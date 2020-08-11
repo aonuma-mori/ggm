@@ -1,3 +1,17 @@
+#<Files ~ "^\.(htaccess|htpasswd)$">
+#deny from all
+#</Files>
+#order deny,allow
+#allow from 60.94.37.1
+#allow from 60.126.10.215
+#allow from 152.165.123.38
+#deny from all
+
+#ErrorDocument 401 /401.html
+#ErrorDocument 403 /403.html
+#ErrorDocument 404 /404.html
+#ErrorDocument 500 /500.html
+
 DirectoryIndex index.php index.html .ht
 
 <FilesMatch "^composer|^COPYING|^\.env|^\.maintenance|^Procfile|^app\.json|^gulpfile\.js|^package\.json|^package-lock\.json|web\.config|^Dockerfile|^\.editorconfig|\.(ini|lock|dist|git|sh|bak|swp|env|twig|yml|yaml|dockerignore|sample)$">
