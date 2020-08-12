@@ -36,7 +36,7 @@ file that was distributed with this source code.
     {# プラグイン用styleseetやmetatagなど #}
     {% if plugin_assets is defined %}{{ include('@admin/snippet.twig', {snippets: plugin_assets}) }}{% endif %}
 </head>
-<body id="page_{{ app.request.get('_route') }}">
+<body id="page_{{ app.request.get('_route') }}" class="ggm">
 <header class="c-headerBar">
     <div class="c-headerBar__container">
         <div class="c-headerBar__logo">
