@@ -1,16 +1,18 @@
 {#
-This file is part of EC-CUBE
-
-Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
-
-http://www.ec-cube.co.jp/
-
-For the full copyright and license information, please view the LICENSE
-file that was distributed with this source code.
+  This file is part of GGM
+  Copyright(c) GGM All Rights Reserved.
 #}
 {% form_theme form 'Form/form_div_layout.twig' %}
 
-<div class="ec-headerSearch">
+
+<form method="get" action="{{ path('product_list') }}" class="searchform form-inline ggm-search-from">
+  <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+  {{ form_widget(form.name, {'id': null, 'attr': {'class': 'search-name form-control mr-sm-2 border-light', 'placeholder' : 'common.search_keyword' }} ) }}
+  <button class="btn btn-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+</form>
+
+
+<!-- <div class="ec-headerSearch">
     <form method="get" class="searchform" action="{{ path('product_list') }}">
         <div class="ec-headerSearch__category">
             <div class="ec-select ec-select_search">
@@ -28,4 +30,4 @@ file that was distributed with this source code.
             </div>
         </div>
     </form>
-</div>
+</div> -->

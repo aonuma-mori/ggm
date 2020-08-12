@@ -120,12 +120,23 @@
         </li>
       </ul>
     </div>
+
+
     <!-- SPでは表示しないようにする（別の場所に移動） -->
-    <form class="form-inline ggm-search-from">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    {{ render(path('block_search_product')) }}
+
+
   </nav>
+
+
+
+
+
+
+
+
+
+
         <div class="ec-layoutRole__header">
             {{ include('block.twig', {'Blocks': Layout.Header}) }}
         </div>
@@ -188,12 +199,19 @@
         </div>
     {% endif %}
 
+
+
+
+
     {# Layout: CONTENTS_FOOTER #}
     {% if Layout.Footer %}
-        <div class="ec-layoutRole__footer">
+        <div class="ggm-footer">
             {{ include('block.twig', {'Blocks': Layout.Footer}) }}
         </div>
     {% endif %}
+
+
+
 </div><!-- ggm-wrapper -->
 
 <div class="ec-overlayRole"></div>

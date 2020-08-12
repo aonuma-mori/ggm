@@ -1,6 +1,8 @@
 body.ggm {
-  // background: #fff;
-  // color: #555;
+  color: #33444C !important;
+  letter-spacing: 1px;
+  font-family: "Noto Sans JP", sans-serif !important;
+
 
   // divice width
   @media (max-width: 576px) {
@@ -29,7 +31,7 @@ body.ggm {
   }
 
 
-  // GGM Shop
+  /* GGM Shop */
   .ggm-wrapper {
     @media (max-width: 576px) {
       .ggm-header-bar {
@@ -62,6 +64,24 @@ body.ggm {
           //
         }
       }
+      form.ggm-search-from {
+        // background: #000;
+        input.search-name {
+          border-radius: 5px 0px 0px 5px;
+          margin-right: -12px;
+          border: 1px solid #c1c1c1 !important;
+        }
+        input.search-name::placeholder {
+          color: #ccc;
+        }
+        button.btn {
+          margin-left: -13px !important;
+          border-radius: 0px 5px 5px 0px;
+          background: #f5f5f5;
+          color: #888;
+          border: 1px solid #c1c1c1 !important;
+        }
+      }
     }
 
     //検索フォームのshow/hide
@@ -73,6 +93,24 @@ body.ggm {
       .ggm-search-from { display: block; }
       .ggm-search-from-sp { display: none; }
     }
+
+
+    /* footer */
+    footer {
+      background: #f5f5f5;
+      .copyright {
+        margin: auto 0;
+        width: 100%;
+        font-size: 12px;
+      }
+    }
+    // body ._message-footer {
+    //   margin: auto 0;
+    //   width: 100%;
+    //   position: fixed;
+    //   bottom: 10%; }
+
+
   }//.ggm-wrapper
 
 
