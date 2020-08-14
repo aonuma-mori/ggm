@@ -2,9 +2,19 @@ body.ggm {
   color: #33444C !important;
   letter-spacing: 1px;
   font-family: "Noto Sans JP", sans-serif !important;
+  margin: 0;
 
+  /* Defoult link a: */
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  a:hover {
+    color: #888;
+    text-decoration-color: transparent;
+  }
 
-  // divice width
+  /* Divice width */
   @media (max-width: 576px) {
     #notice-banner {
       width: 100%;
@@ -33,6 +43,7 @@ body.ggm {
 
   /* GGM Shop */
   .ggm-wrapper {
+    /* Header bar */
     @media (max-width: 576px) {
       .ggm-header-bar {
         height: 5px;
@@ -64,11 +75,12 @@ body.ggm {
           //
         }
       }
+      /* Search form */
       form.ggm-search-from {
         // background: #000;
         input.search-name {
           border-radius: 5px 0px 0px 5px;
-          margin-right: -12px;
+          margin-right: -14px !important;
           border: 1px solid #c1c1c1 !important;
         }
         input.search-name::placeholder {
@@ -97,18 +109,43 @@ body.ggm {
 
     /* footer */
     footer {
-      background: #f5f5f5;
+      background: #fff;
+      // margin: 0;
+      padding: 70px 0px 0px 0px;
+      .ggm-footer-contents {
+        font-size: 13px;
+        ul {
+          margin-bottom: 30px;
+          li {
+            list-style: none;
+            line-height: 30px;
+          }
+        }
+      }
       .copyright {
         margin: auto 0;
+        margin-top: 30px;
         width: 100%;
         font-size: 12px;
       }
     }
-    // body ._message-footer {
-    //   margin: auto 0;
-    //   width: 100%;
-    //   position: fixed;
-    //   bottom: 10%; }
+    /* Top page arrow */
+    .ec-blockTopBtn{
+      display: none;
+      position: fixed;
+      width:60px !important;
+      height: 60px !important;;
+      right: 0;
+      bottom: 10px;
+      cursor: pointer;
+      color: #FFFFFF;
+      text-align: center;
+      line-height: 40px;
+      opacity: 0.8;
+      background-color: #9da3a9;
+      
+    }
+
 
 
   }//.ggm-wrapper
