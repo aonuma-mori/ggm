@@ -39,18 +39,18 @@ services:
       - backend
 
   ### Postgres ################################
-  postgres:
-    image: postgres:10
-    environment:
-      - POSTGRES_DB=eccubedb
-      - POSTGRES_USER=dbuser
-      - POSTGRES_PASSWORD=secret
-    ports:
-      - 15432:5432
-    volumes:
-      - pg-database:/var/lib/postgresql/data
-    networks:
-      - backend
+  # postgres:
+  #   image: postgres:10
+  #   environment:
+  #     - POSTGRES_DB=eccubedb
+  #     - POSTGRES_USER=dbuser
+  #     - POSTGRES_PASSWORD=secret
+  #   ports:
+  #     - 15432:5432
+  #   volumes:
+  #     - pg-database:/var/lib/postgresql/data
+  #   networks:
+  #     - backend
 
   ### MySQL ##################################
   mysql:
@@ -69,28 +69,28 @@ services:
       - backend
 
   ### PHPMyAdmin ##################################
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    environment:
-      - PMA_ARBITRARY=1
-      - PMA_HOST=mysql
-      # - PMA_USER=root
-      # - PMA_PASSWORD=password
-    links:
-      - mysql:mysql
-    networks:
-      - backend
-    ports:
-        - 9200:80
-    volumes:
-        - /sessions
+  # phpmyadmin:
+  #   image: phpmyadmin/phpmyadmin
+  #   environment:
+  #     - PMA_ARBITRARY=1
+  #     - PMA_HOST=mysql
+  #     # - PMA_USER=root
+  #     # - PMA_PASSWORD=password
+  #   links:
+  #     - mysql:mysql
+  #   networks:
+  #     - backend
+  #   ports:
+  #       - 9200:80
+  #   volumes:
+  #       - /sessions
 
   ### Mailcatcher ##################################
-  mailcatcher:
-    image: schickling/mailcatcher
-    ports:
-      - "1080:1080"
-      - "1025:1025"
-    networks:
-      - backend
+  # mailcatcher:
+  #   image: schickling/mailcatcher
+  #   ports:
+  #     - "1080:1080"
+  #     - "1025:1025"
+  #   networks:
+  #     - backend
 

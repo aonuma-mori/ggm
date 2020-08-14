@@ -1,0 +1,106 @@
+body.ggm {
+  // background: #fff;
+  // color: #555;
+
+  // divice width
+  @media (max-width: 576px) {
+    #notice-banner {
+      width: 100%;
+      background: #880000;
+    }
+  }
+  @media (min-width: 577px) and (max-width: 991px) {
+    #notice-banner {
+      width: 100%;
+      background:#660000;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    #notice-banner {
+      width: 100%;
+      background: #440000;
+    }
+  }
+  @media (min-width: 1200px) {
+    #notice-banner {
+      width: 100%;
+      background: #220000;
+    }
+  }
+
+
+  // GGM Shop
+  .ggm-wrapper {
+    @media (max-width: 576px) {
+      .ggm-header-bar {
+        height: 5px;
+        background: #696969;
+      }
+    }
+    @media (min-width: 577px) and (max-width: 991px) {
+      .ggm-header-bar {
+        height: 5px;
+        background: #808080;
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .ggm-header-bar {
+        height: 5px;
+        background: #c0c0c0;
+      }
+    }
+    @media (min-width: 1200px) {
+      .ggm-header-bar {
+        height: 5px;
+        background: #f5f5f5;
+      }
+    }
+    //nav
+    nav {
+      a {
+        img {
+          //
+        }
+      }
+    }
+
+    //検索フォームのshow/hide
+    @media (max-width: 991px) {
+      .ggm-search-from { display: none; }
+      .ggm-search-from-sp { display: block; }
+    }
+    @media (min-width: 991px) {
+      .ggm-search-from { display: block; }
+      .ggm-search-from-sp { display: none; }
+    }
+  }//.ggm-wrapper
+
+
+
+  // ------------------------
+  // Error: 401 403 404 500
+  // ------------------------
+  #message {
+    margin-top: 15%;
+    #message-title {
+    margin: 0 auto;
+    font-size: 24px;
+    width: 80%;
+    }
+  }
+  #message-box {
+    margin-top: 10%;
+    margin: 10%;
+  }
+  ._message-footer {
+    margin: auto 0;
+    width: 100%;
+    position: fixed;
+    bottom: 10%;
+    .copy-right {
+
+    }
+  }
+}
+
+

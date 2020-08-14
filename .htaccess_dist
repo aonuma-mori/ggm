@@ -2,12 +2,9 @@
 deny from all
 </Files>
 order deny,allow
-allow from 60.94.37.1
-allow from 60.126.10.215
-allow from 152.165.123.38
-allow from 126.235.23.188
+allow from xxx.xxx.xxx.xxx
+allow from xxx.xxx.xxx.xxx
 deny from all
-
 
 ErrorDocument 401 /401.html
 ErrorDocument 403 /403.html
@@ -35,7 +32,7 @@ DirectoryIndex index.php index.html .ht
     Header set X-Content-Type-Options nosniff
 </IfModule>
 
-# デザインテンプレートを適用するため10Mで設定 
+# デザインテンプレートを適用するため10Mで設定
 <IfModule mod_php7.c>
     php_value upload_max_filesize 10M
 </IfModule>

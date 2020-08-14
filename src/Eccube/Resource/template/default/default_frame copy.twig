@@ -1,7 +1,13 @@
 <!doctype html>
 {#
-  This file is part of GGM
-  Copyright(c) GGM All Rights Reserved.
+This file is part of EC-CUBE
+
+Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
+
+http://www.ec-cube.co.jp/
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
 #}
 <html lang="{{ eccube_config.locale }}">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
@@ -25,10 +31,10 @@
         {{ include(template_from_string(Page.meta_tags)) }}
     {% endif %}
     <link rel="icon" href="{{ asset('assets/img/common/favicon.ico', 'user_data') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/ggm-styles.css') }}">
     {% block stylesheet %}{% endblock %}
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script>
@@ -48,88 +54,18 @@
     {% if plugin_assets is defined %}{{ include('@admin/snippet.twig', { snippets: plugin_assets }) }}{% endif %}
     <link rel="stylesheet" href="{{ asset('assets/css/customize.css', 'user_data') }}">
 </head>
-<body id="page_{{ app.request.get('_route') }}" class="{{ body_class|default('other_page') }} ggm">
+<body id="page_{{ app.request.get('_route') }}" class="{{ body_class|default('other_page') }}">
 {# Layout: BODY_AFTER #}
 {% if Layout.BodyAfter %}
     {{ include('block.twig', {'Blocks': Layout.BodyAfter}) }}
 {% endif %}
 
-<div class="ggm-wrapper">
-  <div class="ggm-header-bar"></div>
-  {# Layout: HEADER #}
-  {% if Layout.Header %}
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <img src="/html/template/default/assets/img/favicons/icon-32x32.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      GGM
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <form class="form-inline ggm-search-from-sp">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">hoge</a>
-        </li>
-        {% if is_granted('ROLE_USER') %}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('mypage') }}">
-            {{ 'front.block.login.mypage'|trans }}
-          </a>
-        </li>
-        {% if BaseInfo.option_favorite_product %}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('mypage_favorite') }}">
-            {{ 'front.block.login.favorite'|trans }}
-          </a>
-        </li>
-        {% endif %}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('logout') }}">
-            {{ 'front.block.login.logout'|trans }}
-          </a>
-        </li>
-        {% else %}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('entry') }}">
-            {{ 'front.block.login.customer_registration'|trans }}
-          </a>
-        </li>
-        {% if BaseInfo.option_favorite_product %}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('mypage_favorite') }}">
-            {{ 'front.block.login.favorite'|trans }}
-          </a>
-        </li>
-        {% endif %}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('mypage_login') }}">
-            {{ 'front.block.login.login'|trans }}
-          </a>
-        </li>
-        {% endif %}
-        <li class="ggm_cart">
-          {{ include('Block/cart.twig') }}
-        </li>
-      </ul>
-    </div>
-    <!-- SPでは表示しないようにする（別の場所に移動） -->
-    <form class="form-inline ggm-search-from">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </nav>
+<div class="ec-layoutRole">
+    {# Layout: HEADER #}
+    {% if Layout.Header %}
         <div class="ec-layoutRole__header">
             {{ include('block.twig', {'Blocks': Layout.Header}) }}
         </div>
-
     {% endif %}
 
     {# Layout: CONTENTS_TOP #}
@@ -194,7 +130,7 @@
             {{ include('block.twig', {'Blocks': Layout.Footer}) }}
         </div>
     {% endif %}
-</div><!-- ggm-wrapper -->
+</div><!-- ec-layoutRole -->
 
 <div class="ec-overlayRole"></div>
 <div class="ec-drawerRoleClose"><i class="fas fa-times"></i></div>
@@ -205,9 +141,7 @@
     {% endif %}
 </div>
 <div class="ec-blockTopBtn pagetop">{{'common.pagetop'|trans}}</div>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 {% include('@common/lang.twig') %}
 <script src="{{ asset('assets/js/function.js') }}"></script>
