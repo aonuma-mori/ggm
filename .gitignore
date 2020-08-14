@@ -1,5 +1,4 @@
 .htaccess
-
 !dummy
 !.gitmodule
 composer.phar
