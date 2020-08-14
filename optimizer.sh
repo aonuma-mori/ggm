@@ -27,7 +27,7 @@ php composer.phar update
 fi
 
 # Delete cache:
-rm -f var/cache/dev/*
-rm -f var/cache/prod/*
+rm -fR var/cache/dev/*
+rm -fR var/cache/prod/*
 
 exit
