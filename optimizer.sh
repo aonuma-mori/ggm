@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+
 # 1. git pull origin master
 # 2. php composer.phar update
 # 3. rm -f var/cache/dev/* && rm -f var/cache/prod/*
@@ -29,5 +31,23 @@ fi
 # Delete cache:
 rm -fR var/cache/dev/*
 rm -fR var/cache/prod/*
+
+# dev env only
+if [ $ENV = "dev" ];  then
+# db dump
+#docker exec -it ec-cube_mysql_1 mysqldump -u dbuser -psecret eccubedb > var/tmp/dump_`date "+%Y%m%d_%H%M%S"`.sql
+docker exec -it ec-cube_mysql_1 mysqldump -u dbuser -psecret eccubedb > var/tmp/start_dump.sql
+# docker
+docker-compose up -d
+docker-compose ps -a
+else
+  echo "Here is not dev env."
+fi
+
+
+
+
+
+
 
 exit

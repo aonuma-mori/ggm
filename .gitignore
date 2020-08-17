@@ -1,7 +1,6 @@
 .htaccess
 !dummy
 !.gitmodule
-composer.phar
 /vendor/
 /node_modules/
 /var/*
