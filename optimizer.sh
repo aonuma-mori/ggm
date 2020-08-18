@@ -6,7 +6,7 @@
 # 2. php composer.phar update
 # 3. rm -f var/cache/dev/* && rm -f var/cache/prod/*
 
-# ENV:
+# get ENV:
 while read line
 do
   # echo $line
@@ -19,7 +19,8 @@ do
 done < ./.env
 
 # Git pull:
-git pull origin master;
+git add -A;
+git commit -m "auto commit"`date "+%Y%m%d_%H%M%S"`;
 
 # composer update
 if [ $ENV = "prod" ];  then
@@ -35,8 +36,7 @@ rm -fR var/cache/prod/*
 # dev env only
 if [ $ENV = "dev" ];  then
 # db dump
-#docker exec -it ec-cube_mysql_1 mysqldump -u dbuser -psecret eccubedb > var/tmp/dump_`date "+%Y%m%d_%H%M%S"`.sql
-docker exec -it ec-cube_mysql_1 mysqldump -u dbuser -psecret eccubedb > var/tmp/start_dump.sql
+docker exec -it ec-cube_mysql_1 mysqldump -u dbuser -psecret eccubedb > var/tmp/dump_`date "+%Y%m%d_%H%M%S"`.sql
 # docker
 docker-compose up -d
 docker-compose ps -a
