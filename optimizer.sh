@@ -44,10 +44,4 @@ else
   echo "Here is not dev env."
 fi
 
-
-
-
-
-
-
 exit
