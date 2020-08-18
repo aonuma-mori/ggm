@@ -20,7 +20,7 @@ done < ./.env
 
 # Git pull:
 git add -A;
-git commit -m "auto commit"`date "+%Y%m%d_%H%M%S"`;
+git commit -m "auto commit: "`date "+%Y%m%d_%H%M%S"`;
 
 # composer update
 if [ $ENV = "prod" ];  then
