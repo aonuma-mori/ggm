@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 # 1. git pull origin master
 # 2. php composer.phar update
 # 3. rm -f var/cache/dev/* && rm -f var/cache/prod/*
