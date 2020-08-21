@@ -120,6 +120,7 @@
     <!-- SPでは表示しないようにする（別の場所に移動） -->
     {{ render(path('block_search_product')) }}
   </nav>
+
   {#
     <!-- Default Header ignore-->
     {{ include('block.twig', {'Blocks': Layout.Header}) }}
@@ -127,36 +128,52 @@
   #}
   {% endif %}
 
-  {# Layout: CONTENTS_TOP #}
-  {% if Layout.ContentsTop %}
-      <div class="ec-layoutRole__contentTop">
-          {{ include('block.twig', {'Blocks': Layout.ContentsTop}) }}
-      </div>
+
+  {% if Layout.MainTop %}
+  {# 
+   - Jumbotron
+   - Display on top page only.
+  #}
+    {{ include('block.twig', {'Blocks': Layout.MainTop}) }}
   {% endif %}
 
-  <div class="ec-layoutRole__contents ggm-contents">
+  {# Layout: CONTENTS_TOP #}
+  {# {% if Layout.ContentsTop %}
+    <div class="ec-layoutRole__contentTop">
+      {{ include('block.twig', {'Blocks': Layout.ContentsTop}) }}
+    </div>
+  {% endif %} #}
+
+  <div class="ggm-contents">
   <!-- ggm-contents -->
-    {# Layout: SIDE_LEFT #}
+    {# Layout: SIDE_LEFT
     {% if Layout.SideLeft %}
         <div class="ec-layoutRole__left">
             {{ include('block.twig', {'Blocks': Layout.SideLeft}) }}
         </div>
     {% endif %}
+    #}
 
-    {% set layoutRoleMain = 'ec-layoutRole__main' %}
+    {% set layoutRoleMain = 'ggm-block' %}
     {% if Layout.ColumnNum == 2 %}
-        {% set layoutRoleMain = 'ec-layoutRole__mainWithColumn' %}
+        {% set layoutRoleMain = 'ggm-block' %}
     {% elseif Layout.ColumnNum == 3 %}
-        {% set layoutRoleMain = 'ec-layoutRole__mainBetweenColumn' %}
+        {% set layoutRoleMain = 'ggm-block' %}
     {% endif %}
 
-    <div class="{{ layoutRoleMain }}">
+    {# {% if Layout.MainTop %}
+       {{ include('block.twig', {'Blocks': Layout.MainTop}) }}
+    {% endif %} #}
+
+    <div class="ggm-block-div">
+
         {# Layout: MAIN_TOP #}
-        {% if Layout.MainTop %}
+        
+        {# {% if Layout.MainTop %}
             <!-- <div class="ec-layoutRole__mainTop">
                 {{ include('block.twig', {'Blocks': Layout.MainTop}) }}
             </div> -->
-        {% endif %}
+        {% endif %} #}
 
         {# MAIN AREA #}
         {% block main %}{% endblock %}
@@ -225,6 +242,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   {% include('@common/lang.twig') %}
   <script src="{{ asset('assets/js/function.js') }}"></script>
   <script src="{{ asset('assets/js/eccube.js') }}"></script>

@@ -41,6 +41,9 @@ body.ggm {
   }
 
 
+
+
+
   /* GGM Shop */
   .ggm-wrapper {
     /* Header bar */
@@ -104,6 +107,23 @@ body.ggm {
     @media (min-width: 991px) {
       .ggm-search-from { display: block; }
       .ggm-search-from-sp { display: none; }
+    }
+
+
+    #top-banner {
+      background: #000;
+      position: relative;
+      overflow: hidden;
+      height: 600px;
+      #top-banner-img {
+        width: 100%;
+        position: absolute;
+        top: -300px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
     }
 
 
