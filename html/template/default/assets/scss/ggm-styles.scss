@@ -85,6 +85,7 @@ body.ggm {
           border-radius: 5px 0px 0px 5px;
           margin-right: -14px !important;
           border: 1px solid #c1c1c1 !important;
+          // height: 30px;
         }
         input.search-name::placeholder {
           color: #ccc;
@@ -109,20 +110,47 @@ body.ggm {
       .ggm-search-from-sp { display: none; }
     }
 
-
+    /* TOPバナー　Jumbotron */
+    
+    /* TOPバナー image */
     #top-banner {
-      background: #000;
-      position: relative;
-      overflow: hidden;
-      height: 600px;
-      #top-banner-img {
-        width: 100%;
-        position: absolute;
-        top: -300px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
+      border-radius: 0;
+      background: #f4e9e9;
+    }
+    @media (max-width: 991px) {
+      .top-sp { display: block; }
+      .top-pc { display: none; }
+      #top-banner {
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+        #top-banner-img {
+          width: 100%;
+          position: absolute;
+          top: -100px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+        }
+      }
+    }
+    @media (min-width: 991px) {
+      .top-sp { display: none; }
+      .top-pc { display: block; }
+      #top-banner {
+        position: relative;
+        overflow: hidden;
+        height: 600px;
+        #top-banner-img {
+          width: 100%;
+          position: absolute;
+          top: -300px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+        }
       }
     }
 
