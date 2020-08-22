@@ -46,6 +46,7 @@ body.ggm .ggm-wrapper {
   /* TOPバナー　Jumbotron */
   /* TOPバナー image */
   /* eyecatche */
+  /* topic */
   /* footer */
   /* Top page arrow */
 }
@@ -135,6 +136,15 @@ body.ggm .ggm-wrapper nav.navbar form.ggm-search-from button.btn {
 body.ggm .ggm-wrapper #top-banner {
   border-radius: 0;
   background: #f4e9e9;
+  overflow: hidden;
+}
+body.ggm .ggm-wrapper .ggm-top-text-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  margin: 30px;
+  font-size: 27px;
 }
 @media (max-width: 991px) {
   body.ggm .ggm-wrapper .top-sp {
@@ -145,7 +155,6 @@ body.ggm .ggm-wrapper #top-banner {
   }
   body.ggm .ggm-wrapper #top-banner {
     position: relative;
-    overflow: hidden;
     height: 300px;
   }
   body.ggm .ggm-wrapper #top-banner #top-banner-img {
@@ -167,7 +176,6 @@ body.ggm .ggm-wrapper #top-banner {
   }
   body.ggm .ggm-wrapper #top-banner {
     position: relative;
-    overflow: hidden;
     height: 600px;
   }
   body.ggm .ggm-wrapper #top-banner #top-banner-img {
@@ -180,6 +188,9 @@ body.ggm .ggm-wrapper #top-banner {
     margin: auto;
   }
 }
+body.ggm .ggm-wrapper .ec-layoutRole__mainBottom .eyecatch-block {
+  margin-top: 50px;
+}
 body.ggm .ggm-wrapper .ec-layoutRole__mainBottom .eyecatch-block .row .eyecatch-block {
   margin-bottom: 40px;
 }
@@ -188,6 +199,8 @@ body.ggm .ggm-wrapper .ec-layoutRole__mainBottom .eyecatch-block .row .eyecatch-
   text-decoration: none;
 }
 body.ggm .ggm-wrapper .ec-layoutRole__mainBottom .eyecatch-block .row .eyecatch-block img.eyecatch-img {
+  display: block;
+  margin: 0 auto;
   width: 180px;
   border-radius: 50%;
   border: 1px solid #c1c1c1;
@@ -197,6 +210,7 @@ body.ggm .ggm-wrapper .ec-layoutRole__mainBottom .eyecatch-block .row .eyecatch-
   margin: 26px;
 }
 body.ggm .ggm-wrapper .ec-layoutRole__mainBottom .eyecatch-block .row .eyecatch-block .eyecatch-summary {
+  font-size: 13px;
   line-height: 28px;
   margin: 0 auto;
   width: 60%;
@@ -204,6 +218,28 @@ body.ggm .ggm-wrapper .ec-layoutRole__mainBottom .eyecatch-block .row .eyecatch-
 body.ggm .ggm-wrapper .ec-layoutRole__mainBottom .eyecatch-block .row .eyecatch-block .eyecatch-summary a:hover {
   opacity: 0.7;
   text-decoration: none;
+}
+body.ggm .ggm-wrapper .ggm-topic {
+  margin-top: 50px;
+}
+body.ggm .ggm-wrapper .ggm-topic h4.ggm-topic-title {
+  font-size: 20px;
+  height: 67px;
+  line-height: 30px;
+}
+body.ggm .ggm-wrapper .ggm-topic p.ggm-topic-summary {
+  font-size: 14px;
+  line-height: 26px;
+}
+body.ggm .ggm-wrapper .ggm-topic p.ggm-topic-summary .ggm-topic-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 26px;
+}
+body.ggm .ggm-wrapper .ggm-topic .ggm-topic-more {
+  font-size: 14px;
 }
 body.ggm .ggm-wrapper footer {
   background: #fff;

@@ -146,19 +146,27 @@ body.ggm {
       .ggm-search-from-sp { display: none; }
     }
 
-    /* TOPバナー　Jumbotron */
-    
+    /* TOPバナー　Jumbotron */ 
     /* TOPバナー image */
     #top-banner {
       border-radius: 0;
       background: #f4e9e9;
+      overflow: hidden;
+    }
+    .ggm-top-text-block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #fff;
+      margin: 30px;
+      font-size: 27px;
+      // text-shadow: -1px -1px 1px #888;
     }
     @media (max-width: 991px) {
       .top-sp { display: block; }
       .top-pc { display: none; }
       #top-banner {
         position: relative;
-        overflow: hidden;
         height: 300px;
         #top-banner-img {
           width: 100%;
@@ -176,7 +184,6 @@ body.ggm {
       .top-pc { display: block; }
       #top-banner {
         position: relative;
-        overflow: hidden;
         height: 600px;
         #top-banner-img {
           width: 100%;
@@ -191,15 +198,11 @@ body.ggm {
     }
 
 
-
-
-
-
-
-    /* eyecatche */
+/* eyecatche */
 .ec-layoutRole__mainBottom {
   .eyecatch-block {
     // background: #000;
+    margin-top: 50px;
     .row {
       .eyecatch-block {
         margin-bottom: 40px;
@@ -208,6 +211,8 @@ body.ggm {
           text-decoration: none;
         }
         img.eyecatch-img {
+          display: block;
+          margin: 0 auto;
           width: 180px;
           border-radius: 50%;
           border: 1px solid #c1c1c1;
@@ -217,6 +222,7 @@ body.ggm {
           margin: 26px;
         }
         .eyecatch-summary {
+          font-size: 13px;
           line-height: 28px;
           margin: 0 auto;
           width: 60%;
@@ -252,7 +258,29 @@ body.ggm {
 }
 
 
-
+    /* topic */
+    .ggm-topic {
+      margin-top: 50px;
+      h4.ggm-topic-title {
+        font-size: 20px;
+        height: 67px;
+        line-height: 30px;
+      }
+      p.ggm-topic-summary {
+        font-size: 14px;
+        line-height: 26px;
+        .ggm-topic-image {
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+          float: left;
+          margin-right: 26px;
+        }
+      }
+      .ggm-topic-more {
+        font-size: 14px;
+      }
+    }
 
 
 

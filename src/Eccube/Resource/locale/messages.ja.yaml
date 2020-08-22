@@ -136,6 +136,7 @@ front.block.login.login: Login
 front.block.login.logout: Logout
 front.block.login.to_cart: カートを見る
 front.block.login.to_home: ホームに戻る
+front.block.blog.blog: Blog
 
 
 #------------------------------------------------------------------------------------

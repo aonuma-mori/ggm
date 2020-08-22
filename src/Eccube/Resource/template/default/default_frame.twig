@@ -93,11 +93,11 @@
   <link rel="stylesheet" href="{{ asset('assets/css/customize.css', 'user_data') }}">
 </head>
 <body id="page_{{ app.request.get('_route') }}" class="{{ body_class|default('other_page') }} ggm">
+
 {# Layout: BODY_AFTER #}
 {% if Layout.BodyAfter %}
     {{ include('block.twig', {'Blocks': Layout.BodyAfter}) }}
 {% endif %}
-
 
 <!-- Debug -->
 {# <p id="device" v-bind:class="[[width_type]]">device_type class: [[width_type]]</p> #}
@@ -107,7 +107,8 @@
 {# message #}
 <!-- message -->
 
-<div class="ggm-wrapper">
+  
+  <div class="ggm-wrapper">
   <div class="ggm-header-bar"></div>
   {# Layout: HEADER #}
   {% if Layout.Header %}
@@ -161,6 +162,11 @@
           </a>
         </li>
         {% endif %}
+        <li class="ggm-blog active">
+          <a class="nav-link" href="/blog">
+            {{ 'front.block.blog.blog'|trans }}
+          </a>
+        </li>
         <li class="ggm-cart">
           {{ include('Block/cart.twig') }}
         </li>
@@ -172,6 +178,8 @@
   {% endif %}
 
 
+
+
   {% if Layout.MainTop %}
     {{ include('block.twig', {'Blocks': Layout.MainTop}) }}
   {% endif %}
@@ -181,7 +189,8 @@
     <div class="ec-layoutRole__contentTop">
       {{ include('block.twig', {'Blocks': Layout.ContentsTop}) }}
     </div>
-  {% endif %} #}
+  {% endif %}
+
 
   <div class="ggm-contents">
     {# Layout: SIDE_LEFT #}
@@ -228,8 +237,8 @@
         {{ include('block.twig', {'Blocks': Layout.SideRight}) }}
       </div>
     {% endif %}
-  <!-- ggm-contents end -->
-  </div>
+
+  </div><!-- ggm-contents end -->
 
   {# Layout: CONTENTS_BOTTOM #}
   {# eyecatch block /src/Eccube/Resource/template/default/Block/eyecatch.twig #}
@@ -243,37 +252,37 @@
 
 
 
-{# Layout: CONTENTS_FOOTER #}
-{% if Layout.Footer %}
-  <!-- footer -->
-  {{ include('block.twig', {'Blocks': Layout.Footer}) }}
-  <!-- footer end -->
-{% endif %}
-</div><!-- ggm-wrapper -->
+  {# Layout: CONTENTS_FOOTER #}
+  {% if Layout.Footer %}
+    <!-- footer -->
+    {{ include('block.twig', {'Blocks': Layout.Footer}) }}
+    <!-- footer end -->
+  {% endif %}
+  </div><!-- ggm-wrapper end -->
 
-<div class="ec-overlayRole"></div>
-<div class="ec-drawerRoleClose"><i class="fas fa-times"></i></div>
-<div class="ec-drawerRole">
-    {# Layout: DRAWER #}
-    {% if Layout.Drawer %}
-        {{ include('block.twig', {'Blocks': Layout.Drawer}) }}
-    {% endif %}
-</div>
+  <div class="ec-overlayRole"></div>
+  <div class="ec-drawerRoleClose"><i class="fas fa-times"></i></div>
+  <div class="ec-drawerRole">
+      {# Layout: DRAWER #}
+      {% if Layout.Drawer %}
+          {{ include('block.twig', {'Blocks': Layout.Drawer}) }}
+      {% endif %}
+  </div>
 
-<!-- Topへ戻る -->
-<div
-  id="ggm-pagetop-arrow"
-  class="ec-blockTopBtn pagetop"
-  style="
-    width:50px;
-    height:50px;
-    font-size:28px;
-    padding-top: 4px;
-    border-radius: 50%;
-    background: #666;
-  ">
-  <i class="fas fa-arrow-up"></i>
-</div>
+  <!-- Topへ戻る -->
+  <div
+    id="ggm-pagetop-arrow"
+    class="ec-blockTopBtn pagetop"
+    style="
+      width:50px;
+      height:50px;
+      font-size:28px;
+      padding-top: 4px;
+      border-radius: 50%;
+      background: #666;
+    ">
+    <i class="fas fa-arrow-up"></i>
+  </div>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
