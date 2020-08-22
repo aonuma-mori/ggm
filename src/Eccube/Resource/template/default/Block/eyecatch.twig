@@ -1,24 +1,39 @@
 {#
-This file is part of EC-CUBE
-
-Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
-
-http://www.ec-cube.co.jp/
-
-For the full copyright and license information, please view the LICENSE
-file that was distributed with this source code.
+  This file is part of GGM
+  Copyright(c) GGM All Rights Reserved.
 #}
+<div class="ggm-ec-role ec-role">
+{# {{ 'front.block.eyecatch.title__en'|trans }}
+{{ 'front.block.eyecatch.title__ja'|trans }}
+{{ 'front.block.eyecatch.description'|trans|nl2br }}
+{{ url('product_list') }}?category_id=4">{{ 'front.block.eyecatch.view_list'|trans }} #}
 
-<div class="ec-role">
-    <div class="ec-eyecatchRole">
-        <div class="ec-eyecatchRole__image">
-            <img src="{{ asset('assets/img/top/img_about.jpg') }}" alt="" role="presentation"/>
-        </div>
-        <div class="ec-eyecatchRole__intro">
-            <p class="ec-eyecatchRole__introEnTitle">{{ 'front.block.eyecatch.title__en'|trans }}</p>
-            <p class="ec-eyecatchRole__introTitle">{{ 'front.block.eyecatch.title__ja'|trans }}</p>
-            <p class="ec-eyecatchRole__introDescription">{{ 'front.block.eyecatch.description'|trans|nl2br }}</p>
-            <a class="ec-blockBtn--top" href="{{ url('product_list') }}?category_id=4">{{ 'front.block.eyecatch.view_list'|trans }}</a>
-        </div>
+<div class="container eyecatch-block">
+	<div class="row">
+		<div class="col-sm-4 center-block eyecatch-block eyecatch-block-01">
+      <a href="#">
+        <img src="/html/template/default/assets/img/top/eyecatch-01.jpg" class="eyecatch-img eyecatch-img-01 center-block">
+      </a>
+      <div class="text-center eyecatch-title eyecatch-title01">鞣し生成り麻縄</div>
+      <div class="eyecatch-summary">麻縄本来の色と艶、強度を備えています。手入れの仕方次第で何年も品質を保持できます。<br>
+        <a href="#">商品を見る</a>
+      </div>
     </div>
+		<div class="col-sm-4 center-block eyecatch-block eyecatch-block-02">
+      <a href="#">
+        <img src="/html/template/default/assets/img/top/eyecatch-02.jpg" class="eyecatch-img eyecatch-img-02 center-block">
+      </a>
+      <div class="text-center eyecatch-title eyecatch-title02">素麻縄</div>
+      <div class="eyecatch-summary">生の麻縄そのままの状態です。お好みの油で鞣してお使いください。<br>
+        <a href="#">商品を見る</a></div>
+    </div>
+		<div class="col-sm-4 center-block eyecatch-block eyecatch-block-03">
+      <a href="#">
+        <img src="/html/template/default/assets/img/top/eyecatch-03.jpg" class="eyecatch-img eyecatch-img-03 center-block">
+      </a>
+      <div class="text-center eyecatch-title eyecatch-title03">染麻縄</div>
+      <div class="eyecatch-summary">色がついていてかっこいい。カラーSAMPLEから選べます。オリジナル色もできます。<br>
+        <a href="#">商品を見る</a></div>
+    </div>
+  </div>
 </div>
