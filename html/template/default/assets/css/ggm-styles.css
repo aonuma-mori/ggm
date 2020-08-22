@@ -90,6 +90,21 @@ body.ggm .ggm-wrapper nav form.ggm-search-from button.btn {
   color: #888;
   border: 1px solid #c1c1c1 !important;
 }
+body.ggm .ggm-wrapper nav form.ggm-search-from input.search-name {
+  border-radius: 5px 0px 0px 5px;
+  margin-right: -14px !important;
+  border: 1px solid #c1c1c1 !important;
+}
+body.ggm .ggm-wrapper nav form.ggm-search-from input.search-name::placeholder {
+  color: #ccc;
+}
+body.ggm .ggm-wrapper nav form.ggm-search-from button.btn {
+  margin-left: -13px !important;
+  border-radius: 0px 5px 5px 0px;
+  background: #f5f5f5;
+  color: #888;
+  border: 1px solid #c1c1c1 !important;
+}
 @media (max-width: 991px) {
   body.ggm .ggm-wrapper .ggm-search-from {
     display: none;
