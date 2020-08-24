@@ -47,6 +47,7 @@ body.ggm .ggm-wrapper {
   /* TOPバナー image */
   /* eyecatche */
   /* topic */
+  /* ggm-news */
   /* footer */
   /* Top page arrow */
 }
@@ -223,7 +224,7 @@ body.ggm .ggm-wrapper .ggm-topic {
   margin-top: 50px;
 }
 body.ggm .ggm-wrapper .ggm-topic h4.ggm-topic-title {
-  font-size: 20px;
+  font-size: 18px;
   height: 67px;
   line-height: 30px;
 }
@@ -240,6 +241,9 @@ body.ggm .ggm-wrapper .ggm-topic p.ggm-topic-summary .ggm-topic-image {
 }
 body.ggm .ggm-wrapper .ggm-topic .ggm-topic-more {
   font-size: 14px;
+}
+body.ggm .ggm-wrapper .ggm-news {
+  background: #000;
 }
 body.ggm .ggm-wrapper footer {
   background: #fff;

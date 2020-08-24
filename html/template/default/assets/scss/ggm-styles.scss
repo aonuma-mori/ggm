@@ -262,7 +262,7 @@ body.ggm {
     .ggm-topic {
       margin-top: 50px;
       h4.ggm-topic-title {
-        font-size: 20px;
+        font-size: 18px;
         height: 67px;
         line-height: 30px;
       }
@@ -282,7 +282,10 @@ body.ggm {
       }
     }
 
-
+    /* ggm-news */
+    .ggm-news {
+      background: #000;
+    }
 
     /* footer */
     footer {
