@@ -23,6 +23,7 @@
     <div class="row">
 
       <div class="col-sm-8 col-md-9 col-lg-8" id="main-block">
+
         <div class="blog-item">
           <div class="blog-title">
           Google Cloud SDK をMac OS X環境にインストール (gcloudコマンド）
@@ -34,6 +35,7 @@
             texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
             texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
             <div class="blog-meta">
+              <p class="datetime text-right">2020-08-25 09:00</p>
               <p class="catefory">
                 <a href="#">foo</a>
                 <a href="#">bar</a>
@@ -47,9 +49,33 @@
             </div>
           </div><!-- blog-summary -->
         </div><!-- blog-item -->
-          
-          
-        </div><!-- col main -->
+        <div class="blog-item">
+          <div class="blog-title">
+          Google Cloud SDK をMac OS X環境にインストール (gcloudコマンド）
+          </div>
+          <div class="blog-summary">
+            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            <div class="blog-meta">
+              <p class="datetime text-right">2020-08-25 09:00</p>
+              <p class="catefory">
+                <a href="#">foo</a>
+                <a href="#">bar</a>
+                <a href="#">baz</a>
+              </p>
+              <p class="tags">
+                <a href="#">foo</a>
+                <a href="#">bar</a>
+                <a href="#">baz</a>
+              </p>
+            </div>
+          </div><!-- blog-summary -->
+        </div><!-- blog-item -->
+
+      </div><!-- col main -->
         
       <div class="col-sm-4 col-md-3 col-lg-4" id="side-block">
         <!--sidebar-->

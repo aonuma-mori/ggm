@@ -38,8 +38,16 @@
       </ul>
     </div>
     <!-- SPでは表示しないようにする（別の場所に移動） -->
-    <form method="get" action="/products/list" class="searchform form-inline ggm-search-from">
-      <input type="search" name="name" maxlength="50" class="search-name form-control mr-sm-2 border-light" placeholder="keyword" />
-      <button class="btn btn-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+    <form method="get" action="http://localhost:9100/blog/" class="searchform form-inline ggm-search-from" role="search" method="get" id="searchform" class="searchform" >
+      <input type="text" name="s" maxlength="50" class="search-name form-control mr-sm-2 border-light" placeholder=" Blog search" />
+      <button id="searchsubmit" class="btn btn-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
     </form>
+
+    <!-- <form role="search" method="get" id="searchform" class="searchform" action="http://localhost:9100/blog/">
+      <div>
+        <label class="screen-reader-text" for="s">検索:</label>
+        <input type="text" value="hoge" name="s" id="s">
+        <input type="submit" id="searchsubmit" value="検索">
+      </div>
+    </form> -->
   </nav>

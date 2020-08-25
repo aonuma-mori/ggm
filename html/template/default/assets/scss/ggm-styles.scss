@@ -360,8 +360,8 @@ body.ggm {
 
 
 /**
- * Blog
- *
+ * Blog (wordpress)
+ * 
  *
  *
  */
@@ -375,28 +375,35 @@ body.ggm {
         word-break: break-all;
         margin-bottom: 100px;
         .blog-item {
-          margin-bottom : 100px !important;
+          margin-bottom : 60px !important;
           .blog-title {
             font-size: 20px;
+            margin-bottom: 10px;
           }
           .blog-summary {
+            line-height: 26px;
+            font-size: 13px;
+            line-height: 28px;
+            color: #666;
             .blog-meta {
               .catefory {
-                display: inline;
+                display: inline-block;
                 a {
                   font-size: 12px;
                   border: 1px solid #888;
                   padding: 3px 8px;
                   background: #888;
                   color: #fff;
+                  border-radius: 2px;
                 }
               }
               .tags {
-                display: inline;
+                display: inline-block;
                 a {
                   font-size: 12px;
                   border: 1px solid #c1c1c1;
                   padding: 3px 8px;
+                  border-radius: 2px;
                 }
               }
             }
@@ -408,8 +415,38 @@ body.ggm {
        #side-block {
         word-break: break-all;
         margin-bottom: 100px;
-       }
-     }
-   }
- }
+        #sidebar {
+          ul {
+            li.widget_search {
+              h2 {
+
+              }
+              form {
+                div {
+                  .screen-reader-text {
+                    display: none;
+                  }
+                }
+              }
+            }
+            li.widget {
+              list-style: none;
+              margin-bottom: 20px;
+              h2.widgettitle {
+                font-size: 16px;
+              }
+              ul {
+                li {
+                  list-style: none;
+                  font-size: 13px;
+                  margin-left: -28px;
+                }
+              }
+            }
+          }
+        }//sidebar
+      }//side-block
+    }
+  }
+}
 
