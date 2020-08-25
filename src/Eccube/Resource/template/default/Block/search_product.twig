@@ -3,31 +3,7 @@
   Copyright(c) GGM All Rights Reserved.
 #}
 {% form_theme form 'Form/form_div_layout.twig' %}
-
-
 <form method="get" action="{{ path('product_list') }}" class="searchform form-inline ggm-search-from">
-  <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
   {{ form_widget(form.name, {'id': null, 'attr': {'class': 'search-name form-control mr-sm-2 border-light', 'placeholder' : 'common.search_keyword' }} ) }}
   <button class="btn btn-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
 </form>
-
-
-<!-- <div class="ec-headerSearch">
-    <form method="get" class="searchform" action="{{ path('product_list') }}">
-        <div class="ec-headerSearch__category">
-            <div class="ec-select ec-select_search">
-                {{ form_widget(form.category_id, {'id': null, 'attr': {'class': 'category_id'}}) }}
-            </div>
-        </div>
-        <div class="ec-headerSearch__keyword">
-            <div class="ec-input">
-                {{ form_widget(form.name, {'id': null, 'attr': {'class': 'search-name', 'placeholder' : 'common.search_keyword' }} ) }}
-                <button class="ec-headerSearch__keywordBtn" type="submit">
-                    <div class="ec-icon">
-                        <img src="{{ asset('assets/icon/search-dark.svg') }}" alt="">
-                    </div>
-                </button>
-            </div>
-        </div>
-    </form>
-</div> -->

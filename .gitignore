@@ -68,3 +68,6 @@ vendor/*
 ###< symfony/web-server-bundle ###
 
 ggm-utirily
+
+#blog
+blog/wp-config.php

@@ -24,13 +24,57 @@
   {% if Page.meta_tags is not empty %}
       {{ include(template_from_string(Page.meta_tags)) }}
   {% endif %}
-  <link rel="icon" href="{{ asset('assets/img/common/favicon.ico', 'user_data') }}">
+  <meta name="msapplication-square70x70logo" content="/html/template/default/assets/img/favicons/site-tile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="/html/template/default/assets/img/favicons/site-tile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="/html/template/default/assets/img/favicons/site-tile-310x150.png">
+  <meta name="msapplication-square310x310logo" content="/html/template/default/assets/img/favicons/site-tile-310x310.png">
+  <meta name="msapplication-TileColor" content="#0078d7">
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/html/template/default/assets/img/favicons/favicon.ico">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="/html/template/default/assets/img/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/html/template/default/assets/img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/html/template/default/assets/img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/html/template/default/assets/img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/html/template/default/assets/img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/html/template/default/assets/img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/html/template/default/assets/img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/html/template/default/assets/img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/html/template/default/assets/img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/html/template/default/assets/img/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="36x36" href="/html/template/default/assets/img/favicons/android-chrome-36x36.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/html/template/default/assets/img/favicons/android-chrome-48x48.png">
+  <link rel="icon" type="image/png" sizes="72x72" href="/html/template/default/assets/img/favicons/android-chrome-72x72.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/html/template/default/assets/img/favicons/android-chrome-96x96.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="/html/template/default/assets/img/favicons/android-chrome-128x128.png">
+  <link rel="icon" type="image/png" sizes="144x144" href="/html/template/default/assets/img/favicons/android-chrome-144x144.png">
+  <link rel="icon" type="image/png" sizes="152x152" href="/html/template/default/assets/img/favicons/android-chrome-152x152.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/html/template/default/assets/img/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="/html/template/default/assets/img/favicons/android-chrome-256x256.png">
+  <link rel="icon" type="image/png" sizes="384x384" href="/html/template/default/assets/img/favicons/android-chrome-384x384.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/html/template/default/assets/img/favicons/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="36x36" href="/html/template/default/assets/img/favicons/icon-36x36.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/html/template/default/assets/img/favicons/icon-48x48.png">
+  <link rel="icon" type="image/png" sizes="72x72" href="/html/template/default/assets/img/favicons/icon-72x72.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/html/template/default/assets/img/favicons/icon-96x96.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="/html/template/default/assets/img/favicons/icon-128x128.png">
+  <link rel="icon" type="image/png" sizes="144x144" href="/html/template/default/assets/img/favicons/icon-144x144.png">
+  <link rel="icon" type="image/png" sizes="152x152" href="/html/template/default/assets/img/favicons/icon-152x152.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="/html/template/default/assets/img/favicons/icon-160x160.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/html/template/default/assets/img/favicons/icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="196x196" href="/html/template/default/assets/img/favicons/icon-196x196.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="/html/template/default/assets/img/favicons/icon-256x256.png">
+  <link rel="icon" type="image/png" sizes="384x384" href="/html/template/default/assets/img/favicons/icon-384x384.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/html/template/default/assets/img/favicons/icon-512x512.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/html/template/default/assets/img/favicons/icon-16x16.png">
+  <link rel="icon" type="image/png" sizes="24x24" href="/html/template/default/assets/img/favicons/icon-24x24.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/html/template/default/assets/img/favicons/icon-32x32.png">
+  <link rel="manifest" href="/html/template/default/assets/img/favicons/manifest.json">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/ggm-styles.css') }}">
   {% block stylesheet %}{% endblock %}
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
     $(function() {
       $.ajaxSetup({
@@ -49,12 +93,22 @@
   <link rel="stylesheet" href="{{ asset('assets/css/customize.css', 'user_data') }}">
 </head>
 <body id="page_{{ app.request.get('_route') }}" class="{{ body_class|default('other_page') }} ggm">
+
 {# Layout: BODY_AFTER #}
 {% if Layout.BodyAfter %}
     {{ include('block.twig', {'Blocks': Layout.BodyAfter}) }}
 {% endif %}
 
-<div class="ggm-wrapper">
+<!-- Debug -->
+{# <p id="device" v-bind:class="[[width_type]]">device_type class: [[width_type]]</p> #}
+<!-- Debug end -->
+
+<!-- message -->
+{# message #}
+<!-- message -->
+
+  
+  <div class="ggm-wrapper">
   <div class="ggm-header-bar"></div>
   {# Layout: HEADER #}
   {% if Layout.Header %}
@@ -67,52 +121,53 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <form class="form-inline ggm-search-from-sp">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
       <ul class="navbar-nav">
         <li class="nav-item active">
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         {% if is_granted('ROLE_USER') %}
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="{{ url('mypage') }}">
             {{ 'front.block.login.mypage'|trans }}
           </a>
         </li>
         {% if BaseInfo.option_favorite_product %}
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="{{ url('mypage_favorite') }}">
             {{ 'front.block.login.favorite'|trans }}
           </a>
         </li>
         {% endif %}
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="{{ url('logout') }}">
             {{ 'front.block.login.logout'|trans }}
           </a>
         </li>
         {% else %}
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="{{ url('entry') }}">
             {{ 'front.block.login.customer_registration'|trans }}
           </a>
         </li>
         {% if BaseInfo.option_favorite_product %}
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="{{ url('mypage_favorite') }}">
             {{ 'front.block.login.favorite'|trans }}
           </a>
         </li>
         {% endif %}
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="{{ url('mypage_login') }}">
             {{ 'front.block.login.login'|trans }}
           </a>
         </li>
         {% endif %}
-        <li class="ggm_cart">
+        <li class="ggm-blog active">
+          <a class="nav-link" href="/blog">
+            {{ 'front.block.blog.blog'|trans }}
+          </a>
+        </li>
+        <li class="ggm-cart">
           {{ include('Block/cart.twig') }}
         </li>
       </ul>
@@ -120,39 +175,30 @@
     <!-- SPでは表示しないようにする（別の場所に移動） -->
     {{ render(path('block_search_product')) }}
   </nav>
-
-  {#
-    <!-- Default Header ignore-->
-    {{ include('block.twig', {'Blocks': Layout.Header}) }}
-    <!-- Default Header end-->
-  #}
   {% endif %}
 
 
+
+
   {% if Layout.MainTop %}
-  {# 
-   - Jumbotron
-   - Display on top page only.
-  #}
     {{ include('block.twig', {'Blocks': Layout.MainTop}) }}
   {% endif %}
 
   {# Layout: CONTENTS_TOP #}
-  {# {% if Layout.ContentsTop %}
+  {% if Layout.ContentsTop %}
     <div class="ec-layoutRole__contentTop">
       {{ include('block.twig', {'Blocks': Layout.ContentsTop}) }}
     </div>
-  {% endif %} #}
+  {% endif %}
+
 
   <div class="ggm-contents">
-  <!-- ggm-contents -->
-    {# Layout: SIDE_LEFT
+    {# Layout: SIDE_LEFT #}
     {% if Layout.SideLeft %}
-        <div class="ec-layoutRole__left">
-            {{ include('block.twig', {'Blocks': Layout.SideLeft}) }}
-        </div>
+      <div class="ec-layoutRole__left">
+        {{ include('block.twig', {'Blocks': Layout.SideLeft}) }}
+      </div>
     {% endif %}
-    #}
 
     {% set layoutRoleMain = 'ggm-block' %}
     {% if Layout.ColumnNum == 2 %}
@@ -161,88 +207,88 @@
         {% set layoutRoleMain = 'ggm-block' %}
     {% endif %}
 
-    {# {% if Layout.MainTop %}
+    {% if Layout.MainTop %}
        {{ include('block.twig', {'Blocks': Layout.MainTop}) }}
-    {% endif %} #}
+    {% endif %}
 
     <div class="ggm-block-div">
+      {# Layout: MAIN_TOP #}
+      
+      {% if Layout.MainTop %}
+        <div class="ec-layoutRole__mainTop">
+          {{ include('block.twig', {'Blocks': Layout.MainTop}) }}
+        </div>
+      {% endif %}
 
-        {# Layout: MAIN_TOP #}
-        
-        {# {% if Layout.MainTop %}
-            <!-- <div class="ec-layoutRole__mainTop">
-                {{ include('block.twig', {'Blocks': Layout.MainTop}) }}
-            </div> -->
-        {% endif %} #}
+      {# MAIN AREA #}
+      {% block main %}{% endblock %}
 
-        {# MAIN AREA #}
-        {% block main %}{% endblock %}
-
-        {# Layout: MAIN_Bottom #}
-        {% if Layout.MainBottom %}
-            <div class="ec-layoutRole__mainBottom">
-                {{ include('block.twig', {'Blocks': Layout.MainBottom}) }}
-            </div>
-        {% endif %}
+      {# Layout: MAIN_Bottom #}
+      {% if Layout.MainBottom %}
+          <div class="ec-layoutRole__mainBottom">
+              {{ include('block.twig', {'Blocks': Layout.MainBottom}) }}
+          </div>
+      {% endif %}
     </div>
 
     {# Layout: SIDE_RIGHT #}
     {% if Layout.SideRight %}
-        <div class="ec-layoutRole__right">
-            {{ include('block.twig', {'Blocks': Layout.SideRight}) }}
-        </div>
+      <div class="ec-layoutRole__right">
+        {{ include('block.twig', {'Blocks': Layout.SideRight}) }}
+      </div>
     {% endif %}
-  <!-- ggm-contents end -->
-  </div>
+
+  </div><!-- ggm-contents end -->
 
   {# Layout: CONTENTS_BOTTOM #}
+  {# eyecatch block /src/Eccube/Resource/template/default/Block/eyecatch.twig #}
   {% if Layout.ContentsBottom %}
-      <div class="ec-layoutRole__contentBottom">
-          {{ include('block.twig', {'Blocks': Layout.ContentsBottom}) }}
-      </div>
+    <div class="ggm-top-product ec-layoutRole__contentBottom">
+      {{ include('block.twig', {'Blocks': Layout.ContentsBottom}) }}
+    </div>
   {% endif %}
 
 
 
 
 
-{# Layout: CONTENTS_FOOTER #}
-{% if Layout.Footer %}
-  <!-- footer -->
-  {{ include('block.twig', {'Blocks': Layout.Footer}) }}
-  <!-- footer end -->
-{% endif %}
-</div><!-- ggm-wrapper -->
+  {# Layout: CONTENTS_FOOTER #}
+  {% if Layout.Footer %}
+    <!-- footer -->
+    {{ include('block.twig', {'Blocks': Layout.Footer}) }}
+    <!-- footer end -->
+  {% endif %}
+  </div><!-- ggm-wrapper end -->
 
-<div class="ec-overlayRole"></div>
-<div class="ec-drawerRoleClose"><i class="fas fa-times"></i></div>
-<div class="ec-drawerRole">
-    {# Layout: DRAWER #}
-    {% if Layout.Drawer %}
-        {{ include('block.twig', {'Blocks': Layout.Drawer}) }}
-    {% endif %}
-</div>
+  <div class="ec-overlayRole"></div>
+  <div class="ec-drawerRoleClose"><i class="fas fa-times"></i></div>
+  <div class="ec-drawerRole">
+      {# Layout: DRAWER #}
+      {% if Layout.Drawer %}
+          {{ include('block.twig', {'Blocks': Layout.Drawer}) }}
+      {% endif %}
+  </div>
 
-<!-- Topへ戻る -->
-<div
-  id="ggm-pagetop-arrow"
-  class="ec-blockTopBtn pagetop"
-  style="
-    width:50px;
-    height:50px;
-    font-size:28px;
-    padding-top: 4px;
-    border-radius: 50%;
-    background: #666;
-  ">
-  <i class="fas fa-arrow-up"></i>
-</div>
+  <!-- Topへ戻る -->
+  <div
+    id="ggm-pagetop-arrow"
+    class="ec-blockTopBtn pagetop"
+    style="
+      width:50px;
+      height:50px;
+      font-size:28px;
+      padding-top: 4px;
+      border-radius: 50%;
+      background: #666;
+    ">
+    <i class="fas fa-arrow-up"></i>
+  </div>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
   {% include('@common/lang.twig') %}
   <script src="{{ asset('assets/js/function.js') }}"></script>
   <script src="{{ asset('assets/js/eccube.js') }}"></script>
@@ -256,5 +302,6 @@
     {{ include('snippet.twig', { snippets: plugin_snippets }) }}
   {% endif %}
   <script src="{{ asset('assets/js/customize.js', 'user_data') }}"></script>
+  <script src="/html/template/default/assets/js/ggm.js"></script>
 </body>
 </html>
