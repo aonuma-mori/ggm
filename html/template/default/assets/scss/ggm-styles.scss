@@ -359,3 +359,57 @@ body.ggm {
 }
 
 
+/**
+ * Blog
+ *
+ *
+ *
+ */
+ /* GGM Blog */
+ .ggm-blog {
+   #blog-block {
+     margin-top: 100px;
+     div.row {
+      #main-block {
+        // overflow: hidden;
+        word-break: break-all;
+        margin-bottom: 100px;
+        .blog-item {
+          margin-bottom : 100px !important;
+          .blog-title {
+            font-size: 20px;
+          }
+          .blog-summary {
+            .blog-meta {
+              .catefory {
+                display: inline;
+                a {
+                  font-size: 12px;
+                  border: 1px solid #888;
+                  padding: 3px 8px;
+                  background: #888;
+                  color: #fff;
+                }
+              }
+              .tags {
+                display: inline;
+                a {
+                  font-size: 12px;
+                  border: 1px solid #c1c1c1;
+                  padding: 3px 8px;
+                }
+              }
+            }
+
+          }
+        }
+
+       }
+       #side-block {
+        word-break: break-all;
+        margin-bottom: 100px;
+       }
+     }
+   }
+ }
+
