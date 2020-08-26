@@ -21,8 +21,36 @@
 
   <div class="container" id="blog-block">
     <div class="row">
-
       <div class="col-sm-8 col-md-9 col-lg-8" id="main-block">
+
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <div class="blog-item">
+        <div class="blog-title"><?php the_title(); ?></div>
+        <div class="blog-summary">
+          <?php if (!empty(get_the_excerpt())) {
+            $excerpt = preg_replace('/\A[\x00\s]++|[\x00\s]++\z/u', '', get_the_excerpt());
+            $excerpt = str_replace('&times; Close ', '', $excerpt);
+            $excerpt = trim($excerpt);
+            echo $excerpt;
+          } ?>
+          <div class="blog-meta">
+            <p class="datetime text-right"><?php the_time('Y.n.j(D)'); ?></p>
+            <p class="catefory">
+              <?php the_category(); ?>
+            </p>
+            <p class="tags">
+              <?php the_tags(); ?>
+            </p>
+          </div>
+        </div>
+      
+
+      </div><!-- blog-item -->
+      
+      <?php endwhile; else: ?>
+        <p>記事がありません。</p>
+      <?php endif; ?> 
+
 
         <div class="blog-item">
           <div class="blog-title">
@@ -49,6 +77,11 @@
             </div>
           </div><!-- blog-summary -->
         </div><!-- blog-item -->
+
+
+
+
+
         <div class="blog-item">
           <div class="blog-title">
           Google Cloud SDK をMac OS X環境にインストール (gcloudコマンド）
