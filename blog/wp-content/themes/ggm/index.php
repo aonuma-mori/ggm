@@ -23,90 +23,79 @@
     <div class="row">
       <div class="col-sm-8 col-md-9 col-lg-8" id="main-block">
 
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <div class="blog-item">
-        <div class="blog-title"><?php the_title(); ?></div>
-        <div class="blog-summary">
-          <?php if (!empty(get_the_excerpt())) {
-            $excerpt = preg_replace('/\A[\x00\s]++|[\x00\s]++\z/u', '', get_the_excerpt());
-            $excerpt = str_replace('&times; Close ', '', $excerpt);
-            $excerpt = trim($excerpt);
-            echo $excerpt;
-          } ?>
-          <div class="blog-meta">
-            <p class="datetime text-right"><?php the_time('Y.n.j(D)'); ?></p>
-            <p class="catefory">
-              <?php the_category(); ?>
-            </p>
-            <p class="tags">
-              <?php the_tags(); ?>
-            </p>
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <div class="blog-item">
+          <div class="blog-title">
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
           </div>
+        
+
+        </div><!-- blog-item -->
+        <?php endwhile; else: ?>
+          <div class="blog-item">記事がありません。</div>
+        <?php endif; ?>
+    
+
+
+        <div class="blog-item">
+          <div class="blog-title">
+          Google Cloud SDK をMac OS X環境にインストール (gcloudコマンド）
+          </div>
+          <div class="blog-summary">
+            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            <div class="blog-meta">
+              <p class="datetime text-right">2020-08-25 09:00</p>
+              <p class="catefory">
+                <a href="#">foo</a>
+                <a href="#">bar</a>
+                <a href="#">baz</a>
+              </p>
+              <p class="tags">
+                <a href="#">foo</a>
+                <a href="#">bar</a>
+                <a href="#">baz</a>
+              </p>
+            </div>
+          </div><!-- blog-summary -->
+        </div><!-- blog-item -->
+
+
+
+
+
+        <div class="blog-item">
+          <div class="blog-title">
+          Google Cloud SDK をMac OS X環境にインストール (gcloudコマンド）
+          </div>
+          <div class="blog-summary">
+            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            <div class="blog-meta">
+              <p class="datetime text-right">2020-08-25 09:00</p>
+              <p class="catefory">
+                <a href="#">foo</a>
+                <a href="#">bar</a>
+                <a href="#">baz</a>
+              </p>
+              <p class="tags">
+                <a href="#">foo</a>
+                <a href="#">bar</a>
+                <a href="#">baz</a>
+              </p>
+            </div>
+          </div><!-- blog-summary -->
+        </div><!-- blog-item -->
+
+        <div>
+        <?php if( function_exists("the_pagination") ) the_pagination(); ?>
         </div>
-      
-
-      </div><!-- blog-item -->
-      
-      <?php endwhile; else: ?>
-        <p>記事がありません。</p>
-      <?php endif; ?> 
-
-
-        <div class="blog-item">
-          <div class="blog-title">
-          Google Cloud SDK をMac OS X環境にインストール (gcloudコマンド）
-          </div>
-          <div class="blog-summary">
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            <div class="blog-meta">
-              <p class="datetime text-right">2020-08-25 09:00</p>
-              <p class="catefory">
-                <a href="#">foo</a>
-                <a href="#">bar</a>
-                <a href="#">baz</a>
-              </p>
-              <p class="tags">
-                <a href="#">foo</a>
-                <a href="#">bar</a>
-                <a href="#">baz</a>
-              </p>
-            </div>
-          </div><!-- blog-summary -->
-        </div><!-- blog-item -->
-
-
-
-
-
-        <div class="blog-item">
-          <div class="blog-title">
-          Google Cloud SDK をMac OS X環境にインストール (gcloudコマンド）
-          </div>
-          <div class="blog-summary">
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            <div class="blog-meta">
-              <p class="datetime text-right">2020-08-25 09:00</p>
-              <p class="catefory">
-                <a href="#">foo</a>
-                <a href="#">bar</a>
-                <a href="#">baz</a>
-              </p>
-              <p class="tags">
-                <a href="#">foo</a>
-                <a href="#">bar</a>
-                <a href="#">baz</a>
-              </p>
-            </div>
-          </div><!-- blog-summary -->
-        </div><!-- blog-item -->
 
       </div><!-- col main -->
         
