@@ -324,10 +324,16 @@ body.ggm ._message-footer {
   line-height: 28px;
   color: #666;
 }
-.ggm-blog #blog-block div.row #main-block .blog-item .blog-summary .blog-meta .catefory {
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-summary .blog-meta ul.post-categories {
   display: inline-block;
+  margin: 0;
+  margin-left: -38px;
 }
-.ggm-blog #blog-block div.row #main-block .blog-item .blog-summary .blog-meta .catefory a {
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-summary .blog-meta ul.post-categories li {
+  list-style: none;
+  display: inline;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-summary .blog-meta ul.post-categories li a {
   font-size: 12px;
   border: 1px solid #888;
   padding: 3px 8px;
@@ -339,6 +345,93 @@ body.ggm ._message-footer {
   display: inline-block;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-summary .blog-meta .tags a {
+  font-size: 12px;
+  border: 1px solid #c1c1c1;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text {
+  margin-top: 70px;
+  line-height: 26px;
+  font-size: 14px;
+  line-height: 28px;
+  color: #777;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text h1, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h2, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h3, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h4, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h5, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h6 {
+  color: #333;
+  margin-top: 20px;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text h1 {
+  font-size: 22px;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text h2 {
+  font-size: 20px;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text h3 {
+  font-size: 18px;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text h4 {
+  font-size: 16px;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text h5 {
+  font-size: 15px;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text h6 {
+  font-size: 14px;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text pre {
+  white-space: pre-wrap;
+  font-size: 14px;
+  border: 1px dotted #888;
+  padding: 10px 20px;
+  color: #888;
+  border-radius: 3px;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text pre code {
+  width: 100%;
+  overflow: hidden;
+  font-weight: normal !important;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text blockquote {
+  border-left: 3px solid #ddd;
+  padding-left: 21px;
+  margin: 25px 0px;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text p code {
+  border: 1px solid #c1c1c1;
+  padding: 2px 9px;
+  color: #888;
+  margin: 0 7px;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text p a:link, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text p a:visited {
+  color: #0090C8;
+  text-decoration: none;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text p a:hover, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text p a:active {
+  color: #0090C8;
+  text-decoration: underline;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text .blog-meta ul.post-categories {
+  display: inline-block;
+  margin: 0;
+  margin-left: -38px;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text .blog-meta ul.post-categories li {
+  list-style: none;
+  display: inline;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text .blog-meta ul.post-categories li a {
+  font-size: 12px;
+  border: 1px solid #888;
+  padding: 3px 8px;
+  background: #888;
+  color: #fff;
+  border-radius: 2px;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text .blog-meta .tags {
+  display: inline-block;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text .blog-meta .tags a {
   font-size: 12px;
   border: 1px solid #c1c1c1;
   padding: 3px 8px;

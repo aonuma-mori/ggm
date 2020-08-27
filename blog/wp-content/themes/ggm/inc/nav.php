@@ -14,6 +14,11 @@
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="/blog/#">
+            Blog
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/blog/#">
             Document
           </a>
         </li>

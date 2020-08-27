@@ -25,16 +25,12 @@
 
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="blog-item">
-          <div class="blog-title">
+          <h1 class="blog-title">
             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-          </div>
-          <div class="blog-summary">
-            <?php if (!empty(get_the_excerpt())) {
-              $excerpt = preg_replace('/\A[\x00\s]++|[\x00\s]++\z/u', '', get_the_excerpt());
-              $excerpt = str_replace('&times; Close ', '', $excerpt);
-              $excerpt = trim($excerpt);
-              echo $excerpt;
-            } ?>
+          </h1>
+          <div class="blog-text">
+            <?php the_content(); ?>
+            <br clear="both">
             <div class="blog-meta">
               <p class="datetime text-right">2020-08-25 09:00</p>
                 <?php the_category(); ?>
@@ -49,37 +45,6 @@
           <div class="blog-item">記事がありません。</div>
         <?php endif; ?>
     
-
-<!-- 
-        <div class="blog-item">
-          <div class="blog-title">
-          Google Cloud SDK をMac OS X環境にインストール (gcloudコマンド）
-          </div>
-          <div class="blog-summary">
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            <div class="blog-meta">
-              <p class="datetime text-right">2020-08-25 09:00</p>
-              <p class="catefory">
-                <a href="#">foo</a>
-                <a href="#">bar</a>
-                <a href="#">baz</a>
-              </p>
-              <p class="tags">
-                <a href="#">foo</a>
-                <a href="#">bar</a>
-                <a href="#">baz</a>
-              </p>
-            </div>
-          </div>
-        </div> -->
-
-        <div>
-        <?php if( function_exists("the_pagination") ) the_pagination(); ?>
-        </div>
       </div><!-- col main -->
         
       <div class="col-sm-4 col-md-3 col-lg-4" id="side-block">
@@ -96,6 +61,7 @@
           <li><a href="">foobar</a></li>
         </ul>
       </div><!-- col sub -->
+
     </div><!-- row -->
   </div><!-- blog-block -->
 
