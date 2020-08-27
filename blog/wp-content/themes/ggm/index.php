@@ -21,7 +21,7 @@
 
   <div class="container" id="blog-block">
     <div class="row">
-      <div class="col-sm-8 col-md-9 col-lg-8" id="main-block">
+      <div class="col-xs-12 col-sm-8 col-md-9 col-lg-7" id="main-block">
 
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="blog-item">
@@ -82,7 +82,7 @@
         </div>
       </div><!-- col main -->
         
-      <div class="col-sm-4 col-md-3 col-lg-4" id="side-block">
+      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-5" id="side-block">
         <!--sidebar-->
         <?php get_template_part('sidebar'); ?>
         <!--sidebar-->

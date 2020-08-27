@@ -40,5 +40,6 @@
     "postcss-import": "^12.0.1",
     "process": "^0.11.10",
     "sort-css-media-queries": "^1.4.3"
-  }
+  },
+  "keywords": []
 }

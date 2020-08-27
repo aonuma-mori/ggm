@@ -393,8 +393,8 @@ body.ggm ._message-footer {
   font-weight: normal !important;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text blockquote {
-  border-left: 3px solid #ddd;
-  padding-left: 21px;
+  border-left: 5px solid #ddd;
+  padding-left: 22px;
   margin: 25px 0px;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text p code {
@@ -402,6 +402,7 @@ body.ggm ._message-footer {
   padding: 2px 9px;
   color: #888;
   margin: 0 7px;
+  border-radius: 2px;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text p a:link, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text p a:visited {
   color: #0090C8;
