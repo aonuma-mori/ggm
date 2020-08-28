@@ -5,7 +5,7 @@
   <div class="ggm-wrapper ggm-blog">
   <?php get_template_part('inc/nav'); ?>
 
-  <div class="ggm-contents"> 
+  <!-- <div class="ggm-contents"> 
     <div class="ggm-block-div">
       <div id="top-banner" class="jumbotron">
       <div id="device" v-bind:class="[[width_type]]">
@@ -17,7 +17,8 @@
       Adventure is not outside man; it is within.
     </p>
     </div>
-  </div><!-- ggm-contents -->
+  </div> -->
+  <!-- ggm-contents -->
 
   <div class="container" id="blog-block">
     <div class="row">
@@ -35,7 +36,7 @@
               <p class="datetime text-right">2020-08-25 09:00</p>
                 <?php the_category(); ?>
               <p class="tags">
-              <?php the_tags(""); ?>
+              <?php the_tags("","",""); ?>
               </p>
             </div>
           </div>      

@@ -17,15 +17,6 @@
             Blog
           </a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/blog/#">
-            Document
-          </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/blog/#">
-            Gallery
-          </a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="/blog/#">
@@ -34,12 +25,14 @@
         </li>
         <li class="nav-item dropdown active">
           <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">Pages</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="dropdown-menu">
+            <a class="dropdown-item" href="/blog/#">Blog top</a>
+            <a class="dropdown-item" href="/blog/#">Gallery</a>
             <a class="dropdown-item" href="/blog/#">Link</a>
             <a class="dropdown-item" href="/blog/#">Profile</a>
             <a class="dropdown-item" href="/blog/#">About us</a>
           </div>
-      </li>
+        </li>
       </ul>
     </div>
     <!-- SPでは表示しないようにする（別の場所に移動） -->
