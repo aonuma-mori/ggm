@@ -5,7 +5,7 @@
   <div class="ggm-wrapper ggm-blog">
   <?php get_template_part('inc/nav'); ?>
 
-  <div class="ggm-contents"> 
+  <!-- <div class="ggm-contents"> 
     <div class="ggm-block-div">
       <div id="top-banner" class="jumbotron">
       <div id="device" v-bind:class="[[width_type]]">
@@ -17,33 +17,21 @@
       Adventure is not outside man; it is within.
     </p>
     </div>
-  </div><!-- ggm-contents -->
+  </div> -->
+  <!-- ggm-contents -->
 
   <div class="container" id="blog-block">
     <div class="row">
-      <div class="col-xs-12 col-sm-8 col-md-9 col-lg-7" id="main-block">
+      <div class="col-sm-8 col-md-9 col-lg-8" id="main-block">
 
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="blog-item">
-          <div class="blog-title">
+          <h1 class="blog-title">
             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-          </div>
-          <div class="blog-summary">
-            <?php
-              $thumbnail_id = get_post_thumbnail_id();
-              $eimg = wp_get_attachment_image_src( $thumbnail_id , 'small' );
-              // var_dump($eimg[0]);
-              // the_post_thumbnail('thumbnail');
-              ?>
-            <?php if ($eimg[0]) { ?>
-            <div class="trim-thumbnail float-left"><img src="<?php echo $eimg[0]; ?>" class="top-thumbnali"></div>
-            <?php } ?>
-            <?php if (!empty(get_the_excerpt())) {
-              $excerpt = preg_replace('/\A[\x00\s]++|[\x00\s]++\z/u', '', get_the_excerpt());
-              $excerpt = str_replace('&times; Close ', '', $excerpt);
-              $excerpt = trim($excerpt);
-              echo $excerpt;
-            } ?>
+          </h1>
+          <div class="blog-text">
+            <?php the_content(); ?>
+            <br clear="both">
             <div class="blog-meta">
               <p class="datetime text-right">2020-08-25 09:00</p>
                 <?php the_category(); ?>
@@ -58,40 +46,9 @@
           <div class="blog-item">記事がありません。</div>
         <?php endif; ?>
     
-
-<!-- 
-        <div class="blog-item">
-          <div class="blog-title">
-          Google Cloud SDK をMac OS X環境にインストール (gcloudコマンド）
-          </div>
-          <div class="blog-summary">
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            <div class="blog-meta">
-              <p class="datetime text-right">2020-08-25 09:00</p>
-              <p class="catefory">
-                <a href="#">foo</a>
-                <a href="#">bar</a>
-                <a href="#">baz</a>
-              </p>
-              <p class="tags">
-                <a href="#">foo</a>
-                <a href="#">bar</a>
-                <a href="#">baz</a>
-              </p>
-            </div>
-          </div>
-        </div> -->
-
-        <div>
-        <?php if( function_exists("the_pagination") ) the_pagination(); ?>
-        </div>
       </div><!-- col main -->
         
-      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-5" id="side-block">
+      <div class="col-sm-4 col-md-3 col-lg-4" id="side-block">
         <!--sidebar-->
         <?php get_template_part('sidebar'); ?>
         <!--sidebar-->
@@ -105,6 +62,7 @@
           <li><a href="">foobar</a></li>
         </ul>
       </div><!-- col sub -->
+
     </div><!-- row -->
   </div><!-- blog-block -->
 
