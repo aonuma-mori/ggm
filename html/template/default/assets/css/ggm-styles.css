@@ -375,6 +375,7 @@ body.ggm ._message-footer {
   border: 1px solid #c1c1c1;
   padding: 3px 8px;
   border-radius: 2px;
+  margin-right: 5px;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text {
   margin-top: 70px;
@@ -382,6 +383,7 @@ body.ggm ._message-footer {
   font-size: 14px;
   line-height: 28px;
   color: #333;
+  word-wrap: keep-all;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h1, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h2, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h3, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h4, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h5, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h6 {
   color: #333;
@@ -472,6 +474,13 @@ body.ggm ._message-footer {
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text .blog-meta .tags a:hover, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text .blog-meta .tags a:active {
   color: #888;
   text-decoration: none;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text #imageblock {
+  background: #fff !important;
+  margin: 0;
+  padding: 0;
+  float: left;
+  margin-right: 15px;
 }
 .ggm-blog #blog-block div.row #side-block {
   word-break: break-all;

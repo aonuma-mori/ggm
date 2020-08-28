@@ -332,11 +332,7 @@ body.ggm {
       line-height: 40px;
       opacity: 0.8;
       background-color: #9da3a9;
-      
     }
-
-
-
   }//.ggm-wrapper
 
 
@@ -439,6 +435,7 @@ body.ggm {
                   border: 1px solid #c1c1c1;
                   padding: 3px 8px;
                   border-radius: 2px;
+                  margin-right: 5px;
                 }
               }
             }
@@ -449,6 +446,7 @@ body.ggm {
             font-size: 14px;
             line-height: 28px;
             color: #333;
+            word-wrap: keep-all;
             // markdown
             h1,h2,h3,h4,h5,h6 {
               color: #333;
@@ -534,7 +532,14 @@ body.ggm {
                 }
               }
             }
-          }
+            #imageblock {
+              background: #fff !important;
+              margin: 0;
+              padding: 0;
+              float: left;
+              margin-right: 15px;
+            }
+          }//blog-text
         }
 
        }
