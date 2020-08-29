@@ -57,3 +57,4 @@ function the_pagination() {
   ) );
   echo '</div>';
 }
+
