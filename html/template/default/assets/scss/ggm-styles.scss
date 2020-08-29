@@ -143,6 +143,12 @@ body.ggm {
           border: 1px solid #c1c1c1 !important;
         }
       }
+      button.navbar-toggler {
+        border: none;
+      }
+      button.navbar-toggler:active {
+        border: none;
+      }
     }
 
     //検索フォームのshow/hide
@@ -474,10 +480,11 @@ body.ggm {
             }
             blockquote {
               border-left: 5px solid #ddd;
-              padding-left: 22px;
-              margin: 25px 0px;
+              padding-left: 23px;
+              margin: 25px 10px;
             }
             p {
+              word-wrap: keep-all !important;
               code {
                 border: 1px solid #c1c1c1;
                 padding: 2px 9px;
