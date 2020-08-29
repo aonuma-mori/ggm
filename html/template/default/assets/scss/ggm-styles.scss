@@ -143,6 +143,12 @@ body.ggm {
           border: 1px solid #c1c1c1 !important;
         }
       }
+      button.navbar-toggler {
+        border: none;
+      }
+      button.navbar-toggler:active {
+        border: none;
+      }
     }
 
     //検索フォームのshow/hide
@@ -332,11 +338,7 @@ body.ggm {
       line-height: 40px;
       opacity: 0.8;
       background-color: #9da3a9;
-      
     }
-
-
-
   }//.ggm-wrapper
 
 
@@ -439,6 +441,7 @@ body.ggm {
                   border: 1px solid #c1c1c1;
                   padding: 3px 8px;
                   border-radius: 2px;
+                  margin-right: 5px;
                 }
               }
             }
@@ -449,6 +452,7 @@ body.ggm {
             font-size: 14px;
             line-height: 28px;
             color: #333;
+            word-wrap: keep-all;
             // markdown
             h1,h2,h3,h4,h5,h6 {
               color: #333;
@@ -476,10 +480,11 @@ body.ggm {
             }
             blockquote {
               border-left: 5px solid #ddd;
-              padding-left: 22px;
-              margin: 25px 0px;
+              padding-left: 23px;
+              margin: 25px 10px;
             }
             p {
+              word-wrap: keep-all !important;
               code {
                 border: 1px solid #c1c1c1;
                 padding: 2px 9px;
@@ -534,7 +539,14 @@ body.ggm {
                 }
               }
             }
-          }
+            #imageblock {
+              background: #fff !important;
+              margin: 0;
+              padding: 0;
+              float: left;
+              margin-right: 15px;
+            }
+          }//blog-text
         }
 
        }
