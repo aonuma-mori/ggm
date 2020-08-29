@@ -37,6 +37,10 @@ if (!isset($_SERVER['APP_ENV'])) {
 $env = isset($_SERVER['APP_ENV']) ? $_SERVER['APP_ENV'] : 'dev';
 $debug = isset($_SERVER['APP_DEBUG']) ? $_SERVER['APP_DEBUG'] : ('prod' !== $env);
 
+// env souce
+// var_dump("<-- ".$env." -->");
+// var_dump("<-- ".$debug." -->");
+
 if ($debug) {
     umask(0000);
 

@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "composer/ca-bundle",
-            "version": "1.2.4",
+            "version": "1.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "10bb96592168a0f8e8f6dcde3532d9fa50b0b527"
+                "reference": "8a7ecad675253e4654ea05505233285377405215"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/10bb96592168a0f8e8f6dcde3532d9fa50b0b527",
-                "reference": "10bb96592168a0f8e8f6dcde3532d9fa50b0b527",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/8a7ecad675253e4654ea05505233285377405215",
+                "reference": "8a7ecad675253e4654ea05505233285377405215",
                 "shasum": ""
             },
             "require": {
@@ -60,7 +60,25 @@
                 "ssl",
                 "tls"
             ],
+<<<<<<< HEAD
             "time": "2019-08-30T08:44:50+00:00"
+=======
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-08-23T12:54:47+00:00"
+>>>>>>> 5307ffc44f650fc8cd88d2bbb708ccef83fcedaa
         },
         {
             "name": "composer/composer",
@@ -266,6 +284,7 @@
         },
         {
             "name": "composer/xdebug-handler",
+<<<<<<< HEAD
             "version": "1.4.0",
             "source": {
                 "type": "git",
@@ -276,6 +295,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/cbe23383749496fe0f373345208b79568e4bc248",
                 "reference": "cbe23383749496fe0f373345208b79568e4bc248",
+=======
+            "version": "1.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/xdebug-handler.git",
+                "reference": "ebd27a9866ae8254e873866f795491f02418c5a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/ebd27a9866ae8254e873866f795491f02418c5a5",
+                "reference": "ebd27a9866ae8254e873866f795491f02418c5a5",
+>>>>>>> 5307ffc44f650fc8cd88d2bbb708ccef83fcedaa
                 "shasum": ""
             },
             "require": {
@@ -306,7 +337,25 @@
                 "Xdebug",
                 "performance"
             ],
+<<<<<<< HEAD
             "time": "2019-11-06T16:40:04+00:00"
+=======
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-08-19T10:27:58+00:00"
+>>>>>>> 5307ffc44f650fc8cd88d2bbb708ccef83fcedaa
         },
         {
             "name": "doctrine/annotations",
@@ -2538,6 +2587,7 @@
         },
         {
             "name": "nikic/php-parser",
+<<<<<<< HEAD
             "version": "v4.3.0",
             "source": {
                 "type": "git",
@@ -2548,6 +2598,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/9a9981c347c5c49d6dfe5cf826bb882b824080dc",
                 "reference": "9a9981c347c5c49d6dfe5cf826bb882b824080dc",
+=======
+            "version": "v4.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/PHP-Parser.git",
+                "reference": "aaee038b912e567780949787d5fe1977be11a778"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/aaee038b912e567780949787d5fe1977be11a778",
+                "reference": "aaee038b912e567780949787d5fe1977be11a778",
+>>>>>>> 5307ffc44f650fc8cd88d2bbb708ccef83fcedaa
                 "shasum": ""
             },
             "require": {
@@ -2555,8 +2617,13 @@
                 "php": ">=7.0"
             },
             "require-dev": {
+<<<<<<< HEAD
                 "ircmaxell/php-yacc": "0.0.5",
                 "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0"
+=======
+                "ircmaxell/php-yacc": "^0.0.7",
+                "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0 || ^9.0"
+>>>>>>> 5307ffc44f650fc8cd88d2bbb708ccef83fcedaa
             },
             "bin": [
                 "bin/php-parse"
@@ -2564,7 +2631,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "4.3-dev"
+=======
+                    "dev-master": "4.9-dev"
+>>>>>>> 5307ffc44f650fc8cd88d2bbb708ccef83fcedaa
                 }
             },
             "autoload": {
@@ -2586,7 +2657,11 @@
                 "parser",
                 "php"
             ],
+<<<<<<< HEAD
             "time": "2019-11-08T13:50:10+00:00"
+=======
+            "time": "2020-08-18T19:48:01+00:00"
+>>>>>>> 5307ffc44f650fc8cd88d2bbb708ccef83fcedaa
         },
         {
             "name": "ocramius/package-versions",
@@ -3131,6 +3206,7 @@
         },
         {
             "name": "seld/jsonlint",
+<<<<<<< HEAD
             "version": "1.7.2",
             "source": {
                 "type": "git",
@@ -3141,6 +3217,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/e2e5d290e4d2a4f0eb449f510071392e00e10d19",
                 "reference": "e2e5d290e4d2a4f0eb449f510071392e00e10d19",
+=======
+            "version": "1.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/jsonlint.git",
+                "reference": "590cfec960b77fd55e39b7d9246659e95dd6d337"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/590cfec960b77fd55e39b7d9246659e95dd6d337",
+                "reference": "590cfec960b77fd55e39b7d9246659e95dd6d337",
+>>>>>>> 5307ffc44f650fc8cd88d2bbb708ccef83fcedaa
                 "shasum": ""
             },
             "require": {
@@ -3176,7 +3264,21 @@
                 "parser",
                 "validator"
             ],
+<<<<<<< HEAD
             "time": "2019-10-24T14:27:39+00:00"
+=======
+            "funding": [
+                {
+                    "url": "https://github.com/Seldaek",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/seld/jsonlint",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-08-25T06:56:57+00:00"
+>>>>>>> 5307ffc44f650fc8cd88d2bbb708ccef83fcedaa
         },
         {
             "name": "seld/phar-utils",
@@ -4574,6 +4676,7 @@
         },
         {
             "name": "symfony/flex",
+<<<<<<< HEAD
             "version": "v1.4.8",
             "source": {
                 "type": "git",
@@ -4584,6 +4687,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/flex/zipball/f5bfc79c1f5bed6b2bb4ca9e49a736c2abc03e8f",
                 "reference": "f5bfc79c1f5bed6b2bb4ca9e49a736c2abc03e8f",
+=======
+            "version": "v1.9.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/flex.git",
+                "reference": "08882d1d639c4e58a6e4cd48411ed8a622dd206e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/08882d1d639c4e58a6e4cd48411ed8a622dd206e",
+                "reference": "08882d1d639c4e58a6e4cd48411ed8a622dd206e",
+>>>>>>> 5307ffc44f650fc8cd88d2bbb708ccef83fcedaa
                 "shasum": ""
             },
             "require": {
@@ -4619,7 +4734,25 @@
                 }
             ],
             "description": "Composer plugin for Symfony",
+<<<<<<< HEAD
             "time": "2019-11-14T09:25:51+00:00"
+=======
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-08-25T08:51:56+00:00"
+>>>>>>> 5307ffc44f650fc8cd88d2bbb708ccef83fcedaa
         },
         {
             "name": "symfony/form",
@@ -5096,6 +5229,7 @@
         },
         {
             "name": "symfony/maker-bundle",
+<<<<<<< HEAD
             "version": "v1.14.3",
             "source": {
                 "type": "git",
@@ -5106,6 +5240,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/c864e7f9b8d1e1f5f60acc3beda11299f637aded",
                 "reference": "c864e7f9b8d1e1f5f60acc3beda11299f637aded",
+=======
+            "version": "v1.21.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/maker-bundle.git",
+                "reference": "1a3202324f264b96f6aebd5967ee2d708e6abf06"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/1a3202324f264b96f6aebd5967ee2d708e6abf06",
+                "reference": "1a3202324f264b96f6aebd5967ee2d708e6abf06",
+>>>>>>> 5307ffc44f650fc8cd88d2bbb708ccef83fcedaa
                 "shasum": ""
             },
             "require": {
@@ -5160,7 +5306,25 @@
                 "scaffold",
                 "scaffolding"
             ],
+<<<<<<< HEAD
             "time": "2019-11-07T00:56:03+00:00"
+=======
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-08-25T20:53:07+00:00"
+>>>>>>> 5307ffc44f650fc8cd88d2bbb708ccef83fcedaa
         },
         {
             "name": "symfony/monolog-bridge",

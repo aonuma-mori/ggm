@@ -24,6 +24,7 @@ class TopController extends AbstractController
      */
     public function index()
     {
+        // var_dump("foobar");
         return [];
     }
 }
