@@ -304,7 +304,7 @@ body.ggm {
 
     /* footer */
     footer {
-      background: #fff;
+      // background: #000;
       // margin: 0;
       padding: 70px 0px 0px 0px;
       .ggm-footer-contents {
@@ -579,6 +579,11 @@ body.ggm {
                   font-size: 13px;
                   margin-left: -28px;
                 }
+                li:before {
+                  content: "\f105";
+                  font-family:"FontAwesome","Font Awesome 5 Free","Font Awesome 5 Brands";
+                  font-weight: 400;
+                }
               }
               .tagcloud {
                 // background: #000;
@@ -587,6 +592,7 @@ body.ggm {
                   font-size: 12px;
                   padding: 3px 8px;
                   border-radius: 2px;
+                  display: inline-block;
                 }
               }
             }

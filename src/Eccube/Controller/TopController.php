@@ -18,13 +18,17 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TopController extends AbstractController
 {
+  /**
+   * @Route("/", name="homepage")
+   * @Template("index.twig")
+   */
+  public function index()
+  {
     /**
-     * @Route("/", name="homepage")
-     * @Template("index.twig")
+     * RSSを読み込む
+     * 
      */
-    public function index()
-    {
-        // var_dump("foobar");
-        return [];
-    }
+    // var_dump("foobar");
+    return [];
+  }
 }

@@ -42,4 +42,14 @@ else
   echo "Here is not dev env."
 fi
 
+# comoposer optimaze
+if [ $ENV = "prod" ];  then
+/usr/local/php7.1/bin/php composer.phar update -o
+/usr/local/php7.1/bin/php composer.phar dump-autoload -o
+else
+php composer.phar update -o
+php composer.phar dump-autoload -o
+fi
+
 exit
+

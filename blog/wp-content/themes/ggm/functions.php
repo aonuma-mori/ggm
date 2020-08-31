@@ -58,3 +58,13 @@ function the_pagination() {
   echo '</div>';
 }
 
+/* 抜粋の文字数調整 */
+function twpp_change_excerpt_length( $length ) {
+  return 400; 
+}
+add_filter( 'excerpt_length', 'twpp_change_excerpt_length', 999 );
+/* 抜粋の[...]の変更 */
+function twpp_change_excerpt_more( $more ) {
+  return '......';
+}
+add_filter( 'excerpt_more', 'twpp_change_excerpt_more' );

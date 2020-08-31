@@ -102,9 +102,10 @@
     </div>
   </div>
 
+  <?php get_template_part('inc/footer'); ?>   
   </div><!-- ggm-wrapper -->
 
-  <?php get_template_part('inc/footer'); ?>   
+
             
   <!-- Topへ戻る -->
   <div
@@ -127,9 +128,9 @@
   <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
   <script>
-var eccube_lang = {
-    "common.delete_confirm":"削除してもよろしいですか?"
-}
+    var eccube_lang = {
+        "common.delete_confirm":"削除してもよろしいですか?"
+    }
   </script>  <script src="/html/template/default/assets/js/function.js"></script>
   <script src="/html/template/default/assets/js/eccube.js"></script>
     <script>

@@ -33,16 +33,19 @@
               $eimg = wp_get_attachment_image_src( $thumbnail_id , 'small' );
               // var_dump($eimg[0]);
               // the_post_thumbnail('thumbnail');
-              ?>
+            ?>
             <?php if ($eimg[0]) { ?>
             <div class="trim-thumbnail float-left"><img src="<?php echo $eimg[0]; ?>" class="top-thumbnali"></div>
             <?php } ?>
-            <?php if (!empty(get_the_excerpt())) {
+            <?php
+            // echo get_the_excerpt();
+            if (!empty(get_the_excerpt())) {
               $excerpt = preg_replace('/\A[\x00\s]++|[\x00\s]++\z/u', '', get_the_excerpt());
               $excerpt = str_replace('&times; Close ', '', $excerpt);
               $excerpt = trim($excerpt);
-              echo $excerpt;
-            } ?>
+              echo $excerpt. " "."<a href='".get_the_permalink()."'>read more.</a>";
+            }
+            ?>
             <div class="blog-meta">
               <p class="datetime text-right">2020-08-25 09:00</p>
                 <?php the_category(); ?>
