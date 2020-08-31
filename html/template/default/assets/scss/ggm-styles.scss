@@ -575,15 +575,15 @@ body.ggm {
               }
               ul {
                 li {
-                  list-style: none;
+                  list-style: circle;
                   font-size: 13px;
                   margin-left: -28px;
                 }
-                li:before {
-                  content: "\f105";
-                  font-family:"FontAwesome","Font Awesome 5 Free","Font Awesome 5 Brands";
-                  font-weight: 400;
-                }
+                // li:before {
+                //   content: "\f105";
+                //   font-family:"FontAwesome","Font Awesome 5 Free","Font Awesome 5 Brands";
+                //   font-weight: 400;
+                // }
               }
               .tagcloud {
                 // background: #000;

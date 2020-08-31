@@ -505,14 +505,9 @@ body.ggm ._message-footer {
   font-size: 16px;
 }
 .ggm-blog #blog-block div.row #side-block #sidebar ul li.widget ul li {
-  list-style: none;
+  list-style: circle;
   font-size: 13px;
   margin-left: -28px;
-}
-.ggm-blog #blog-block div.row #side-block #sidebar ul li.widget ul li:before {
-  content: "";
-  font-family: "FontAwesome", "Font Awesome 5 Free", "Font Awesome 5 Brands";
-  font-weight: 400;
 }
 .ggm-blog #blog-block div.row #side-block #sidebar ul li.widget .tagcloud a {
   border: 1px solid #c1c1c1;
