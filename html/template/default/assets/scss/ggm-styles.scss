@@ -294,16 +294,45 @@ body.ggm {
       }
       .ggm-topic-more {
         font-size: 14px;
+        margin-bottom: 50px;
       }
     }
 
     /* ggm-news */
     .ggm-news {
-      background: #000;
+      margin-top: 50px;
+      h3.ggm-news-h3 {
+        font-size: 19px;
+        letter-spacing: 2px;
+        margin-bottom: 50px;
+      }
+      h4.ggm-news-title {
+        font-size: 17px;
+        height: 37px;
+        line-height: 30px;
+      }
+      p.ggm-news-date {
+        font-size: 10px;
+      }
+      p.ggm-news-summary {
+        font-size: 14px;
+        line-height: 26px;
+        .ggm-news-image {
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+          float: left;
+          margin-right: 26px;
+        }
+      }
+      .ggm-news-more {
+        font-size: 14px;
+      }
     }
 
     /* footer */
     footer {
+      margin-top: 80px;
       // background: #000;
       // margin: 0;
       padding: 70px 0px 0px 0px;

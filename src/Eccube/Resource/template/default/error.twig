@@ -11,28 +11,75 @@ file that was distributed with this source code.
 #}
 <html lang="{{ eccube_config.locale }}">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{ error_title }}</title>
-    <link rel="icon" href="{{ asset('assets/img/common/favicon.ico', 'user_data') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ error_title }}</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="content-language" content="ja">
+  <link rel="icon" href="{{ asset('assets/img/common/favicon.ico', 'user_data') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+  <link rel="icon" href="/html/template/admin/assets/img/favicon.ico">
+  <!-- // bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="/html/template/default/assets/css/gmm-styles.css"> -->
+  <style type="text/css">
+    body {
+      background: #fff;
+      color: #555;
+    }
+    body nav.navbar p.navbar-brand a:link,
+    body nav.navbar p.navbar-brand a:visited {
+      color: #000;
+    }
+    body nav.navbar p.navbar-brand a:hover,
+    body nav.navbar p.navbar-brand a:active {
+      text-decoration: none;
+    }
+    /* Error: 401 403 404 500 */ }
+    body #message {
+      margin-top: 10%; }
+    body #message #message-title {
+      margin: 0 auto;
+      font-size: 24px;
+      width: 80%; }
+    body #message-box {
+      margin-top: 10%;
+      margin: 10%; }
+    body ._message-footer {
+      margin: auto 0;
+      width: 100%;
+      position: fixed;
+      bottom: 10%; }
+  /*# sourceMappingURL=gmm-styles.css.map */
+  </style>
+
+  <!-- // jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>
+    // alert();
+  </script>
+  </head>
 <body>
-<div class="ec-layoutRole">
-    <div class="ec-404Role">
-        <div class="ec-off4Grid">
-            <div class="ec-off4Grid__cell">
-                <div style="font-size:100px;text-align:center;">
-                    <div class="ec-404Role__icon ec-icon">
-                        <img src="{{ asset('assets/icon/exclamation-pale.svg') }}" alt="">
-                    </div>
-                </div>
-                <p class="ec-404Role__title ec-reportHeading">{{ error_title }}</p>
-                <p class="ec-404Role__description ec-reportDescription">{{ error_message }}</p>
-                <a class="ec-blockBtn--cancel" href="{{ url('homepage') }}">{{ 'common.go_to_top'|trans }}</a>
-            </div>
-        </div>
-    </div>
-</div>
+
+
+{# {{ error_title }}
+<a class="ec-blockBtn--cancel" href="{{ url('homepage') }}">{{ 'common.go_to_top'|trans }}</a>
+{{ error_message }}
+{{ asset('assets/icon/exclamation-pale.svg') }} #}
+
+<nav class="navbar navbar-light bg-light">
+ <p class="navbar-brand"><a href="/">GGM</a></p>
+</nav>
+  <div id="message" class="col text-center">
+    <span id="message-title">{{ error_title }}</span>
+    <p id="message-box">
+      {{ error_message }}
+    </p>
+  </div>
+  <footer class="_message-footer">
+    <p class="copy-right text-center">copyright (c) ぐるぐる漫月堂 all rights reserved.</p>
+  </footer>
+
 </body>
 </html>

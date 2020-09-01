@@ -237,8 +237,16 @@
       {% block main %}{% endblock %}
 
       {# Layout: MAIN_Bottom #}
+      {#
+      * トップページのメインブロック部分 class:ggm-main-block
+      * - eyecatch-block
+      * - ggm-topic
+      * - 新着情報
+      * - カテゴリー(削除)
+      * - NEWS
+      #}
       {% if Layout.MainBottom %}
-          <div class="ec-layoutRole__mainBottom">
+          <div class="ggm-main-block ec-layoutRole__mainBottom">
               {{ include('block.twig', {'Blocks': Layout.MainBottom}) }}
           </div>
       {% endif %}

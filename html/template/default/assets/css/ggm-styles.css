@@ -254,11 +254,40 @@ body.ggm .ggm-wrapper .ggm-topic p.ggm-topic-summary .ggm-topic-image {
 }
 body.ggm .ggm-wrapper .ggm-topic .ggm-topic-more {
   font-size: 14px;
+  margin-bottom: 50px;
 }
 body.ggm .ggm-wrapper .ggm-news {
-  background: #000;
+  margin-top: 50px;
+}
+body.ggm .ggm-wrapper .ggm-news h3.ggm-news-h3 {
+  font-size: 19px;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+body.ggm .ggm-wrapper .ggm-news h4.ggm-news-title {
+  font-size: 17px;
+  height: 37px;
+  line-height: 30px;
+}
+body.ggm .ggm-wrapper .ggm-news p.ggm-news-date {
+  font-size: 10px;
+}
+body.ggm .ggm-wrapper .ggm-news p.ggm-news-summary {
+  font-size: 14px;
+  line-height: 26px;
+}
+body.ggm .ggm-wrapper .ggm-news p.ggm-news-summary .ggm-news-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 26px;
+}
+body.ggm .ggm-wrapper .ggm-news .ggm-news-more {
+  font-size: 14px;
 }
 body.ggm .ggm-wrapper footer {
+  margin-top: 80px;
   padding: 70px 0px 0px 0px;
 }
 body.ggm .ggm-wrapper footer .ggm-footer-contents {

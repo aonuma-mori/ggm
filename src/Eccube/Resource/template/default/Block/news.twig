@@ -2,6 +2,21 @@
   This file is part of GGM
   Copyright(c) GGM All Rights Reserved.
 #}
-{# Blog RSSののnewsカテゴリーだけ読み込み #}
+{% set NewsList = repository('Eccube\\Entity\\News').getList() %}
 
-$rss = simplexml_load_file( $url );
+<div class="ggm-news container">
+<h3 class="ggm-news-h3">NEWS</h3>
+  <div class="row">
+    {% for News in NewsList %}
+    <div class="col-md-6">
+    <h4 class="ggm-news-title">{{ News.title }}</h4>
+    　<p class="ggm-news-date">{{ News.publish_date|date_day }}</p>
+      <p class="ggm-news-summary">{{ News.description|raw|nl2br }}
+      {% if News.url %}
+          <a href="{{ News.url }}" {% if News.link_method == '1' %}target="_blank"{% endif %}>...{{ 'front.block.news.see_details'|trans }}</a>
+      {% endif %}
+      </p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
