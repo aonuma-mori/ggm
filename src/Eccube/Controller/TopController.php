@@ -25,7 +25,7 @@ class TopController extends AbstractController
   public function index()
   {
     /**
-     * RSSを読み込む
+     * RSSを読み込む?(やめた。面倒なので。)
      * 
      */
     // var_dump("foobar");

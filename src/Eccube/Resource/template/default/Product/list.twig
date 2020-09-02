@@ -1,12 +1,8 @@
 {#
-This file is part of EC-CUBE
+  This file is part of GGM
+  Copyright(c) GGM All Rights Reserved.
 
-Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
-
-http://www.ec-cube.co.jp/
-
-For the full copyright and license information, please view the LICENSE
-file that was distributed with this source code.
+  商品検索の結果画面
 #}
 {% extends 'default_frame.twig' %}
 
@@ -90,6 +86,18 @@ file that was distributed with this source code.
 {% endblock %}
 
 {% block main %}
+{# ここからコンテンツ #}
+<div class="container ggm-product-list">
+  <div class="row">
+    <div class="col-sm-6 col-md-3 col-lg-4">
+      foo
+    </div>
+    <div class="col-sm-6 col-md-3 col-lg-4">
+      bar
+    </div>
+  </div>
+</div>
+hoge
     {% if search_form.category_id.vars.errors|length > 0 %}
         <div class="ec-searchnavRole">
             <p class="errormsg text-danger">{{ 'front.product.search__category_not_found'|trans }}</p>
