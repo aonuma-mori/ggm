@@ -4,6 +4,42 @@ body.ggm {
   font-family: "Noto Sans JP", sans-serif !important;
   margin: 0;
 
+  /* 検索フォームのshow/hide */
+  @media (max-width: 991px) {
+    #search-form-pc { display: none; }
+    #search-form-sp { display: block; }
+  }
+  @media (min-width: 991px) {
+    #search-form-pc { display: block; }
+    #search-form-sp { display: none; }
+  }
+  #search-form-pc, #search-form-sp {
+    input.search-name {
+      border-radius: 5px 0px 0px 5px;
+      margin-right: -14px !important;
+      border: 1px solid #c1c1c1 !important;
+      // height: 30px;
+    }
+    input.search-name::placeholder {
+      color: #ccc;
+    }
+    button.btn {
+      margin-left: -13px !important;
+      border-radius: 0px 5px 5px 0px;
+      background: #f5f5f5;
+      color: #888;
+      border: 1px solid #c1c1c1 !important;
+    }
+  }
+  #search-form-sp {
+    margin-left: -2px;
+    margin-top: 10px;
+    margin-bottom: 13px;
+  }
+
+
+
+
   /* Defoult link a: */
   a {
     text-decoration: none;
@@ -104,62 +140,55 @@ body.ggm {
         }
       }
 
-      /* Search form */
-      form.ggm-search-from {
-        // background: #000;
-        input.search-name {
-          border-radius: 5px 0px 0px 5px;
-          margin-right: -14px !important;
-          border: 1px solid #c1c1c1 !important;
-          // height: 30px;
-        }
-        input.search-name::placeholder {
-          color: #ccc;
-        }
-        button.btn {
-          margin-left: -13px !important;
-          border-radius: 0px 5px 5px 0px;
-          background: #f5f5f5;
-          color: #888;
-          border: 1px solid #c1c1c1 !important;
-        }
-      }
-      form.ggm-search-from {
-        // background: #000;
-        input.search-name {
-          border-radius: 5px 0px 0px 5px;
-          margin-right: -14px !important;
-          border: 1px solid #c1c1c1 !important;
-          // height: 30px;
-        }
-        input.search-name::placeholder {
-          color: #ccc;
-        }
-        button.btn {
-          margin-left: -13px !important;
-          border-radius: 0px 5px 5px 0px;
-          background: #f5f5f5;
-          color: #888;
-          border: 1px solid #c1c1c1 !important;
-        }
-      }
-      button.navbar-toggler {
-        border: none;
-      }
-      button.navbar-toggler:active {
-        border: none;
-      }
-    }
 
-    //検索フォームのshow/hide
-    @media (max-width: 991px) {
-      .ggm-search-from { display: none; }
-      .ggm-search-from-sp { display: block; }
-    }
-    @media (min-width: 991px) {
-      .ggm-search-from { display: block; }
-      .ggm-search-from-sp { display: none; }
-    }
+      // /* Search form */
+      // form.ggm-search-from {
+      //   // background: #000;
+      //   input.search-name {
+      //     border-radius: 5px 0px 0px 5px;
+      //     margin-right: -14px !important;
+      //     border: 1px solid #c1c1c1 !important;
+      //     // height: 30px;
+      //   }
+      //   input.search-name::placeholder {
+      //     color: #ccc;
+      //   }
+      //   button.btn {
+      //     margin-left: -13px !important;
+      //     border-radius: 0px 5px 5px 0px;
+      //     background: #f5f5f5;
+      //     color: #888;
+      //     border: 1px solid #c1c1c1 !important;
+      //   }
+      // }
+      // PC
+      // form.ggm-search-from {
+      //   // background: #000;
+      //   input.search-name {
+      //     border-radius: 5px 0px 0px 5px;
+      //     margin-right: -14px !important;
+      //     border: 1px solid #c1c1c1 !important;
+      //     // height: 30px;
+      //   }
+      //   input.search-name::placeholder {
+      //     color: #ccc;
+      //   }
+      //   button.btn {
+      //     margin-left: -13px !important;
+      //     border-radius: 0px 5px 5px 0px;
+      //     background: #f5f5f5;
+      //     color: #888;
+      //     border: 1px solid #c1c1c1 !important;
+      //   }
+      // }
+      // button.navbar-toggler {
+      //   border: none;
+      // }
+      // button.navbar-toggler:active {
+      //   border: none;
+      // }
+
+    } // nav
 
     /* TOPバナー　Jumbotron */ 
     /* TOPバナー image */
