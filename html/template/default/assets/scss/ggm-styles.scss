@@ -428,6 +428,85 @@ body.ggm {
 }
 
 
+/* page_product_list */
+body#page_product_list {
+  .ggm-wrapper {
+    .ggm-contents {
+      .ggm-block-div {
+        .ec-searchnavRole {
+
+        }
+        .ggm-ec-product-block {
+          background: #fff;
+          ul.ggm-ec-product-grid {
+            li.ggm-ec-product-item {
+              // background: #000;
+              margin-top: 30px;
+              a.ggm-ec-product-item-ancher {
+                p.ggm-ec-product-item-image {
+                  // border: 1px solid #c1c1c1;
+                  img {
+                    border-radius: 2px;
+                  }
+                }
+              }
+              .ggm-product-item-from {
+
+              }
+              .ggm-product-btn {
+                button {
+                  background: #880000;
+                  border-color: #880000;
+                  width: 80%;
+                  margin: 0 auto;
+                  border-radius: 3px;
+                  font-weight: normal;
+                }
+              }
+            }
+          }
+
+        }
+        .ggm-ec-modal {
+          font-size: 13px;
+          font-weight: normal;
+          .ggm-ec-modal-wrap {
+            // background: #000;
+            border: 1px solid #c1c1c1;
+            border-radius: 2px;
+            .ggm-ec-modal-box {
+              .ggm-ec-role {
+                
+                label {
+                  font-weight: normal;
+                  border-radius: 2px;
+                  background: #777;
+                  border: 1px #777 solid;
+                  .ggm-ec-icon {
+                    img {
+                      max-width: 40px !important;
+                      max-height: 40px !important;
+                    }
+                  }
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
 /**
  * Blog (wordpress)
  * 
