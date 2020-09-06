@@ -71,3 +71,6 @@ ggm-utirily
 
 #blog
 blog/wp-config.php
+
+# mac
+*.icloud
