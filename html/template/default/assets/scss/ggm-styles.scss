@@ -541,7 +541,6 @@ body#page_product_list {
                   }
                 }
               }
-
             }
           }
         }
@@ -550,6 +549,49 @@ body#page_product_list {
   }
 }
 
+/* page_product_detail (single) */
+body#page_product_detail {
+  
+  .ggm-wrapper {
+    .ggm-contents {
+      .ggm-block-div {
+        margin-top: 100px;
+        .ggm-ec-product-role {
+          .ggm-ec-grid2 {
+            .ggm-ec-grid2-cell {
+              
+              //画像
+              .ggm-ec-slider-item-role {
+                // background: #00ffff;
+              }
+              //商品情報
+              .ggm-ec-productRole-profile {
+                // background: #c1c1c1;
+                .ggm-ec-heading-title {
+                  font-size: 18px;
+                  letter-spacing: 2px;
+                }
+                ul.ggm-ec-product-role-tags {
+                  li.ggm-ec-product-role-tag {
+
+                  }
+                }
+                .ggm-ec-product-role-price-regular-price {
+                  font-size: 13px;
+                }
+                .ggm-ec-product-role-price {
+                  font-size: 23px;
+                  color: #b14848;
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
 
 
 

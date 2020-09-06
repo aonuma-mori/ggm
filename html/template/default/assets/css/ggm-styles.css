@@ -398,6 +398,22 @@ body#page_product_list .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-modal .
   height: 20px !important;
 }
 
+/* page_product_detail (single) */
+body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div {
+  margin-top: 100px;
+}
+body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-product-role .ggm-ec-grid2 .ggm-ec-grid2-cell .ggm-ec-productRole-profile .ggm-ec-heading-title {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-product-role .ggm-ec-grid2 .ggm-ec-grid2-cell .ggm-ec-productRole-profile .ggm-ec-product-role-price-regular-price {
+  font-size: 13px;
+}
+body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-product-role .ggm-ec-grid2 .ggm-ec-grid2-cell .ggm-ec-productRole-profile .ggm-ec-product-role-price {
+  font-size: 23px;
+  color: #b14848;
+}
+
 /**
  * Blog (wordpress)
  * 
