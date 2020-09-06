@@ -477,15 +477,15 @@ body#page_product_list {
             .ggm-ec-modal-box {
               .ggm-ec-role {
                 
-                label {
+                label.ggm-ec-modal-close {
                   font-weight: normal;
                   border-radius: 2px;
                   background: #777;
                   border: 1px #777 solid;
-                  .ggm-ec-icon {
+                  .ec-icon {
                     img {
-                      max-width: 40px !important;
-                      max-height: 40px !important;
+                      width: 20px !important;
+                      height: 20px !important;
                     }
                   }
                 }

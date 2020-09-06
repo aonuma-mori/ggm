@@ -346,15 +346,15 @@ body#page_product_list .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-modal .
   border: 1px solid #c1c1c1;
   border-radius: 2px;
 }
-body#page_product_list .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-modal .ggm-ec-modal-wrap .ggm-ec-modal-box .ggm-ec-role label {
+body#page_product_list .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-modal .ggm-ec-modal-wrap .ggm-ec-modal-box .ggm-ec-role label.ggm-ec-modal-close {
   font-weight: normal;
   border-radius: 2px;
   background: #777;
   border: 1px #777 solid;
 }
-body#page_product_list .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-modal .ggm-ec-modal-wrap .ggm-ec-modal-box .ggm-ec-role label .ggm-ec-icon img {
-  max-width: 40px !important;
-  max-height: 40px !important;
+body#page_product_list .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-modal .ggm-ec-modal-wrap .ggm-ec-modal-box .ggm-ec-role label.ggm-ec-modal-close .ec-icon img {
+  width: 20px !important;
+  height: 20px !important;
 }
 
 /**
