@@ -279,39 +279,39 @@
                         </div>
                     {% endif %}
                     <form action="{{ url('product_add_cart', {id:Product.id}) }}" method="post" id="form1" name="form1">
-                        {% if Product.stock_find %}
-                            <div class="ggm-ec-product-role-actions ec-productRole__actions">
-                                {% if form.classcategory_id1 is defined %}
-                                    <div class="ggm-ec-select ec-select">
-                                        {{ form_widget(form.classcategory_id1) }}
-                                        {{ form_errors(form.classcategory_id1) }}
-                                    </div>
-                                    {% if form.classcategory_id2 is defined %}
-                                        <div class="ggm-ec-select ec-select">
-                                            {{ form_widget(form.classcategory_id2) }}
-                                            {{ form_errors(form.classcategory_id2) }}
-                                        </div>
-                                    {% endif %}
-                                {% endif %}
-                                <div class="ec-numberInput"><span>{{ 'common.quantity'|trans }}</span>
-                                    {{ form_widget(form.quantity) }}
-                                    {{ form_errors(form.quantity) }}
+                    {% if Product.stock_find %}
+                        <div class="ggm-ec-product-role-actions ec-productRole__actions">
+                          {% if form.classcategory_id1 is defined %}
+                              <div class="ggm-ec-select ec-select">
+                                {{ form_widget(form.classcategory_id1) }}
+                                {{ form_errors(form.classcategory_id1) }}
+                              </div>
+                              {% if form.classcategory_id2 is defined %}
+                                <div class="ggm-ec-select ec-select">
+                                  {{ form_widget(form.classcategory_id2) }}
+                                  {{ form_errors(form.classcategory_id2) }}
                                 </div>
+                              {% endif %}
+                            {% endif %}
+                            <div class="ec-numberInput"><span>{{ 'common.quantity'|trans }}</span>
+                              {{ form_widget(form.quantity) }}
+                              {{ form_errors(form.quantity) }}
                             </div>
-                            <div class="ggm-ec-product-role-btn ec-productRole__btn">
-                                <button type="submit" class="ec-blockBtn--action add-cart">
-                                    {{ 'front.product.add_cart'|trans }}
-                                </button>
-                            </div>
-                        {% else %}
-                            <div class="ggm-ec-product-role-btn ec-productRole__btn">
-                                <button type="button" class="ec-blockBtn--action" disabled="disabled">
-                                    {{ 'front.product.out_of_stock'|trans }}
-                                </button>
-                            </div>
-                        {% endif %}
+                        </div>
+                        <div class="ggm-ec-product-role-btn ec-productRole__btn">
+                          <button type="submit" class="ggm-ec-block-button-action ec-blockBtn--action add-cart">
+                            {{ 'front.product.add_cart'|trans }}
+                          </button>
+                        </div>
+                    {% else %}
+                        <div class="ggm-ec-product-role-btn ec-productRole__btn">
+                            <button type="button" class="ggm-ec-block-button-action ec-blockBtn--action" disabled="disabled">
+                                {{ 'front.product.out_of_stock'|trans }}
+                            </button>
+                        </div>
+                    {% endif %}
 
-                        {{ form_rest(form) }}
+                    {{ form_rest(form) }}
                     </form>
                     <div class="ec-modal">
                         <input type="checkbox" id="ec-modal-checkbox" class="checkbox">
@@ -330,19 +330,19 @@
                         </div>
                     </div>
                     {% if BaseInfo.option_favorite_product %}
-                        <form action="{{ url('product_add_favorite', {id:Product.id}) }}" method="post">
-                            <div class="ggm-ec-product-role-btn ec-productRole__btn">
-                                {% if is_favorite == false %}
-                                    <button type="submit" id="favorite" class="ec-blockBtn--cancel">
-                                        {{ 'front.product.add_favorite'|trans }}
-                                    </button>
-                                {% else %}
-                                    <button type="submit" id="favorite" class="ec-blockBtn--cancel"
-                                            disabled="disabled">{{ 'front.product.add_favorite_alrady'|trans }}
-                                    </button>
-                                {% endif %}
-                            </div>
-                        </form>
+                      <form action="{{ url('product_add_favorite', {id:Product.id}) }}" method="post" id="form2">
+                        <div class="ggm-ec-product-role-btn ec-productRole__btn">
+                          {% if is_favorite == false %}
+                            <button type="submit" id="favorite" class="ggm-ec-block-button-cancel ec-blockBtn--cancel">
+                              {{ 'front.product.add_favorite'|trans }}
+                            </button>
+                          {% else %}
+                            <button type="submit" id="favorite" class="ggm-ec-block-button-cancel ec-blockBtn--cancel"
+                              disabled="disabled">{{ 'front.product.add_favorite_alrady'|trans }}
+                            </button>
+                          {% endif %}
+                        </div>
+                      </form>
                     {% endif %}
                     <div class="ggm-ec-product-role-description ec-productRole__description">{{ Product.description_detail|raw|nl2br }}
                     </div>

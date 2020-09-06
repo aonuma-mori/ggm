@@ -405,6 +405,7 @@ body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div {
 body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-product-role .ggm-ec-grid2 .ggm-ec-grid2-cell .ggm-ec-productRole-profile .ggm-ec-heading-title {
   font-size: 18px;
   letter-spacing: 2px;
+  margin-bottom: 60px;
 }
 body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-product-role .ggm-ec-grid2 .ggm-ec-grid2-cell .ggm-ec-productRole-profile .ggm-ec-product-role-price-regular-price {
   font-size: 13px;
@@ -412,6 +413,38 @@ body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-produ
 body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-product-role .ggm-ec-grid2 .ggm-ec-grid2-cell .ggm-ec-productRole-profile .ggm-ec-product-role-price {
   font-size: 23px;
   color: #b14848;
+}
+body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-product-role .ggm-ec-grid2 .ggm-ec-grid2-cell .ggm-ec-productRole-profile .ggm-ec-product-role-code {
+  font-size: 13px;
+}
+body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-product-role .ggm-ec-grid2 .ggm-ec-grid2-cell .ggm-ec-productRole-profile .ggm-ec-product-role-code span.ggm-product-code-default {
+  border: 1px solid #c1c1c1;
+  background: #f5f5f5f5;
+  padding: 4px 10px;
+}
+body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-product-role .ggm-ec-grid2 .ggm-ec-grid2-cell .ggm-ec-productRole-profile .ggm-ec-product-role-category {
+  font-size: 13px;
+}
+body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-product-role .ggm-ec-grid2 .ggm-ec-grid2-cell .ggm-ec-productRole-profile #form1 .ggm-ec-product-role-btn .ggm-ec-block-button-action {
+  font-weight: normal;
+  background: #880000;
+  border: 1px solid #880000;
+  border-radius: 3px;
+}
+body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-product-role .ggm-ec-grid2 .ggm-ec-grid2-cell .ggm-ec-productRole-profile #form2 .ggm-ec-product-role-btn .ggm-ec-block-button-cancel {
+  font-weight: normal;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #888;
+  color: #666;
+}
+body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-product-role .ggm-ec-grid2 .ggm-ec-grid2-cell .ggm-ec-productRole-profile .ggm-ec-product-role-description {
+  line-height: 27px;
+  font-size: 14px;
+}
+body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-product-role .ggm-ec-product-role-description {
+  line-height: 27px;
+  font-size: 14px;
 }
 
 /**
