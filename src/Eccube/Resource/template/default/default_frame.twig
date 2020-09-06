@@ -122,6 +122,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
+        <li>
+          <form method="get" action="/products/list" class="searchform form-inline" id="search-form-sp">
+            <input type="search" name="name" maxlength="50" class="search-name form-control mr-sm-2 border-light" placeholder="keyword">
+            <button class="btn btn-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </li>
         <li class="nav-item active">
           <a class="nav-link" href="/">Shop<span class="sr-only">(current)</span></a>
         </li>
@@ -172,14 +178,6 @@
             <a class="dropdown-item" href="/blog/#">About us</a>
           </div>
         </li>
-
-        {# <li class="ggm-blog active">
-          <a class="nav-link" href="/blog">
-            {{ 'front.block.blog.blog'|trans }}
-          </a>
-        </li> #}
-
-
         <li class="ggm-cart">
           {{ include('Block/cart.twig') }}
         </li>
@@ -206,6 +204,13 @@
 
 
   <div class="ggm-contents">
+
+
+{# <form method="get" action="/products/list" class="searchform form-inline ggm-search-from-sp" id="ggm-search-from-sp">
+  <input type="search" name="name" maxlength="50" class="search-name form-control mr-sm-2 border-light" placeholder="keyword">
+  <button class="btn btn-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+</form> #}
+
     {# Layout: SIDE_LEFT #}
     {% if Layout.SideLeft %}
       <div class="ec-layoutRole__left">
@@ -295,12 +300,13 @@
     id="ggm-pagetop-arrow"
     class="ec-blockTopBtn pagetop"
     style="
-      width:50px;
-      height:50px;
-      font-size:28px;
+      width: 50px !important;
+      height: 50px !important;
+      font-size: 28px;
       padding-top: 4px;
       border-radius: 50%;
       background: #666;
+      margin: 20px;
     ">
     <i class="fas fa-arrow-up"></i>
   </div>

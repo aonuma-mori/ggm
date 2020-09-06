@@ -3,7 +3,8 @@
   Copyright(c) GGM All Rights Reserved.
 #}
 {% form_theme form 'Form/form_div_layout.twig' %}
-<form method="get" action="{{ path('product_list') }}" class="searchform form-inline ggm-search-from">
+<form method="get" action="{{ path('product_list') }}" class="searchform form-inline" id="search-form-pc">
   {{ form_widget(form.name, {'id': null, 'attr': {'class': 'search-name form-control mr-sm-2 border-light', 'placeholder' : 'common.search_keyword' }} ) }}
   <button class="btn btn-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
 </form>
+
