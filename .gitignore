@@ -74,3 +74,6 @@ blog/wp-config.php
 
 # mac
 *.icloud
+
+# phpmyadmin
+phpmyadmin/tmp/twig/*
