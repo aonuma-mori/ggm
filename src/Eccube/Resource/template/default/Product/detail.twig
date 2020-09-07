@@ -237,46 +237,46 @@
                     {% endif %}
                     {# 販売価格 #}
                     <div class="ggm-ec-product-role-price ec-productRole__price">
-                        {% if Product.hasProductClass -%}
-                            {% if Product.getPrice02IncTaxMin == Product.getPrice02IncTaxMax %}
-                                <div class="ggm-ec-price ec-price">
-                                    <span class="ggm-ec-price-price ec-price__price price02-default">{{ Product.getPrice02IncTaxMin|price }}</span>
-                                    <span class="ggm-ggm-ec-price-tax ec-price__tax">{{ 'common.tax_include'|trans }}</span>
-                                </div>
-                            {% else %}
-                                <div class="ec-price">
-                                    <span class="ggm-ec-price-price ec-price__price price02-default">{{ Product.getPrice02IncTaxMin|price }} ～ {{ Product.getPrice02IncTaxMax|price }}</span>
-                                    <span class="ggm-ggm-ec-price-tax ec-price__tax">{{ 'common.tax_include'|trans }}</span>
-                                </div>
-                            {% endif %}
+                      {% if Product.hasProductClass -%}
+                        {% if Product.getPrice02IncTaxMin == Product.getPrice02IncTaxMax %}
+                          <div class="ggm-ec-price ec-price">
+                            <span class="ggm-ec-price-price ec-price__price price02-default">{{ Product.getPrice02IncTaxMin|price }}</span>
+                            <span class="ggm-ggm-ec-price-tax ec-price__tax">{{ 'common.tax_include'|trans }}</span>
+                          </div>
                         {% else %}
-                            <div class="ec-price">
-                                <span class="ggm-ec-price-price ec-price__price">{{ Product.getPrice02IncTaxMin|price }}</span>
-                                <span class="ggm-ggm-ec-price-tax ec-price__tax">{{ 'common.tax_include'|trans }}</span>
-                            </div>
+                          <div class="ec-price">
+                            <span class="ggm-ec-price-price ec-price__price price02-default">{{ Product.getPrice02IncTaxMin|price }} ～ {{ Product.getPrice02IncTaxMax|price }}</span>
+                            <span class="ggm-ggm-ec-price-tax ec-price__tax">{{ 'common.tax_include'|trans }}</span>
+                          </div>
                         {% endif %}
+                      {% else %}
+                        <div class="ec-price">
+                          <span class="ggm-ec-price-price ec-price__price">{{ Product.getPrice02IncTaxMin|price }}</span>
+                          <span class="ggm-ggm-ec-price-tax ec-price__tax">{{ 'common.tax_include'|trans }}</span>
+                        </div>
+                      {% endif %}
                     </div>
                     {# 商品コード #}
                     {% if Product.code_min is not empty %}
-                        <div class="ggm-ec-product-role-code ec-productRole__code">
-                            {{ 'front.product.code'|trans }}： <span class="ggm-product-code-default product-code-default">{{ Product.code_min }}{% if Product.code_min != Product.code_max %} ～ {{ Product.code_max }}{% endif %}</span>
-                        </div>
+                      <div class="ggm-ec-product-role-code ec-productRole__code">
+                        {{ 'front.product.code'|trans }}： <span class="ggm-product-code-default product-code-default">{{ Product.code_min }}{% if Product.code_min != Product.code_max %} ～ {{ Product.code_max }}{% endif %}</span>
+                      </div>
                     {% endif %}
                     {# 関連カテゴリ #}
                     {% if Product.ProductCategories is not empty %}
-                        <div class="ggm-ec-product-role-category ec-productRole__category">
-                            <div>{{ 'front.product.related_category'|trans }}</div>
-                            {% for ProductCategory in Product.ProductCategories %}
-                                <ul>
-                                    <li>
-                                        {% for Category in ProductCategory.Category.path %}
-                                            <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a> {%- if loop.last == false %}
-                                            <span>＞</span>{% endif -%}
-                                        {% endfor %}
-                                    </li>
-                                </ul>
-                            {% endfor %}
-                        </div>
+                      <div class="ggm-ec-product-role-category ec-productRole__category">
+                        <div>{{ 'front.product.related_category'|trans }}</div>
+                        {% for ProductCategory in Product.ProductCategories %}
+                          <ul>
+                            <li>
+                              {% for Category in ProductCategory.Category.path %}
+                                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a> {%- if loop.last == false %}
+                                <span>＞</span>{% endif -%}
+                              {% endfor %}
+                            </li>
+                          </ul>
+                        {% endfor %}
+                      </div>
                     {% endif %}
                     <form action="{{ url('product_add_cart', {id:Product.id}) }}" method="post" id="form1" name="form1">
                     {% if Product.stock_find %}
@@ -313,21 +313,25 @@
 
                     {{ form_rest(form) }}
                     </form>
-                    <div class="ec-modal">
-                        <input type="checkbox" id="ec-modal-checkbox" class="checkbox">
-                        <div class="ec-modal-overlay">
-                            <label for="ec-modal-checkbox" class="ec-modal-overlay-close"></label>
-                            <div class="ec-modal-wrap">
-                                <label for="ec-modal-checkbox" class="ec-modal-close"><span class="ec-icon"><img src="{{ asset('assets/icon/cross-dark.svg') }}" alt=""/></span></label>
-                                <div id="ec-modal-header" class="text-center">{{ 'front.product.add_cart_complete'|trans }}</div>
-                                <div class="ec-modal-box">
-                                    <div class="ec-role">
-                                        <label for="ec-modal-checkbox" class="ec-inlineBtn--cancel">{{ 'front.product.continue'|trans }}</label>
-                                        <a href="{{ url('cart') }}" class="ec-inlineBtn--action">{{ 'common.go_to_cart'|trans }}</a>
-                                    </div>
-                                </div>
+                    <div class="ggm-ec-modal ec-modal">
+                      <input type="checkbox" id="ec-modal-checkbox" class="checkbox">
+                      <div class="ec-modal-overlay">
+                        <label for="ec-modal-checkbox" class="ec-modal-overlay-close"></label>
+                        <div class="ggm-ec-modal-wrap ec-modal-wrap">
+                          <label for="ec-modal-checkbox" class="ec-modal-close">
+                            <span class="ec-icon">
+                              <img src="{{ asset('assets/icon/cross-dark.png') }}" alt="" style="width: 20px;height: 20px;">
+                            </span>
+                          </label>
+                          <div id="ec-modal-header" class="ggm-ec-modal-header text-center">{{ 'front.product.add_cart_complete'|trans }}</div>
+                          <div class="ggm-ec-modal-box ec-modal-box">
+                            <div class="ggm-ec-role ec-role">
+                              <label for="ec-modal-checkbox" class="ggm-ec-inline-button-cancel ec-inlineBtn--cancel">{{ 'front.product.continue'|trans }}</label>
+                              <a href="{{ url('cart') }}" class="ggm-ec-inline-button-action ec-inlineBtn--action">{{ 'common.go_to_cart'|trans }}</a>
                             </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
                     {% if BaseInfo.option_favorite_product %}
                       <form action="{{ url('product_add_favorite', {id:Product.id}) }}" method="post" id="form2">

@@ -31,10 +31,27 @@ body.ggm {
       border: 1px solid #c1c1c1 !important;
     }
   }
+  //SP
   #search-form-sp {
     margin-left: -2px;
     margin-top: 10px;
     margin-bottom: 13px;
+    input {
+      width: 80%;
+      display: inline-block;
+    }
+    button {
+      display: inline-block;
+    }
+  }
+  @media (max-width: 576px) {
+    #search-form-sp {
+      button {
+        display: inline-block;
+        position: relative;
+        top: -2px;
+      }
+    }
   }
 
 
@@ -594,6 +611,10 @@ body#page_product_detail {
                 }
                 .ggm-ec-product-role-category {
                   font-size: 13px;
+                  ul {
+                    margin-top: 10px;
+                    display: inline-block;
+                  }
                 }
                 #form1 {
                   .ggm-ec-product-role-actions {
@@ -624,10 +645,60 @@ body#page_product_detail {
                   line-height: 27px;
                   font-size: 14px;
                 }
+                // modal
+                .ggm-ec-modal {
+                  font-size: 13px;
+                  font-weight: normal;
+                  .ggm-ec-modal-wrap {
+                    // background: #000;
+                    border: 1px solid #c1c1c1;
+                    border-radius: 2px;
+                    .ggm-ec-modal-header {
+                      margin-bottom: 50px;
+                    }
+                    .ggm-ec-modal-box {
+                      .ggm-ec-role {
+                        label.ggm-ec-inline-button-cancel {
+                          color: #666;
+                          font-weight: normal;
+                          border-radius: 3px;
+                          background: #fff;
+                          margin-right:5px;
+                        }
+                        a.ggm-ec-inline-button-action:link,
+                        a.ggm-ec-inline-button-action:visited
+                        {
+                          color: #fff;
+                          font-weight: normal;
+                          margin-left:5px;
+                          background: #880000;
+                          border-radius: 3px;
+                          border: 1px solid #880000;
+                        }
+                        
+                        label.ggm-ec-modal-close {
+                          font-weight: normal;
+                          border-radius: 2px;
+                          background: #777;
+                          border: 1px #777 solid;
+
+                          .ec-icon {
+                            img {
+                              width: 20px !important;
+                              height: 20px !important;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }
           .ggm-ec-product-role-description {
+            border-top: 1px dotted #c1c1c1;
+            padding-top: 20px;
             line-height: 27px;
             font-size: 14px;
           }
@@ -637,7 +708,10 @@ body#page_product_detail {
   }
 }
 
+/* Cart (/cart) */
+body#page_cart {
 
+}
 
 
 
