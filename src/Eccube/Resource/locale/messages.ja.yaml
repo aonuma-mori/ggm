@@ -293,7 +293,7 @@ front.product.product_class_unselected: 項目が選択されていません
 # カート
 #------------------------------------------------------------------------------------
 
-front.cart.title: ショッピングカート
+front.cart.title: Shopping cart
 front.cart.nav__cart_items: カートの商品
 front.cart.nav__customer_info: お客様情報
 front.cart.nav__order: ご注文手続き

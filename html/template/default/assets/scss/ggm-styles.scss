@@ -258,7 +258,6 @@ body.ggm {
       }
     }
 
-
 /* eyecatche */
 .ec-layoutRole__mainBottom {
   .eyecatch-block {
@@ -445,6 +444,11 @@ body.ggm {
 }
 
 
+/* page共通 */
+.ggm-ec-role {
+  margin-bottom: 30px;
+}
+
 /* page_product_list */
 body#page_product_list {
   .ggm-wrapper {
@@ -489,7 +493,7 @@ body#page_product_list {
           ul.ggm-ec-product-grid {
             li.ggm-ec-product-item {
               // background: #000;
-              margin-top: 30px;
+              margin-top: 10px;
               a.ggm-ec-product-item-ancher {
                 p.ggm-ec-product-item-image {
                   // border: 1px solid #c1c1c1;
@@ -710,7 +714,40 @@ body#page_product_detail {
 
 /* Cart (/cart) */
 body#page_cart {
-
+  .ggm-wrapper{
+    .ggm-contents {
+      .ggm-block-div{
+        .ggm-ec-role {
+          .ggm-ec-page-header {
+            h1 {
+              font-size: 18px;
+              font-weight: normal;
+            }
+          }
+        }
+        .ggm-ec-cart-role {
+          .ggm-ec-cart-role-progress {
+            ul.ggm-ec-progress {
+              li.ggm-ec-progress-item {
+                .ggm-ec-progress-number {
+                  
+                }
+                .ggm-ec-progress-label {
+                  font-weight: normal;
+                }
+              }
+              li.is-complete {
+                
+                .ggm-ec-progress-number {
+                  background: #ff0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 
