@@ -730,7 +730,10 @@ body#page_cart {
             ul.ggm-ec-progress {
               li.ggm-ec-progress-item {
                 .ggm-ec-progress-number {
-                  
+                  background: #fff;
+                  color: #586069;
+                  border: 1px solid #586069;
+                  font-weight: normal;
                 }
                 .ggm-ec-progress-label {
                   font-weight: normal;
@@ -739,7 +742,67 @@ body#page_cart {
               li.is-complete {
                 
                 .ggm-ec-progress-number {
-                  background: #ff0;
+                  background: #880000;
+                  color: #fff;
+                  border: 1px solid #880000;
+                  font-weight: normal;
+                }
+                .ggm-ec-progress-label {
+                  font-weight: bold;
+                  color: #586069;
+                }
+              }
+              .ec-progress, .ec-progress__item:after {
+                background: #586069 !important;
+                height: 1px;
+              }
+            }
+          }
+          .ggm-ec-cart-role-total-text {
+            p {
+              margin-top: 35px;
+              margin-bottom: 50px;
+              font-size: 14px;
+              strong {
+                font-weight: normal;
+                font-size: 16px;
+              }
+            }
+          }
+          // 商品リスト内
+          form.ggm-ec-cart-role {
+            .ggm-cart-role-cart {
+              .ggm-ec-cart-table {
+                ol.ggm-ec-cart-header {
+                  margin-bottom: 20px;
+                  li.ggm-ec-cartHeader-label{
+                    font-weight: normal;
+                    font-size: 13px;
+                    background: #f8f9fa;
+                    border-bottom: 1px dotted #c1c1c1;
+                  }
+
+                }
+                ul.ggm-ec-cart-row {
+                  li.ggm-ec-cart-row-contentcolumn {
+                    .ggm-ec-cart-row-img {
+                      a {
+                        img {
+                          border-radius: 3px;
+                        }
+                      }
+                    }
+                    .ggm-ec-cart-row-summary {
+                      font-weight: normal;
+                      font-size: 14px;
+                    }
+                  }
+                  li.ggm-ec-cart-row-amountcolumn {
+                    // background: #ff0;
+                    .ggm-ec-cart-row-amount{
+                      font-weight: normal;
+                    }
+                  }
                 }
               }
             }
