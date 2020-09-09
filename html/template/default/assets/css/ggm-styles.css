@@ -547,6 +547,7 @@ body#page_cart .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-
   font-size: 16px;
 }
 body#page_cart .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-cart-role-cart .ggm-ec-cart-table ol.ggm-ec-cart-header {
+  display: none;
   margin-bottom: 20px;
 }
 body#page_cart .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-cart-role-cart .ggm-ec-cart-table ol.ggm-ec-cart-header li.ggm-ec-cartHeader-label {

@@ -770,10 +770,12 @@ body#page_cart {
             }
           }
           // 商品リスト内
+          
           form.ggm-ec-cart-role {
             .ggm-cart-role-cart {
               .ggm-ec-cart-table {
                 ol.ggm-ec-cart-header {
+                  display: none;
                   margin-bottom: 20px;
                   li.ggm-ec-cartHeader-label{
                     font-weight: normal;
