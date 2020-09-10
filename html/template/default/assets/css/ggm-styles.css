@@ -565,15 +565,47 @@ body#page_cart .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.
 }
 body#page_cart .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-cart-role-cart .ggm-ec-cart-table ul.ggm-ec-cart-row li.ggm-ec-cart-row-amountcolumn .ggm-ec-cart-row-amount {
   font-weight: normal;
+  font-size: 13px;
+}
+body#page_cart .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-cart-role-cart .ggm-ec-cart-table ul.ggm-ec-cart-row li.ggm-ec-cart-row-amountcolumn .ggm-ec-cart-row-amountupdown a {
+  border: 1px #c1c1c1 solid;
+}
+body#page_cart .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-cart-role-cart .ggm-ec-cart-table ul.ggm-ec-cart-row li.ggm-ec-cart-row-amountcolumn .ggm-ec-cart-row-amountupdown .ggm-ec-cart-row-amountupdown {
+  background: #f00;
+}
+body#page_cart .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-ec-cart-role-actions .ggm-ec-cart-role-total {
+  font-weight: normal;
+}
+body#page_cart .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-ec-cart-role-actions .ggm-ec-cart-role-total .ggm-ec-cart-role-total-amount {
+  font-weight: normal;
+  color: #333;
+  font-size: 20px;
+}
+body#page_cart .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-ec-cart-role-actions .ggm-ec-block-btn-action {
+  color: #fff;
+  border-radius: 3px;
+  background: #880000;
+  border: 1px solid #880000;
+  font-weight: normal;
+}
+body#page_cart .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-ec-cart-role-actions .ggm-ec-block-btn-cancel {
+  background: #fff;
+  color: #666;
+  border: 1px solid #666;
+  font-weight: normal;
 }
 
-/**
+/************************************************
  * Blog (wordpress)
  * 
  *
  *
  */
 /* GGM Blog */
+.ggm-blog .ggm-contents .ggm-pagetop-arrow {
+  width: 50px !important;
+  height: 45px !important;
+}
 .ggm-blog #blog-block {
   margin-top: 100px;
 }
@@ -773,5 +805,18 @@ body#page_cart .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.
   padding: 3px 8px;
   border-radius: 2px;
   display: inline-block;
+}
+
+#ggm-pagetop-arrow {
+  position: fixed;
+  width: 50px !important;
+  height: 50px !important;
+  right: 0;
+  bottom: 10px;
+  cursor: pointer;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 40px;
+  opacity: 0.8;
 }
 /*# sourceMappingURL=ggm-styles.css.map */
