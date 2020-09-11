@@ -866,6 +866,96 @@ body#page_cart {
   }
 }
 
+/* Shopping 注文手続き */
+body#page_shopping {
+  .ggm-wrapper{
+    .ggm-contents {
+      .ggm-block-div {
+        .ggm-ec-role {
+          .ggm-ec-page-header {
+            h1 {
+              font-size: 18px;
+              font-weight: normal;
+            }
+          }
+        }
+        .ggm-ec-cart-role {
+          .ggm-ec-cart-role-progress {
+            ul.ggm-ec-progress {
+              li.ggm-ec-progress-item {
+                .ggm-ec-progress-number {
+                  background: #fff;
+                  color: #586069;
+                  border: 1px solid #586069;
+                  font-weight: normal;
+                }
+                .ggm-ec-progress-label {
+                  font-weight: normal;
+                }
+              }
+              li.is-complete {
+                
+                .ggm-ec-progress-number {
+                  background: #880000;
+                  color: #fff;
+                  border: 1px solid #880000;
+                  font-weight: normal;
+                }
+                .ggm-ec-progress-label {
+                  font-weight: bold;
+                  color: #586069;
+                }
+              }
+              .ec-progress, .ec-progress__item:after {
+                background: #586069 !important;
+                height: 1px;
+              }
+            }
+          }
+        }
+        /* 注文内容 */
+        form#shopping-form {
+          .ggmec-order-role { 
+            .ggm-ec-order-role-detail {  
+              .ggm-ec-order-account {
+                // background: #f00;
+                .ggm-ec-rect-heading {
+                  h2 {
+                    font-weight: normal;
+                    color: #586069;
+                    background: #fff;
+                  }
+                  
+                }
+                /* customer info */
+                .ggm-ec-order-account-account {
+                  // background: #f00;
+                  margin-left: 30px;
+                  font-size: 14px;
+                  line-height: 27px;
+                }
+                /* delivery info */
+                .ggm-ec-order-delivery {
+                  background: #ff0
+                //   .ggm-ec-rect-heading {
+                //     h2 {
+                //       font-weight: normal;
+                //       color: #586069;
+                //       background: #fff;
+                //     }
+                //   }
+                }
+              }
+            }
+          }
+
+
+
+        }
+      }
+    }
+  }
+}
 
 
 

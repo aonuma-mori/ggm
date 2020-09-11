@@ -316,7 +316,7 @@ front.cart.delivery_fee_free__quantity: あと「<strong>%quantity%個</strong>�
 # ショッピング
 #------------------------------------------------------------------------------------
 
-front.shopping.title: ご注文手続き
+front.shopping.title: Shopping
 front.shopping.order_no: ご注文番号
 front.shopping.customer_info: お客様情報
 front.shopping.delivery_info: 配送情報

@@ -595,6 +595,55 @@ body#page_cart .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.
   font-weight: normal;
 }
 
+/* Shopping 注文手続き */
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div {
+  /* 注文内容 */
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-role .ggm-ec-page-header h1 {
+  font-size: 18px;
+  font-weight: normal;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress li.ggm-ec-progress-item .ggm-ec-progress-number {
+  background: #fff;
+  color: #586069;
+  border: 1px solid #586069;
+  font-weight: normal;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress li.ggm-ec-progress-item .ggm-ec-progress-label {
+  font-weight: normal;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress li.is-complete .ggm-ec-progress-number {
+  background: #880000;
+  color: #fff;
+  border: 1px solid #880000;
+  font-weight: normal;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress li.is-complete .ggm-ec-progress-label {
+  font-weight: bold;
+  color: #586069;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress .ec-progress, body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress .ec-progress__item:after {
+  background: #586069 !important;
+  height: 1px;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-account {
+  /* customer info */
+  /* delivery info */
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-account .ggm-ec-rect-heading h2 {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-account .ggm-ec-order-account-account {
+  margin-left: 30px;
+  font-size: 14px;
+  line-height: 27px;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-account .ggm-ec-order-delivery {
+  background: #ff0;
+}
+
 /************************************************
  * Blog (wordpress)
  * 
