@@ -784,8 +784,29 @@ body#page_cart .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.
   word-break: break-all;
   margin-bottom: 100px;
 }
+.ggm-blog #blog-block div.row #side-block #sidebar ul {
+  /* Blog検索 */
+}
 .ggm-blog #blog-block div.row #side-block #sidebar ul li.widget_search form div .screen-reader-text {
   display: none;
+}
+.ggm-blog #blog-block div.row #side-block #sidebar ul li.widget_search form div input {
+  height: 38px;
+  border: 1px solid #c1c1c1;
+  border-radius: 3px;
+  background: #fff;
+}
+.ggm-blog #blog-block div.row #side-block #sidebar ul li.widget_search form div button#searchsubmit {
+  border: 1px solid #c1c1c1;
+  margin-left: -13px;
+  display: inline-block;
+  padding: -3px;
+  position: relative;
+  top: -2px;
+  border-radius: 0 3px 3px 0;
+}
+.ggm-blog #blog-block div.row #side-block #sidebar ul li.widget_search form div button#searchsubmit .fa-search {
+  color: #888;
 }
 .ggm-blog #blog-block div.row #side-block #sidebar ul li.widget {
   list-style: none;

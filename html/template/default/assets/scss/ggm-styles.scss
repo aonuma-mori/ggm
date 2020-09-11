@@ -1055,13 +1055,13 @@ body#page_cart {
             }
           }//blog-text
         }
-
        }
        #side-block {
         word-break: break-all;
         margin-bottom: 100px;
         #sidebar {
           ul {
+            /* Blog検索 */
             li.widget_search {
               h2 {
 
@@ -1070,6 +1070,27 @@ body#page_cart {
                 div {
                   .screen-reader-text {
                     display: none;
+                  }
+                  input {
+                    height: 38px;
+                    border: 1px solid #c1c1c1;
+                    border-radius: 3px;
+                    background: #fff;
+                  }
+                  // input::placeholder,input:-ms-input-placeholder,input::-ms-input-placeholder {
+                  //   color: red !important;
+                  // }
+                  button#searchsubmit{
+                    border: 1px solid #c1c1c1;
+                    margin-left: -13px;
+                    display: inline-block;
+                    padding: -3px;
+                    position: relative;
+                    top: -2px;
+                    border-radius: 0 3px 3px 0;
+                    .fa-search {
+                      color: #888;
+                    }
                   }
                 }
               }
