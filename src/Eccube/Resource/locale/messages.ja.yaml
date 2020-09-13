@@ -293,13 +293,13 @@ front.product.product_class_unselected: 項目が選択されていません
 # カート
 #------------------------------------------------------------------------------------
 
-front.cart.title: ショッピングカート
+front.cart.title: Shopping cart
 front.cart.nav__cart_items: カートの商品
 front.cart.nav__customer_info: お客様情報
 front.cart.nav__order: ご注文手続き
 front.cart.nav__confirm: ご注文内容確認
 front.cart.nav__complete: 完了
-front.cart.total_price: 商品の合計金額は「<strong>%price%</strong>」です。
+front.cart.total_price: 商品の合計金額は <strong>%price%</strong> です。
 front.cart.divide_cart: 同時購入できない商品がカートに含まれています。
 front.cart.delete: 削除
 front.cart.delete__confirm: カートから商品を削除してよろしいですか？
@@ -316,7 +316,7 @@ front.cart.delivery_fee_free__quantity: あと「<strong>%quantity%個</strong>�
 # ショッピング
 #------------------------------------------------------------------------------------
 
-front.shopping.title: ご注文手続き
+front.shopping.title: Shopping
 front.shopping.order_no: ご注文番号
 front.shopping.customer_info: お客様情報
 front.shopping.delivery_info: 配送情報

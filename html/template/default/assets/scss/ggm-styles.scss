@@ -258,7 +258,6 @@ body.ggm {
       }
     }
 
-
 /* eyecatche */
 .ec-layoutRole__mainBottom {
   .eyecatch-block {
@@ -445,6 +444,11 @@ body.ggm {
 }
 
 
+/* page共通 */
+.ggm-ec-role {
+  margin-bottom: 30px;
+}
+
 /* page_product_list */
 body#page_product_list {
   .ggm-wrapper {
@@ -489,7 +493,7 @@ body#page_product_list {
           ul.ggm-ec-product-grid {
             li.ggm-ec-product-item {
               // background: #000;
-              margin-top: 30px;
+              margin-top: 10px;
               a.ggm-ec-product-item-ancher {
                 p.ggm-ec-product-item-image {
                   // border: 1px solid #c1c1c1;
@@ -710,15 +714,303 @@ body#page_product_detail {
 
 /* Cart (/cart) */
 body#page_cart {
+  .ggm-wrapper{
+    .ggm-contents {
+      .ggm-block-div{
+        .ggm-ec-role {
+          .ggm-ec-page-header {
+            h1 {
+              font-size: 18px;
+              font-weight: normal;
+            }
+          }
+        }
+        .ggm-ec-cart-role {
+          .ggm-ec-cart-role-progress {
+            ul.ggm-ec-progress {
+              li.ggm-ec-progress-item {
+                .ggm-ec-progress-number {
+                  background: #fff;
+                  color: #586069;
+                  border: 1px solid #586069;
+                  font-weight: normal;
+                }
+                .ggm-ec-progress-label {
+                  font-weight: normal;
+                }
+              }
+              li.is-complete {
+                
+                .ggm-ec-progress-number {
+                  background: #880000;
+                  color: #fff;
+                  border: 1px solid #880000;
+                  font-weight: normal;
+                }
+                .ggm-ec-progress-label {
+                  font-weight: bold;
+                  color: #586069;
+                }
+              }
+              .ec-progress, .ec-progress__item:after {
+                background: #586069 !important;
+                height: 1px;
+              }
+            }
+          }
+          .ggm-ec-cart-role-total-text {
+            p {
+              margin-top: 35px;
+              margin-bottom: 50px;
+              font-size: 14px;
+              strong {
+                font-weight: normal;
+                font-size: 16px;
+              }
+            }
+          }
+          // 商品リスト内
+          
+          form.ggm-ec-cart-role {
+            .ggm-cart-role-cart {
+              .ggm-ec-cart-table {
+                ol.ggm-ec-cart-header {
+                  display: none;
+                  margin-bottom: 20px;
+                  li.ggm-ec-cartHeader-label{
+                    font-weight: normal;
+                    font-size: 13px;
+                    background: #f8f9fa;
+                    border-bottom: 1px dotted #c1c1c1;
+                  }
 
+                }
+                ul.ggm-ec-cart-row {
+                  li.ggm-ec-cart-row-contentcolumn {
+                    .ggm-ec-cart-row-img {
+                      a {
+                        img {
+                          border-radius: 3px;
+                        }
+                      }
+                    }
+                    .ggm-ec-cart-row-summary {
+                      font-weight: normal;
+                      font-size: 14px;
+                    }
+                  }
+                  li.ggm-ec-cart-row-amountcolumn {
+                    // background: #ff0;
+                    
+                    .ggm-ec-cart-row-amount{
+                      font-weight: normal;
+                      font-size: 13px;
+                    }
+                    .ggm-ec-cart-row-amountsp {
+
+                    }
+                    .ggm-ec-cart-row-amountupdown {
+                      
+                      a {
+                        border: 1px #c1c1c1 solid;
+                        span.ggm-ec-cart-row-amount-down-button-icon {
+                          img {
+                            // border: 1px #c1c1c1 solid;
+                          }
+                        }
+                      }
+                      .ggm-ec-cart-row-amountupdown {
+                        background: #f00;
+                      }
+                    }
+                    .ggm-ec-cart-row-amount {
+                      
+                    }
+
+
+
+
+                  }
+                }
+              }
+            }//ggm-cart-role-cart
+            .ggm-ec-cart-role-actions {
+              // background: #000;
+              .ggm-ec-cart-role-total {
+                font-weight: normal;
+                .ggm-ec-cart-role-total-amount {
+                  font-weight: normal;
+                  color: #333;
+                  font-size: 20px;
+                  // margin-top: 15px;
+                }
+              }
+              .ggm-ec-block-btn-action {
+                color: #fff;
+                border-radius: 3px;
+                background: #880000;
+                border: 1px solid #880000;
+                font-weight: normal;
+              }
+              .ggm-ec-block-btn-cancel {
+                background: #fff;
+                color: #666;
+                border: 1px solid #666;
+                font-weight: normal;
+              }
+            }
+          } //form.ggm-ec-cart-role
+        }
+      }
+    }
+  }
+}
+
+/* Shopping 注文手続き */
+body#page_shopping {
+  .ggm-wrapper{
+    .ggm-contents {
+      .ggm-block-div {
+        .ggm-ec-role {
+          .ggm-ec-page-header {
+            h1 {
+              font-size: 18px;
+              font-weight: normal;
+            }
+          }
+        }
+        .ggm-ec-cart-role {
+          .ggm-ec-cart-role-progress {
+            ul.ggm-ec-progress {
+              li.ggm-ec-progress-item {
+                .ggm-ec-progress-number {
+                  background: #fff;
+                  color: #586069;
+                  border: 1px solid #586069;
+                  font-weight: normal;
+                }
+                .ggm-ec-progress-label {
+                  font-weight: normal;
+                }
+              }
+              li.is-complete {
+                
+                .ggm-ec-progress-number {
+                  background: #880000;
+                  color: #fff;
+                  border: 1px solid #880000;
+                  font-weight: normal;
+                }
+                .ggm-ec-progress-label {
+                  font-weight: bold;
+                  color: #586069;
+                }
+              }
+              .ec-progress, .ec-progress__item:after {
+                background: #586069 !important;
+                height: 1px;
+              }
+            }
+          }
+        }
+        /* 注文内容 */
+        form#shopping-form {
+          .ggmec-order-role { 
+            .ggm-ec-order-role-detail {  
+              .ggm-ec-order-account {
+                // background: #f00;
+                .ggm-ec-rect-heading {
+                  h2 {
+                    font-weight: normal;
+                    color: #586069;
+                    background: #fff;
+                  }
+                  
+                }
+                /* customer info */
+                .ggm-ec-order-account-account {
+                  // background: #f00;
+                  margin-left: 30px;
+                  font-size: 14px;
+                  line-height: 27px;
+                }
+                
+
+              }
+              /* delivery info */
+              .ggm-ec-order-delivery {
+                .ggm-ec-rect-heading {
+                  h2 {
+                    font-weight: normal;
+                    color: #586069;
+                    background: #fff;
+                  }
+                }
+                .ggm-ec-order-delivery-title {
+                  font-weight: normal;
+                    color: #586069;
+                    margin-left: 10px;
+                  .ggm-ec-order-delivery-change {
+                    button {
+                      border-radius: 3px;
+                    }
+                  }
+                }
+              }
+              .ggm-ec-order-delivery-item {
+                // background: #ff0;
+                ul.ggm-ec-bordered-list {
+                  li {
+                    .ggm-ec-image-grid {
+                      .ggm-ec-image-grid-img {
+                        // background: #ff0; 
+                        img {
+                          border-radius: 3px;
+                        }
+                      } 
+                      .ggm-ec-imageg-rid-content {
+                        // background: #f00;
+                        font-size: 14px;
+                        p {
+                          margin-bottom: 5px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .ggm-ec-order-delivery-address {
+                font-size: 14px;
+                line-height: 25px;
+                margin: 60px 0;
+              }
+              .ggm-ec-order-delivery-actions {
+                font-weight: normal;
+                .ggm-ec-selects {
+                  .ec-select {
+                    font-size:14px;
+                    label {
+                      font-weight: normal;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+
+
+        }
+      }
+    }
+  }
 }
 
 
 
 
 
-
-/**
+/************************************************
  * Blog (wordpress)
  * 
  *
@@ -726,6 +1018,12 @@ body#page_cart {
  */
  /* GGM Blog */
  .ggm-blog {
+   .ggm-contents {
+     .ggm-pagetop-arrow {
+      width: 50px !important;
+      height: 45px !important;
+     }
+   }
    #blog-block {
      margin-top: 100px;
      div.row {
@@ -896,13 +1194,13 @@ body#page_cart {
             }
           }//blog-text
         }
-
        }
        #side-block {
         word-break: break-all;
         margin-bottom: 100px;
         #sidebar {
           ul {
+            /* Blog検索 */
             li.widget_search {
               h2 {
 
@@ -911,6 +1209,27 @@ body#page_cart {
                 div {
                   .screen-reader-text {
                     display: none;
+                  }
+                  input {
+                    height: 38px;
+                    border: 1px solid #c1c1c1;
+                    border-radius: 3px;
+                    background: #fff;
+                  }
+                  // input::placeholder,input:-ms-input-placeholder,input::-ms-input-placeholder {
+                  //   color: red !important;
+                  // }
+                  button#searchsubmit{
+                    border: 1px solid #c1c1c1;
+                    margin-left: -13px;
+                    display: inline-block;
+                    padding: -3px;
+                    position: relative;
+                    top: -2px;
+                    border-radius: 0 3px 3px 0;
+                    .fa-search {
+                      color: #888;
+                    }
                   }
                 }
               }
@@ -949,5 +1268,17 @@ body#page_cart {
       }//side-block
     }
   }
+}
+#ggm-pagetop-arrow {
+  position: fixed;
+  width: 50px !important;
+  height: 50px !important;
+  right: 0;
+  bottom: 10px;
+  cursor: pointer;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 40px;
+  opacity: 0.8;
 }
 
