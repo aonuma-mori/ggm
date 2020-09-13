@@ -278,8 +278,8 @@
               {% for shipping in Order.shippings %}
                 {% set idx = loop.index0 %}
                 {% set isShowReducedTaxMess = false %}
-                <div class="ec-orderDelivery__title">{{ 'front.shopping.delivery_to'|trans }}{% if Order.multiple %}({{ loop.index }}){% endif %}
-                  <div class="ec-orderDelivery__change">
+                <div class="ggm-ec-order-delivery-title ec-orderDelivery__title">{{ 'front.shopping.delivery_to'|trans }}{% if Order.multiple %}({{ loop.index }}){% endif %}
+                  <div class="ggm-ec-order-delivery-change ec-orderDelivery__change">
                     {% if is_granted('ROLE_USER') %}
                       <button class="ec-inlineBtn" data-id="{{ shipping.id }}" data-trigger="click" data-path="{{ path('shopping_shipping', {'id': shipping.id}) }}">{{ 'common.change'|trans }}</button>
                     {% else %}
@@ -287,13 +287,13 @@
                     {% endif %}
                   </div>
                 </div>
-                <div class="ec-orderDelivery__item">
-                  <ul class="ec-borderedList">
+                <div class="ggm-ec-order-delivery-item ec-orderDelivery__item">
+                  <ul class="ggm-ec-bordered-list ec-borderedList">
                     {% for orderItem in shipping.productOrderItems %}
                       <li>
-                        <div class="ec-imageGrid">
-                          <div class="ec-imageGrid__img"><img src="{{ asset((orderItem.product is null ? null : orderItem.product.MainListImage)|no_image_product, 'save_image') }}" alt="{{ orderItem.productName }}"></div>
-                          <div class="ec-imageGrid__content">
+                        <div class="ggm-ec-image-grid ec-imageGrid">
+                          <div class="ggm-ec-image-grid-img ec-imageGrid__img"><img src="{{ asset((orderItem.product is null ? null : orderItem.product.MainListImage)|no_image_product, 'save_image') }}" alt="{{ orderItem.productName }}"></div>
+                          <div class="ggm-ec-imageg-rid-content ec-imageGrid__content">
                             <p>{{ orderItem.productName }}{% if is_reduced_tax_rate(orderItem) %}{{ 'common.reduced_tax_rate_symbol'|trans }}{% set isShowReducedTaxMess = true %}{% endif %}</p>
                             {% if orderItem.productClass is not null and orderItem.productClass.classCategory1 %}
                               <p>{{ orderItem.productClass.classCategory1.className.name }}：{{ orderItem.productClass.classCategory1 }}</p>
@@ -309,24 +309,24 @@
                   </ul>
                   <p>{{ isShowReducedTaxMess ? 'common.reduced_tax_rate_messeage'|trans }}</p>
                 </div>
-                <div class="ec-orderDelivery__address">
+                <div class="ggm-ec-order-delivery-address ec-orderDelivery__address">
                     <p>{{ 'common.name.prefix'|trans }}{{ shipping.name01 }} {{ shipping.name02 }} ({{ shipping.kana01 }} {{ shipping.kana02 }}){{ 'common.name.suffix'|trans }}</p>
                     <p>{{ 'common.postal_symbol'|trans }}{{ shipping.postal_code }} {{ shipping.pref }}{{ shipping.addr01 }}{{ shipping.addr02 }}</p>
                     <p>{{ shipping.phone_number }}</p>
                 </div>
-                <div class="ec-orderDelivery__actions">
-                    <div class="ec-selects">
-                        <div class="ec-select">
+                <div class="ggm-ec-order-delivery-actions ec-orderDelivery__actions">
+                    <div class="ggm-ec-selects ec-selects">
+                        <div class="ggm-ec-select ec-select">
                             <label>{{ 'front.shopping.delivery_provider'|trans }}</label>
                             {{ form_widget(form.Shippings[idx].Delivery, { 'attr': { 'class': 'form-control', 'data-trigger': 'change' }}) }}
                             {{ form_errors(form.Shippings[idx].Delivery) }}
                         </div>
-                        <div class="ec-select ec-select__delivery">
+                        <div class="ggm-ec-select ec-select ec-select__delivery">
                             <label>{{ 'front.shopping.delivery_date'|trans }}</label>
                             {{ form_widget(form.Shippings[idx].shipping_delivery_date, {'attr': {'class': 'form-control'}}) }}
                             {{ form_errors(form.Shippings[idx].shipping_delivery_date) }}
                         </div>
-                        <div class="ec-select ec-select__time">
+                        <div class="ggm-ec-select ec-select ec-select__time">
                             <label>{{ 'front.shopping.delivery_time'|trans }}</label>
                             {{ form_widget(form.Shippings[idx].DeliveryTime, {'attr': {'class': 'form-control'}}) }}
                             {{ form_errors(form.Shippings[idx].DeliveryTime) }}
