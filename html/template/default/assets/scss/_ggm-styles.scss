@@ -915,7 +915,7 @@ body#page_shopping {
         }
         /* 注文内容 */
         form#shopping-form {
-          .ggmec-order-role {
+          .ggmec-order-role { 
             .ggm-ec-order-role-detail {  
               .ggm-ec-order-account {
                 // background: #f00;
@@ -966,33 +966,6 @@ body#page_shopping {
                     background: #fff;
                   }
                 }
-                .ggm-ec-radio {
-                  label {
-                    span {
-                      font-size: 14px;
-                    }
-                  }
-                }
-                .ggm-ec-input {
-                  p {
-                    font-size: 14px;
-                  }
-                }
-              }
-              .ggm-ec-order-confirm {
-                margin-top: 30px;
-                .ggm-ec-rect-heading {
-                  h2 {
-                    font-weight: normal;
-                    color: #586069;
-                    background: #fff;
-                  }
-                }
-                .ggm-ec-input {
-                  .textarea {
-                    line-height: 25px;
-                  }
-                }
               }
               .ggm-ec-order-delivery-item {
                 // background: #ff0;
@@ -1034,85 +1007,7 @@ body#page_shopping {
               }
             }
           }
-          /* 横に出る会計のサマリー */
-          .ggm-ec-order-role-summary {
-            // background: #000;
-            padding-top: 30px;
-            font-size: 14px;
-            .ggm-ec-total-box {
 
-              background: #f8f9fa;
-              .ggm-ec-total-box-spec {
-                
-              }
-              /* 合計金額 */
-              .ggm-ec-total-box-total {
-                font-size: 14px;
-                font-weight: normal;
-                .ggm-ec-total-box-price {
-                  color: #000;
-                  font-size: 18px;
-                  font-weight: normal;
-                }
-                .ggm-ec-total-box-taxlabel {
-                  color: #000;
-                  font-size: 14px;
-                  font-weight: normal;
-                }
-                .ggm-ec-total-box-payment-total {
-
-                }
-                .ggm-ec-total-box-payment-total {
-                  color: #F00;
-                  font-size: 25px;
-                  font-weight: normal;
-                }
-              }
-              .ggm-ec-total-box-payment-total {
-                font-weight: normal;
-                .ggm-ec-total-box-price {
-                  color: #880000;
-                  font-weight: normal;
-                }
-                .ggm-ec-total-box-taxlabel {
-                  color: #880000;
-                  font-weight: normal;
-                }
-              }
-              .ggm-ec-total-box-point-block {
-                // background: #000;
-                font-weight: normal;
-                .ggm-ec-total-box-spec {
-                  font-weight: normal;
-                  dt {
-                    .ggm-ec-font-bold {
-                      font-weight: normal;
-                    }
-                  }
-                  dd {
-                    .ggm-ec-font-bold {
-                      font-weight: normal;
-                    }
-                  }
-                }
-              }
-              .ggm-ec-total-box-btn {
-                // background: #000;
-                button.ggm-ec-block-btn-action {
-                  border-radius: 3px;
-                  background: #880000;
-                  font-weight: normal;
-                  border: 1px solid #880000;
-                }
-                a.ggm-ec-block-btn-cancel {
-                  background: #fff;
-                  color: #666;
-                  font-weight: normal;
-                }
-              }
-            }
-          }
-          
 
 
         }

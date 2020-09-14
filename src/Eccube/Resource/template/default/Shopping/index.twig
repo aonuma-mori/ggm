@@ -338,95 +338,101 @@
                   <button type="button" class="ec-inlineBtn" data-trigger="click" data-path="{{ path('shopping_shipping_multiple') }}">{{ 'front.shopping.to_multiple'|trans }}</button>
               </div>
             </div>
-            <div class="ec-orderPayment">
-              <div class="ec-rectHeading">
-                  <h2>{{ 'front.shopping.payment_info'|trans }}</h2>
+            <div class="ggm-ec-order-payment ec-orderPayment">
+              <div class="ggm-ec-rect-heading ec-rectHeading">
+                <h2>{{ 'front.shopping.payment_info'|trans }}</h2>
               </div>
-              <div class="ec-radio">
-                  {% for key, child in form.Payment %}
-                      <div style="display: block;">
-                          {% set Payment = form.Payment.vars.choices[key].data %}
-                          {{ form_widget(child, { 'attr': { 'data-trigger': 'change' }}) }}
-                          {% if Payment.payment_image is not null %}
-                              <p><img src="{{ asset(Payment.payment_image, 'save_image') }}"></p>
-                          {% endif %}
-                      </div>
-                  {% endfor %}
+              <div class="ggm-ec-radio ec-radio">
+                {% for key, child in form.Payment %}
+                  <div style="display: block;">
+                    {% set Payment = form.Payment.vars.choices[key].data %}
+                    {{ form_widget(child, { 'attr': { 'data-trigger': 'change' }}) }}
+                    {% if Payment.payment_image is not null %}
+                      <p><img src="{{ asset(Payment.payment_image, 'save_image') }}"></p>
+                    {% endif %}
+                  </div>
+                {% endfor %}
               </div>
-              <div class="ec-input {{ has_errors(form.Payment) ? ' error' }}">{{ form_errors(form.Payment) }}</div>
+              <div class="ggm-ec-input ec-input {{ has_errors(form.Payment) ? ' error' }}">{{ form_errors(form.Payment) }}</div>
           </div>
           {% if BaseInfo.isOptionPoint and Order.Customer is not null %}
-              <div class="ec-orderPayment">
-                  <div class="ec-rectHeading">
-                      <h2>{{ 'front.shopping.point_info'|trans }}</h2>
-                  </div>
-                  <div class="ec-input {{ has_errors(form.use_point) ? ' error' }}">
-                      <p>{{ 'front.shopping.available_point'|trans({ '%point%': Order.Customer.Point|number_format }) }}</p>
-                      {{ form_widget(form.use_point, { 'attr': { 'type': 'text', 'class': 'form-control', 'data-trigger': 'change' }}) }}
-                      {{ form_errors(form.use_point) }}
-                  </div>
+            <div class="ggm-ec-order-payment ec-orderPayment">
+              <div class="ggm-ec-rect-heading ec-rectHeading">
+                  <h2>{{ 'front.shopping.point_info'|trans }}</h2>
               </div>
+              <div class="ggm-ec-input ec-input {{ has_errors(form.use_point) ? ' error' }}">
+                  <p>{{ 'front.shopping.available_point'|trans({ '%point%': Order.Customer.Point|number_format }) }}</p>
+                  {{ form_widget(form.use_point, { 'attr': { 'type': 'text', 'class': 'form-control', 'data-trigger': 'change' }}) }}
+                  {{ form_errors(form.use_point) }}
+              </div>
+            </div>
           {% endif %}
-          <div class="ec-orderConfirm">
-              <div class="ec-rectHeading">
+          <div class="ggm-ec-order-confirm ec-orderConfirm">
+              <div class="ggm-ec-rect-heading ec-rectHeading">
                   <h2>{{ 'front.shopping.message_info'|trans }}</h2>
               </div>
-              <div class="ec-input">
+              <div class="ggm-ec-input ec-input">
                   {{ form_widget(form.message, {'attr': {'class': 'form-control', 'placeholder': 'front.shopping.message_placeholder'|trans, 'rows': '6'}}) }}
                   {{ form_errors(form.message) }}
               </div>
           </div>
         </div>
-        <div class="ec-orderRole__summary">
-            <div class="ec-totalBox">
-                <dl class="ec-totalBox__spec">
+        <div class="ggm-ec-order-role-summary ec-orderRole__summary">
+            <div class="ggm-ec-total-box ec-totalBox">
+                <dl class="ggm-ec-total-box-spec ec-totalBox__spec">
                     <dt>{{ 'common.subtotal'|trans }}</dt>
-                    <dd class="ec-totalBox__specTotal">{{ Order.subtotal|price }}</dd>
+                    <dd class="ggm-ec-total-box-spec-total ec-totalBox__specTotal">{{ Order.subtotal|price }}</dd>
                 </dl>
-                <dl class="ec-totalBox__spec">
+                <dl class="ggm-ec-total-box-spec ec-totalBox__spec">
                     <dt>{{ 'common.charge'|trans }}</dt>
                     <dd>{{ Order.charge|price }}</dd>
                 </dl>
-                <dl class="ec-totalBox__spec">
+                <dl class="ggm-ec-total-box-spec ec-totalBox__spec">
                     <dt>{{ 'common.delivery_fee'|trans }}</dt>
                     <dd>{{ Order.deliveryFeeTotal|price }}</dd>
                 </dl>
                 {% if Order.taxable_discount < 0 %}
-                <dl class="ec-totalBox__spec">
+                <dl class="ggm-ec-total-box-spec ec-totalBox__spec">
                     <dt>{{ 'common.discount'|trans }}</dt>
                     <dd>{{ Order.taxable_discount|price }}</dd>
                 </dl>
                 {% endif %}
-                <div class="ec-totalBox__total">{{ 'common.total'|trans }}<span class="ec-totalBox__price">{{ Order.taxable_total|price }}</span><span class="ec-totalBox__taxLabel">{{ 'common.tax_include'|trans }}</span></div>
+                <div class="ggm-ec-total-box-total ec-totalBox__total">{{ 'common.total'|trans }}
+                  <span class="ggm-ec-total-box-price ec-totalBox__price">{{ Order.taxable_total|price }}</span>
+                  <span class="ggm-ec-total-box-taxlabel ec-totalBox__taxLabel">{{ 'common.tax_include'|trans }}</span>
+                </div>
                 {% for rate, total in Order.taxable_total_by_tax_rate %}
-                <dl class="ec-totalBox__taxRate">
+                <dl class="ggm-ec-totalbox-tax-rate ec-totalBox__taxRate">
                     <dt>{{ 'common.tax_rate_target'|trans({ '%rate%': rate }) }}</dt>
                     <dd>{{ total|price }}</dd>
                 </dl>
                 {% endfor %}
                 {% for item in Order.tax_free_discount_items %}
                     {% if loop.first %}<div class="ec-totalBox__total"></div>{% endif %}
-                    <dl class="ec-totalBox__spec">
+                    <dl class="ggm-ec-total-box-spec ec-totalBox__spec">
                         <dt>{{ item.product_name }}</dt>
                         <dd>{{ item.total_price|price }}</dd>
                     </dl>
                 {% endfor %}
-                <div class="ec-totalBox__paymentTotal">{{ 'common.payment_total'|trans }}<span class="ec-totalBox__price">{{ Order.payment_total|price }}</span><span class="ec-totalBox__taxLabel">{{ 'common.tax_include'|trans }}</span></div>
+                <div class="ggm-ec-total-box-payment-total ec-totalBox__paymentTotal">{{ 'common.payment_total'|trans }}
+                  <span class="ggm-ec-total-box-price ec-totalBox__price">{{ Order.payment_total|price }}</span>
+                  <span class="ggm-ec-total-box-taxlabel ec-totalBox__taxLabel">{{ 'common.tax_include'|trans }}</span>
+                </div>
                 {% if BaseInfo.isOptionPoint and Order.Customer is not null %}
-                <div class="ec-totalBox__pointBlock">
-                    <dl class="ec-totalBox__spec">
+                <div class="ggm-ec-total-box-point-block ec-totalBox__pointBlock">
+                    <dl class="ggm-ec-total-box-sspec ec-totalBox__spec">
                         <dt>{{ 'front.shopping.use_point'|trans }}</dt>
                         <dd>{{ Order.UsePoint|number_format }} pt</dd>
                     </dl>
-                    <dl class="ec-totalBox__spec">
-                        <dt><span class="ec-font-bold">{{ 'front.shopping.add_point'|trans }}</span></dt>
-                        <dd><span class="ec-font-bold">{{ Order.AddPoint|number_format }} pt</span></dd>
+                    <dl class="ggm-ec-total-box-spec ec-totalBox__spec">
+                        <dt><span class="ggm-ec-font-bold ec-font-bold">{{ 'front.shopping.add_point'|trans }}</span></dt>
+                        <dd><span class="ggm-ec-font-bold ec-font-bold">{{ Order.AddPoint|number_format }} pt</span></dd>
                     </dl>
                 </div>
                 {% endif %}
-                <div class="ec-totalBox__btn">
-                    <button type="submit" class="ec-blockBtn--action">{{ 'front.shopping.go_to_confirm'|trans }}</button>
-                    <a href="{{ url("cart") }}" class="ec-blockBtn--cancel">{{ 'front.shopping.back_to_cart'|trans }}</a>
+                <div class="ggm-ec-total-box-btn ec-totalBox__btn">
+                    <button type="submit" class="ggm-ec-block-btn-action ec-blockBtn--action">{{ 'front.shopping.go_to_confirm'|trans }}</button>
+                    <a href="{{ url("cart") }}" class="ggm-ec-block-btn-cancel ec-blockBtn--cancel">{{ 'front.shopping.back_to_cart'|trans }}</a>
                 </div>
             </div>
         </div>
