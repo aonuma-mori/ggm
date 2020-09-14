@@ -1125,6 +1125,32 @@ body#page_shopping {
 
 
 
+
+body#page_contact,
+body#page_help_about,
+body#page_help_tradelaw,
+body#page_help_privacy {
+  .ggm-wrapper {
+    .ggm-contents {
+      .ggm-block-div {
+        .ec-role,.ec-contactRole {
+          background: #ff0;
+          .ec-pageHeader {
+            h1 {
+              font-weight: normal;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
 /************************************************
  * Blog (wordpress)
  * 
