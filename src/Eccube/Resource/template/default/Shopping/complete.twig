@@ -10,53 +10,53 @@ file that was distributed with this source code.
 #}
 {% extends 'default_frame.twig' %}
 
-{% set body_class = 'cart_page' %}
+{% set body_class = 'ggm-cart_page cart_page' %}
 
 {% block main %}
-<div class="ec-role">
-    <div class="ec-pageHeader">
-        <h1>{{ 'front.shopping.complete_title'|trans }}</h1>
-    </div>
+<div class="ggm-ec-role ec-role">
+  <div class="ggm-ec-page-header ec-pageHeader">
+    <h1>{{ 'front.shopping.complete_title'|trans }}</h1>
+  </div>
 </div>
 
-<div class="ec-cartRole">
-    <div class="ec-cartRole__progress">
-        <ul class="ec-progress">
-            {% set step = 1 %}
-            <li class="ec-progress__item">
-                <div class="ec-progress__number">{{ step }}{% set step = step + 1 %}
-                </div>
-                <div class="ec-progress__label">{{ 'front.cart.nav__cart_items'|trans }}
-                </div>
-            </li>
-            {% if is_granted('ROLE_USER') == false %}
-                <li class="ec-progress__item">
-                    <div class="ec-progress__number">{{ step }}{% set step = step + 1 %}
-                    </div>
-                    <div class="ec-progress__label">{{ 'front.cart.nav__customer_info'|trans }}
-                    </div>
-                </li>
-            {% endif %}
-            <li class="ec-progress__item">
-                <div class="ec-progress__number">{{ step }}{% set step = step + 1 %}
-                </div>
-                <div class="ec-progress__label">{{ 'front.cart.nav__order'|trans }}
-                </div>
-            </li>
-            <li class="ec-progress__item">
-                <div class="ec-progress__number">{{ step }}{% set step = step + 1 %}
-                </div>
-                <div class="ec-progress__label">{{ 'front.cart.nav__confirm'|trans }}
-                </div>
-            </li>
-            <li class="ec-progress__item  is-complete">
-                <div class="ec-progress__number">{{ step }}{% set step = step + 1 %}
-                </div>
-                <div class="ec-progress__label">{{ 'front.cart.nav__complete'|trans }}
-                </div>
-            </li>
-        </ul>
-    </div>
+<div class="ggm-ec-cart-role ec-cartRole">
+  <div class="ggm-ec-cart-role-progress ec-cartRole__progress">
+    <ul class="ggm-ec-progress ec-progress">
+      {% set step = 1 %}
+      <li class="ggm-ec-progress-item ec-progress__item">
+        <div class="ggm-ec-progress-number ec-progress__number">{{ step }}{% set step = step + 1 %}
+        </div>
+        <div class="ggm-ec-progress-label ec-progress__label">{{ 'front.cart.nav__cart_items'|trans }}
+        </div>
+      </li>
+      {% if is_granted('ROLE_USER') == false %}
+        <li class="ggm-ec-progress-item ec-progress__item">
+          <div class="ggm-ec-progress-number ec-progress__number">{{ step }}{% set step = step + 1 %}
+          </div>
+          <div class="ggm-ec-progress-label ec-progress__label">{{ 'front.cart.nav__customer_info'|trans }}
+          </div>
+        </li>
+      {% endif %}
+      <li class="ggm-ec-progress-item ec-progress__item">
+        <div class="ggm-ec-progress-number ec-progress__number">{{ step }}{% set step = step + 1 %}
+        </div>
+        <div class="ggm-ec-progress-label ec-progress__label">{{ 'front.cart.nav__order'|trans }}
+        </div>
+      </li>
+      <li class="ggm-ec-progress-item ec-progress__item">
+        <div class="ggm-ec-progress-number ec-progress__number">{{ step }}{% set step = step + 1 %}
+        </div>
+        <div class="ggm-ec-progress-label ec-progress__label">{{ 'front.cart.nav__confirm'|trans }}
+        </div>
+      </li>
+      <li class="ggm-ec-progress-item ec-progress__item  is-complete">
+        <div class="ggm-ec-progress-number ec-progress__number">{{ step }}{% set step = step + 1 %}
+        </div>
+        <div class="ggm-ec-progress-label ec-progress__label">{{ 'front.cart.nav__complete'|trans }}
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 
 <div class="ec-cartCompleteRole">

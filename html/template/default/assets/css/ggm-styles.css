@@ -942,6 +942,18 @@ body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shoppi
   font-weight: normal;
 }
 
+.ggm-ec-alert-warning {
+  background: #fff;
+}
+.ggm-ec-alert-warning .ggm-ec-alert-warning-icon {
+  color: #880000;
+}
+.ggm-ec-alert-warning .ggm-ec-alert-warning-text {
+  background: #fff;
+  color: #880000;
+  font-weight: normal;
+}
+
 /*
 - 当サイトについて
 - お問い合わせ

@@ -56,9 +56,11 @@
       {% for error in app.session.flashbag.get('eccube.front.request.error') %}
           {% set idx = loop.index0 %}
           <div class="ec-cartRole__error">
-              <div class="ec-alert-warning">
-                  <div class="ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-white.svg') }}"></div>
-                  <div class="ec-alert-warning__text">
+              <div class="ggm-ec-alert-warning ec-alert-warning">
+                  <div class="ggm-ec-alert-warning-icon ec-alert-warning__icon">
+                  <img src="{{ asset('assets/icon/exclamation-red.png') }}">
+                  </div>
+                  <div class="ggm-ec-alert-warning-text ec-alert-warning__text">
                       {% if productStr[idx] is defined %}
                           {{ error|trans({'%product%':productStr[idx]})|nl2br }}
                       {% else %}
@@ -70,9 +72,9 @@
       {% endfor %}
       {% for error in app.session.flashbag.get('eccube.front.cart.error') %}
           <div class="ec-cartRole__error">
-              <div class="ec-alert-warning">
-                  <div class="ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-white.svg') }}"></div>
-                  <div class="ec-alert-warning__text">
+              <div class="ggm-ec-alert-warning ec-alert-warning">
+                  <div class="ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-red.png') }}"></div>
+                  <div class="ggm-ec-alert-warning-text ec-alert-warning__text">
                       {{ error|trans|nl2br }}
                   </div>
               </div>
@@ -86,8 +88,8 @@
           </div>
           {% if Carts|length > 1 %}
               <div class="ec-cartRole__error">
-                  <div class="ec-alert-warning">
-                      <div class="ec-alert-warning__text">
+                  <div class="ggm-ec-alert-warning ec-alert-warning">
+                      <div class="ggm-ec-alert-warning-text ec-alert-warning__text">
                           {{ 'front.cart.divide_cart'|trans|nl2br }}
                       </div>
                   </div>
@@ -100,9 +102,9 @@
                 {% set cartKey = Cart.cart_key %}
                 {% for error in app.session.flashbag.get('eccube.front.cart.' ~ cartKey ~ '.request.error') %}
                   <div class="ec-cartRole__error">
-                    <div class="ec-alert-warning">
-                      <div class="ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-white.svg') }}"></div>
-                      <div class="ec-alert-warning__text">
+                    <div class="ggm-ec-alert-warning ec-alert-warning">
+                      <div class="ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-red.png') }}"></div>
+                      <div class="ggm-ec-alert-warning-text ec-alert-warning__text">
                         {{ error|trans|nl2br }}
                       </div>
                     </div>
@@ -216,9 +218,9 @@
               {% set cartKey = Cart.cart_key %}
               {% for error in app.session.flashbag.get('eccube.front.cart.' ~ cartKey ~ '.request.error') %}
                   <div class="ec-cartRole__error">
-                      <div class="ec-alert-warning">
-                          <div class="ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-white.svg') }}"></div>
-                          <div class="ec-alert-warning__text">
+                      <div class="ggm-ec-alert-warning ec-alert-warning">
+                          <div class="ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-red.png') }}"></div>
+                          <div class="ggm-ec-alert-warning-text ec-alert-warning__text">
                               {{ error|trans|nl2br }}
                           </div>
                       </div>
@@ -228,9 +230,9 @@
           <div class="ec-role">
               <div class="ec-off3Grid">
                   <div class="ec-off3Grid__cell">
-                      <div class="ec-alert-warning">
-                          <div class="ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-white.svg') }}"></div>
-                          <div class="ec-alert-warning__text">{{ 'front.cart.no_items'|trans }}</div>
+                      <div class="ggm-ec-alert-warning ec-alert-warning">
+                          <div class="ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-red.png') }}"></div>
+                          <div class="ggm-ec-alert-warning-text ec-alert-warning__text">{{ 'front.cart.no_items'|trans }}</div>
                       </div>
                   </div>
               </div>
