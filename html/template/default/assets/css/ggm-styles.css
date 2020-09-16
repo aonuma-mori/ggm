@@ -881,8 +881,6 @@ body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shoppi
   font-weight: normal;
 }
 body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-summary {
-  background: #000;
-  /*ここから*/
   padding-top: 30px;
   font-size: 14px;
 }
