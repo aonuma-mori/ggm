@@ -948,9 +948,6 @@ body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-ro
   font-size: 18px;
   font-weight: normal;
 }
-body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress li.ggm-ec-progress-item {
-  background: #ff0;
-}
 body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress li.ggm-ec-progress-item .ggm-ec-progress-number {
   background: #fff;
   color: #586069;
@@ -1030,6 +1027,26 @@ body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-ca
   color: #666;
   border: 1px solid #666;
   font-weight: normal;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-report-heading {
+  margin-bottom: 120px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-report-heading h2 {
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-size: 27px;
+  color: #666;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-report-description {
+  text-align: left;
+  line-height: 27px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-report-description #ggm-order-id {
+  text-align: center;
 }
 
 /* Warning common */

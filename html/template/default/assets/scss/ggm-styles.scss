@@ -1385,7 +1385,7 @@ body#page_shopping_complete {
             // background: #ff0;
             ul.ggm-ec-progress {
               li.ggm-ec-progress-item {
-                background: #ff0;
+                // background: #ff0;
                 .ggm-ec-progress-number {
                   background: #fff;
                   color: #586069;
@@ -1517,6 +1517,32 @@ body#page_shopping_complete {
               }
             }
           } //form.ggm-ec-cart-role
+        }
+        .ggm-ec-cart-complete-role {
+          margin-top: 50px;
+          margin-bottom:50px;
+          .ggm-ec-off-3grid {
+            .ggm-ec-off3grid-cell {
+              // background:#ff0;
+              .ggm-ec-report-heading {
+                margin-bottom: 120px;
+                h2 {
+                  font-weight: normal;
+                  letter-spacing: 2px;
+                  font-size:27px;
+                  color: #666;
+                }
+              }
+              .ggm-ec-report-description {
+                // background: #0ff;
+                text-align: left;
+                line-height: 27px;
+                #ggm-order-id {
+                  text-align: center;
+                }
+              }
+            }
+          }
         }
       }
     }
