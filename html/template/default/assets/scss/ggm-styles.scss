@@ -1116,6 +1116,7 @@ body#page_shopping {
   }
 }
 
+/* ショッピング確認画面 */
 body#page_shopping_confirm {
   .ggm-wrapper {
     .ggm-contents {
@@ -1359,20 +1360,182 @@ body#page_shopping_confirm {
                 }
               }
             }
-
-
           }
-          
         }
       }
     }
   }
 }
 
+/* ショッピング完了画面 */
+body#page_shopping_complete {
+  .ggm-wrapper {
+    .ggm-contents {
+      .ggm-block-div {
+        .ggm-ec-role {
+          .ggm-ec-page-header {
+            h1 {
+              font-size: 18px;
+              font-weight: normal;
+            }
+          }
+        }
+        .ggm-ec-cart-role {
+          .ggm-ec-cart-role-progress {
+            // background: #ff0;
+            ul.ggm-ec-progress {
+              li.ggm-ec-progress-item {
+                background: #ff0;
+                .ggm-ec-progress-number {
+                  background: #fff;
+                  color: #586069;
+                  border: 1px solid #586069;
+                  font-weight: normal;
+                }
+                .ggm-ec-progress-label {
+                  font-weight: normal;
+                }
+              }
+              li.is-complete {
+                
+                .ggm-ec-progress-number {
+                  background: #880000;
+                  color: #fff;
+                  border: 1px solid #880000;
+                  font-weight: normal;
+                }
+                .ggm-ec-progress-label {
+                  font-weight: bold;
+                  color: #586069;
+                }
+              }
+              .ec-progress, .ec-progress__item:after {
+                background: #586069 !important;
+                height: 1px;
+              }
+            }
+          }
+          .ggm-ec-cart-role-total-text {
+            p {
+              margin-top: 35px;
+              margin-bottom: 50px;
+              font-size: 14px;
+              strong {
+                font-weight: normal;
+                font-size: 16px;
+              }
+            }
+          }
+          // 商品リスト内
+          
+          form.ggm-ec-cart-role {
+            .ggm-cart-role-cart {
+              .ggm-ec-cart-table {
+                ol.ggm-ec-cart-header {
+                  display: none;
+                  margin-bottom: 20px;
+                  li.ggm-ec-cartHeader-label{
+                    font-weight: normal;
+                    font-size: 13px;
+                    background: #f8f9fa;
+                    border-bottom: 1px dotted #c1c1c1;
+                  }
+
+                }
+                ul.ggm-ec-cart-row {
+                  li.ggm-ec-cart-row-contentcolumn {
+                    .ggm-ec-cart-row-img {
+                      a {
+                        img {
+                          border-radius: 3px;
+                        }
+                      }
+                    }
+                    .ggm-ec-cart-row-summary {
+                      font-weight: normal;
+                      font-size: 14px;
+                    }
+                  }
+                  li.ggm-ec-cart-row-amountcolumn {
+                    // background: #ff0;
+                    
+                    .ggm-ec-cart-row-amount{
+                      font-weight: normal;
+                      font-size: 13px;
+                    }
+                    .ggm-ec-cart-row-amountsp {
+
+                    }
+                    .ggm-ec-cart-row-amountupdown {
+                      
+                      a {
+                        border: 1px #c1c1c1 solid;
+                        span.ggm-ec-cart-row-amount-down-button-icon {
+                          img {
+                            // border: 1px #c1c1c1 solid;
+                          }
+                        }
+                      }
+                      .ggm-ec-cart-row-amountupdown {
+                        background: #f00;
+                      }
+                    }
+                    .ggm-ec-cart-row-amount {
+                      
+                    }
+
+
+
+
+                  }
+                }
+              }
+            }//ggm-cart-role-cart
+            .ggm-ec-cart-role-actions {
+              // background: #000;
+              .ggm-ec-cart-role-total {
+                font-weight: normal;
+                .ggm-ec-cart-role-total-amount {
+                  font-weight: normal;
+                  color: #333;
+                  font-size: 20px;
+                  // margin-top: 15px;
+                }
+              }
+              .ggm-ec-block-btn-action {
+                color: #fff;
+                border-radius: 3px;
+                background: #880000;
+                border: 1px solid #880000;
+                font-weight: normal;
+              }
+              .ggm-ec-block-btn-cancel {
+                background: #fff;
+                color: #666;
+                border: 1px solid #666;
+                font-weight: normal;
+              }
+            }
+          } //form.ggm-ec-cart-role
+        }
+      }
+    }
+  }
+}
+
+/* Warning common */
 .ggm-ec-alert-warning {
   background: #fff;
   .ggm-ec-alert-warning-icon {
-    color: #880000;
+    display: inline-block;
+    margin-right: 0;
+    width: 24px;
+    height: -7px;
+    color: #fff;
+    fill: #fff;
+    vertical-align: top;
+    position: relative;
+    top: -3px;
     img {
 
     }

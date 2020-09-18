@@ -73,7 +73,7 @@
       {% for error in app.session.flashbag.get('eccube.front.cart.error') %}
           <div class="ec-cartRole__error">
               <div class="ggm-ec-alert-warning ec-alert-warning">
-                  <div class="ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-red.png') }}"></div>
+                  <div class="ggm-ec-alert-warning-icon ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-red.png') }}"></div>
                   <div class="ggm-ec-alert-warning-text ec-alert-warning__text">
                       {{ error|trans|nl2br }}
                   </div>
@@ -103,7 +103,7 @@
                 {% for error in app.session.flashbag.get('eccube.front.cart.' ~ cartKey ~ '.request.error') %}
                   <div class="ec-cartRole__error">
                     <div class="ggm-ec-alert-warning ec-alert-warning">
-                      <div class="ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-red.png') }}"></div>
+                      <div class="ggm-ec-alert-warning-icon ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-red.png') }}"></div>
                       <div class="ggm-ec-alert-warning-text ec-alert-warning__text">
                         {{ error|trans|nl2br }}
                       </div>
@@ -219,7 +219,7 @@
               {% for error in app.session.flashbag.get('eccube.front.cart.' ~ cartKey ~ '.request.error') %}
                   <div class="ec-cartRole__error">
                       <div class="ggm-ec-alert-warning ec-alert-warning">
-                          <div class="ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-red.png') }}"></div>
+                          <div class="ggm-ec-alert-warning-icon ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-red.png') }}"></div>
                           <div class="ggm-ec-alert-warning-text ec-alert-warning__text">
                               {{ error|trans|nl2br }}
                           </div>
@@ -231,7 +231,7 @@
               <div class="ec-off3Grid">
                   <div class="ec-off3Grid__cell">
                       <div class="ggm-ec-alert-warning ec-alert-warning">
-                          <div class="ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-red.png') }}"></div>
+                          <div class="ggm-ec-alert-warning-icon ec-alert-warning__icon"><img src="{{ asset('assets/icon/exclamation-red.png') }}"></div>
                           <div class="ggm-ec-alert-warning-text ec-alert-warning__text">{{ 'front.cart.no_items'|trans }}</div>
                       </div>
                   </div>
