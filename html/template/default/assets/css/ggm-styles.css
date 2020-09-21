@@ -1033,6 +1033,7 @@ body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-ca
   margin-bottom: 50px;
 }
 body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-report-heading {
+  border-top: none;
   margin-bottom: 120px;
 }
 body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-report-heading h2 {
@@ -1044,9 +1045,19 @@ body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-ca
 body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-report-description {
   text-align: left;
   line-height: 27px;
+  font-size: 14px;
 }
 body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-report-description #ggm-order-id {
   text-align: center;
+  margin-bottom: 50px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-off4grid .ggm-ec-off4grid-cell {
+  margin-top: 70px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-off4grid .ggm-ec-off4grid-cell a:link, body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-off4grid .ggm-ec-off4grid-cell a:visited {
+  background: #fff;
+  border-radius: 3px;
+  font-weight: normal;
 }
 
 /* Warning common */
@@ -1113,6 +1124,15 @@ body#page_help_tradelaw .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-o
 body#page_help_tradelaw .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs dl dt label,
 body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs dl dt label,
 body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs dl dt label {
+  font-weight: normal;
+}
+
+/* mypage (login page) */
+.ggm-ec-mypage-role {
+  background: #ff0;
+}
+.ggm-ec-mypage-role .ggm-ec-page-header h1 {
+  font-size: 18px;
   font-weight: normal;
 }
 

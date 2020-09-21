@@ -18,7 +18,7 @@ file that was distributed with this source code.
     <h1>{{ 'front.shopping.complete_title'|trans }}</h1>
   </div>
 </div>
-hoge
+
 <div class="ggm-ec-cart-role ec-cartRole">
   <div class="ggm-ec-cart-role-progress ec-cartRole__progress">
     <ul class="ggm-ec-progress ec-progress">
@@ -60,30 +60,31 @@ hoge
 </div>
 
 <div class="ggm-ec-cart-complete-role ec-cartCompleteRole">
-    <div class="ggm-ec-off-3grid ec-off3Grid ec-text-ac">
-        <div class="ggm-ec-off3grid-cell ec-off3Grid__cell">
-            <div class="ggm-ec-report-heading ec-reportHeading">
-                <h2>{{ 'front.shopping.complete_message__title'|trans }}</h2>
-            </div>
-            <p class="ggm-ec-report-description ec-reportDescription">
-                {{ 'front.shopping.complete_message__body'|trans|nl2br }}
-                {% if Order.id %}
-                    <br /><br /><strong>{{ 'front.shopping.order_no'|trans }} : {{ Order.orderNo }}</strong>
-                {% endif %}
-            </p>
+  <div class="ggm-ec-off-3grid ec-off3Grid ec-text-ac">
+    <div class="ggm-ec-off3grid-cell ec-off3Grid__cell">
+      <div class="ggm-ec-report-heading ec-reportHeading">
+        <h2>{{ 'front.shopping.complete_message__title'|trans }}</h2>
+      </div>
+      <p class="ggm-ec-report-description ec-reportDescription">
+        {{ 'front.shopping.complete_message__body'|trans|nl2br }}
+        {% if Order.id %}
+          <br /><br />
+          <p id="ggm-order-id">{{ 'front.shopping.order_no'|trans }} : {{ Order.orderNo }}</p>
+        {% endif %}
+      </p>
 
-            {% if Order.complete_message is not empty %}
-                {{ Order.complete_message|raw }}
-            {% endif %}
+      {% if Order.complete_message is not empty %}
+        {{ Order.complete_message|raw }}
+      {% endif %}
 
-            <div class="ggm-ec-off4grid ec-off4Grid">
-                {% if hasNextCart %}
-                    <div class="ggm-ec-off4grid-cell ec-off4Grid__cell"><a class="ec-blockBtn--primary" href="{{ url('cart') }}">{{ 'front.shopping.continue'|trans }}</a></div>
-                {% else %}
-                    <div class="ggm-ec-off4grid-cell ec-off4Grid__cell"><a class="ec-blockBtn--cancel" href="{{ url('homepage') }}">{{ 'common.go_to_top'|trans }}</a></div>
-                {% endif %}
-            </div>
-        </div>
+      <div class="ggm-ec-off4grid ec-off4Grid">
+        {% if hasNextCart %}
+          <div class="ggm-ec-off4grid-cell ec-off4Grid__cell"><a class="ec-blockBtn--primary" href="{{ url('cart') }}">{{ 'front.shopping.continue'|trans }}</a></div>
+        {% else %}
+          <div class="ggm-ec-off4grid-cell ec-off4Grid__cell"><a class="ec-blockBtn--cancel" href="{{ url('homepage') }}">{{ 'common.go_to_top'|trans }}</a></div>
+        {% endif %}
+      </div>
     </div>
+  </div>
 </div>
 {% endblock %}

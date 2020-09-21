@@ -16,20 +16,20 @@ file that was distributed with this source code.
 
 {% block main %}
     <div class="ec-layoutRole__main">
-        <div class="ec-mypageRole">
+        <div class="ggm-ec-mypage-role ec-mypageRole">
             <div class="ec-pageHeader">
                 <h1>{{ 'front.mypage.title'|trans }}/{{ 'front.mypage.nav__customer_address'|trans }}</h1>
             </div>
             {{ include('Mypage/navi.twig') }}
         </div>
-        <div class="ec-mypageRole">
+        <div class="ggm-ec-mypage-role ec-mypageRole">
             {% if Customer.CustomerAddresses|length > 0 %}
                 <p class="ec-para-normal">{{ 'front.mypage.customer_address_count'|trans({'%count%':Customer.CustomerAddresses|length}) }}</p>
             {% else %}
                 <p class="ec-para-normal">{{ 'front.mypage.customer_address_not_found'|trans }}</p>
             {% endif %}
         </div>
-        <div class="ec-mypageRole">
+        <div class="ggm-ec-mypage-role ec-mypageRole">
             <div class="ec-off1Grid">
                 <div class="ec-off1Grid__cell">
                     <div class="ec-addressRole">

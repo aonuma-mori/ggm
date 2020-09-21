@@ -16,13 +16,13 @@ file that was distributed with this source code.
 
 {% block main %}
     <div class="ec-layoutRole__main">
-        <div class="ec-mypageRole">
+        <div class="ggm-ec-mypage-role ec-mypageRole">
             <div class="ec-pageHeader">
                 <h1>{{ 'front.mypage.title'|trans }}/{{ 'front.mypage.nav__history'|trans }}</h1>
             </div>
             {% include 'Mypage/navi.twig' %}
         </div>
-        <div class="ec-mypageRole">
+        <div class="ggm-ec-mypage-role ec-mypageRole">
             {% if pagination.totalItemCount > 0 %}
                 <p class="ec-para-normal">{{ 'front.mypage.history_count'|trans({'%count%':pagination.totalItemCount}) }}</p>
                 {% for Order in pagination %}

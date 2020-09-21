@@ -1525,6 +1525,7 @@ body#page_shopping_complete {
             .ggm-ec-off3grid-cell {
               // background:#ff0;
               .ggm-ec-report-heading {
+                border-top: none;
                 margin-bottom: 120px;
                 h2 {
                   font-weight: normal;
@@ -1537,8 +1538,21 @@ body#page_shopping_complete {
                 // background: #0ff;
                 text-align: left;
                 line-height: 27px;
+                font-size: 14px;
                 #ggm-order-id {
                   text-align: center;
+                  margin-bottom: 50px;
+                }
+              }
+              .ggm-ec-off4grid {
+                // background: #0ff;
+                .ggm-ec-off4grid-cell {
+                  margin-top: 70px;
+                  a:link, a:visited {
+                    background: #fff;
+                    border-radius: 3px;
+                    font-weight: normal;
+                  }
                 }
               }
             }
@@ -1621,7 +1635,16 @@ body#page_help_privacy {
 }
 
 
-
+/* mypage (login page) */
+.ggm-ec-mypage-role {
+  background: #ff0;
+  .ggm-ec-page-header {
+    h1 {
+      font-size: 18px;
+      font-weight: normal;
+    }
+  }
+}
 
 
 /************************************************
