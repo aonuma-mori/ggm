@@ -1637,7 +1637,7 @@ body#page_help_privacy {
 
 /* mypage (login page) */
 .ggm-ec-mypage-role {
-  background: #ff0;
+  // background: #ff0;
   .ggm-ec-page-header {
     h1 {
       font-size: 18px;
@@ -1645,6 +1645,9 @@ body#page_help_privacy {
     }
   }
 }
+
+/* Mypage navi */
+// src/Eccube/Resource/template/default/Mypage/navi.twig
 
 
 /************************************************

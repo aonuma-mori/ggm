@@ -1128,14 +1128,12 @@ body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole
 }
 
 /* mypage (login page) */
-.ggm-ec-mypage-role {
-  background: #ff0;
-}
 .ggm-ec-mypage-role .ggm-ec-page-header h1 {
   font-size: 18px;
   font-weight: normal;
 }
 
+/* Mypage navi */
 /************************************************
  * Blog (wordpress)
  * 
