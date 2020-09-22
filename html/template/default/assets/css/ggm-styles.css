@@ -626,59 +626,514 @@ body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .
   background: #586069 !important;
   height: 1px;
 }
-body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail {
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form {
+  /* 横に出る会計のサマリー */
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail {
   /* delivery info */
 }
-body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-account {
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-account {
   /* customer info */
 }
-body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-account .ggm-ec-rect-heading h2 {
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-account .ggm-ec-rect-heading h2 {
   font-weight: normal;
   color: #586069;
   background: #fff;
 }
-body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-account .ggm-ec-order-account-account {
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-account .ggm-ec-order-account-account {
   margin-left: 30px;
   font-size: 14px;
   line-height: 27px;
 }
-body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-rect-heading h2 {
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-rect-heading h2 {
   font-weight: normal;
   color: #586069;
   background: #fff;
 }
-body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-order-delivery-title {
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-order-delivery-title {
   font-weight: normal;
   color: #586069;
   margin-left: 10px;
 }
-body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-order-delivery-title .ggm-ec-order-delivery-change button {
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-order-delivery-title .ggm-ec-order-delivery-change button {
   border-radius: 3px;
 }
-body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-item ul.ggm-ec-bordered-list li .ggm-ec-image-grid .ggm-ec-image-grid-img img {
-  border-radius: 3px;
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-payment {
+  margin-top: 30px;
 }
-body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-item ul.ggm-ec-bordered-list li .ggm-ec-image-grid .ggm-ec-imageg-rid-content {
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-payment .ggm-ec-rect-heading h2 {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-payment .ggm-ec-radio label span {
   font-size: 14px;
 }
-body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-item ul.ggm-ec-bordered-list li .ggm-ec-image-grid .ggm-ec-imageg-rid-content p {
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-payment .ggm-ec-input p {
+  font-size: 14px;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-confirm {
+  margin-top: 30px;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-confirm .ggm-ec-rect-heading h2 {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-confirm .ggm-ec-input {
+  word-break: break-all;
+  line-height: 25px;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-item ul.ggm-ec-bordered-list li .ggm-ec-image-grid .ggm-ec-image-grid-img img {
+  border-radius: 3px;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-item ul.ggm-ec-bordered-list li .ggm-ec-image-grid .ggm-ec-imageg-grid-content {
+  font-size: 14px;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-item ul.ggm-ec-bordered-list li .ggm-ec-image-grid .ggm-ec-imageg-grid-content p {
   margin-bottom: 5px;
 }
-body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-address {
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-address {
   font-size: 14px;
   line-height: 25px;
   margin: 60px 0;
 }
-body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-actions {
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-actions {
   font-weight: normal;
 }
-body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-actions .ggm-ec-selects .ec-select {
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-actions .ggm-ec-selects .ec-select {
   font-size: 14px;
 }
-body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggmec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-actions .ggm-ec-selects .ec-select label {
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-actions .ggm-ec-selects .ec-select label {
+  font-weight: normal;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role-summary {
+  padding-top: 30px;
+  font-size: 14px;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role-summary .ggm-ec-total-box {
+  background: #f8f9fa;
+  /* 合計金額 */
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-total {
+  font-size: 14px;
+  font-weight: normal;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-total .ggm-ec-total-box-price {
+  color: #000;
+  font-size: 18px;
+  font-weight: normal;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-total .ggm-ec-total-box-taxlabel {
+  color: #000;
+  font-size: 14px;
+  font-weight: normal;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-total .ggm-ec-total-box-payment-total {
+  color: #F00;
+  font-size: 25px;
+  font-weight: normal;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-payment-total {
+  font-weight: normal;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-payment-total .ggm-ec-total-box-price {
+  color: #880000;
+  font-weight: normal;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-payment-total .ggm-ec-total-box-taxlabel {
+  color: #880000;
+  font-weight: normal;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-point-block {
+  font-weight: normal;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-point-block .ggm-ec-total-box-spec {
+  font-weight: normal;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-point-block .ggm-ec-total-box-spec dt .ggm-ec-font-bold {
+  font-weight: normal;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-point-block .ggm-ec-total-box-spec dd .ggm-ec-font-bold {
+  font-weight: normal;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-btn button.ggm-ec-block-btn-action {
+  border-radius: 3px;
+  background: #880000;
+  font-weight: normal;
+  border: 1px solid #880000;
+}
+body#page_shopping .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-btn a.ggm-ec-block-btn-cancel {
+  background: #fff;
+  color: #666;
   font-weight: normal;
 }
 
+/* ショッピング確認画面 */
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div {
+  /* 注文内容 */
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-role .ggm-ec-page-header h1 {
+  font-size: 18px;
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress li.ggm-ec-progress-item .ggm-ec-progress-number {
+  background: #fff;
+  color: #586069;
+  border: 1px solid #586069;
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress li.ggm-ec-progress-item .ggm-ec-progress-label {
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress li.is-complete .ggm-ec-progress-number {
+  background: #880000;
+  color: #fff;
+  border: 1px solid #880000;
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress li.is-complete .ggm-ec-progress-label {
+  font-weight: bold;
+  color: #586069;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress .ec-progress, body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress .ec-progress__item:after {
+  background: #586069 !important;
+  height: 1px;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role {
+  /* 横に出る会計のサマリー */
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail {
+  /* delivery info */
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-account {
+  /* customer info */
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-account .ggm-ec-rect-heading h2 {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-account .ggm-ec-order-account-account {
+  margin-left: 30px;
+  font-size: 14px;
+  line-height: 27px;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-rect-heading h2 {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-order-delivery-title {
+  font-weight: normal;
+  color: #586069;
+  margin-left: 10px;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-order-delivery-title .ggm-ec-order-delivery-change button {
+  border-radius: 3px;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-payment {
+  margin-top: 30px;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-payment .ggm-ec-rect-heading h2 {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-payment .ggm-ec-radio label span {
+  font-size: 14px;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-payment .ggm-ec-input p {
+  font-size: 14px;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-confirm {
+  margin-top: 30px;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-confirm .ggm-ec-rect-heading h2 {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-confirm .ggm-ec-input .textarea {
+  line-height: 25px;
+  word-break: break-all;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-item ul.ggm-ec-bordered-list li .ggm-ec-image-grid .ggm-ec-image-grid-img img {
+  border-radius: 3px;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-item ul.ggm-ec-bordered-list li .ggm-ec-image-grid .ggm-ec-imageg-grid-content {
+  font-size: 14px;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-item ul.ggm-ec-bordered-list li .ggm-ec-image-grid .ggm-ec-imageg-grid-content p {
+  margin-bottom: 5px;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-address {
+  font-size: 14px;
+  line-height: 25px;
+  margin: 60px 0;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-actions {
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-actions .ggm-ec-selects .ec-select {
+  font-size: 14px;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery-actions .ggm-ec-selects .ec-select label {
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-summary {
+  padding-top: 30px;
+  font-size: 14px;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-summary .ggm-ec-total-box {
+  background: #f8f9fa;
+  /* 合計金額 */
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-total {
+  font-size: 14px;
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-total .ggm-ec-total-box-price {
+  color: #000;
+  font-size: 18px;
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-total .ggm-ec-total-box-taxlabel {
+  color: #000;
+  font-size: 14px;
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-total .ggm-ec-total-box-payment-total {
+  color: #F00;
+  font-size: 25px;
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-payment-total {
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-payment-total .ggm-ec-total-box-price {
+  color: #880000;
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-payment-total .ggm-ec-total-box-taxlabel {
+  color: #880000;
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-point-block {
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-point-block .ggm-ec-total-box-spec {
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-point-block .ggm-ec-total-box-spec dt .ggm-ec-font-bold {
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-point-block .ggm-ec-total-box-spec dd .ggm-ec-font-bold {
+  font-weight: normal;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-btn button.ggm-ec-block-btn-action {
+  border-radius: 3px;
+  background: #880000;
+  font-weight: normal;
+  border: 1px solid #880000;
+}
+body#page_shopping_confirm .ggm-wrapper .ggm-contents .ggm-block-div form#shopping-form .ggm-ec-order-role .ggm-ec-order-role-summary .ggm-ec-total-box .ggm-ec-total-box-btn a.ggm-ec-block-btn-cancel {
+  background: #fff;
+  color: #666;
+  font-weight: normal;
+}
+
+/* ショッピング完了画面 */
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-role .ggm-ec-page-header h1 {
+  font-size: 18px;
+  font-weight: normal;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress li.ggm-ec-progress-item .ggm-ec-progress-number {
+  background: #fff;
+  color: #586069;
+  border: 1px solid #586069;
+  font-weight: normal;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress li.ggm-ec-progress-item .ggm-ec-progress-label {
+  font-weight: normal;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress li.is-complete .ggm-ec-progress-number {
+  background: #880000;
+  color: #fff;
+  border: 1px solid #880000;
+  font-weight: normal;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress li.is-complete .ggm-ec-progress-label {
+  font-weight: bold;
+  color: #586069;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress .ec-progress, body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-progress ul.ggm-ec-progress .ec-progress__item:after {
+  background: #586069 !important;
+  height: 1px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-total-text p {
+  margin-top: 35px;
+  margin-bottom: 50px;
+  font-size: 14px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role .ggm-ec-cart-role-total-text p strong {
+  font-weight: normal;
+  font-size: 16px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-cart-role-cart .ggm-ec-cart-table ol.ggm-ec-cart-header {
+  display: none;
+  margin-bottom: 20px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-cart-role-cart .ggm-ec-cart-table ol.ggm-ec-cart-header li.ggm-ec-cartHeader-label {
+  font-weight: normal;
+  font-size: 13px;
+  background: #f8f9fa;
+  border-bottom: 1px dotted #c1c1c1;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-cart-role-cart .ggm-ec-cart-table ul.ggm-ec-cart-row li.ggm-ec-cart-row-contentcolumn .ggm-ec-cart-row-img a img {
+  border-radius: 3px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-cart-role-cart .ggm-ec-cart-table ul.ggm-ec-cart-row li.ggm-ec-cart-row-contentcolumn .ggm-ec-cart-row-summary {
+  font-weight: normal;
+  font-size: 14px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-cart-role-cart .ggm-ec-cart-table ul.ggm-ec-cart-row li.ggm-ec-cart-row-amountcolumn .ggm-ec-cart-row-amount {
+  font-weight: normal;
+  font-size: 13px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-cart-role-cart .ggm-ec-cart-table ul.ggm-ec-cart-row li.ggm-ec-cart-row-amountcolumn .ggm-ec-cart-row-amountupdown a {
+  border: 1px #c1c1c1 solid;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-cart-role-cart .ggm-ec-cart-table ul.ggm-ec-cart-row li.ggm-ec-cart-row-amountcolumn .ggm-ec-cart-row-amountupdown .ggm-ec-cart-row-amountupdown {
+  background: #f00;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-ec-cart-role-actions .ggm-ec-cart-role-total {
+  font-weight: normal;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-ec-cart-role-actions .ggm-ec-cart-role-total .ggm-ec-cart-role-total-amount {
+  font-weight: normal;
+  color: #333;
+  font-size: 20px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-ec-cart-role-actions .ggm-ec-block-btn-action {
+  color: #fff;
+  border-radius: 3px;
+  background: #880000;
+  border: 1px solid #880000;
+  font-weight: normal;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-role form.ggm-ec-cart-role .ggm-ec-cart-role-actions .ggm-ec-block-btn-cancel {
+  background: #fff;
+  color: #666;
+  border: 1px solid #666;
+  font-weight: normal;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-report-heading {
+  border-top: none;
+  margin-bottom: 120px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-report-heading h2 {
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-size: 27px;
+  color: #666;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-report-description {
+  text-align: left;
+  line-height: 27px;
+  font-size: 14px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-report-description #ggm-order-id {
+  text-align: center;
+  margin-bottom: 50px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-off4grid .ggm-ec-off4grid-cell {
+  margin-top: 70px;
+}
+body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-off4grid .ggm-ec-off4grid-cell a:link, body#page_shopping_complete .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-cart-complete-role .ggm-ec-off-3grid .ggm-ec-off3grid-cell .ggm-ec-off4grid .ggm-ec-off4grid-cell a:visited {
+  background: #fff;
+  border-radius: 3px;
+  font-weight: normal;
+}
+
+/* Warning common */
+.ggm-ec-alert-warning {
+  background: #fff;
+}
+.ggm-ec-alert-warning .ggm-ec-alert-warning-icon {
+  display: inline-block;
+  margin-right: 0;
+  width: 24px;
+  height: -7px;
+  color: #fff;
+  fill: #fff;
+  vertical-align: top;
+  position: relative;
+  top: -3px;
+}
+.ggm-ec-alert-warning .ggm-ec-alert-warning-text {
+  background: #fff;
+  color: #880000;
+  font-weight: normal;
+}
+
+/*
+- 当サイトについて
+- お問い合わせ
+- 特定商取引法に基づく表記
+- プライバシーポリシー
+*/
+body#page_contact .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-pageHeader h1, body#page_contact .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-pageHeader h1,
+body#page_help_about .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-pageHeader h1,
+body#page_help_about .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-pageHeader h1,
+body#page_help_tradelaw .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-pageHeader h1,
+body#page_help_tradelaw .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-pageHeader h1,
+body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-pageHeader h1,
+body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-pageHeader h1 {
+  font-weight: normal;
+  font-size: 18px;
+  border-bottom: 0px solid #ccc;
+}
+body#page_contact .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-off1Grid, body#page_contact .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-off1Grid,
+body#page_help_about .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-off1Grid,
+body#page_help_about .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-off1Grid,
+body#page_help_tradelaw .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-off1Grid,
+body#page_help_tradelaw .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-off1Grid,
+body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-off1Grid,
+body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-off1Grid {
+  font-size: 14px;
+  font-weight: normal;
+}
+body#page_contact .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs, body#page_contact .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs,
+body#page_help_about .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs,
+body#page_help_about .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs,
+body#page_help_tradelaw .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs,
+body#page_help_tradelaw .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs,
+body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs,
+body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs {
+  background: #ff0;
+}
+body#page_contact .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs dl dt label, body#page_contact .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs dl dt label,
+body#page_help_about .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs dl dt label,
+body#page_help_about .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs dl dt label,
+body#page_help_tradelaw .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs dl dt label,
+body#page_help_tradelaw .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs dl dt label,
+body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-role .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs dl dt label,
+body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole .ec-off1Grid .ec-off1Grid__cell .ec-borderedDefs dl dt label {
+  font-weight: normal;
+}
+
+/* mypage (login page) */
+.ggm-ec-mypage-role .ggm-ec-page-header h1 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* Mypage navi */
 /************************************************
  * Blog (wordpress)
  * 

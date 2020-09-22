@@ -894,7 +894,6 @@ body#page_shopping {
                 }
               }
               li.is-complete {
-                
                 .ggm-ec-progress-number {
                   background: #880000;
                   color: #fff;
@@ -915,8 +914,8 @@ body#page_shopping {
         }
         /* 注文内容 */
         form#shopping-form {
-          .ggmec-order-role { 
-            .ggm-ec-order-role-detail {  
+          .ggm-ec-order-role {
+            .ggm-ec-order-role-detail {
               .ggm-ec-order-account {
                 // background: #f00;
                 .ggm-ec-rect-heading {
@@ -957,6 +956,42 @@ body#page_shopping {
                   }
                 }
               }
+              .ggm-ec-order-payment {
+                margin-top: 30px;
+                .ggm-ec-rect-heading {
+                  h2 {
+                    font-weight: normal;
+                    color: #586069;
+                    background: #fff;
+                  }
+                }
+                .ggm-ec-radio {
+                  label {
+                    span {
+                      font-size: 14px;
+                    }
+                  }
+                }
+                .ggm-ec-input {
+                  p {
+                    font-size: 14px;
+                  }
+                }
+              }
+              .ggm-ec-order-confirm {
+                margin-top: 30px;
+                .ggm-ec-rect-heading {
+                  h2 {
+                    font-weight: normal;
+                    color: #586069;
+                    background: #fff;
+                  }
+                }
+                .ggm-ec-input {
+                  word-break: break-all;
+                  line-height: 25px;
+                }
+              }
               .ggm-ec-order-delivery-item {
                 // background: #ff0;
                 ul.ggm-ec-bordered-list {
@@ -968,7 +1003,7 @@ body#page_shopping {
                           border-radius: 3px;
                         }
                       } 
-                      .ggm-ec-imageg-rid-content {
+                      .ggm-ec-imageg-grid-content {
                         // background: #f00;
                         font-size: 14px;
                         p {
@@ -997,9 +1032,602 @@ body#page_shopping {
               }
             }
           }
+          /* 横に出る会計のサマリー */
+          .ggm-ec-order-role-summary {
+            // background: #000;
+            padding-top: 30px;
+            font-size: 14px;
+            .ggm-ec-total-box {
+
+              background: #f8f9fa;
+              .ggm-ec-total-box-spec {
+                
+              }
+              /* 合計金額 */
+              .ggm-ec-total-box-total {
+                font-size: 14px;
+                font-weight: normal;
+                .ggm-ec-total-box-price {
+                  color: #000;
+                  font-size: 18px;
+                  font-weight: normal;
+                }
+                .ggm-ec-total-box-taxlabel {
+                  color: #000;
+                  font-size: 14px;
+                  font-weight: normal;
+                }
+                .ggm-ec-total-box-payment-total {
+
+                }
+                .ggm-ec-total-box-payment-total {
+                  color: #F00;
+                  font-size: 25px;
+                  font-weight: normal;
+                }
+              }
+              .ggm-ec-total-box-payment-total {
+                font-weight: normal;
+                .ggm-ec-total-box-price {
+                  color: #880000;
+                  font-weight: normal;
+                }
+                .ggm-ec-total-box-taxlabel {
+                  color: #880000;
+                  font-weight: normal;
+                }
+              }
+              .ggm-ec-total-box-point-block {
+                // background: #000;
+                font-weight: normal;
+                .ggm-ec-total-box-spec {
+                  font-weight: normal;
+                  dt {
+                    .ggm-ec-font-bold {
+                      font-weight: normal;
+                    }
+                  }
+                  dd {
+                    .ggm-ec-font-bold {
+                      font-weight: normal;
+                    }
+                  }
+                }
+              }
+              .ggm-ec-total-box-btn {
+                // background: #000;
+                button.ggm-ec-block-btn-action {
+                  border-radius: 3px;
+                  background: #880000;
+                  font-weight: normal;
+                  border: 1px solid #880000;
+                }
+                a.ggm-ec-block-btn-cancel {
+                  background: #fff;
+                  color: #666;
+                  font-weight: normal;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ショッピング確認画面 */
+body#page_shopping_confirm {
+  .ggm-wrapper {
+    .ggm-contents {
+      .ggm-block-div {
+        .ggm-ec-role {
+          .ggm-ec-page-header {
+            h1 {
+              font-size: 18px;
+              font-weight: normal;
+            }
+          }
+        }
+        .ggm-ec-cart-role {
+          .ggm-ec-cart-role-progress {
+            ul.ggm-ec-progress {
+              li.ggm-ec-progress-item {
+                // background: #0f0;
+                .ggm-ec-progress-number {
+                  background: #fff;
+                  color: #586069;
+                  border: 1px solid #586069;
+                  font-weight: normal;
+                }
+                .ggm-ec-progress-label {
+                  font-weight: normal;
+                }
+              }
+              li.is-complete {
+                .ggm-ec-progress-number {
+                  background: #880000;
+                  color: #fff;
+                  border: 1px solid #880000;
+                  font-weight: normal;
+                }
+                .ggm-ec-progress-label {
+                  font-weight: bold;
+                  color: #586069;
+                }
+              }
+              .ec-progress, .ec-progress__item:after {
+                background: #586069 !important;
+                height: 1px;
+              }
+            }
+          }
+        }
+        /* 注文内容 */
+        form#shopping-form {
+          // background: #f00;
+          .ggm-ec-order-role {
+            .ggm-ec-order-role-detail {
+              .ggm-ec-order-account {
+                // background: #f00;
+                .ggm-ec-rect-heading {
+                  h2 {
+                    font-weight: normal;
+                    color: #586069;
+                    background: #fff;
+                  }
+                }
+                /* customer info */
+                .ggm-ec-order-account-account {
+                  // background: #f00;
+                  margin-left: 30px;
+                  font-size: 14px;
+                  line-height: 27px;
+                }
+              }
+              /* delivery info */
+              .ggm-ec-order-delivery {
+                .ggm-ec-rect-heading {
+                  h2 {
+                    font-weight: normal;
+                    color: #586069;
+                    background: #fff;
+                  }
+                }
+                .ggm-ec-order-delivery-title {
+                  font-weight: normal;
+                    color: #586069;
+                    margin-left: 10px;
+                  .ggm-ec-order-delivery-change {
+                    button {
+                      border-radius: 3px;
+                    }
+                  }
+                }
+              }
+              .ggm-ec-order-payment {
+                margin-top: 30px;
+                .ggm-ec-rect-heading {
+                  h2 {
+                    font-weight: normal;
+                    color: #586069;
+                    background: #fff;
+                  }
+                }
+                .ggm-ec-radio {
+                  label {
+                    span {
+                      font-size: 14px;
+                    }
+                  }
+                }
+                .ggm-ec-input {
+                  p {
+                    font-size: 14px;
+                  }
+                }
+              }
+              .ggm-ec-order-confirm {
+                margin-top: 30px;
+                .ggm-ec-rect-heading {
+                  h2 {
+                    font-weight: normal;
+                    color: #586069;
+                    background: #fff;
+                  }
+                }
+                .ggm-ec-input {
+                  .textarea {
+                    line-height: 25px;
+                    word-break: break-all;
+                  }
+                }
+              }
+              .ggm-ec-order-delivery-item {
+                // background: #ff0;
+                ul.ggm-ec-bordered-list {
+                  li {
+                    .ggm-ec-image-grid {
+                      .ggm-ec-image-grid-img {
+                        // background: #ff0; 
+                        img {
+                          border-radius: 3px;
+                        }
+                      } 
+                      .ggm-ec-imageg-grid-content {
+                        // background: #f00;
+                        font-size: 14px;
+                        p {
+                          margin-bottom: 5px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .ggm-ec-order-delivery-address {
+                font-size: 14px;
+                line-height: 25px;
+                margin: 60px 0;
+              }
+              .ggm-ec-order-delivery-actions {
+                font-weight: normal;
+                .ggm-ec-selects {
+                  .ec-select {
+                    font-size:14px;
+                    label {
+                      font-weight: normal;
+                    }
+                  }
+                }
+              }
+            }
+            /* 横に出る会計のサマリー */
+            .ggm-ec-order-role-summary {
+              // background: #000;
+              padding-top: 30px;
+              font-size: 14px;
+              .ggm-ec-total-box {
+
+                background: #f8f9fa;
+                .ggm-ec-total-box-spec {
+                  
+                }
+                /* 合計金額 */
+                .ggm-ec-total-box-total {
+                  font-size: 14px;
+                  font-weight: normal;
+                  .ggm-ec-total-box-price {
+                    color: #000;
+                    font-size: 18px;
+                    font-weight: normal;
+                  }
+                  .ggm-ec-total-box-taxlabel {
+                    color: #000;
+                    font-size: 14px;
+                    font-weight: normal;
+                  }
+                  .ggm-ec-total-box-payment-total {
+
+                  }
+                  .ggm-ec-total-box-payment-total {
+                    color: #F00;
+                    font-size: 25px;
+                    font-weight: normal;
+                  }
+                }
+                .ggm-ec-total-box-payment-total {
+                  font-weight: normal;
+                  .ggm-ec-total-box-price {
+                    color: #880000;
+                    font-weight: normal;
+                  }
+                  .ggm-ec-total-box-taxlabel {
+                    color: #880000;
+                    font-weight: normal;
+                  }
+                }
+                .ggm-ec-total-box-point-block {
+                  // background: #000;
+                  font-weight: normal;
+                  .ggm-ec-total-box-spec {
+                    font-weight: normal;
+                    dt {
+                      .ggm-ec-font-bold {
+                        font-weight: normal;
+                      }
+                    }
+                    dd {
+                      .ggm-ec-font-bold {
+                        font-weight: normal;
+                      }
+                    }
+                  }
+                }
+                .ggm-ec-total-box-btn {
+                  // background: #000;
+                  button.ggm-ec-block-btn-action {
+                    border-radius: 3px;
+                    background: #880000;
+                    font-weight: normal;
+                    border: 1px solid #880000;
+                  }
+                  a.ggm-ec-block-btn-cancel {
+                    background: #fff;
+                    color: #666;
+                    font-weight: normal;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ショッピング完了画面 */
+body#page_shopping_complete {
+  .ggm-wrapper {
+    .ggm-contents {
+      .ggm-block-div {
+        .ggm-ec-role {
+          .ggm-ec-page-header {
+            h1 {
+              font-size: 18px;
+              font-weight: normal;
+            }
+          }
+        }
+        .ggm-ec-cart-role {
+          .ggm-ec-cart-role-progress {
+            // background: #ff0;
+            ul.ggm-ec-progress {
+              li.ggm-ec-progress-item {
+                // background: #ff0;
+                .ggm-ec-progress-number {
+                  background: #fff;
+                  color: #586069;
+                  border: 1px solid #586069;
+                  font-weight: normal;
+                }
+                .ggm-ec-progress-label {
+                  font-weight: normal;
+                }
+              }
+              li.is-complete {
+                
+                .ggm-ec-progress-number {
+                  background: #880000;
+                  color: #fff;
+                  border: 1px solid #880000;
+                  font-weight: normal;
+                }
+                .ggm-ec-progress-label {
+                  font-weight: bold;
+                  color: #586069;
+                }
+              }
+              .ec-progress, .ec-progress__item:after {
+                background: #586069 !important;
+                height: 1px;
+              }
+            }
+          }
+          .ggm-ec-cart-role-total-text {
+            p {
+              margin-top: 35px;
+              margin-bottom: 50px;
+              font-size: 14px;
+              strong {
+                font-weight: normal;
+                font-size: 16px;
+              }
+            }
+          }
+          // 商品リスト内
+          
+          form.ggm-ec-cart-role {
+            .ggm-cart-role-cart {
+              .ggm-ec-cart-table {
+                ol.ggm-ec-cart-header {
+                  display: none;
+                  margin-bottom: 20px;
+                  li.ggm-ec-cartHeader-label{
+                    font-weight: normal;
+                    font-size: 13px;
+                    background: #f8f9fa;
+                    border-bottom: 1px dotted #c1c1c1;
+                  }
+
+                }
+                ul.ggm-ec-cart-row {
+                  li.ggm-ec-cart-row-contentcolumn {
+                    .ggm-ec-cart-row-img {
+                      a {
+                        img {
+                          border-radius: 3px;
+                        }
+                      }
+                    }
+                    .ggm-ec-cart-row-summary {
+                      font-weight: normal;
+                      font-size: 14px;
+                    }
+                  }
+                  li.ggm-ec-cart-row-amountcolumn {
+                    // background: #ff0;
+                    
+                    .ggm-ec-cart-row-amount{
+                      font-weight: normal;
+                      font-size: 13px;
+                    }
+                    .ggm-ec-cart-row-amountsp {
+
+                    }
+                    .ggm-ec-cart-row-amountupdown {
+                      
+                      a {
+                        border: 1px #c1c1c1 solid;
+                        span.ggm-ec-cart-row-amount-down-button-icon {
+                          img {
+                            // border: 1px #c1c1c1 solid;
+                          }
+                        }
+                      }
+                      .ggm-ec-cart-row-amountupdown {
+                        background: #f00;
+                      }
+                    }
+                    .ggm-ec-cart-row-amount {
+                      
+                    }
 
 
 
+
+                  }
+                }
+              }
+            }//ggm-cart-role-cart
+            .ggm-ec-cart-role-actions {
+              // background: #000;
+              .ggm-ec-cart-role-total {
+                font-weight: normal;
+                .ggm-ec-cart-role-total-amount {
+                  font-weight: normal;
+                  color: #333;
+                  font-size: 20px;
+                  // margin-top: 15px;
+                }
+              }
+              .ggm-ec-block-btn-action {
+                color: #fff;
+                border-radius: 3px;
+                background: #880000;
+                border: 1px solid #880000;
+                font-weight: normal;
+              }
+              .ggm-ec-block-btn-cancel {
+                background: #fff;
+                color: #666;
+                border: 1px solid #666;
+                font-weight: normal;
+              }
+            }
+          } //form.ggm-ec-cart-role
+        }
+        .ggm-ec-cart-complete-role {
+          margin-top: 50px;
+          margin-bottom:50px;
+          .ggm-ec-off-3grid {
+            .ggm-ec-off3grid-cell {
+              // background:#ff0;
+              .ggm-ec-report-heading {
+                border-top: none;
+                margin-bottom: 120px;
+                h2 {
+                  font-weight: normal;
+                  letter-spacing: 2px;
+                  font-size:27px;
+                  color: #666;
+                }
+              }
+              .ggm-ec-report-description {
+                // background: #0ff;
+                text-align: left;
+                line-height: 27px;
+                font-size: 14px;
+                #ggm-order-id {
+                  text-align: center;
+                  margin-bottom: 50px;
+                }
+              }
+              .ggm-ec-off4grid {
+                // background: #0ff;
+                .ggm-ec-off4grid-cell {
+                  margin-top: 70px;
+                  a:link, a:visited {
+                    background: #fff;
+                    border-radius: 3px;
+                    font-weight: normal;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Warning common */
+.ggm-ec-alert-warning {
+  background: #fff;
+  .ggm-ec-alert-warning-icon {
+    display: inline-block;
+    margin-right: 0;
+    width: 24px;
+    height: -7px;
+    color: #fff;
+    fill: #fff;
+    vertical-align: top;
+    position: relative;
+    top: -3px;
+    img {
+
+    }
+  }
+  .ggm-ec-alert-warning-text {
+    background: #fff;
+    color: #880000;
+    font-weight: normal;
+  }
+}
+
+
+/*
+- 当サイトについて
+- お問い合わせ
+- 特定商取引法に基づく表記
+- プライバシーポリシー
+*/
+body#page_contact,
+body#page_help_about,
+body#page_help_tradelaw,
+body#page_help_privacy {
+  .ggm-wrapper {
+    .ggm-contents {
+      .ggm-block-div {
+        .ec-role,.ec-contactRole {
+          .ec-pageHeader {
+            h1 {
+              font-weight: normal;
+              font-size: 18px;
+              border-bottom: 0px solid #ccc;
+            }
+          }
+          .ec-off1Grid {
+            
+            font-size: 14px;
+            font-weight: normal;
+            .ec-off1Grid__cell {
+              
+              .ec-borderedDefs {
+                background: #ff0;
+                dl {
+                  dt {
+                    label {
+                      font-weight: normal;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          
         }
       }
     }
@@ -1007,7 +1635,19 @@ body#page_shopping {
 }
 
 
+/* mypage (login page) */
+.ggm-ec-mypage-role {
+  // background: #ff0;
+  .ggm-ec-page-header {
+    h1 {
+      font-size: 18px;
+      font-weight: normal;
+    }
+  }
+}
 
+/* Mypage navi */
+// src/Eccube/Resource/template/default/Mypage/navi.twig
 
 
 /************************************************
