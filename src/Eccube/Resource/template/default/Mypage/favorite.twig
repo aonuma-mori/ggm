@@ -18,47 +18,106 @@
   </div>
 
   <div class="ggm-ec-mypage-role ec-mypageRole">
-    <div class="ec-favoriteRole">
+    {# <div class="ggm-ec-favorite-role ec-favoriteRole">
+
       {% if pagination.totalItemCount > 0 %}
-      <div class="ec-favoriteRole__header">
-          <p>{{ 'front.mypage.favorite_count'|trans({'%count%':pagination.totalItemCount}) }}</p>
+      <div class="ggm-ec-favorite-role-header ec-favoriteRole__header">
+        <p>{{ 'front.mypage.favorite_count'|trans({'%count%':pagination.totalItemCount}) }}</p>
       </div>
-      <div class="ec-favoriteRole__detail">
-          <ul class="ec-favoriteRole__itemList">
-            {% for FavoriteProduct in pagination %}
-              {% set Product = FavoriteProduct.Product %}
-              <li class="ec-favoriteRole__item">
-                <a class="ec-closeBtn--circle"
-                  href="{{ url('mypage_favorite_delete', { id : Product.id }) }}" {{ csrf_token_for_anchor() }}
-                  data-method="delete">
-                  <div class="ec-icon">
-                    <img src="{{ asset('assets/icon/cross-white.svg') }}" alt="close">
-                  </div>
-                </a>
-                <a class="ec-favoriteRole__itemThumb" href="{{ url('product_detail', {'id': Product.id}) }}">
-                <p class="ec-favoriteRole__item-image">
-                    <img src="{{ asset(Product.main_list_image|no_image_product, 'save_image') }}">
-                </p>
-                </a>
-                <p class="ec-favoriteRole__itemTitle">{{ Product.name }}</p>
-                <p class="ec-favoriteRole__itemPrice">
-                  {% if Product.price02_inc_tax_min == Product.price02_inc_tax_max %}
-                    {{ Product.price02_inc_tax_min|price }}
-                  {% else %}
-                    {{ Product.price02_inc_tax_min|price }}～{{ Product.price02_inc_tax_max|price }}
-                  {% endif %}
-                </p>
-              </li>
-            {% endfor %}
-          </ul>
+      <div class="ggm-ec-favorite-role-detail ec-favoriteRole__detail">
+        <ul class="ggm-ec-favorite-role-item-list ec-favoriteRole__itemList">
+          {% for FavoriteProduct in pagination %}
+            {% set Product = FavoriteProduct.Product %}
+
+            <li class="ggm-ec-favorite-role-item ec-favoriteRole__item">
+              <a class="ec-closeBtn--circle"
+                href="{{ url('mypage_favorite_delete', { id : Product.id }) }}" {{ csrf_token_for_anchor() }}
+                data-method="delete">
+                <div class="ec-icon">
+                  <img src="{{ asset('assets/icon/cross-white.svg') }}" alt="close">
+                </div>
+              </a>
+              <a class="ec-favoriteRole__itemThumb" href="{{ url('product_detail', {'id': Product.id}) }}">
+              <p class="ec-favoriteRole__item-image">
+                <img src="{{ asset(Product.main_list_image|no_image_product, 'save_image') }}">
+              </p>
+              </a>
+              <p class="ec-favoriteRole__itemTitle">{{ Product.name }}</p>
+              <p class="ec-favoriteRole__itemPrice">
+                {% if Product.price02_inc_tax_min == Product.price02_inc_tax_max %}
+                  {{ Product.price02_inc_tax_min|price }}
+                {% else %}
+                  {{ Product.price02_inc_tax_min|price }}～{{ Product.price02_inc_tax_max|price }}
+                {% endif %}
+              </p>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="ec-pagerRole">
+        {% include "pager.twig" with {'pages': pagination.paginationData} %}
+      </div>
+      {% else %}
+        <div class="ggm-ec-favorite-role-header ec-favoriteRole__header">{{ 'front.mypage.favorite_not_found'|trans }}</div>
+      {% endif %}
+    </div> #}
+
+
+
+
+
+
+
+      {# bootstrapにする #}
+      {% if pagination.totalItemCount > 0 %}
+      <div class="container ggm-ec-favorite-role">
+        <div class="ggm-ec-favorite-top-mes">
+          <p>{{ 'front.mypage.favorite_count'|trans({'%count%':pagination.totalItemCount}) }}</p>
+        </div>
+        <div class="row">
+          {% for FavoriteProduct in pagination %}
+          {% set Product = FavoriteProduct.Product %}
+            <div class="col-sm-6 col-md-4 col-lg-3 ggm-ec-favorite-item-block">
+              <a class="ggm-ec-close-btn-circle ec-closeBtn--circle"
+                href="{{ url('mypage_favorite_delete', { id : Product.id }) }}" {{ csrf_token_for_anchor() }}
+                data-method="delete">
+                <div class="ec-icon">
+                  <img src="{{ asset('assets/icon/cross-dark.png') }}" alt="close">
+                </div>
+              </a>
+              <a class="ec-favoriteRole__itemThumb" href="{{ url('product_detail', {'id': Product.id}) }}">
+              <p class="ec-favoriteRole__item-image">
+                <img src="{{ asset(Product.main_list_image|no_image_product, 'save_image') }}">
+              </p>
+              </a>
+              <p class="ec-favoriteRole__itemTitle">{{ Product.name }}</p>
+              <p class="ec-favoriteRole__itemPrice">
+                {% if Product.price02_inc_tax_min == Product.price02_inc_tax_max %}
+                  {{ Product.price02_inc_tax_min|price }}
+                {% else %}
+                  {{ Product.price02_inc_tax_min|price }}～{{ Product.price02_inc_tax_max|price }}
+                {% endif %}
+              </p>
+            </div>
+          {% endfor %}
         </div>
         <div class="ec-pagerRole">
-            {% include "pager.twig" with {'pages': pagination.paginationData} %}
+          {% include "pager.twig" with {'pages': pagination.paginationData} %}
         </div>
+      </div>
       {% else %}
-          <div class="ec-favoriteRole__header">{{ 'front.mypage.favorite_not_found'|trans }}</div>
+      <div class="container ggm-ec-favorite-role">
+        <div class="ggm-ec-favorite-top-mes">
+          {{ 'front.mypage.favorite_not_found'|trans }}
+        </div>
+      </div>
       {% endif %}
-    </div>
+
+
+
+
+
+
   </div>
 </div>
 {% endblock %}

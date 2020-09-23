@@ -1610,11 +1610,9 @@ body#page_help_privacy {
             }
           }
           .ec-off1Grid {
-            
             font-size: 14px;
             font-weight: normal;
             .ec-off1Grid__cell {
-              
               .ec-borderedDefs {
                 background: #ff0;
                 dl {
@@ -1627,7 +1625,6 @@ body#page_help_privacy {
               }
             }
           }
-          
         }
       }
     }
@@ -1637,12 +1634,75 @@ body#page_help_privacy {
 
 /* mypage (login page) */
 .ggm-ec-mypage-role {
-  // background: #ff0;
+  
   .ggm-ec-page-header {
     h1 {
       font-size: 18px;
       font-weight: normal;
       border: none;
+    }
+  }
+  .ggm-ec-welcome-msg {
+    // background: #ff0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .ggm-ec-navlist-role {
+    // background: #ff0;
+    .ggm-ec-navlist-role-navlist {
+      border: none;
+      .ggm-ec-navlist-role-item {
+        // border: none;
+        font-size: 14px;
+        border: 1px solid #c1c1c1;
+        margin: 10px;
+        border-radius: 3px;
+        padding: 6px 10px;
+        text-align: center;
+        a:hover {
+          background: #f00;
+        }
+      }
+    }
+  }
+  /* お気に入り一覧 */
+  .ggm-ec-favorite-role {
+    
+    /* bootstrap */
+    .ggm-ec-favorite-item-block {
+      // background: #ff0;
+      // border: 1px solid #c1c1c1;
+      padding: 38px;
+      p {
+        font-size: 14px;
+      }
+      .ggm-ec-close-btn-circle {
+        position: relative;
+        top: -10px;
+        background: #fff;
+      }
+    }
+  }
+}
+
+
+.ggm-mypage-navi {
+  .ggm-mypage-navi-row {
+    .ggm-ec-navlist-role-item {
+      font-size: 14px;
+      border: 1px solid #666;
+      margin: 10px;
+      border-radius: 3px;
+      padding: 6px 10px;
+      text-align: center;
+    }
+    .active {
+      background: #880000;
+      color: #fff;
+      border: 1px solid #880000;
+      a {
+        color: #fff;
+      }
     }
   }
 }

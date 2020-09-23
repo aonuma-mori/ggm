@@ -1128,10 +1128,62 @@ body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole
 }
 
 /* mypage (login page) */
+.ggm-ec-mypage-role {
+  /* お気に入り一覧 */
+}
 .ggm-ec-mypage-role .ggm-ec-page-header h1 {
   font-size: 18px;
   font-weight: normal;
   border: none;
+}
+.ggm-ec-mypage-role .ggm-ec-welcome-msg {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.ggm-ec-mypage-role .ggm-ec-navlist-role .ggm-ec-navlist-role-navlist {
+  border: none;
+}
+.ggm-ec-mypage-role .ggm-ec-navlist-role .ggm-ec-navlist-role-navlist .ggm-ec-navlist-role-item {
+  font-size: 14px;
+  border: 1px solid #c1c1c1;
+  margin: 10px;
+  border-radius: 3px;
+  padding: 6px 10px;
+  text-align: center;
+}
+.ggm-ec-mypage-role .ggm-ec-navlist-role .ggm-ec-navlist-role-navlist .ggm-ec-navlist-role-item a:hover {
+  background: #f00;
+}
+.ggm-ec-mypage-role .ggm-ec-favorite-role {
+  /* bootstrap */
+}
+.ggm-ec-mypage-role .ggm-ec-favorite-role .ggm-ec-favorite-item-block {
+  padding: 38px;
+}
+.ggm-ec-mypage-role .ggm-ec-favorite-role .ggm-ec-favorite-item-block p {
+  font-size: 14px;
+}
+.ggm-ec-mypage-role .ggm-ec-favorite-role .ggm-ec-favorite-item-block .ggm-ec-close-btn-circle {
+  position: relative;
+  top: -10px;
+  background: #fff;
+}
+
+.ggm-mypage-navi .ggm-mypage-navi-row .ggm-ec-navlist-role-item {
+  font-size: 14px;
+  border: 1px solid #666;
+  margin: 10px;
+  border-radius: 3px;
+  padding: 6px 10px;
+  text-align: center;
+}
+.ggm-mypage-navi .ggm-mypage-navi-row .active {
+  background: #880000;
+  color: #fff;
+  border: 1px solid #880000;
+}
+.ggm-mypage-navi .ggm-mypage-navi-row .active a {
+  color: #fff;
 }
 
 /* Mypage navi */
