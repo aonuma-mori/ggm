@@ -1186,6 +1186,95 @@ body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole
   color: #fff;
 }
 
+/* 購入履歴　詳細 */
+body#page_mypage_history .ggm-ec-order-role {
+  font-size: 14px;
+  /* left */
+  /* right */
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-order .ggm-ec-definitions {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-order .ggm-ec-definitions dt {
+  font-weight: normal;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-order .ggm-ec-definitions dd {
+  font-weight: normal;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-rect-heading {
+  background: #fff;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-rect-heading h2 {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+  margin-left: -14px;
+  border-bottom: 1px solid #dcdcdc;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-order-delivery-title {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-order-delivery-item .ggm-ec-image-grid {
+  border: none;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-order-delivery-item .ggm-ec-image-grid .ggm-ec-image-grid-img img {
+  border-radius: 3px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-order-delivery-address {
+  background: #F3F3F3;
+  padding: 20px 14px 5px 20px;
+  border-radius: 5px;
+  margin-bottom: 45px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-order-delivery-address p {
+  margin-bottom: 10px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-definitions-soft {
+  margin-bottom: 10px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-payment {
+  margin-top: 46px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-payment .ggm-ec-rect-heading h2 {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+  margin-left: -14px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-confirm {
+  margin-top: 50px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-confirm .ggm-ec-rect-heading h2 {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+  margin-left: -14px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-mails {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 14px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-mails .ggm-ec-rect-heading h2 {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+  margin-left: -14px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-mails .ggm-ec-order-mail div {
+  margin-bottom: 10px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-summary .ggm-ec-total-box {
+  background: #f00;
+}
+body#page_mypage_history .ggm-ec-role a {
+  margin-left: 10px;
+  background: #fff;
+}
+
 /* Mypage navi */
 /************************************************
  * Blog (wordpress)

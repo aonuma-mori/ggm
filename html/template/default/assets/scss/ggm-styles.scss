@@ -1634,7 +1634,6 @@ body#page_help_privacy {
 
 /* mypage (login page) */
 .ggm-ec-mypage-role {
-  
   .ggm-ec-page-header {
     h1 {
       font-size: 18px;
@@ -1706,6 +1705,129 @@ body#page_help_privacy {
     }
   }
 }
+
+/* 購入履歴　詳細 */
+body#page_mypage_history {
+  .ggm-ec-order-role {
+    font-size: 14px;
+    /* left */
+    .ggm-ec-order-role-detail {
+      .ggm-ec-order-order {
+        .ggm-ec-definitions {
+          font-size: 15px;
+          margin-bottom: 10px;
+          dt {
+            font-weight: normal;
+          }
+          dd {
+            font-weight: normal;
+          }
+        }
+      }
+      .ggm-ec-order-delivery {
+        .ggm-ec-rect-heading {
+          background: #fff;
+          h2 {
+            font-weight: normal;
+            color: #586069;
+            background: #fff;
+            margin-left: -14px;
+            border-bottom: 1px solid #dcdcdc;
+          }
+        }
+        .ggm-ec-order-delivery-title {
+          font-weight: normal;
+          color: #586069;
+          background: #fff;
+        }
+        .ggm-ec-order-delivery-item {
+          
+          .ggm-ec-image-grid {
+            border: none;
+            .ggm-ec-image-grid-img {
+              img {
+                border-radius: 3px;
+              }
+            }
+          }
+        }
+        .ggm-ec-order-delivery-address {
+          background: #F3F3F3;
+          padding: 20px 14px 5px 20px;
+          border-radius: 5px;
+          margin-bottom: 45px;
+          p {
+            margin-bottom: 10px;
+          }
+        }
+        .ggm-ec-definitions-soft {
+          margin-bottom: 10px;
+        }
+      }
+      .ggm-ec-order-payment {
+        margin-top: 46px;
+        .ggm-ec-rect-heading {
+          h2 {
+            font-weight: normal;
+            color: #586069;
+            background: #fff;
+            margin-left: -14px;
+          }
+        }
+      }
+      .ggm-ec-order-confirm {
+        // background: #0f0;
+        margin-top: 50px;
+        .ggm-ec-rect-heading {
+          h2 {
+            font-weight: normal;
+            color: #586069;
+            background: #fff;
+            margin-left: -14px;
+          }
+        }
+      }
+      .ggm-ec-order-mails {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 14px;
+        .ggm-ec-rect-heading {
+          h2 {
+            font-weight: normal;
+            color: #586069;
+            background: #fff;
+            margin-left: -14px;
+          }
+        }
+        .ggm-ec-order-mail {
+          div {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    /* right */
+    .ggm-ec-order-role-summary {
+      .ggm-ec-total-box {
+        background: #f00;
+      }
+    }
+  }
+  .ggm-ec-role {
+    a {
+      margin-left: 10px;
+      background: #fff;
+    }
+  }
+}
+
+
+
+
+
+
+
+
 
 /* Mypage navi */
 // src/Eccube/Resource/template/default/Mypage/navi.twig
