@@ -1272,6 +1272,11 @@ body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole
   color: #fff;
 }
 
+/* Mypage top */
+body#page_mypage .ggm-mypage-index .ggm-mypage-text {
+  font-size: 14px;
+}
+
 /* 購入履歴　詳細 */
 body#page_mypage_history .ggm-ec-order-role {
   font-size: 14px;

@@ -14,8 +14,144 @@ file that was distributed with this source code.
 
 {% set body_class = 'mypage' %}
 
+
+
+
 {% block main %}
-    <div class="ec-layoutRole__main">
+
+
+
+
+
+
+  <div class="ec-layoutRole__main">hoge
+    <div class="ggm-ec-mypage-role ec-mypageRole">
+      <div class="ggm-ec-page-header ec-pageHeader">
+        <h1>{{ 'front.mypage.title'|trans }}/{{ 'front.mypage.nav__history'|trans }}</h1>
+      </div>
+      {% include 'Mypage/navi.twig' %}
+    </div>
+
+    <div class="container ggm-mypage-index">
+      <p class="ggm-mypage-text">{{ 'front.mypage.history_count'|trans({'%count%':pagination.totalItemCount}) }}</p>
+
+      <div class="row">
+      <table class="table">
+
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+
+        {% if pagination.totalItemCount > 0 %}
+
+        {% else %}
+          <p class="ec-para-normal">{{ 'front.mypage.history_not_found'|trans }}</p>
+        {% endif %}
+
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+ 
+      </div>
+    </div>
+
+
+
+
+
+      <div class="ggm-ec-mypage-role ec-mypageRole">
+          {% if pagination.totalItemCount > 0 %}
+              {% for Order in pagination %}
+                  <div class="ec-historyRole">
+                      <div class="ec-historyRole__contents">
+
+                          <div class="ec-historyRole__header">
+                              <div class="ec-historyListHeader">
+                                  <p class="ec-historyListHeader__date">{{ Order.order_date|date_sec }}</p>
+                                  <dl class="ec-definitions">
+                                      <dt>{{ 'front.mypage.order_no'|trans }}</dt>
+                                      <dd>{{ Order.order_no }}</dd>
+                                  </dl>
+                                  {% if (BaseInfo.option_mypage_order_status_display) %}
+                                      <dl class="ec-definitions">
+                                          <dt>{{ 'front.mypage.order_status'|trans }}</dt>
+                                          <dd>{{ Order.CustomerOrderStatus }}</dd>
+                                      </dl>
+                                  {% endif %}
+                                  <p class="ec-historyListHeader__action"><a class="ec-inlineBtn"
+                                                                              href="{{ url('mypage_history', {'order_no': Order.order_no}) }}">{{ 'front.mypage.view_detail'|trans }}</a>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="ec-historyRole__detail">
+                              {% for OrderItem in Order.MergedProductOrderItems %}
+                                  <div class="ec-imageGrid">
+                                      <div class="ec-imageGrid__img">
+                                          {% if OrderItem.Product is null %}
+                                              <img src="{{ asset(''|no_image_product, 'save_image') }}"/>
+                                          {% else %}
+                                              <img src="{{ asset(OrderItem.Product.MainListImage|no_image_product, 'save_image') }}">
+                                          {% endif %}
+                                      </div>
+                                      <div class="ec-imageGrid__content">
+                                          <p class="ec-historyRole__detailTitle">{{ OrderItem.product_name }}</p>
+                                          {% if OrderItem.class_category_name1 is not empty %}
+                                              {{ OrderItem.class_category_name1 }}
+                                          {% endif %}
+                                          {% if OrderItem.class_category_name1 is not empty %}
+                                              / {{ OrderItem.class_category_name2 }}
+                                          {% endif %}
+                                          <p class="ec-historyRole__detailPrice">{{ OrderItem.price_inc_tax|price }}
+                                              × {{ OrderItem.quantity }}</p>
+                                      </div>
+                                  </div>
+                              {% endfor %}
+                          </div>
+                      </div>
+                  </div>
+              {% endfor %}
+              <div class="ec-pagerRole">
+                  {% include "pager.twig" with {'pages': pagination.paginationData} %}
+              </div>
+          {% else %}
+              <p class="ec-para-normal">{{ 'front.mypage.history_not_found'|trans }}</p>
+          {% endif %}
+      </div>
+  </div>
+{% endblock %}
+
+
+
+
+
+{# {% block main %}
+    <div class="ec-layoutRole__main">hoge
         <div class="ggm-ec-mypage-role ec-mypageRole">
             <div class="ggm-ec-page-header ec-pageHeader">
                 <h1>{{ 'front.mypage.title'|trans }}/{{ 'front.mypage.nav__history'|trans }}</h1>
@@ -82,4 +218,4 @@ file that was distributed with this source code.
             {% endif %}
         </div>
     </div>
-{% endblock %}
+{% endblock %} #}
