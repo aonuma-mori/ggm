@@ -1,4 +1,90 @@
 @charset "UTF-8";
+/* メンテナンス画面
+/Users/osamuyamakami/Documents/mywork/docker/ggm/ec-cube/maintenance.php
+*/
+body#ggm-maintenance .ggm-wrapper {
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+body#ggm-maintenance .ggm-wrapper .message-block {
+  margin: 10px;
+}
+body#ggm-maintenance .ggm-wrapper .message-block h1 {
+  font-size: 25px;
+  color: #33444C;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message {
+  margin: 20px;
+  line-height: 27px;
+}
+body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message .message-text {
+  font-size: 14px;
+}
+@media (max-width: 576px) {
+  body#ggm-maintenance .ggm-wrapper .message-block å .maintenance-message {
+    margin: 20px;
+    line-height: 27px;
+  }
+  body#ggm-maintenance .ggm-wrapper .message-block å .maintenance-message .message-text {
+    font-size: 14px;
+  }
+}
+@media (min-width: 577px) and (max-width: 991px) {
+  body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message {
+    width: 338px;
+    margin: 0 auto;
+    line-height: 28px;
+  }
+  body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message .message-text {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  body#ggm-maintenance .ggm-wrapper {
+    margin-top: 200px;
+    margin-bottom: 150px;
+  }
+  body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message {
+    width: 338px;
+    margin: 0 auto;
+    line-height: 28px;
+  }
+  body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message .message-text {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+  body#ggm-maintenance .ggm-wrapper footer {
+    position: fixed;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  body#ggm-maintenance .ggm-wrapper {
+    margin-top: 200px;
+    margin-bottom: 150px;
+  }
+  body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message {
+    width: 500px;
+    margin: 0 auto;
+    line-height: 28px;
+  }
+  body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message .message-text {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+  body#ggm-maintenance .ggm-wrapper footer {
+    position: fixed;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
 body.ggm {
   color: #33444C !important;
   letter-spacing: 1px;

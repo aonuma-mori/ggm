@@ -1,3 +1,108 @@
+/* メンテナンス画面
+/Users/osamuyamakami/Documents/mywork/docker/ggm/ec-cube/maintenance.php
+*/
+body#ggm-maintenance {
+  .ggm-wrapper {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    .message-block {
+      margin: 10px;
+      h1 {
+        font-size: 25px;
+        color: #33444C;
+        margin: 0 auto;
+        margin-bottom: 50px;
+      }
+      .maintenance-message {
+        margin: 20px;
+        line-height: 27px;
+        .message-text {
+          font-size: 14px;
+        }
+        .message-datetime {
+
+        }
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    .ggm-wrapper {
+      .message-block {å
+        .maintenance-message {
+          margin: 20px;
+          line-height: 27px;
+          .message-text {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 577px) and (max-width: 991px) {
+    .ggm-wrapper {
+      .message-block {
+        .maintenance-message {
+          width: 338px;
+          margin: 0 auto;
+          line-height: 28px;
+          .message-text {
+            font-size: 14px;
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .ggm-wrapper {
+      margin-top: 200px;
+      margin-bottom: 150px;
+      .message-block {
+        .maintenance-message {
+          width: 338px;
+          margin: 0 auto;
+          line-height: 28px;
+          .message-text {
+            font-size: 15px;
+            margin-bottom: 30px;
+          }
+        }
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .ggm-wrapper {
+      margin-top: 200px;
+      margin-bottom: 150px;
+      .message-block {
+        .maintenance-message {
+          width: 500px;
+          margin: 0 auto;
+          line-height: 28px;
+          .message-text {
+            font-size: 15px;
+            margin-bottom: 30px;
+          }
+        }
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+  }
+}//メンテナンス end
+
+
+
 body.ggm {
   color: #33444C !important;
   letter-spacing: 1px;
