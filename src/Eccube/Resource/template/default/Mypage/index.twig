@@ -14,13 +14,9 @@ file that was distributed with this source code.
 
 {% set body_class = 'mypage' %}
 
-
-
-
 {% block main %}
 
-
-  <div class="ec-layoutRole__main">hoge
+  <div class="ec-layoutRole__main">
     <div class="ggm-ec-mypage-role ec-mypageRole">
       <div class="ggm-ec-page-header ec-pageHeader">
         <h1>{{ 'front.mypage.title'|trans }}/{{ 'front.mypage.nav__history'|trans }}</h1>
@@ -33,22 +29,56 @@ file that was distributed with this source code.
 
       <div class="row">
         <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-
+          <tbody>
           {% if pagination.totalItemCount > 0 %}
             {% for Order in pagination %}
+              <tr>
+                <td>
+                  <p>{{ Order.order_date|date_sec }}</p>
+                  <p>{{ 'front.mypage.order_no'|trans }}: {{ Order.order_no }}</p>
+                  {% if (BaseInfo.option_mypage_order_status_display) %}
+                    <p>{{ 'front.mypage.order_status'|trans }}: {{ Order.CustomerOrderStatus }}</p>
+                  {% endif %}
+                  <p class="ggm-mypage-btn-wrapper">
+                    <a class="ggm-mypage-btn" href="{{ url('mypage_history', {'order_no': Order.order_no}) }}">{{ 'front.mypage.view_detail'|trans }}</a>
+                  </p>
+                </td>
+                <td>
+                  <div class="container">
+                    <div class="row">
+                      {% for OrderItem in Order.MergedProductOrderItems %}
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                          {% if OrderItem.Product is null %}
+                            <img src="{{ asset(''|no_image_product, 'save_image') }}" class="ggm-hist-image">
+                          {% else %}
+                            <img src="{{ asset(OrderItem.Product.MainListImage|no_image_product, 'save_image') }}" class="ggm-hist-image">
+                          {% endif %}
+                          <p>
+                            {{ OrderItem.product_name }}
+                            {% if OrderItem.class_category_name1 is not empty %}
+                                {{ OrderItem.class_category_name1 }}
+                            {% endif %}
+                            {% if OrderItem.class_category_name1 is not empty %}
+                                / {{ OrderItem.class_category_name2 }}
+                            {% endif %}
+                              {{ OrderItem.price_inc_tax|price }}
+                                × {{ OrderItem.quantity }}
+                          </p>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </div>
 
+                </td>
+              </tr>
             {% endfor %}
           {% else %}
             <p class="ggm-mypage-text">{{ 'front.mypage.history_not_found'|trans }}</p>
           {% endif %}
+          </tbody>
+
+
+
 
           <tbody>
             <tr>
@@ -63,12 +93,7 @@ file that was distributed with this source code.
               <td>Thornton</td>
               <td>@fat</td>
             </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
+            
           </tbody>
         </table>
 
@@ -85,7 +110,7 @@ file that was distributed with this source code.
                   <div class="ec-historyRole">
                       <div class="ec-historyRole__contents">
 
-                          <div class="ec-historyRole__header">
+                          {# <div class="ec-historyRole__header">
                               <div class="ec-historyListHeader">
                                   <p class="ec-historyListHeader__date">{{ Order.order_date|date_sec }}</p>
                                   <dl class="ec-definitions">
@@ -102,7 +127,8 @@ file that was distributed with this source code.
                                                                               href="{{ url('mypage_history', {'order_no': Order.order_no}) }}">{{ 'front.mypage.view_detail'|trans }}</a>
                                   </p>
                               </div>
-                          </div>
+                          </div> #}
+
                           <div class="ec-historyRole__detail">
                               {% for OrderItem in Order.MergedProductOrderItems %}
                                   <div class="ec-imageGrid">

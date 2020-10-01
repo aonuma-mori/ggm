@@ -1819,6 +1819,31 @@ body#page_mypage {
       font-size: 14px;
     }
 
+    .row {
+      .table {
+        font-size: 14px;
+        tbody {
+          tr {
+            td {
+              .ggm-mypage-btn-wrapper {
+                .ggm-mypage-btn {
+                  padding: 10px;
+                  border: 1px solid #c1c1c1;
+                  background: #f5f5f5;
+                  border-radius: 3px;
+                }
+              }
+              .ggm-hist-image {
+                width: 100px;
+                display: inline-block;
+                border-radius: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+
   }
 
 }

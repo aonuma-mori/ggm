@@ -1276,6 +1276,20 @@ body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole
 body#page_mypage .ggm-mypage-index .ggm-mypage-text {
   font-size: 14px;
 }
+body#page_mypage .ggm-mypage-index .row .table {
+  font-size: 14px;
+}
+body#page_mypage .ggm-mypage-index .row .table tbody tr td .ggm-mypage-btn-wrapper .ggm-mypage-btn {
+  padding: 10px;
+  border: 1px solid #c1c1c1;
+  background: #f5f5f5;
+  border-radius: 3px;
+}
+body#page_mypage .ggm-mypage-index .row .table tbody tr td .ggm-hist-image {
+  width: 100px;
+  display: inline-block;
+  border-radius: 3px;
+}
 
 /* 購入履歴　詳細 */
 body#page_mypage_history .ggm-ec-order-role {
