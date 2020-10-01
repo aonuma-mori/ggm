@@ -20,10 +20,6 @@ file that was distributed with this source code.
 {% block main %}
 
 
-
-
-
-
   <div class="ec-layoutRole__main">hoge
     <div class="ggm-ec-mypage-role ec-mypageRole">
       <div class="ggm-ec-page-header ec-pageHeader">
@@ -36,44 +32,45 @@ file that was distributed with this source code.
       <p class="ggm-mypage-text">{{ 'front.mypage.history_count'|trans({'%count%':pagination.totalItemCount}) }}</p>
 
       <div class="row">
-      <table class="table">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
 
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
+          {% if pagination.totalItemCount > 0 %}
+            {% for Order in pagination %}
 
-        {% if pagination.totalItemCount > 0 %}
+            {% endfor %}
+          {% else %}
+            <p class="ggm-mypage-text">{{ 'front.mypage.history_not_found'|trans }}</p>
+          {% endif %}
 
-        {% else %}
-          <p class="ec-para-normal">{{ 'front.mypage.history_not_found'|trans }}</p>
-        {% endif %}
-
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
 
 
 
