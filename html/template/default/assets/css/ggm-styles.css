@@ -1,4 +1,90 @@
 @charset "UTF-8";
+/* メンテナンス画面
+/Users/osamuyamakami/Documents/mywork/docker/ggm/ec-cube/maintenance.php
+*/
+body#ggm-maintenance .ggm-wrapper {
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+body#ggm-maintenance .ggm-wrapper .message-block {
+  margin: 10px;
+}
+body#ggm-maintenance .ggm-wrapper .message-block h1 {
+  font-size: 25px;
+  color: #33444C;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message {
+  margin: 20px;
+  line-height: 27px;
+}
+body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message .message-text {
+  font-size: 14px;
+}
+@media (max-width: 576px) {
+  body#ggm-maintenance .ggm-wrapper .message-block å .maintenance-message {
+    margin: 20px;
+    line-height: 27px;
+  }
+  body#ggm-maintenance .ggm-wrapper .message-block å .maintenance-message .message-text {
+    font-size: 14px;
+  }
+}
+@media (min-width: 577px) and (max-width: 991px) {
+  body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message {
+    width: 338px;
+    margin: 0 auto;
+    line-height: 28px;
+  }
+  body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message .message-text {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  body#ggm-maintenance .ggm-wrapper {
+    margin-top: 200px;
+    margin-bottom: 150px;
+  }
+  body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message {
+    width: 338px;
+    margin: 0 auto;
+    line-height: 28px;
+  }
+  body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message .message-text {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+  body#ggm-maintenance .ggm-wrapper footer {
+    position: fixed;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  body#ggm-maintenance .ggm-wrapper {
+    margin-top: 200px;
+    margin-bottom: 150px;
+  }
+  body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message {
+    width: 500px;
+    margin: 0 auto;
+    line-height: 28px;
+  }
+  body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message .message-text {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+  body#ggm-maintenance .ggm-wrapper footer {
+    position: fixed;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
 body.ggm {
   color: #33444C !important;
   letter-spacing: 1px;
@@ -1128,10 +1214,151 @@ body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole
 }
 
 /* mypage (login page) */
+.ggm-ec-mypage-role {
+  /* お気に入り一覧 */
+}
 .ggm-ec-mypage-role .ggm-ec-page-header h1 {
   font-size: 18px;
   font-weight: normal;
   border: none;
+}
+.ggm-ec-mypage-role .ggm-ec-welcome-msg {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.ggm-ec-mypage-role .ggm-ec-navlist-role .ggm-ec-navlist-role-navlist {
+  border: none;
+}
+.ggm-ec-mypage-role .ggm-ec-navlist-role .ggm-ec-navlist-role-navlist .ggm-ec-navlist-role-item {
+  font-size: 14px;
+  border: 1px solid #c1c1c1;
+  margin: 10px;
+  border-radius: 3px;
+  padding: 6px 10px;
+  text-align: center;
+}
+.ggm-ec-mypage-role .ggm-ec-navlist-role .ggm-ec-navlist-role-navlist .ggm-ec-navlist-role-item a:hover {
+  background: #f00;
+}
+.ggm-ec-mypage-role .ggm-ec-favorite-role {
+  /* bootstrap */
+}
+.ggm-ec-mypage-role .ggm-ec-favorite-role .ggm-ec-favorite-item-block {
+  padding: 38px;
+}
+.ggm-ec-mypage-role .ggm-ec-favorite-role .ggm-ec-favorite-item-block p {
+  font-size: 14px;
+}
+.ggm-ec-mypage-role .ggm-ec-favorite-role .ggm-ec-favorite-item-block .ggm-ec-close-btn-circle {
+  position: relative;
+  top: -10px;
+  background: #fff;
+}
+
+.ggm-mypage-navi .ggm-mypage-navi-row .ggm-ec-navlist-role-item {
+  font-size: 14px;
+  border: 1px solid #666;
+  margin: 10px;
+  border-radius: 3px;
+  padding: 6px 10px;
+  text-align: center;
+}
+.ggm-mypage-navi .ggm-mypage-navi-row .active {
+  background: #880000;
+  color: #fff;
+  border: 1px solid #880000;
+}
+.ggm-mypage-navi .ggm-mypage-navi-row .active a {
+  color: #fff;
+}
+
+/* 購入履歴　詳細 */
+body#page_mypage_history .ggm-ec-order-role {
+  font-size: 14px;
+  /* left */
+  /* right */
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-order .ggm-ec-definitions {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-order .ggm-ec-definitions dt {
+  font-weight: normal;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-order .ggm-ec-definitions dd {
+  font-weight: normal;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-rect-heading {
+  background: #fff;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-rect-heading h2 {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+  margin-left: -14px;
+  border-bottom: 1px solid #dcdcdc;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-order-delivery-title {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-order-delivery-item .ggm-ec-image-grid {
+  border: none;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-order-delivery-item .ggm-ec-image-grid .ggm-ec-image-grid-img img {
+  border-radius: 3px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-order-delivery-address {
+  background: #F3F3F3;
+  padding: 20px 14px 5px 20px;
+  border-radius: 5px;
+  margin-bottom: 45px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-order-delivery-address p {
+  margin-bottom: 10px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-delivery .ggm-ec-definitions-soft {
+  margin-bottom: 10px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-payment {
+  margin-top: 46px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-payment .ggm-ec-rect-heading h2 {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+  margin-left: -14px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-confirm {
+  margin-top: 50px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-confirm .ggm-ec-rect-heading h2 {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+  margin-left: -14px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-mails {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 14px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-mails .ggm-ec-rect-heading h2 {
+  font-weight: normal;
+  color: #586069;
+  background: #fff;
+  margin-left: -14px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-detail .ggm-ec-order-mails .ggm-ec-order-mail div {
+  margin-bottom: 10px;
+}
+body#page_mypage_history .ggm-ec-order-role .ggm-ec-order-role-summary .ggm-ec-total-box {
+  background: #f00;
+}
+body#page_mypage_history .ggm-ec-role a {
+  margin-left: 10px;
+  background: #fff;
 }
 
 /* Mypage navi */

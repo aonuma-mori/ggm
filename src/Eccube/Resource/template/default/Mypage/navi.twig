@@ -2,7 +2,8 @@
   This file is part of GGM
   Copyright(c) GGM All Rights Reserved.
 #}
-<div class="ggm-ec-navlist-role ec-navlistRole">
+
+{# <div class="ggm-ec-navlist-role ec-navlistRole">
   <ul class="ggm-ec-navlist-role-navlist ec-navlistRole__navlist">
     <li class="ggm-ec-navlist-role-item ec-navlistRole__item {% if mypageno|default('') == 'index' %}active{% endif %}">
       <a href="{{ url('mypage') }}">{{ 'front.mypage.nav__history'|trans }}</a>
@@ -22,6 +23,28 @@
       <a href="{{ url('mypage_withdraw') }}">{{ 'front.mypage.nav__withdrow'|trans }}</a>
     </li>
   </ul>
+</div> #}
+
+<div class="container ggm-mypage-navi">
+  <div class="row ggm-mypage-navi-row">
+    <div class="col-sm-4 col-lg-2 ggm-ec-navlist-role-item ec-navlistRole__item {% if mypageno|default('') == 'index' %}active{% endif %}">
+      <a href="{{ url('mypage') }}">{{ 'front.mypage.nav__history'|trans }}</a>
+    </div>
+    {% if BaseInfo.option_favorite_product %}
+      <div class="col-sm-4 col-lg-2 ggm-ec-navlist-role-item ec-navlistRole__item {% if mypageno|default('') == 'favorite' %}active{% endif %}">
+        <a href="{{ url('mypage_favorite') }}">{{ 'front.mypage.nav__favorite'|trans }}</a>
+      </div>
+    {% endif %}
+    <div class="col-sm-4 col-lg-2 ggm-ec-navlist-role-item ec-navlistRole__item {% if mypageno|default('') == 'change' %}active{% endif %}">
+      <a href="{{ url('mypage_change') }}">{{ 'front.mypage.nav__customer'|trans }}</a>
+    </div>
+    <div class="col-sm-4 col-lg-2 ggm-ec-navlist-role-item ec-navlistRole__item {% if mypageno|default('') == 'delivery' %}active{% endif %}">
+      <a href="{{ url('mypage_delivery') }}">{{ 'front.mypage.nav__customer_address'|trans }}</a>
+    </div>
+    <div class="col-sm-4 col-lg-2 ggm-ec-navlist-role-item ec-navlistRole__item {% if mypageno|default('') == 'withdraw' %}active{% endif %}">
+      <a href="{{ url('mypage_withdraw') }}">{{ 'front.mypage.nav__withdrow'|trans }}</a>
+    </div>
+  </div>
 </div>
 
 <div class="ggm-ec-welcome-msg ec-welcomeMsg">

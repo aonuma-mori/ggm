@@ -1,3 +1,108 @@
+/* メンテナンス画面
+/Users/osamuyamakami/Documents/mywork/docker/ggm/ec-cube/maintenance.php
+*/
+body#ggm-maintenance {
+  .ggm-wrapper {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    .message-block {
+      margin: 10px;
+      h1 {
+        font-size: 25px;
+        color: #33444C;
+        margin: 0 auto;
+        margin-bottom: 50px;
+      }
+      .maintenance-message {
+        margin: 20px;
+        line-height: 27px;
+        .message-text {
+          font-size: 14px;
+        }
+        .message-datetime {
+
+        }
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    .ggm-wrapper {
+      .message-block {å
+        .maintenance-message {
+          margin: 20px;
+          line-height: 27px;
+          .message-text {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 577px) and (max-width: 991px) {
+    .ggm-wrapper {
+      .message-block {
+        .maintenance-message {
+          width: 338px;
+          margin: 0 auto;
+          line-height: 28px;
+          .message-text {
+            font-size: 14px;
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .ggm-wrapper {
+      margin-top: 200px;
+      margin-bottom: 150px;
+      .message-block {
+        .maintenance-message {
+          width: 338px;
+          margin: 0 auto;
+          line-height: 28px;
+          .message-text {
+            font-size: 15px;
+            margin-bottom: 30px;
+          }
+        }
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .ggm-wrapper {
+      margin-top: 200px;
+      margin-bottom: 150px;
+      .message-block {
+        .maintenance-message {
+          width: 500px;
+          margin: 0 auto;
+          line-height: 28px;
+          .message-text {
+            font-size: 15px;
+            margin-bottom: 30px;
+          }
+        }
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+  }
+}//メンテナンス end
+
+
+
 body.ggm {
   color: #33444C !important;
   letter-spacing: 1px;
@@ -1610,11 +1715,9 @@ body#page_help_privacy {
             }
           }
           .ec-off1Grid {
-            
             font-size: 14px;
             font-weight: normal;
             .ec-off1Grid__cell {
-              
               .ec-borderedDefs {
                 background: #ff0;
                 dl {
@@ -1627,7 +1730,6 @@ body#page_help_privacy {
               }
             }
           }
-          
         }
       }
     }
@@ -1637,7 +1739,6 @@ body#page_help_privacy {
 
 /* mypage (login page) */
 .ggm-ec-mypage-role {
-  // background: #ff0;
   .ggm-ec-page-header {
     h1 {
       font-size: 18px;
@@ -1645,7 +1746,193 @@ body#page_help_privacy {
       border: none;
     }
   }
+  .ggm-ec-welcome-msg {
+    // background: #ff0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .ggm-ec-navlist-role {
+    // background: #ff0;
+    .ggm-ec-navlist-role-navlist {
+      border: none;
+      .ggm-ec-navlist-role-item {
+        // border: none;
+        font-size: 14px;
+        border: 1px solid #c1c1c1;
+        margin: 10px;
+        border-radius: 3px;
+        padding: 6px 10px;
+        text-align: center;
+        a:hover {
+          background: #f00;
+        }
+      }
+    }
+  }
+  /* お気に入り一覧 */
+  .ggm-ec-favorite-role {
+    
+    /* bootstrap */
+    .ggm-ec-favorite-item-block {
+      // background: #ff0;
+      // border: 1px solid #c1c1c1;
+      padding: 38px;
+      p {
+        font-size: 14px;
+      }
+      .ggm-ec-close-btn-circle {
+        position: relative;
+        top: -10px;
+        background: #fff;
+      }
+    }
+  }
 }
+
+
+.ggm-mypage-navi {
+  .ggm-mypage-navi-row {
+    .ggm-ec-navlist-role-item {
+      font-size: 14px;
+      border: 1px solid #666;
+      margin: 10px;
+      border-radius: 3px;
+      padding: 6px 10px;
+      text-align: center;
+    }
+    .active {
+      background: #880000;
+      color: #fff;
+      border: 1px solid #880000;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* 購入履歴　詳細 */
+body#page_mypage_history {
+  .ggm-ec-order-role {
+    font-size: 14px;
+    /* left */
+    .ggm-ec-order-role-detail {
+      .ggm-ec-order-order {
+        .ggm-ec-definitions {
+          font-size: 15px;
+          margin-bottom: 10px;
+          dt {
+            font-weight: normal;
+          }
+          dd {
+            font-weight: normal;
+          }
+        }
+      }
+      .ggm-ec-order-delivery {
+        .ggm-ec-rect-heading {
+          background: #fff;
+          h2 {
+            font-weight: normal;
+            color: #586069;
+            background: #fff;
+            margin-left: -14px;
+            border-bottom: 1px solid #dcdcdc;
+          }
+        }
+        .ggm-ec-order-delivery-title {
+          font-weight: normal;
+          color: #586069;
+          background: #fff;
+        }
+        .ggm-ec-order-delivery-item {
+          
+          .ggm-ec-image-grid {
+            border: none;
+            .ggm-ec-image-grid-img {
+              img {
+                border-radius: 3px;
+              }
+            }
+          }
+        }
+        .ggm-ec-order-delivery-address {
+          background: #F3F3F3;
+          padding: 20px 14px 5px 20px;
+          border-radius: 5px;
+          margin-bottom: 45px;
+          p {
+            margin-bottom: 10px;
+          }
+        }
+        .ggm-ec-definitions-soft {
+          margin-bottom: 10px;
+        }
+      }
+      .ggm-ec-order-payment {
+        margin-top: 46px;
+        .ggm-ec-rect-heading {
+          h2 {
+            font-weight: normal;
+            color: #586069;
+            background: #fff;
+            margin-left: -14px;
+          }
+        }
+      }
+      .ggm-ec-order-confirm {
+        // background: #0f0;
+        margin-top: 50px;
+        .ggm-ec-rect-heading {
+          h2 {
+            font-weight: normal;
+            color: #586069;
+            background: #fff;
+            margin-left: -14px;
+          }
+        }
+      }
+      .ggm-ec-order-mails {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 14px;
+        .ggm-ec-rect-heading {
+          h2 {
+            font-weight: normal;
+            color: #586069;
+            background: #fff;
+            margin-left: -14px;
+          }
+        }
+        .ggm-ec-order-mail {
+          div {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    /* right */
+    .ggm-ec-order-role-summary {
+      .ggm-ec-total-box {
+        background: #f00;
+      }
+    }
+  }
+  .ggm-ec-role {
+    a {
+      margin-left: 10px;
+      background: #fff;
+    }
+  }
+}
+
+
+
+
+
+
+
+
 
 /* Mypage navi */
 // src/Eccube/Resource/template/default/Mypage/navi.twig
