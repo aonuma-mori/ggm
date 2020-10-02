@@ -1815,28 +1815,26 @@ body#page_help_privacy {
 body#page_mypage {
   // background: #ff0;
   .ggm-mypage-index {
+    .ggm-hist-image {
+      width: 100px;
+    }
     .ggm-mypage-text {
       font-size: 14px;
     }
-
-    .row {
-      .table {
-        font-size: 14px;
+    .ggm-mypage-hist-text {
+      font-size: 14px;
+      margin-left: 14px;
+    }
+    .ggm-mypage-index-row {
+      table {
         tbody {
           tr {
             td {
-              .ggm-mypage-btn-wrapper {
-                .ggm-mypage-btn {
-                  padding: 10px;
-                  border: 1px solid #c1c1c1;
-                  background: #f5f5f5;
-                  border-radius: 3px;
-                }
-              }
-              .ggm-hist-image {
+              background: #0ff;
+              .ggm-mypage-img-block {
+                float: left;
                 width: 100px;
-                display: inline-block;
-                border-radius: 3px;
+                margin: 0 10px;
               }
             }
           }
