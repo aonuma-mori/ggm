@@ -26,7 +26,7 @@ mkdir -m 777 ./var/tmp/backup
 fi
 # - source
 # /Users/osamuyamakami/Documents/mywork/docker/ggm
-cp -pR /Users/osamuyamakami/Documents/mywork/docker/ggm ./var/tmp/back/
+cp -pR /Users/osamuyamakami/Documents/mywork/docker/ggm ./var/tmp/backup/ggm
 # - mysqldump
 docker exec -it ggm_mysql_1 mysqldump -u dbuser -psecret eccubedb > var/tmp/backup/eccubedb_dump_`date "+%Y%m%d_%H%M%S"`.sql
 echo "dump all database /var/tmp/backup"
