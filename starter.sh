@@ -12,8 +12,8 @@ mkdir -m 777 ./var/log
 fi
 
 # var/sessions
-if [ ! -e ./var/sessons ]; then
-mkdir -m 777 ./var/sessons
+if [ ! -e ./var/sessions ]; then
+mkdir -m 777 ./var/sessions
 fi
 
 # var/tmp

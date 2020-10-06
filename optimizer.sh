@@ -33,10 +33,8 @@ rm -fR ./var/tmp/backup/ggm_`date "+%Y%m%d"`
 
 echo "source copyed !";
 # - mysqldump
-docker exec -it ggm_mysql_1 mysqldump -u dbuser -psecret eccubedb > var/tmp/backup/eccubedb_dump_`date "+%Y%m%d_%H%M%S"`.sql
+docker exec -it ggm_mysql_1 mysqldump -u dbuser -psecret eccubedb > var/tmp/backup/eccubedb_dump_`date "+%Y%m%d"`.sql
 echo "dump all database /var/tmp/backup"
-
-exit;
 
 
 # composer update
