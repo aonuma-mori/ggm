@@ -30,7 +30,6 @@ echo "source copy....";
 rsync -av --delete --exclude 'var/tmp/backup' --exclude '.git' /Users/osamuyamakami/Documents/mywork/docker/ggm ./var/tmp/backup/ggm_`date "+%Y%m%d"`
 tar -pcvzf ./var/tmp/backup/ggm_`date "+%Y%m%d"`.tar.gz ./var/tmp/backup/ggm_`date "+%Y%m%d"`
 rm -fR ./var/tmp/backup/ggm_`date "+%Y%m%d"`
-
 echo "source copyed !";
 # - mysqldump
 docker exec -it ggm_mysql_1 mysqldump -u dbuser -psecret eccubedb > var/tmp/backup/eccubedb_dump_`date "+%Y%m%d"`.sql
@@ -51,7 +50,7 @@ rm -fR var/cache/prod/*
 # dev env only
 if [ $ENV = "dev" ];  then
 # db dump
-docker exec -it ec-cube_mysql_1 mysqldump -u dbuser -psecret eccubedb > var/tmp/dump_`date "+%Y%m%d_%H%M%S"`.sql
+docker exec -it ggm_mysql_1 mysqldump -u dbuser -psecret eccubedb > var/tmp/dump_`date "+%Y%m%d_%H%M%S"`.sql
 # docker
 docker-compose up -d
 docker-compose ps -a
