@@ -25,8 +25,8 @@ git commit -m "auto commit: "`date "+%Y%m%d_%H%M%S"`;
 # - mysqldump
 # ./var/tmp/backup
 
-if [ ! -e "./var/tmp/backup"]; then
-
+if [ ! -e ./var/tmp/backup ]; then
+mkdir -m 777 ./var/tmp/backup
 fi
 
 exit;
