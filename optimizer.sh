@@ -20,6 +20,18 @@ done < ./.env
 git add -A;
 git commit -m "auto commit: "`date "+%Y%m%d_%H%M%S"`;
 
+# All backup
+# - source
+# - mysqldump
+# ./var/tmp/backup
+
+if [ ! -e "./var/tmp/backup"]; then
+
+fi
+
+exit();
+
+
 # composer update
 if [ $ENV = "prod" ];  then
 /usr/local/php7.1/bin/php composer.phar update
