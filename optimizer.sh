@@ -29,7 +29,7 @@ if [ ! -e "./var/tmp/backup"]; then
 
 fi
 
-exit();
+exit;
 
 
 # composer update
