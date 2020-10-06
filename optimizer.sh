@@ -24,10 +24,13 @@ git commit -m "auto commit: "`date "+%Y%m%d_%H%M%S"`;
 if [ ! -e ./var/tmp/backup ]; then
 mkdir -m 777 ./var/tmp/backup
 fi
-# - source
+# - source rsync
 # /Users/osamuyamakami/Documents/mywork/docker/ggm
 echo "source copy....";
-cp -pR /Users/osamuyamakami/Documents/mywork/docker/ggm ./var/tmp/backup/ggm_`date "+%Y%m%d_%H%M%S"`
+rsync -av --delete --exclude 'var/tmp/backup' --exclude '.git' /Users/osamuyamakami/Documents/mywork/docker/ggm ./var/tmp/backup/ggm_`date "+%Y%m%d"`
+tar -pcvzf ./var/tmp/backup/ggm_`date "+%Y%m%d"`.tar.gz ./var/tmp/backup/ggm_`date "+%Y%m%d"`
+rm -fR ./var/tmp/backup/ggm_`date "+%Y%m%d"`
+
 echo "source copyed !";
 # - mysqldump
 docker exec -it ggm_mysql_1 mysqldump -u dbuser -psecret eccubedb > var/tmp/backup/eccubedb_dump_`date "+%Y%m%d_%H%M%S"`.sql
