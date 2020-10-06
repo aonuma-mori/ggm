@@ -21,16 +21,16 @@ git add -A;
 git commit -m "auto commit: "`date "+%Y%m%d_%H%M%S"`;
 
 # All backup
-# - source
-# - mysqldump
-# ./var/tmp/backup
-
 if [ ! -e ./var/tmp/backup ]; then
 mkdir -m 777 ./var/tmp/backup
 fi
-
+# - source
+# /Users/osamuyamakami/Documents/mywork/docker/ggm
+cp -pR /Users/osamuyamakami/Documents/mywork/docker/ggm ./var/tmp/back/
+# - mysqldump
 docker exec -it ggm_mysql_1 mysqldump -u dbuser -psecret eccubedb > var/tmp/backup/eccubedb_dump_`date "+%Y%m%d_%H%M%S"`.sql
-echo "dump all database."
+echo "dump all database /var/tmp/backup"
+
 exit;
 
 
