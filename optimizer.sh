@@ -29,7 +29,7 @@ if [ ! -e ./var/tmp/backup ]; then
 mkdir -m 777 ./var/tmp/backup
 fi
 
-docker exec -it ggm_mysql_1 mysqldump -u dbuser -psecret eccubedb > var/tmp/backup/eccubedb_dump.sql
+docker exec -it ggm_mysql_1 mysqldump -u dbuser -psecret eccubedb > var/tmp/backup/eccubedb_dump_`date "+%Y%m%d_%H%M%S"`.sql
 echo "dump all database."
 exit;
 
