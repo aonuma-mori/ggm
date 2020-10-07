@@ -1272,6 +1272,26 @@ body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole
   color: #fff;
 }
 
+/* Mypage top */
+body#page_mypage .ggm-mypage-index .ggm-hist-image {
+  width: 100px;
+}
+body#page_mypage .ggm-mypage-index .ggm-mypage-text {
+  font-size: 14px;
+}
+body#page_mypage .ggm-mypage-index .ggm-mypage-hist-text {
+  font-size: 14px;
+  margin-left: 14px;
+}
+body#page_mypage .ggm-mypage-index .ggm-mypage-index-row table tbody tr td {
+  background: #0ff;
+}
+body#page_mypage .ggm-mypage-index .ggm-mypage-index-row table tbody tr td .ggm-mypage-img-block {
+  float: left;
+  width: 100px;
+  margin: 0 10px;
+}
+
 /* 購入履歴　詳細 */
 body#page_mypage_history .ggm-ec-order-role {
   font-size: 14px;

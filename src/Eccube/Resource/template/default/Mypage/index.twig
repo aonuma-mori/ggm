@@ -15,7 +15,87 @@ file that was distributed with this source code.
 {% set body_class = 'mypage' %}
 
 {% block main %}
-    <div class="ec-layoutRole__main">
+
+  <div class="ec-layoutRole__main">
+    <div class="ggm-ec-mypage-role ec-mypageRole">
+      <div class="ggm-ec-page-header ec-pageHeader">
+        <h1>{{ 'front.mypage.title'|trans }}/{{ 'front.mypage.nav__history'|trans }}</h1>
+      </div>
+      {% include 'Mypage/navi.twig' %}
+    </div>
+
+
+    <div class="container ggm-mypage-index">
+      <p class="ggm-mypage-text">{{ 'front.mypage.history_count'|trans({'%count%':pagination.totalItemCount}) }}</p>
+      <div class="row ggm-mypage-index-row">
+        <table>
+          <tbody>
+            {% if pagination.totalItemCount > 0 %}
+              {% for Order in pagination %}
+              <tr>
+                <td>
+                  <p>{{ 'front.mypage.order_no'|trans }}: {{ Order.order_no }}</p>
+                  {% if (BaseInfo.option_mypage_order_status_display) %}
+                    <p>{{ 'front.mypage.order_status'|trans }}: {{ Order.CustomerOrderStatus }}</p>
+                  {% endif %}
+                  <p class="ggm-mypage-btn-wrapper">
+                    <a class="ggm-mypage-btn" href="{{ url('mypage_history', {'order_no': Order.order_no}) }}">{{ 'front.mypage.view_detail'|trans }}</a>
+                  </p>
+                  <p>{{ Order.order_date|date_sec }}</p>
+                </td>
+                <td>
+                  
+                      {% for OrderItem in Order.MergedProductOrderItems %}
+                        <div class="ggm-mypage-img-block">
+                          {% if OrderItem.Product is null %}
+                            <img src="{{ asset(''|no_image_product, 'save_image') }}" class="ggm-hist-image">
+                          {% else %}
+                            <img src="{{ asset(OrderItem.Product.MainListImage|no_image_product, 'save_image') }}" class="ggm-hist-image">
+                          {% endif %}
+                          
+                          <p>{{ OrderItem.product_name }}</p>
+                          
+                          {% if OrderItem.class_category_name1 is not empty %}
+                              {{ OrderItem.class_category_name1 }}
+                          {% endif %}
+                          {% if OrderItem.class_category_name1 is not empty %}
+                              / {{ OrderItem.class_category_name2 }}
+                          {% endif %}
+                        
+                          {{ OrderItem.price_inc_tax|price }}
+                            × {{ OrderItem.quantity }}
+                        </div>
+                      {% endfor %}
+
+                </td>
+              <tr>
+              {% endfor %}
+            {% else %}
+              <p class="ggm-mypage-hist-text">{{ 'front.mypage.history_not_found'|trans }}</p>
+            {% endif %}
+          </tbody>
+        </table>
+      </div>
+    </div><!--con-->
+
+
+
+
+
+
+
+  
+
+
+
+{% endblock %}
+
+
+
+
+
+{# {% block main %}
+    <div class="ec-layoutRole__main">hoge
         <div class="ggm-ec-mypage-role ec-mypageRole">
             <div class="ggm-ec-page-header ec-pageHeader">
                 <h1>{{ 'front.mypage.title'|trans }}/{{ 'front.mypage.nav__history'|trans }}</h1>
@@ -82,4 +162,4 @@ file that was distributed with this source code.
             {% endif %}
         </div>
     </div>
-{% endblock %}
+{% endblock %} #}

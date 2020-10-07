@@ -1811,6 +1811,41 @@ body#page_help_privacy {
   }
 }
 
+/* Mypage top */
+body#page_mypage {
+  // background: #ff0;
+  .ggm-mypage-index {
+    .ggm-hist-image {
+      width: 100px;
+    }
+    .ggm-mypage-text {
+      font-size: 14px;
+    }
+    .ggm-mypage-hist-text {
+      font-size: 14px;
+      margin-left: 14px;
+    }
+    .ggm-mypage-index-row {
+      table {
+        tbody {
+          tr {
+            td {
+              background: #0ff;
+              .ggm-mypage-img-block {
+                float: left;
+                width: 100px;
+                margin: 0 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
 /* 購入履歴　詳細 */
 body#page_mypage_history {
   .ggm-ec-order-role {
