@@ -5,6 +5,8 @@
 {% set NewsList = repository('Eccube\\Entity\\News').getList() %}
 
 <div class="ggm-news container">
+{{ tweet }}<br>
+{{ image_url }}<br>
 <h3 class="ggm-news-h3">NEWS</h3>
   <div class="row">
     {% for News in NewsList %}

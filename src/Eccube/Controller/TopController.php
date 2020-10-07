@@ -25,10 +25,27 @@ class TopController extends AbstractController
   public function index()
   {
     /**
-     * RSSを読み込む?(やめた。面倒なので。)
+     * TwitterのRSSを読み込む
      * 
+     * twitter RSS service: http://twitter-great-rss.herokuapp.com/
+     * url: http://twitter-great-rss.herokuapp.com/feed/user?name=GGM06605451&url_id_hash=4aabb9cbdf72d63df551b752ac8f63181466b24c
      */
-    // var_dump("foobar");
-    return [];
+    $rss_url = "http://twitter-great-rss.herokuapp.com/feed/user?name=GGM06605451&url_id_hash=4aabb9cbdf72d63df551b752ac8f63181466b24c";
+    $rss = file_get_contents($rss_url);
+    $rss = simplexml_load_string($rss);
+    foreach ($rss->channel as $v) {
+      $tweet = $v->item->description;
+    }
+    $dummy = preg_match('/https?:\/{2}[\w\/:%#\$&\?\(\)~\.=\+\-]+/', $tweet, $matches);
+    $tweet = preg_replace("/<img(.|\s)*?>/","",$tweet);
+    $image = $matches[0];
+
+    return [
+      'tweet' => $tweet,
+      'image_url' => $image,
+    ];
   }
 }
+
+
+
