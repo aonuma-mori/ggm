@@ -2,8 +2,6 @@
 Disallow: /*.csv$
 # dccube admin
 Disallow: /f9u4gm2b
-# phpmyadmin (prod unuse)
-Disallow: /phpmyadmin
 
 # system
 Disallow: .DS_Store
@@ -53,7 +51,7 @@ Disallow: dockerbuild
 Disallow: gulp
 Disallow: gulpfile.js
 Disallow: html
-Disallow: index.php
+#Disallow: index.php
 Disallow: maintenance.php
 Disallow: nginx.conf.sample
 Disallow: optimizer.sh
