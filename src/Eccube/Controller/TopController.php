@@ -40,6 +40,12 @@ class TopController extends AbstractController
     $tweet = preg_replace("/<img(.|\s)*?>/","",$tweet);
     $image = $matches[0];
 
+    /**
+     * Wordpress RSS
+     * 
+     * url: 
+     */
+
     return [
       'tweet' => $tweet,
       'image_url' => $image,

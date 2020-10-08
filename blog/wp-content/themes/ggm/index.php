@@ -2,6 +2,7 @@
 
 
 <body id="page_homepage" class="front_page ggm">
+<?php bloginfo('rss2_url'); ?>
   <div class="ggm-wrapper ggm-blog">
   <?php get_template_part('inc/nav'); ?>
 
