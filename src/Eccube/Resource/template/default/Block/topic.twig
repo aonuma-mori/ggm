@@ -1,9 +1,23 @@
 {#
   This file is part of GGM
   Copyright(c) GGM All Rights Reserved.
+
+  Wordpress feed/rss
 #}
+
+
+{% for product in wp %}
+  <!--index:{{ loop.index0 }}-->
+  {% if loop.index0 == 0 %}
+    {{ product.title }}
+    {{ product.link }}
+    {{ product.description }}
+  {% endif %}
+{% endfor %}
+
 <div class="ggm-topic container">
   <div class="row">
+
     <div class="col-sm-6">
       <h4 class="ggm-topic-title">テキストテキストテキストテキストテキストテキスト</h4>
       <p class="ggm-topic-summary">
@@ -12,16 +26,23 @@
       </p>
       <p class="ggm-topic-more"><a href="#">read more</a></p>
     </div>
+
     <div class="col-sm-6">
-      <h4 class="ggm-topic-title">テキストテキストテキストテキス</h4>
-      <p class="ggm-topic-summary">
-      <img src="/html/template/default/assets/img/common/dummy-01.jpg" class="ggm-topic-image">
-      <span class="">
-        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。
-        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。
-        </span>
-      </p>
-      <p class="ggm-topic-more"><a href="#">read more</a></p>
+      {% for product in wp %}
+        <!--index:{{ loop.index0 }}-->
+        {% if loop.index0 == 0 %}
+          <h4 class="ggm-topic-title">{{ product.title }}</h4>
+          <p class="ggm-topic-summary">
+            <span class="">
+              {{ product.description }}
+            </span>
+          </p>
+          <p class="ggm-topic-more">
+            <a href="{{ product.link }}" target="_blank">read more</a>
+          </p>
+        {% endif %}
+      {% endfor %}
     </div>
+
   </div>
 </div>

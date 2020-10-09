@@ -43,10 +43,28 @@ class TopController extends AbstractController
     /**
      * Wordpress RSS
      * 
-     * url: 
+     * url: https://ggm-do.com/blog/feed/
      */
+    if (env("APP_ENV") == "dev") {
+      $wp_rss_url = "https://ggm-do.com/blog/feed/";
+      // $wp_rss_url = "http://localhost:9100/blog/feed/rss2/";
+    } else {
+      $wp_rss_url = "https://ggm-do.com/blog/feed/";
+    }
+    $wp_rss = file_get_contents($wp_rss_url);
+    $wp_rss = simplexml_load_string($wp_rss);
+
+    // foreach ($wp_rss->channel->item as $item) {
+      var_dump($wp_rss->channel);
+
+    // }
+
+    
+
+
 
     return [
+      'wp' => $wp_rss->channel->item,
       'tweet' => $tweet,
       'image_url' => $image,
     ];
