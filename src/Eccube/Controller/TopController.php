@@ -47,17 +47,21 @@ class TopController extends AbstractController
      */
     if (env("APP_ENV") == "dev") {
       $wp_rss_url = "https://ggm-do.com/blog/feed/";
-      // $wp_rss_url = "http://localhost:9100/blog/feed/rss2/";
+      // $wp_rss_url = "http://127.0.0.1:9100/blog/feed/";
     } else {
       $wp_rss_url = "https://ggm-do.com/blog/feed/";
     }
     $wp_rss = file_get_contents($wp_rss_url);
     $wp_rss = simplexml_load_string($wp_rss);
 
-    // foreach ($wp_rss->channel->item as $item) {
-      var_dump($wp_rss->channel);
-
-    // }
+    foreach ($wp_rss->channel->item as $item) {
+      // var_dump($wp_rss->channel->item->pubDate);
+      
+      // $formated_date = preg_replace("+0000","",$wp_rss->channel->item->pubDate);
+      $wp_formated_date = preg_replace("/[\+0000|Mon,|Tue,|Wed,|Thu,|Fri,|Sat,|Sun,]/", '', $wp_rss->channel->item->pubDate);
+      // echo "\n";
+      // echo $formated_date."<br>";
+    }
 
     
 
@@ -65,6 +69,7 @@ class TopController extends AbstractController
 
     return [
       'wp' => $wp_rss->channel->item,
+      'wp_formated_date' => $wp_formated_date,
       'tweet' => $tweet,
       'image_url' => $image,
     ];

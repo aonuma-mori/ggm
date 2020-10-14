@@ -423,6 +423,7 @@ body.ggm {
 }
 
 
+
     /* topic */
     .ggm-topic {
       margin-top: 50px;
@@ -438,6 +439,13 @@ body.ggm {
           border-radius: 50%;
           width: 100px;
           height: 100px;
+          float: left;
+          margin-right: 26px;
+        }
+        .ggm-sns-image {
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
           float: left;
           margin-right: 26px;
         }

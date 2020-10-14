@@ -6,14 +6,14 @@
 #}
 
 
-{% for product in wp %}
+{# {% for product in wp %}
   <!--index:{{ loop.index0 }}-->
   {% if loop.index0 == 0 %}
     {{ product.title }}
     {{ product.link }}
     {{ product.description }}
   {% endif %}
-{% endfor %}
+{% endfor %} #}
 
 <div class="ggm-topic container">
   <div class="row">
@@ -35,7 +35,7 @@
           <p class="ggm-topic-summary">
             <img src="/html/template/default/assets/img/common/dummy-01.jpg" class="ggm-topic-image">
             <span class="">
-              {{ product.description }}　{{ product.pubDate }}
+              {{ product.description }}　{{ wp_formated_date }}
             </span>
           </p>
           <p class="ggm-topic-more">
@@ -45,5 +45,20 @@
       {% endfor %}
     </div>
 
+  </div>
+</div>
+
+<div class="ggm-topic container">
+  <div class="row">
+    <div class="col-sm-12">
+      <p class="ggm-topic-summary">
+      <img src="{{ image_url }}" class="ggm-sns-image">
+        <span class="">
+          <a href="https://twitter.com/GGM06605451" target="_blank">Twitter</a>
+          <br>
+          {{ tweet }}
+        </span>
+      </p>
+    </div>
   </div>
 </div>
