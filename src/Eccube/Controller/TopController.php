@@ -51,28 +51,54 @@ class TopController extends AbstractController
     } else {
       $wp_rss_url = "https://ggm-do.com/blog/feed/";
     }
-    $wp_rss = file_get_contents($wp_rss_url);
-    $wp_rss = simplexml_load_string($wp_rss);
 
-    foreach ($wp_rss->channel->item as $item) {
-      // var_dump($wp_rss->channel->item->pubDate);
-      
-      // $formated_date = preg_replace("+0000","",$wp_rss->channel->item->pubDate);
-      $wp_formated_date = preg_replace("/[\+0000|Mon,|Tue,|Wed,|Thu,|Fri,|Sat,|Sun,]/", '', $wp_rss->channel->item->pubDate);
-      // echo "\n";
-      // echo $formated_date."<br>";
+    $httpstatus = $this->httpstatus($wp_rss_url);
+
+    if ($httpstatus == "200") {
+      $wp_rss = file_get_contents($wp_rss_url);
+      $wp_rss = simplexml_load_string($wp_rss);
+      $wp_blog_array = json_decode(json_encode($wp_rss->channel->item), true);
+      var_dump($wp_blog_array);
     }
 
-    
+    // try {
+    //   $http_response_header = array();
+      
+    // } catch (\Exception $e) {
+    //   // var_dump($http_response_header);
+    // }
 
-
+    log_debug('GGMログメッセージ');
+    // log_alert('GGMログメッセージ');
+    // // log_critical('GGMログメッセージ');
+    // log_error('GGMログメッセージ');
+    // log_warning('GGMログメッセージ');
+    // log_notice('GGMログメッセージ');
+    // log_info('GGMログメッセージ');
+    // log_debug('GGMログメッセージ');
 
     return [
-      'wp' => $wp_rss->channel->item,
-      'wp_formated_date' => $wp_formated_date,
+      'wp' => $wp_blog_array,
       'tweet' => $tweet,
       'image_url' => $image,
     ];
+  }
+
+  
+  /**
+   * RSSなどのHTTPステータスを確認する
+   * 
+   * 200: true
+   */
+  public function httpstatus($url) {
+
+    $curl = "curl -LI ".$url." -o /dev/null -w '%{http_code}\n' -s";
+    $httpstatus = exec($curl, $error);
+    // logging
+    // log_info('GGMログメッセージ');
+
+    // var_dump($httpstatus);
+    return $httpstatus;
   }
 }
 
