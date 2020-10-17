@@ -1,7 +1,10 @@
 # eccube
 Disallow: /*.csv$
 # dccube admin
-Disallow: /f9u4gm2b
+Disallow: /f9*
+# phpmyadmin (prod unuse)
+Disallow: /phpmyadmin
+
 
 # system
 Disallow: .DS_Store
