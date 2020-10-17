@@ -29,9 +29,9 @@ class TopController extends AbstractController
      */
     if (env("APP_ENV") == "prod") {
       $product_links = [
+        "/products/list?category_id=8",
+        "/products/list?category_id=9",
         "/products/list?category_id=10",
-        "/products/list?category_id=7",
-        "/products/list?category_id=11",
       ];
     } else {
       $product_links = [
