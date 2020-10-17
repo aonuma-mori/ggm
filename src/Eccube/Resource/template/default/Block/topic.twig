@@ -6,14 +6,14 @@
 #}
 
 
-{% for product in wp %}
+{# {% for product in wp %}
   <!--index:{{ loop.index0 }}-->
   {% if loop.index0 == 0 %}
     {{ product.title }}
     {{ product.link }}
     {{ product.description }}
   {% endif %}
-{% endfor %}
+{% endfor %} #}
 
 <div class="ggm-topic container">
   <div class="row">
@@ -28,9 +28,8 @@
     </div>
 
     <div class="col-sm-6">
-      {% for key,line in wp %}
+      {% for product in wp %}
         <!--index:{{ loop.index0 }}-->
-        {{ key }}
         {% if loop.index0 == 0 %}
         
           <h4 class="ggm-topic-title">{{ product.title }}</h4>

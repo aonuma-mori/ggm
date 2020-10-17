@@ -25,6 +25,23 @@ class TopController extends AbstractController
   public function index()
   {
     /**
+     * 商品リンクの出し分け　トップ3
+     */
+    if (env("APP_ENV") == "prod") {
+      $product_links = [
+        "/products/list?category_id=10",
+        "/products/list?category_id=7",
+        "/products/list?category_id=11",
+      ];
+    } else {
+      $product_links = [
+        "/products/list?category_id=10",
+        "/products/list?category_id=7",
+        "/products/list?category_id=11",
+      ];
+    }
+
+    /**
      * TwitterのRSSを読み込む
      * 
      * twitter RSS service: http://twitter-great-rss.herokuapp.com/
@@ -52,25 +69,21 @@ class TopController extends AbstractController
       $wp_rss_url = "https://ggm-do.com/blog/feed/";
     }
 
-    $httpstatus = $this->httpstatus($wp_rss_url);
-
-    if ($httpstatus == "200") {
+    if ($this->httpstatus($wp_rss_url) == "200") {
       $wp_rss = file_get_contents($wp_rss_url);
       $wp_rss = simplexml_load_string($wp_rss);
-      $wp_blog_array = json_decode(json_encode($wp_rss->channel->item), true);
-      var_dump($wp_blog_array);
+      // $wp_blog_array = json_decode(json_encode($wp_rss->channel->item), true);
+      $wp_rss_object = $wp_rss->channel->item;
+    } else {
+      $wp_rss_object = array();
     }
+    // dump($wp_rss->channel->item);
 
-    // try {
-    //   $http_response_header = array();
-      
-    // } catch (\Exception $e) {
-    //   // var_dump($http_response_header);
-    // }
+
 
     log_debug('GGMログメッセージ');
     // log_alert('GGMログメッセージ');
-    // // log_critical('GGMログメッセージ');
+    // log_critical('GGMログメッセージ');
     // log_error('GGMログメッセージ');
     // log_warning('GGMログメッセージ');
     // log_notice('GGMログメッセージ');
@@ -78,10 +91,11 @@ class TopController extends AbstractController
     // log_debug('GGMログメッセージ');
 
     return [
-      'wp' => $wp_blog_array,
+      'wp' => $wp_rss_object,
       'tweet' => $tweet,
       'image_url' => $image,
-    ];
+      'product_links' => $product_links,
+    ]; 
   }
 
   
