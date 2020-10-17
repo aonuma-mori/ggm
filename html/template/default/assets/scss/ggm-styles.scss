@@ -441,6 +441,13 @@ body.ggm {
           float: left;
           margin-right: 26px;
         }
+        .ggm-sns-image {
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          float: left;
+          margin-right: 26px;
+        }
       }
       .ggm-topic-more {
         font-size: 14px;
@@ -473,6 +480,25 @@ body.ggm {
           height: 100px;
           float: left;
           margin-right: 26px;
+        }
+        .ggm-topic-image {
+          width: 200px;
+          float: right;
+          margin-left: 10px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          filter: saturate(50%);
+        }
+        .ggm-topic-image:hover {
+          filter: saturate(100%);
+        }
+        img {
+          width: 200px;
+          float: right;
+          margin-left: 10px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          filter: saturate(50%);
         }
       }
       .ggm-news-more {
