@@ -578,6 +578,36 @@ body.ggm {
 /* page共通 */
 .ggm-ec-role {
   margin-bottom: 30px;
+  .ggm-ec-page-header {
+    h1.ggm-ec-heading-title {
+      font-size: 18px;
+      letter-spacing: 2px;
+      margin-bottom: 60px;
+      font-weight: normal;
+    }
+  }
+  /* Login */
+  .ggm-ec-off2Grid {
+    .ggm-ec-off2Grid__cell {
+      form.ggm-login-form {
+        .ggm-ec-login {
+          background: #fff;
+          .ggm-ec-login__input {
+            .ggm-ec-checkbox {
+              label {
+                .form-check {
+                  // background: #ff0;
+                  .form-check-label {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /* page_product_list */
@@ -587,6 +617,12 @@ body#page_product_list {
       .ggm-block-div {
         /* 検索結果ナビ */
         .ggm-ec-searchnav {
+          .ggm-errormsg {
+            color: #880000;
+            font-weight: bold;
+            margin-top: 120px;
+            text-align: center;
+          }
           .ggm-ec-searchnav-topicpath {
             ol.ggm-ec-topicpath-ol {
               li {
@@ -1666,7 +1702,6 @@ body#page_shopping_complete {
                 }
               }
               .ggm-ec-report-description {
-                // background: #0ff;
                 text-align: left;
                 line-height: 27px;
                 font-size: 14px;
@@ -1676,7 +1711,6 @@ body#page_shopping_complete {
                 }
               }
               .ggm-ec-off4grid {
-                // background: #0ff;
                 .ggm-ec-off4grid-cell {
                   margin-top: 70px;
                   a:link, a:visited {
@@ -1853,14 +1887,29 @@ body#page_mypage {
     }
     .ggm-mypage-index-row {
       table {
+        margin: 20px;
         tbody {
           tr {
+            // border-bottom: 1px solid #c1c1c1;
+            // margin-bottom: 10px;
             td {
-              background: #0ff;
+              background: #fff;
+              font-size: 14px;
+              border-bottom: 1px solid #c1c1c1;
+              padding-top: 25px;
+              p {
+                font-size: 14px;
+              }
               .ggm-mypage-img-block {
                 float: left;
                 width: 100px;
                 margin: 0 10px;
+                margin-right: 25px;
+                margin-left: 25px;
+                margin-bottom: 40px;
+                img {
+                  margin-bottom: 10px;
+                }
               }
             }
           }

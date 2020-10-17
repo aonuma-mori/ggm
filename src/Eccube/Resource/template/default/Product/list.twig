@@ -90,7 +90,7 @@
 {# ここからコンテンツ #}
 {% if search_form.category_id.vars.errors|length > 0 %}
   <div class="ggm-ec-searchnav ec-searchnavRole">
-    <p class="errormsg text-danger">{{ 'front.product.search__category_not_found'|trans }}</p>
+    <p class="ggm-errormsg ggm-text-danger errormsg text-danger">{{ 'front.product.search__category_not_found'|trans }}</p>
   </div>
 {% else %}
   <div class="ggm-ec-searchnav ec-searchnavRole">

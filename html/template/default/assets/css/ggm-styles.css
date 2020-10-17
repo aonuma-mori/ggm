@@ -449,11 +449,30 @@ body.ggm ._message-footer {
 /* page共通 */
 .ggm-ec-role {
   margin-bottom: 30px;
+  /* Login */
+}
+.ggm-ec-role .ggm-ec-page-header h1.ggm-ec-heading-title {
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+  font-weight: normal;
+}
+.ggm-ec-role .ggm-ec-off2Grid .ggm-ec-off2Grid__cell form.ggm-login-form .ggm-ec-login {
+  background: #fff;
+}
+.ggm-ec-role .ggm-ec-off2Grid .ggm-ec-off2Grid__cell form.ggm-login-form .ggm-ec-login .ggm-ec-login__input .ggm-ec-checkbox label .form-check .form-check-label {
+  font-size: 14px;
 }
 
 /* page_product_list */
 body#page_product_list .ggm-wrapper .ggm-contents .ggm-block-div {
   /* 検索結果ナビ */
+}
+body#page_product_list .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-searchnav .ggm-errormsg {
+  color: #880000;
+  font-weight: bold;
+  margin-top: 120px;
+  text-align: center;
 }
 body#page_product_list .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-searchnav .ggm-ec-searchnav-topicpath ol.ggm-ec-topicpath-ol li {
   font-size: 13px;
@@ -1309,13 +1328,28 @@ body#page_mypage .ggm-mypage-index .ggm-mypage-hist-text {
   font-size: 14px;
   margin-left: 14px;
 }
+body#page_mypage .ggm-mypage-index .ggm-mypage-index-row table {
+  margin: 20px;
+}
 body#page_mypage .ggm-mypage-index .ggm-mypage-index-row table tbody tr td {
-  background: #0ff;
+  background: #fff;
+  font-size: 14px;
+  border-bottom: 1px solid #c1c1c1;
+  padding-top: 25px;
+}
+body#page_mypage .ggm-mypage-index .ggm-mypage-index-row table tbody tr td p {
+  font-size: 14px;
 }
 body#page_mypage .ggm-mypage-index .ggm-mypage-index-row table tbody tr td .ggm-mypage-img-block {
   float: left;
   width: 100px;
   margin: 0 10px;
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-bottom: 40px;
+}
+body#page_mypage .ggm-mypage-index .ggm-mypage-index-row table tbody tr td .ggm-mypage-img-block img {
+  margin-bottom: 10px;
 }
 
 /* 購入履歴　詳細 */
