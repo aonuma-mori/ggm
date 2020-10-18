@@ -102,12 +102,20 @@ body#ggm-maintenance {
 }//メンテナンス end
 
 
-
+/**
+ * 
+ *
+ *
+ */
 body.ggm {
   color: #33444C !important;
   letter-spacing: 1px;
   font-family: "Noto Sans JP", sans-serif !important;
   margin: 0;
+  a:link, a:visited {
+    color:#4682b4;
+    // text-decoration: underline;
+  }
 
   /* 検索フォームのshow/hide */
   @media (max-width: 991px) {
@@ -229,10 +237,12 @@ body.ggm {
     /* nav bar */
     /*---------*/
     nav.navbar {
+      .navbar-brand {
+         color: #000;
+      }
       #navbarNav {
         ul.navbar-nav {
           li.dropdown {
-            // background: #000;
             .show {
               border: none;
               background: #f8f9fa!important;
@@ -596,12 +606,26 @@ body.ggm {
             .ggm-ec-checkbox {
               label {
                 .form-check {
-                  // background: #ff0;
                   .form-check-label {
-                    font-size: 14px;
+                    font-size: 13px;
+                    // background: #ff0;
                   }
                 }
               }
+            }
+          }
+          .ggm-ec-grid2 {
+            .ggm-ec-grid2__cell {
+              .ggm-ec-login__actions {
+                button {
+                  border-radius: 3px;
+                  font-weight: normal;
+                }
+              }
+            }
+            .ggm-ec-grid2__cell {
+              background: #ff0;
+              font-size: 13px;
             }
           }
         }

@@ -85,6 +85,11 @@ body#ggm-maintenance .ggm-wrapper .message-block .maintenance-message .message-t
   }
 }
 
+/**
+ * 
+ *
+ *
+ */
 body.ggm {
   color: #33444C !important;
   letter-spacing: 1px;
@@ -94,6 +99,9 @@ body.ggm {
   /* Defoult link a: */
   /* Divice width */
   /* GGM Shop */
+}
+body.ggm a:link, body.ggm a:visited {
+  color: #4682b4;
 }
 @media (max-width: 991px) {
   body.ggm #search-form-pc {
@@ -214,6 +222,9 @@ body.ggm .ggm-wrapper {
     height: 5px;
     background: #f5f5f5;
   }
+}
+body.ggm .ggm-wrapper nav.navbar .navbar-brand {
+  color: #000;
 }
 body.ggm .ggm-wrapper nav.navbar #navbarNav ul.navbar-nav li.dropdown .show {
   border: none;
@@ -461,7 +472,15 @@ body.ggm ._message-footer {
   background: #fff;
 }
 .ggm-ec-role .ggm-ec-off2Grid .ggm-ec-off2Grid__cell form.ggm-login-form .ggm-ec-login .ggm-ec-login__input .ggm-ec-checkbox label .form-check .form-check-label {
-  font-size: 14px;
+  font-size: 13px;
+}
+.ggm-ec-role .ggm-ec-off2Grid .ggm-ec-off2Grid__cell form.ggm-login-form .ggm-ec-login .ggm-ec-grid2 .ggm-ec-grid2__cell .ggm-ec-login__actions button {
+  border-radius: 3px;
+  font-weight: normal;
+}
+.ggm-ec-role .ggm-ec-off2Grid .ggm-ec-off2Grid__cell form.ggm-login-form .ggm-ec-login .ggm-ec-grid2 .ggm-ec-grid2__cell {
+  background: #ff0;
+  font-size: 13px;
 }
 
 /* page_product_list */
