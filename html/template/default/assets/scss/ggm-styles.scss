@@ -257,6 +257,9 @@ body.ggm {
       #navbarNav {
         ul.navbar-nav {
           li.dropdown {
+            a:link, a:visited {
+              color: #000;
+            }
             .show {
               border: none;
               background: #f8f9fa!important;
@@ -646,7 +649,58 @@ body.ggm {
       }
     }
   }
+  /* Login + Guest login */
+  .ggm-ec-grid3 { 
+    .ggm-ec-grid3-cell2 {
+      form {
+        .ggm-ec-login {
+          background: #fff;
+          .ggm-ec-login-input {
+            .ggm-ec-checkbox {
+              label {
+                font-size: 13px;
+                input {
+                  margin: 2px -17px;
+                }
+              }
+            }
+          }
+          .ggm-ec-grid2 {
+            .ggm-ec-grid2-cell {
+              font-size: 13px;
+              .ggm-ec-login-actions {
+                button {
+                  border-radius: 3px;
+                  font-weight: normal;
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .ggm-ec-grid3-cell {
+      .ggm-ec-guest {
+        font-size: 13px;
+        border-radius: 5px;
+        .ggm-ec-guest-inner {
+          p {
+            text-align: left;
+          }
+          .ggm-ec-guest-actions {
+            a:link, a:visited {
+              border-radius: 3px;
+              color: #fff;
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
 
 /* page_product_list */
 body#page_product_list {
@@ -737,7 +791,7 @@ body#page_product_list {
           .ggm-ec-modal-wrap {
             // background: #000;
             border: 1px solid #c1c1c1;
-            border-radius: 2px;
+            border-radius: 3px;
             .ggm-ec-modal-header {
               margin-bottom: 50px;
             }
@@ -763,7 +817,7 @@ body#page_product_list {
                 
                 label.ggm-ec-modal-close {
                   font-weight: normal;
-                  border-radius: 2px;
+                  border-radius: 3px;
                   background: #777;
                   border: 1px #777 solid;
 
@@ -869,7 +923,7 @@ body#page_product_detail {
                   .ggm-ec-modal-wrap {
                     // background: #000;
                     border: 1px solid #c1c1c1;
-                    border-radius: 2px;
+                    border-radius: 3px;
                     .ggm-ec-modal-header {
                       margin-bottom: 50px;
                     }
@@ -895,7 +949,7 @@ body#page_product_detail {
                         
                         label.ggm-ec-modal-close {
                           font-weight: normal;
-                          border-radius: 2px;
+                          border-radius: 3px;
                           background: #777;
                           border: 1px #777 solid;
 
@@ -1457,18 +1511,15 @@ body#page_shopping_confirm {
                 }
               }
               .ggm-ec-order-delivery-item {
-                // background: #ff0;
                 ul.ggm-ec-bordered-list {
                   li {
                     .ggm-ec-image-grid {
                       .ggm-ec-image-grid-img {
-                        // background: #ff0; 
                         img {
                           border-radius: 3px;
                         }
                       } 
                       .ggm-ec-imageg-grid-content {
-                        // background: #f00;
                         font-size: 14px;
                         p {
                           margin-bottom: 5px;
@@ -1558,7 +1609,6 @@ body#page_shopping_confirm {
                   }
                 }
                 .ggm-ec-total-box-btn {
-                  // background: #000;
                   button.ggm-ec-block-btn-action {
                     border-radius: 3px;
                     background: #880000;
@@ -1895,16 +1945,19 @@ body#page_help_privacy {
   }
 }
 
-
 .ggm-mypage-navi {
   .ggm-mypage-navi-row {
     .ggm-ec-navlist-role-item {
       font-size: 14px;
-      border: 1px solid #666;
+      border: 1px solid #808080;
+      background: #fff;
       margin: 10px;
       border-radius: 3px;
       padding: 6px 10px;
       text-align: center;
+      a {
+        color: #666;
+      }
     }
     .active {
       background: #880000;
@@ -2002,7 +2055,6 @@ body#page_mypage_history {
           background: #fff;
         }
         .ggm-ec-order-delivery-item {
-          
           .ggm-ec-image-grid {
             border: none;
             .ggm-ec-image-grid-img {

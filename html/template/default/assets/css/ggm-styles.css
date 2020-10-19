@@ -232,6 +232,9 @@ body.ggm .ggm-wrapper {
 body.ggm .ggm-wrapper nav.navbar .navbar-brand {
   color: #000;
 }
+body.ggm .ggm-wrapper nav.navbar #navbarNav ul.navbar-nav li.dropdown a:link, body.ggm .ggm-wrapper nav.navbar #navbarNav ul.navbar-nav li.dropdown a:visited {
+  color: #000;
+}
 body.ggm .ggm-wrapper nav.navbar #navbarNav ul.navbar-nav li.dropdown .show {
   border: none;
   background: #f8f9fa !important;
@@ -467,6 +470,7 @@ body.ggm ._message-footer {
 .ggm-ec-role {
   margin-bottom: 30px;
   /* Login */
+  /* Login + Guest login */
 }
 .ggm-ec-role .ggm-ec-page-header h1.ggm-ec-heading-title {
   font-size: 18px;
@@ -486,6 +490,35 @@ body.ggm ._message-footer {
 }
 .ggm-ec-role .ggm-ec-off2Grid .ggm-ec-off2Grid__cell form.ggm-login-form .ggm-ec-login .ggm-ec-grid2 .ggm-ec-grid2__cell {
   font-size: 13px;
+}
+.ggm-ec-role .ggm-ec-grid3 .ggm-ec-grid3-cell2 form .ggm-ec-login {
+  background: #fff;
+}
+.ggm-ec-role .ggm-ec-grid3 .ggm-ec-grid3-cell2 form .ggm-ec-login .ggm-ec-login-input .ggm-ec-checkbox label {
+  font-size: 13px;
+}
+.ggm-ec-role .ggm-ec-grid3 .ggm-ec-grid3-cell2 form .ggm-ec-login .ggm-ec-login-input .ggm-ec-checkbox label input {
+  margin: 2px -17px;
+}
+.ggm-ec-role .ggm-ec-grid3 .ggm-ec-grid3-cell2 form .ggm-ec-login .ggm-ec-grid2 .ggm-ec-grid2-cell {
+  font-size: 13px;
+}
+.ggm-ec-role .ggm-ec-grid3 .ggm-ec-grid3-cell2 form .ggm-ec-login .ggm-ec-grid2 .ggm-ec-grid2-cell .ggm-ec-login-actions button {
+  border-radius: 3px;
+  font-weight: normal;
+  color: #fff;
+}
+.ggm-ec-role .ggm-ec-grid3 .ggm-ec-grid3-cell .ggm-ec-guest {
+  font-size: 13px;
+  border-radius: 5px;
+}
+.ggm-ec-role .ggm-ec-grid3 .ggm-ec-grid3-cell .ggm-ec-guest .ggm-ec-guest-inner p {
+  text-align: left;
+}
+.ggm-ec-role .ggm-ec-grid3 .ggm-ec-grid3-cell .ggm-ec-guest .ggm-ec-guest-inner .ggm-ec-guest-actions a:link, .ggm-ec-role .ggm-ec-grid3 .ggm-ec-grid3-cell .ggm-ec-guest .ggm-ec-guest-inner .ggm-ec-guest-actions a:visited {
+  border-radius: 3px;
+  color: #fff;
+  font-weight: normal;
 }
 
 /* page_product_list */
@@ -550,7 +583,7 @@ body#page_product_list .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-modal {
 }
 body#page_product_list .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-modal .ggm-ec-modal-wrap {
   border: 1px solid #c1c1c1;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 body#page_product_list .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-modal .ggm-ec-modal-wrap .ggm-ec-modal-header {
   margin-bottom: 50px;
@@ -573,7 +606,7 @@ body#page_product_list .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-modal .
 }
 body#page_product_list .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-modal .ggm-ec-modal-wrap .ggm-ec-modal-box .ggm-ec-role label.ggm-ec-modal-close {
   font-weight: normal;
-  border-radius: 2px;
+  border-radius: 3px;
   background: #777;
   border: 1px #777 solid;
 }
@@ -636,7 +669,7 @@ body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-produ
 }
 body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-product-role .ggm-ec-grid2 .ggm-ec-grid2-cell .ggm-ec-productRole-profile .ggm-ec-modal .ggm-ec-modal-wrap {
   border: 1px solid #c1c1c1;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-product-role .ggm-ec-grid2 .ggm-ec-grid2-cell .ggm-ec-productRole-profile .ggm-ec-modal .ggm-ec-modal-wrap .ggm-ec-modal-header {
   margin-bottom: 50px;
@@ -659,7 +692,7 @@ body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-produ
 }
 body#page_product_detail .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-product-role .ggm-ec-grid2 .ggm-ec-grid2-cell .ggm-ec-productRole-profile .ggm-ec-modal .ggm-ec-modal-wrap .ggm-ec-modal-box .ggm-ec-role label.ggm-ec-modal-close {
   font-weight: normal;
-  border-radius: 2px;
+  border-radius: 3px;
   background: #777;
   border: 1px #777 solid;
 }
@@ -1336,11 +1369,15 @@ body#page_help_privacy .ggm-wrapper .ggm-contents .ggm-block-div .ec-contactRole
 
 .ggm-mypage-navi .ggm-mypage-navi-row .ggm-ec-navlist-role-item {
   font-size: 14px;
-  border: 1px solid #666;
+  border: 1px solid #808080;
+  background: #fff;
   margin: 10px;
   border-radius: 3px;
   padding: 6px 10px;
   text-align: center;
+}
+.ggm-mypage-navi .ggm-mypage-navi-row .ggm-ec-navlist-role-item a {
+  color: #666;
 }
 .ggm-mypage-navi .ggm-mypage-navi-row .active {
   background: #880000;
