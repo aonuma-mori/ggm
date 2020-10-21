@@ -1512,7 +1512,10 @@ body#page_mypage_history .ggm-ec-role a {
   background: #fff;
 }
 
-/* Mypage navi */
+.ggm-ec-customer-role {
+  background: #ff0;
+}
+
 /************************************************
  * Blog (wordpress)
  * 
