@@ -1512,8 +1512,34 @@ body#page_mypage_history .ggm-ec-role a {
   background: #fff;
 }
 
-.ggm-ec-customer-role {
-  background: #ff0;
+/* 非会員ログイン */
+.ggm-ec-customer-role .ggm-ec-page-header h1 {
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+  font-weight: normal;
+}
+.ggm-ec-customer-role .ggm-ec-cart-role .ggm-ec-cart-role-progress .ggm-ec-progress .ggm-ec-progress-item .ggm-ec-progress-number {
+  font-weight: normal;
+}
+.ggm-ec-customer-role .ggm-ec-cart-role .ggm-ec-cart-role-progress .ggm-ec-progress .ggm-ec-progress-item .ggm-ec-progress-label {
+  font-weight: normal;
+}
+.ggm-ec-customer-role .ggm-ec-cart-role .ggm-ec-cart-role-progress .ggm-ec-progress .ggm-ec-progress-item .ec-progress__item:after {
+  background: #586069 !important;
+  height: 1px;
+}
+.ggm-ec-customer-role .ggm-ec-cart-role .ggm-ec-cart-role-progress .ggm-ec-progress .is-complete .ggm-ec-progress-number {
+  font-weight: normal;
+}
+.ggm-ec-customer-role .ggm-ec-cart-role .ggm-ec-cart-role-progress .ggm-ec-progress .is-complete .ggm-ec-progress-label {
+  font-weight: normal;
+}
+.ggm-ec-customer-role .ggm-ec-cart-role .ggm-ec-cart-role-progress .ggm-ec-progress .is-complete .ec-progress__number {
+  background: #880000;
+}
+.ggm-ec-customer-role .ggm-ec-cart-role .ggm-ec-cart-role-progress .ggm-ec-progress .is-complete .ec-progress__label {
+  color: #880000;
 }
 
 /************************************************
