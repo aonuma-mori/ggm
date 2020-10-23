@@ -2,7 +2,6 @@
 
 
 <body id="page_homepage" class="front_page ggm">
-<?php bloginfo('rss2_url'); ?>
   <div class="ggm-wrapper ggm-blog">
   <?php get_template_part('inc/nav'); ?>
 
@@ -14,9 +13,9 @@
       <img class="top-pc" src="/html/template/default/assets/img/top/ggm-top02-pc.jpg" id="top-banner-img">
     </div>
     <div class="ggm-top-text-block">
-    <p class="">
-      Adventure is not outside man; it is within.
-    </p>
+      <p class="">
+        <?php echo fetch_copy(); ?>
+      </p>
     </div>
   </div><!-- ggm-contents -->
 
