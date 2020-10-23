@@ -295,15 +295,16 @@ body.ggm {
       background: #f4e9e9;
       overflow: hidden;
     }
-    .ggm-top-text-block {
-      position: absolute;
-      top: 0;
-      left: 0;
-      color: #fff;
-      margin: 30px;
-      font-size: 27px;
-      // text-shadow: -1px -1px 1px #888;
-    }
+    // .ggm-top-text-block {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   color: #fff;
+    //   margin: 30px;
+    //   font-size: 27px;
+    //   // text-shadow: -1px -1px 1px #888;
+
+    // }
     @media (max-width: 991px) {
       .top-sp { display: block; }
       .top-pc { display: none; }
@@ -320,6 +321,15 @@ body.ggm {
           margin: auto;
         }
       }
+      .ggm-top-text-block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #fff;
+        margin: 30px;
+        font-size: 27px;
+        // text-shadow: -1px -1px 1px #888;
+      }
     }
     @media (min-width: 991px) {
       .top-sp { display: none; }
@@ -335,6 +345,24 @@ body.ggm {
           right: 0;
           bottom: 0;
           margin: auto;
+        }
+      }
+      .ggm-top-text-block {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        color: #fff;
+        margin: 30px;
+        font-size: 27px;
+        letter-spacing: 3px;
+        line-height: 45px;
+        width: 50%;
+        // text-shadow: -1px -1px 1px #888;
+        text-shadow: #000 2px 0 15px;
+        img {
+          border-radius: 50%;
+          border: 1px solid #c1c1c1;
+          width: 42px;
         }
       }
     }
@@ -2071,7 +2099,33 @@ body#page_mypage_history {
     /* right */
     .ggm-ec-order-role-summary {
       .ggm-ec-total-box {
-        background: #f00;
+        background: #f8f9fa;
+        .ggm-ec-total-box-total {
+          font-weight: normal;
+          .ggm-ec-total-box-price {
+            font-weight: normal;
+            font-size: 18px;
+            color: #000;
+          }
+        }
+        .ec-totalBox__paymentTotal {
+          // background: #ff0;
+          font-weight: normal;
+          .ec-totalBox__price {
+            font-weight: normal;
+            color: #880000;
+          }
+          .ec-totalBox__taxLabel {
+            color: #880000;
+          }
+        }
+        .ec-blockBtn--action {
+          margin-top: 30px;
+          border-radius: 3px;
+          background: #880000;
+          color: #fff;
+          font-weight: normal;
+        }
       }
     }
   }
@@ -2124,6 +2178,41 @@ body#page_mypage_history {
             color: #880000;
           }
           
+        }
+      }
+    }
+  }
+}
+
+/* 新規会員登録 */
+.ggm-ec-register-role {
+  .ggm-ec-page-header {
+    h1 {
+      font-weight: normal;
+      font-size: 18px;
+    }
+  }
+  .ggm-ec-off1-grid {
+    .ggm-ec-off1-grid-cell {
+      form {
+        .ggm-p-country-name {
+
+        }
+        .ggm-ec-bordered-defs {
+          
+          dl {
+            dt {
+              // background: #ff0;
+              label {
+                font-weight: normal;
+                font-size: 14px;
+              }
+            }
+            dd {
+              // input form and something other.
+            }
+          }
+
         }
       }
     }
