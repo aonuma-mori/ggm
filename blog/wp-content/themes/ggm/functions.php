@@ -1,5 +1,48 @@
 <?php
 
+/* トップバナーのコピーライト */
+function fetch_copy() {
+  /**
+   * TwitterのRSSから取得して、もし取得できなかったら固定文から取得する。
+   */
+  $rss_url = "http://twitter-great-rss.herokuapp.com/feed/user?name=aonuma_moriri&url_id_hash=4aabb9cbdf72d63df551b752ac8f63181466b24c";
+  $rss = file_get_contents($rss_url);
+  $rss = simplexml_load_string($rss);
+  
+  $tweets = json_decode(json_encode($rss->channel), true);
+  // var_dump($tweets["item"]);
+  $n=0;
+  foreach ($tweets["item"] as $num => $v) {
+    // echo $num."\n";
+    // var_dump($v["description"])."<br>\n";
+    if (preg_match("/@/",$v["description"])) {
+      continue;
+    } else {
+      $tweet = $v["description"];
+    }
+    //&& !preg_match("/img/",$v["description"]))
+  }
+  $dummy = preg_match('/https?:\/{2}[\w\/:%#\$&\?\(\)~\.=\+\-]+/', $tweet, $matches);
+  $tweet = preg_replace("/<img(.|\s)*?>/","",$tweet);
+  // var_dump($tweet);
+  $image = $matches[0];
+  $image_tag = "<img src='".$image."' class='top-twitter-icon' id='top-twitter-icon'>";
+  if ($tweet) {
+    return $tweet.$image_tag;
+  } else {
+    $copys = [
+      "Don't think too much about your propensity.<br>This is because propensity is an entertainment for the wealthy and a luxury worry.",
+      "Als Gregor Samsa eines Morgens aus unruhigen Träumen erwachte, fand er sich in seinem Bett zu einem ungeheuren Ungeziefer verwandelt.",
+      "Beware that, when fighting monsters, you yourself do not become a monster… for when you gaze long into the abyss. The abyss gazes also into you.",
+    ];
+    $select_num = mt_rand(0, count($copys)-1);
+    return $copys[$select_num];
+  }
+  
+
+  
+}
+
 /* Sidebar */
 if ( function_exists('register_sidebar') ) register_sidebar();
 
