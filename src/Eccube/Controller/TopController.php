@@ -55,6 +55,7 @@ class TopController extends AbstractController
     }
     $dummy = preg_match('/https?:\/{2}[\w\/:%#\$&\?\(\)~\.=\+\-]+/', $tweet, $matches);
     $tweet = preg_replace("/<img(.|\s)*?>/","",$tweet);
+    $tweet = preg_replace("/<a.*?<\/a>/","",$tweet);
     $image = $matches[0];
 
     /**
