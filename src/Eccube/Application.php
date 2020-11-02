@@ -36,8 +36,10 @@ class Application extends \Pimple
     {
         if (!is_object(self::$instance)) {
             self::$instance = new Application($values);
+            // var_dump(self::$instance);
+            // exit("!is_object");
         }
-
+        // exit("is_object");
         return self::$instance;
     }
 
@@ -140,6 +142,7 @@ class Application extends \Pimple
      */
     public function getParentContainer()
     {
+        // exit("あああああ");
         return $this->parentContainer;
     }
 }
