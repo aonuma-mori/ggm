@@ -1595,16 +1595,114 @@ body#page_mypage_history .ggm-ec-role a {
 .ggm-ec-customer-role .ggm-ec-cart-role .ggm-ec-cart-role-progress .ggm-ec-progress .is-complete .ec-progress__label {
   color: #880000;
 }
+.ggm-ec-customer-role .ggm-ec-off1-grid .ggm-ec-off1-grid-cell form .ggm-ec-bordered-defs dl dt label {
+  font-weight: normal;
+  font-size: 14px;
+}
+.ggm-ec-customer-role .ggm-ec-off1-grid .ggm-ec-off1-grid-cell form .ggm-ec-bordered-defs dl dd {
+  font-size: 13px;
+}
+.ggm-ec-customer-role .ggm-ec-off1-grid .ggm-ec-off1-grid-cell form .ggm-ec-bordered-defs dl dd .ggm-ec-zip-input .ggm-attention {
+  font-size: 13px;
+  color: #888;
+}
+.ggm-ec-customer-role .ggm-ec-off1-grid .ggm-ec-off1-grid-cell form .ggm-ec-bordered-defs dl dd .ggm-ec-tel-input .ggm-attention {
+  font-size: 13px;
+  color: #888;
+}
+.ggm-ec-customer-role .ggm-ec-off1-grid .ggm-ec-off1-grid-cell form .ggm-ec-bordered-defs dl dd .ggm-ec-radio {
+  font-size: 14px;
+}
+.ggm-ec-customer-role .ggm-ec-off1-grid .ggm-ec-off1-grid-cell form .ggm-ec-register-role-actions .ggm-ec-off4grid .ggm-ec-off4Grid-cell .ggm-ec-blockbtn-action {
+  border-radius: 3px;
+  background: #880000;
+  border: none;
+  font-weight: normal;
+}
+.ggm-ec-customer-role .ggm-ec-off1-grid .ggm-ec-off1-grid-cell form .ggm-ec-register-role-actions .ggm-ec-off4grid .ggm-ec-off4Grid-cell .ggm-ec-blockbtn-cancel {
+  border-radius: 3px;
+  font-weight: normal;
+  color: #fff;
+  background: #888;
+  border: none;
+}
 
-/* 新規会員登録 */
+/* 新規会員登録 / 確認画面*/
 .ggm-ec-register-role .ggm-ec-page-header h1 {
   font-weight: normal;
   font-size: 18px;
+}
+.ggm-ec-register-role .ggm-ec-off1-grid .ggm-ec-off1-grid-cell form p {
+  font-size: 14px;
+  line-height: 28px;
 }
 .ggm-ec-register-role .ggm-ec-off1-grid .ggm-ec-off1-grid-cell form .ggm-ec-bordered-defs dl dt label {
   font-weight: normal;
   font-size: 14px;
 }
+.ggm-ec-register-role .ggm-ec-off1-grid .ggm-ec-off1-grid-cell form .ggm-ec-bordered-defs dl dd {
+  font-size: 13px;
+}
+.ggm-ec-register-role .ggm-ec-off1-grid .ggm-ec-off1-grid-cell form .ggm-ec-bordered-defs dl dd .ggm-ec-zip-input .ggm-attention {
+  font-size: 13px;
+  color: #888;
+}
+.ggm-ec-register-role .ggm-ec-off1-grid .ggm-ec-off1-grid-cell form .ggm-ec-bordered-defs dl dd .ggm-ec-tel-input .ggm-attention {
+  font-size: 13px;
+  color: #888;
+}
+.ggm-ec-register-role .ggm-ec-off1-grid .ggm-ec-off1-grid-cell form .ggm-ec-bordered-defs dl dd .ggm-ec-radio {
+  font-size: 14px;
+}
+.ggm-ec-register-role .ggm-ec-off1-grid .ggm-ec-off1-grid-cell form .ggm-ec-register-role-actions .ggm-ec-off4grid .ggm-ec-off4grid-cell .ggm-ec-checkbox {
+  font-size: 14px;
+}
+.ggm-ec-register-role .ggm-ec-off1-grid .ggm-ec-off1-grid-cell form .ggm-ec-register-role-actions .ggm-ec-off4grid .ggm-ec-off4grid-cell .ggm-ec-blockbtn-action {
+  border-radius: 3px;
+  background: #880000;
+  border: none;
+  font-weight: normal;
+}
+.ggm-ec-register-role .ggm-ec-off1-grid .ggm-ec-off1-grid-cell form .ggm-ec-register-role-actions .ggm-ec-off4grid .ggm-ec-off4grid-cell .ggm-ec-blockbtn-cancel {
+  border-radius: 3px;
+  font-weight: normal;
+  color: #fff;
+  background: #888;
+  border: none;
+}
+
+.ggm-ec-role .ggm-ec-page-header h1 {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.ggm-ec-register-complete-role .ggm-ec-off3-grid .ggm-ec-off3-grid-cell .ggm-ec-report-heading {
+  border-top: none;
+  margin-bottom: 80px;
+}
+.ggm-ec-register-complete-role .ggm-ec-off3-grid .ggm-ec-off3-grid-cell .ggm-ec-report-heading h2 {
+  font-size: 22px;
+  font-weight: normal;
+}
+.ggm-ec-register-complete-role .ggm-ec-off3-grid .ggm-ec-off3-grid-cell .ggm-ec-report-description {
+  text-align: left;
+  font-size: 14px;
+  line-height: 27px;
+}
+.ggm-ec-register-complete-role .ggm-ec-off3-grid .ggm-ec-off3-grid-cell .ggm-ec-off4-grid {
+  margin-top: 60px;
+  border-radius: 3px;
+}
+.ggm-ec-register-complete-role .ggm-ec-off3-grid .ggm-ec-off3-grid-cell .ggm-ec-off4-grid .ggm-ec-off4-grid-cell {
+  color: #fff;
+}
+.ggm-ec-register-complete-role .ggm-ec-off3-grid .ggm-ec-off3-grid-cell .ggm-ec-off4-grid .ggm-ec-off4-grid-cell a {
+  color: #fff;
+  font-weight: normal;
+  background: #666;
+  border-radius: 3px;
+}
+
 /************************************************
  * Blog (wordpress)
  * 

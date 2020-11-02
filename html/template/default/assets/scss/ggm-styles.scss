@@ -2196,24 +2196,11 @@ body#page_mypage_history {
       }
     }
   }
-}
-
-/* 新規会員登録 */
-.ggm-ec-register-role {
-  .ggm-ec-page-header {
-    h1 {
-      font-weight: normal;
-      font-size: 18px;
-    }
-  }
   .ggm-ec-off1-grid {
+    // background: #ff0;
     .ggm-ec-off1-grid-cell {
       form {
-        .ggm-p-country-name {
-
-        }
         .ggm-ec-bordered-defs {
-          
           dl {
             dt {
               // background: #ff0;
@@ -2223,10 +2210,165 @@ body#page_mypage_history {
               }
             }
             dd {
+              font-size: 13px;
               // input form and something other.
+              .ggm-ec-zip-input {
+                .ggm-attention {
+                  font-size: 13px;
+                  color: #888;
+                }
+              }
+              .ggm-ec-tel-input {
+                .ggm-attention {
+                  font-size: 13px;
+                  color: #888;
+                }
+              }
+              .ggm-ec-radio {
+                font-size: 14px;
+                // color: #888;
+              }
             }
           }
+        }
+        .ggm-ec-register-role-actions {
+          // background: #ff0;
+          .ggm-ec-off4grid {
+            .ggm-ec-off4Grid-cell {
+              .ggm-ec-blockbtn-action {
+                border-radius: 3px;
+                background: #880000;
+                border: none;
+                font-weight: normal;
+              }
+              .ggm-ec-blockbtn-cancel {
+                border-radius: 3px;
+                font-weight: normal;
+                color: #fff;
+                background: #888;
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
+/* 新規会員登録 / 確認画面*/
+.ggm-ec-register-role {
+  .ggm-ec-page-header {
+    h1 {
+      font-weight: normal;
+      font-size: 18px;
+    }
+  }
+  .ggm-ec-off1-grid { 
+    .ggm-ec-off1-grid-cell {
+      form {
+        .ggm-p-country-name {
+
+        }
+        p {
+          font-size: 14px;
+          line-height: 28px;
+        }
+        .ggm-ec-bordered-defs {
+          dl {
+            dt {
+              // background: #ff0;
+              label {
+                font-weight: normal;
+                font-size: 14px;
+              }
+            }
+            dd {
+              font-size: 13px;
+              // input form and something other.
+              .ggm-ec-zip-input {
+                .ggm-attention {
+                  font-size: 13px;
+                  color: #888;
+                }
+              }
+              .ggm-ec-tel-input {
+                .ggm-attention {
+                  font-size: 13px;
+                  color: #888;
+                }
+              }
+              .ggm-ec-radio {
+                font-size: 14px;
+                // color: #888;
+              }
+            }
+          }
+        }
+        .ggm-ec-register-role-actions {
+          .ggm-ec-off4grid {
+            .ggm-ec-off4grid-cell {
+              // background: #ff0;
+              .ggm-ec-checkbox {
+                // background: #ff0;
+                font-size: 14px;
+              }
+              .ggm-ec-blockbtn-action {
+                border-radius: 3px;
+                background: #880000;
+                border: none;
+                font-weight: normal;
+              }
+              .ggm-ec-blockbtn-cancel {
+                border-radius: 3px;
+                font-weight: normal;
+                color: #fff;
+                background: #888;
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.ggm-ec-role {
+  .ggm-ec-page-header {
+    h1 {
+      font-weight: normal;
+      font-size: 18px;
+    }
+  }
+}
+.ggm-ec-register-complete-role {
+  .ggm-ec-off3-grid {
+    .ggm-ec-off3-grid-cell {
+      .ggm-ec-report-heading {
+        border-top: none;
+        margin-bottom: 80px;
+        h2 {
+          font-size: 22px;
+          font-weight: normal;
+        }      
+      }
+      .ggm-ec-report-description {
+        // background: #ff0;
+        text-align: left;
+        font-size: 14px;
+        line-height: 27px;
+      }
+      .ggm-ec-off4-grid {
+        margin-top: 60px;
+        border-radius: 3px;
+        .ggm-ec-off4-grid-cell {
+          color: #fff;
+          a {
+            color: #fff;
+            font-weight: normal;
+            background: #666;
+            border-radius: 3px;
+          }
         }
       }
     }
