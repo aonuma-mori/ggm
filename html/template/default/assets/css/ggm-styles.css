@@ -232,6 +232,10 @@ body.ggm .ggm-wrapper {
 body.ggm .ggm-wrapper nav.navbar .navbar-brand {
   color: #000;
 }
+body.ggm .ggm-wrapper nav.navbar .navbar-brand h1 {
+  display: inline;
+  font-size: 20px;
+}
 body.ggm .ggm-wrapper nav.navbar #navbarNav ul.navbar-nav li.dropdown a:link, body.ggm .ggm-wrapper nav.navbar #navbarNav ul.navbar-nav li.dropdown a:visited {
   color: #000;
 }

@@ -253,6 +253,11 @@ body.ggm {
     nav.navbar {
       .navbar-brand {
          color: #000;
+         h1 {
+           display: inline;
+          //  background: #ff0;
+           font-size: 20px;
+         }
       }
       #navbarNav {
         ul.navbar-nav {

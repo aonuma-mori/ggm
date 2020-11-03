@@ -55,12 +55,7 @@
       {{ include(template_from_string(Page.meta_tags)) }}
   {% endif %}
   {# ogタグ #}
-  <meta property="og:url" content="https://ggm-do.com{{ current_path }}" />
-  <meta property="og:type" content="" />
-  <meta property="og:title" content="{{ BaseInfo.shop_name }}{% if subtitle is defined and subtitle is not empty %} | {{ subtitle }}{% elseif title is defined and title is not empty %} / {{ title }}{% endif %}" />
-  <meta property="og:description" content=" ページの説明文" />
-  <meta property="og:site_name" content="サイト名" />
-  <meta property="og:image" content=" サムネイル画像の URL" />
+  {{ include('Block/og.twig') }}
   {# end: ogタグ #}
   <meta name="msapplication-square70x70logo" content="/html/template/default/assets/img/favicons/site-tile-70x70.png">
   <meta name="msapplication-square150x150logo" content="/html/template/default/assets/img/favicons/site-tile-150x150.png">
@@ -124,7 +119,7 @@
   </script>
   {# Layout: HEAD #}
   {% if Layout.Head %}
-      {{ include('block.twig', {'Blocks': Layout.Head}) }}
+    {{ include('block.twig', {'Blocks': Layout.Head}) }}
   {% endif %}
   {# プラグイン用styleseetやmetatagなど #}
   {% if plugin_assets is defined %}{{ include('@admin/snippet.twig', { snippets: plugin_assets }) }}{% endif %}
@@ -152,7 +147,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">
       <img src="/html/template/default/assets/img/favicons/icon-32x32.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      GGM
+      <h1>GGM</h1>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
