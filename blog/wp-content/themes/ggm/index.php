@@ -98,14 +98,6 @@
         <?php get_template_part('sidebar'); ?>
         <!--sidebar-->
         <?php get_template_part('inc/admintools'); ?>
-
-        <ul>
-          <li><a href="">foobar</a></li>
-          <li><a href="">foobar</a></li>
-          <li><a href="">foobar</a></li>
-          <li><a href="">foobar</a></li>
-          <li><a href="">foobar</a></li>
-        </ul>
       </div><!-- col sub -->
     </div><!-- row -->
   </div><!-- blog-block -->

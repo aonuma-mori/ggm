@@ -15,11 +15,10 @@
 
   gtag('config', 'G-ZPB0NJSEKH');
 </script>
-
 {# begine: noindexタグをページによって出し分けする #}
 {% set current_path=path(app.request.attributes.get('_route'),app.request.attributes.get('_route_params')) %}
 <!-- current-path: {{ current_path }} -->
-{#
+{# botのnoindexの設定ページ
   - 当サイトについて
   - 特定商取引法に基づく表記
 #}
@@ -33,7 +32,6 @@
 {% else %}
   <meta name="robots" content="index">
 {% endif %}
-{# end: noindexタグをページによって出し分けする #}
   <link rel="canonical" href="https://ggm-do.com{{ current_path }}">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
