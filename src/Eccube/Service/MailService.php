@@ -289,12 +289,12 @@ class MailService
         ]);
 
        
-
         // 問い合わせ者にメール送信
         $message = (new \Swift_Message())
             ->setSubject('['.$this->BaseInfo->getShopName().'] '.$MailTemplate->getMailSubject())
             ->setFrom([$this->BaseInfo->getEmail02() => $this->BaseInfo->getShopName()])
             ->setTo([$formData['email']])
+            // ->setBcc('ggm.information@gmail.com')
             ->setBcc($this->BaseInfo->getEmail02())
             // ->setCc($this->BaseInfo->getEmail02())
             ->setReplyTo($this->BaseInfo->getEmail02())
