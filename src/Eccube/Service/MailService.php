@@ -288,14 +288,20 @@ class MailService
             'BaseInfo' => $this->BaseInfo,
         ]);
 
+       
+
         // 問い合わせ者にメール送信
         $message = (new \Swift_Message())
             ->setSubject('['.$this->BaseInfo->getShopName().'] '.$MailTemplate->getMailSubject())
             ->setFrom([$this->BaseInfo->getEmail02() => $this->BaseInfo->getShopName()])
             ->setTo([$formData['email']])
             ->setBcc($this->BaseInfo->getEmail02())
+            // ->setCc($this->BaseInfo->getEmail02())
             ->setReplyTo($this->BaseInfo->getEmail02())
             ->setReturnPath($this->BaseInfo->getEmail04());
+        
+            // var_dump($this->BaseInfo->getEmail02());
+            // die();
 
         // HTMLテンプレートが存在する場合
         $htmlFileName = $this->getHtmlTemplate($MailTemplate->getFileName());
