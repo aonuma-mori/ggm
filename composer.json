@@ -52,7 +52,7 @@
         "setasign/fpdi-tcpdf": "^2.2",
         "skorp/detect-incompatible-samesite-useragents": "^1.0",
         "suncat/mobile-detect-bundle": "^1.1",
-        "swiftmailer/swiftmailer": "^6.1",
+        "swiftmailer/swiftmailer": "^6.2",
         "symfony/asset": "^3.4",
         "symfony/cache": "^3.4",
         "symfony/class-loader": "^3.4",

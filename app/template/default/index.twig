@@ -1,0 +1,34 @@
+{#
+  This file is part of GGM
+  Copyright(c) GGM All Rights Reserved.
+#}
+{% extends 'default_frame.twig' %}
+
+{% set body_class = 'front_page' %}
+
+{% block stylesheet %}
+<style>
+/* top-banner style-sheet */
+</style>
+{% endblock %}
+
+{% block javascript %}
+  <script>
+  // top-banner js
+  </script>
+{% endblock javascript %}
+
+{% block main %}
+  <div id="top-banner" class="jumbotron">
+    <!-- <div id="">[[foobar]]</div> -->
+    <div id="device" v-bind:class="[[width_type]]">
+      <img class="top-sp" src="/html/template/default/assets/img/top/ggm-top02-sp.jpg" id="top-banner-img">
+      <img class="top-pc" src="/html/template/default/assets/img/top/ggm-top02-pc.jpg" id="top-banner-img">
+    </div>
+    <div class="ggm-top-text-block">
+    <p class="">
+      Adventure is not outside man; it is within.
+    </p>
+    </div>
+  </div>
+{% endblock %}

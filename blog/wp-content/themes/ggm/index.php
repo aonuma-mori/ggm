@@ -1,6 +1,5 @@
 <?php get_template_part('inc/meta'); ?>
 
-
 <body id="page_homepage" class="front_page ggm">
   <div class="ggm-wrapper ggm-blog">
   <?php get_template_part('inc/nav'); ?>
@@ -47,7 +46,7 @@
             }
             ?>
             <div class="blog-meta">
-              <p class="datetime text-right">2020-08-25 09:00</p>
+              <p class="datetime text-right"><?php the_time('Y.m.d'); ?></p>
                 <?php the_category(); ?>
               <p class="tags">
               <?php the_tags("","",""); ?>
@@ -98,14 +97,6 @@
         <?php get_template_part('sidebar'); ?>
         <!--sidebar-->
         <?php get_template_part('inc/admintools'); ?>
-
-        <!-- <ul>
-          <li><a href="">foobar</a></li>
-          <li><a href="">foobar</a></li>
-          <li><a href="">foobar</a></li>
-          <li><a href="">foobar</a></li>
-          <li><a href="">foobar</a></li>
-        </ul> -->
       </div><!-- col sub -->
     </div><!-- row -->
   </div><!-- blog-block -->

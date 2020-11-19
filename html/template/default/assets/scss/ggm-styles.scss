@@ -253,12 +253,20 @@ body.ggm {
     nav.navbar {
       .navbar-brand {
          color: #000;
+         h1 {
+           display: inline;
+          //  background: #ff0;
+           font-size: 20px;
+         }
       }
       #navbarNav {
         ul.navbar-nav {
           li.dropdown {
             a:link, a:visited {
               color: #000;
+            }
+            a:hover, a:active {
+              background: #f5f5f5;
             }
             .show {
               border: none;
@@ -807,6 +815,7 @@ body#page_product_list {
                   background: #880000;
                   border-radius: 3px;
                   border: 1px solid #880000;
+                  margin: 20px;
                 }
                 
                 label.ggm-ec-modal-close {
@@ -2199,24 +2208,11 @@ body#page_mypage_history {
       }
     }
   }
-}
-
-/* 新規会員登録 */
-.ggm-ec-register-role {
-  .ggm-ec-page-header {
-    h1 {
-      font-weight: normal;
-      font-size: 18px;
-    }
-  }
   .ggm-ec-off1-grid {
+    // background: #ff0;
     .ggm-ec-off1-grid-cell {
       form {
-        .ggm-p-country-name {
-
-        }
         .ggm-ec-bordered-defs {
-          
           dl {
             dt {
               // background: #ff0;
@@ -2226,10 +2222,165 @@ body#page_mypage_history {
               }
             }
             dd {
+              font-size: 13px;
               // input form and something other.
+              .ggm-ec-zip-input {
+                .ggm-attention {
+                  font-size: 13px;
+                  color: #888;
+                }
+              }
+              .ggm-ec-tel-input {
+                .ggm-attention {
+                  font-size: 13px;
+                  color: #888;
+                }
+              }
+              .ggm-ec-radio {
+                font-size: 14px;
+                // color: #888;
+              }
             }
           }
+        }
+        .ggm-ec-register-role-actions {
+          // background: #ff0;
+          .ggm-ec-off4grid {
+            .ggm-ec-off4Grid-cell {
+              .ggm-ec-blockbtn-action {
+                border-radius: 3px;
+                background: #880000;
+                border: none;
+                font-weight: normal;
+              }
+              .ggm-ec-blockbtn-cancel {
+                border-radius: 3px;
+                font-weight: normal;
+                color: #fff;
+                background: #888;
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
+/* 新規会員登録 / 確認画面*/
+.ggm-ec-register-role {
+  .ggm-ec-page-header {
+    h1 {
+      font-weight: normal;
+      font-size: 18px;
+    }
+  }
+  .ggm-ec-off1-grid { 
+    .ggm-ec-off1-grid-cell {
+      form {
+        .ggm-p-country-name {
+
+        }
+        p {
+          font-size: 14px;
+          line-height: 28px;
+        }
+        .ggm-ec-bordered-defs {
+          dl {
+            dt {
+              // background: #ff0;
+              label {
+                font-weight: normal;
+                font-size: 14px;
+              }
+            }
+            dd {
+              font-size: 13px;
+              // input form and something other.
+              .ggm-ec-zip-input {
+                .ggm-attention {
+                  font-size: 13px;
+                  color: #888;
+                }
+              }
+              .ggm-ec-tel-input {
+                .ggm-attention {
+                  font-size: 13px;
+                  color: #888;
+                }
+              }
+              .ggm-ec-radio {
+                font-size: 14px;
+                // color: #888;
+              }
+            }
+          }
+        }
+        .ggm-ec-register-role-actions {
+          .ggm-ec-off4grid {
+            .ggm-ec-off4grid-cell {
+              // background: #ff0;
+              .ggm-ec-checkbox {
+                // background: #ff0;
+                font-size: 14px;
+              }
+              .ggm-ec-blockbtn-action {
+                border-radius: 3px;
+                background: #880000;
+                border: none;
+                font-weight: normal;
+              }
+              .ggm-ec-blockbtn-cancel {
+                border-radius: 3px;
+                font-weight: normal;
+                color: #fff;
+                background: #888;
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.ggm-ec-role {
+  .ggm-ec-page-header {
+    h1 {
+      font-weight: normal;
+      font-size: 18px;
+    }
+  }
+}
+.ggm-ec-register-complete-role {
+  .ggm-ec-off3-grid {
+    .ggm-ec-off3-grid-cell {
+      .ggm-ec-report-heading {
+        border-top: none;
+        margin-bottom: 80px;
+        h2 {
+          font-size: 22px;
+          font-weight: normal;
+        }      
+      }
+      .ggm-ec-report-description {
+        // background: #ff0;
+        text-align: left;
+        font-size: 14px;
+        line-height: 27px;
+      }
+      .ggm-ec-off4-grid {
+        margin-top: 60px;
+        border-radius: 3px;
+        .ggm-ec-off4-grid-cell {
+          color: #fff;
+          a {
+            color: #fff;
+            font-weight: normal;
+            background: #666;
+            border-radius: 3px;
+          }
         }
       }
     }
@@ -2315,6 +2466,7 @@ body#page_mypage_history {
                   padding: 3px 8px;
                   border-radius: 2px;
                   margin-right: 5px;
+                  color: #888;
                 }
               }
             }
@@ -2350,16 +2502,50 @@ body#page_mypage_history {
               margin-bottom: 20px;
               // border-bottom: 1px solid #cecece;
             }
-            h4 {font-size: 15px;}
-            h5 {font-size: 15px;}
-            h6 {font-size: 14px;}
+            h1 {
+              font-size: 22px;
+              margin-top: 60px;
+              border-left: 5px solid #c1c1c1;
+              padding-left: 13px;
+            }
+            h2 {
+              font-size: 20px;
+              margin-top: 50px;
+              border-left: 5px solid #c1c1c1;
+              padding-left: 13px;
+            }
+            h3 {
+              font-size: 18px;
+              margin-top: 40px;
+              border-left: 5px solid #c1c1c1;
+              padding-left: 13px;
+            }
+            h4 {
+              font-size: 16px;
+              margin-top: 30px;
+              border-left: 5px solid #c1c1c1;
+              padding-left: 13px;
+            }
+            h5 {
+              font-size: 15px;  
+              margin-top: 20px;
+              border-left: 5px solid #c1c1c1;
+              padding-left: 13px;
+            }
+            h6 {
+              font-size: 14px;
+              margin-top: 10px;
+              border-left: 5px solid #c1c1c1;
+              padding-left: 13px;
+            }
             pre {
               white-space: pre-wrap;
               font-size: 14px;
-              border: 1px dotted #888;
+              // border: 1px dotted #888;
               padding: 10px 20px;
-              color: #888;
+              // color: #888;
               border-radius: 3px;
+              background:#f5f5f5;
               
               code {
                 width: 100%;
@@ -2389,6 +2575,23 @@ body#page_mypage_history {
               a:hover, a:active {
                 color: #0090C8;
                 text-decoration: underline;
+              }
+              em {
+                background:linear-gradient(transparent 75%, #9eceff 75%);
+                font-style: normal;
+              }
+              strong {
+                text-decoration: underline;
+              }
+              code {
+                color: #333;
+                border: none;
+                font-size: 14px;
+                border: 1px solid #bbb;
+                background:#f5f5f5;
+                // width: 100%;
+                // overflow: hidden;
+                // font-weight: normal !important;
               }
             }
             ul {
@@ -2447,6 +2650,72 @@ body#page_mypage_history {
           }//blog-text
         }
        }
+
+       /* category */
+       #category-block {
+        .ggm-article-caption {
+          margin-top: 50px;
+          margin-bottom: 50px;
+          strong {
+            color: #880000;
+          }
+        }
+        .blog-item {
+          margin-top: 50px;
+          .blog-title {
+            font-size: 20px;
+          }
+          p.datetime {
+            // float: right;
+            font-size: 10px;
+          }
+        }
+        .blog-text {
+          font-size: 14px;
+          .blog-meta {
+            // background: #ff0;
+            font-size: 14px;
+            margin-top: 10px;
+            ul.post-categories {
+              display: inline-block;
+              margin: 0;
+              margin-left: -38px;
+              li {
+                list-style: none;
+                display: inline;
+                a {
+                  font-size: 12px;
+                  border: 1px solid #888;
+                  padding: 3px 8px;
+                  background: #888;
+                  color: #fff;
+                  border-radius: 2px;
+                }
+              }
+            }
+            .tags {
+              display: inline-block;
+              a {
+                font-size: 12px;
+                border: 1px solid #c1c1c1;
+                padding: 3px 8px;
+                border-radius: 2px;
+                margin-right: 5px;
+              }
+              a:link, a:visited, a:hover, a:active {
+                color: #666;
+                text-decoration: none;
+              }
+              a:hover, a:active {
+                color: #888;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+       }
+
+       /* sidebar */
        #side-block {
         word-break: break-all;
         margin-bottom: 100px;

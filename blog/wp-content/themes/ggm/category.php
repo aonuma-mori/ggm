@@ -21,18 +21,32 @@
 
   <div class="container" id="blog-block">
     <div class="row">
-      <div class="col-sm-8 col-md-9 col-lg-8" id="main-block">
-
+    <?php /* category */
+    $cat = get_the_category();
+    $cat_link = get_category_link($cat[0]->cat_ID);
+    ?>
+    <div class="col-sm-8 col-md-9 col-lg-8" id="category-block">
+      <div class="ggm-article-caption">Category <strong>"<?php echo $cat[0]->name; ?>"</strong>を表示しています。</div>
+      
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="blog-item">
           <h1 class="blog-title">
-            <?php the_title(); ?>
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
           </h1>
+          <p class="datetime text-right"><?php the_time('Y.m.d'); ?></p>
           <div class="blog-text">
-            <?php the_content(); ?>
+            <?php //the_content(); ?>
+            <?php
+              $description = $post->post_content;
+              $description = str_replace(array("\r\n","\r","\n","&nbsp;"),'',$description);
+              $description = wp_strip_all_tags($description);
+              $description = preg_replace('/\[.*\]/','',$description);
+              $description = mb_strimwidth($description,0,220,"...");
+              echo $description;
+            ?>
             <br clear="both">
             <div class="blog-meta">
-              <p class="datetime text-right"><?php the_time('Y.m.d'); ?></p>
+              
                 <?php the_category(); ?>
               <p class="tags">
               <?php the_tags("","",""); ?>
@@ -59,13 +73,45 @@
 
 
 
-  <?php get_template_part('inc/products'); ?> 
+<div class="ec-layoutRole__mainBottom">
+  <div class="ggm-ec-role ec-role">
+    <div class="container eyecatch-block">
+      <div class="row">
+        <div class="col-sm-4 eyecatch-block eyecatch-block-01">
+          <a href="#">
+            <img src="/html/template/default/assets/img/top/eyecatch-01.jpg" class="eyecatch-img eyecatch-img-01">
+          </a>
+          <div class="text-center eyecatch-title eyecatch-title01">鞣し生成り麻縄</div>
+          <div class="eyecatch-summary">麻縄本来の色と艶、強度を備えています。手入れの仕方次第で何年も品質を保持できます。<br>
+            <a href="#">商品を見る</a>
+          </div>
+        </div>
+        <div class="col-sm-4 eyecatch-block eyecatch-block-02">
+          <a href="#">
+            <img src="/html/template/default/assets/img/top/eyecatch-02.jpg" class="eyecatch-img eyecatch-img-02">
+          </a>
+          <div class="text-center eyecatch-title eyecatch-title02">素麻縄</div>
+          <div class="eyecatch-summary">生の麻縄そのままの状態です。お好みの油で鞣してお使いください。<br>
+            <a href="#">商品を見る</a></div>
+          </div>
+          <div class="col-sm-4 eyecatch-block eyecatch-block-03">
+            <a href="#">
+              <img src="/html/template/default/assets/img/top/eyecatch-03.jpg" class="eyecatch-img eyecatch-img-03">
+            </a>
+            <div class="text-center eyecatch-title eyecatch-title03">染麻縄</div>
+            <div class="eyecatch-summary">色がついていてかっこいい。カラーSAMPLEから選べます。オリジナル色もできます。<br>
+              <a href="#">商品を見る</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <?php get_template_part('inc/footer'); ?>   
   </div><!-- ggm-wrapper -->
 
 
             
-          
   <!-- Topへ戻る -->
   <div
     id="ggm-pagetop-arrow"
