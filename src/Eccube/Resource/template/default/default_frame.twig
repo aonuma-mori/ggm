@@ -6,7 +6,7 @@
 <html lang="{{ eccube_config.locale }}">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics : ggm.information-->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPB0NJSEKH"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -15,26 +15,46 @@
 
   gtag('config', 'G-ZPB0NJSEKH');
 </script>
-
+{# begine: noindexタグをページによって出し分けする #}
+{% set current_path=path(app.request.attributes.get('_route'),app.request.attributes.get('_route_params')) %}
+<!-- current-path: {{ current_path }} -->
+{# botのnoindexの設定ページ
+  - 当サイトについて
+  - 特定商取引法に基づく表記
+#}
+{% 
+  if current_path == "/help/about" or
+    current_path == "/help/tradelaw" 
+%}
+  <meta name="robots" content="noindex">
+{% elseif current_path == "" %}
+  <meta name="robots" content="noindex">
+{% else %}
+  <meta name="robots" content="index">
+{% endif %}
+  <link rel="canonical" href="https://ggm-do.com{{ current_path }}">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="eccube-csrf-token" content="{{ csrf_token(constant('Eccube\\Common\\Constant::TOKEN_NAME')) }}">
-  <title>{{ BaseInfo.shop_name }}{% if subtitle is defined and subtitle is not empty %} / {{ subtitle }}{% elseif title is defined and title is not empty %} / {{ title }}{% endif %}</title>
+  <title>{{ BaseInfo.shop_name }}{% if subtitle is defined and subtitle is not empty %} | {{ subtitle }}{% elseif title is defined and title is not empty %} / {{ title }}{% endif %}</title>
   {% if Page.author is not empty %}
-      <meta name="author" content="{{ Page.author }}">
+  <meta name="author" content="{{ Page.author }}">
   {% endif %}
   {% if Page.description is not empty %}
-      <meta name="description" content="{{ Page.description }}">
+  <meta name="description" content="{{ Page.description }}">
   {% endif %}
   {% if Page.keyword is not empty %}
-      <meta name="keywords" content="{{ Page.keyword }}">
+  <meta name="keywords" content="{{ Page.keyword }}">
   {% endif %}
   {% if Page.meta_robots is not empty %}
-      <meta name="robots" content="{{ Page.meta_robots }}">
+  <meta name="robots" content="{{ Page.meta_robots }}">
   {% endif %}
   {% if Page.meta_tags is not empty %}
       {{ include(template_from_string(Page.meta_tags)) }}
   {% endif %}
+  {# ogタグ #}
+  {{ include('Block/og.twig') }}
+  {# end: ogタグ #}
   <meta name="msapplication-square70x70logo" content="/html/template/default/assets/img/favicons/site-tile-70x70.png">
   <meta name="msapplication-square150x150logo" content="/html/template/default/assets/img/favicons/site-tile-150x150.png">
   <meta name="msapplication-wide310x150logo" content="/html/template/default/assets/img/favicons/site-tile-310x150.png">
@@ -97,7 +117,7 @@
   </script>
   {# Layout: HEAD #}
   {% if Layout.Head %}
-      {{ include('block.twig', {'Blocks': Layout.Head}) }}
+    {{ include('block.twig', {'Blocks': Layout.Head}) }}
   {% endif %}
   {# プラグイン用styleseetやmetatagなど #}
   {% if plugin_assets is defined %}{{ include('@admin/snippet.twig', { snippets: plugin_assets }) }}{% endif %}
@@ -125,7 +145,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">
       <img src="/html/template/default/assets/img/favicons/icon-32x32.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      GGM
+      <h1>GGM</h1>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -142,7 +162,7 @@
           <a class="nav-link" href="/">Shop<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="/products/list">Products</a>
+          <a class="nav-link" href="/products/list?mode=disp_number=0&orderby=2">Products</a>
         </li>
         {% if is_granted('ROLE_USER') %}
         <li class="nav-item active">

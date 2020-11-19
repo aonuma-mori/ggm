@@ -55,6 +55,7 @@ class TopController extends AbstractController
     }
     $dummy = preg_match('/https?:\/{2}[\w\/:%#\$&\?\(\)~\.=\+\-]+/', $tweet, $matches);
     $tweet = preg_replace("/<img(.|\s)*?>/","",$tweet);
+    $tweet = preg_replace("/<a.*?<\/a>/","",$tweet);
     $image = $matches[0];
 
     /**
@@ -81,14 +82,14 @@ class TopController extends AbstractController
 
 
 
-    log_debug('GGMログメッセージ');
-    // log_alert('GGMログメッセージ');
-    // log_critical('GGMログメッセージ');
-    // log_error('GGMログメッセージ');
-    // log_warning('GGMログメッセージ');
-    // log_notice('GGMログメッセージ');
-    // log_info('GGMログメッセージ');
-    // log_debug('GGMログメッセージ');
+    log_debug('log_debug:GGMログメッセージ');
+    // log_alert('log_alert:GGMログメッセージ');
+    // log_critical('log_critical:GGMログメッセージ');
+    // log_error('log_error:GGMログメッセージ');
+    // log_warning('log_warning:GGMログメッセージ');
+    // log_notice('log_warning:GGMログメッセージ');
+    // log_info('log_info:GGMログメッセージ');
+    // log_debug('log_debug:GGMログメッセージ');
 
     return [
       'wp' => $wp_rss_object,

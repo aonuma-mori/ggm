@@ -253,12 +253,20 @@ body.ggm {
     nav.navbar {
       .navbar-brand {
          color: #000;
+         h1 {
+           display: inline;
+          //  background: #ff0;
+           font-size: 20px;
+         }
       }
       #navbarNav {
         ul.navbar-nav {
           li.dropdown {
             a:link, a:visited {
               color: #000;
+            }
+            a:hover, a:active {
+              background: #f5f5f5;
             }
             .show {
               border: none;
@@ -351,18 +359,21 @@ body.ggm {
         position: absolute;
         top: 30px;
         right: 30px;
-        color: #fff;
+        color: #f5f5f5;
         margin: 30px;
-        font-size: 27px;
-        letter-spacing: 3px;
-        line-height: 45px;
+        font-size: 23px;
+        letter-spacing: 2px;
+        line-height: 46px;
         width: 50%;
-        // text-shadow: -1px -1px 1px #888;
-        text-shadow: #000 2px 0 15px;
-        img {
+        text-shadow: #000 2px 2px 15px;
+        span.tweet-count {
+          font-size: 15px;
+        }
+        img.top-twitter-icon {
           border-radius: 50%;
           border: 1px solid #c1c1c1;
           width: 42px;
+          margin-left: 13px;
         }
       }
     }
@@ -804,6 +815,7 @@ body#page_product_list {
                   background: #880000;
                   border-radius: 3px;
                   border: 1px solid #880000;
+                  margin: 20px;
                 }
                 
                 label.ggm-ec-modal-close {
@@ -2399,7 +2411,7 @@ body#page_mypage_history {
         .blog-item {
           margin-bottom : 60px !important;
           .blog-title {
-            font-size: 20px;
+            font-size: 23px;
             margin-bottom: 10px;
           }
           .blog-summary {
@@ -2448,11 +2460,13 @@ body#page_mypage_history {
               .tags {
                 display: inline-block;
                 a {
+                  color: #666;
                   font-size: 12px;
                   border: 1px solid #c1c1c1;
                   padding: 3px 8px;
                   border-radius: 2px;
                   margin-right: 5px;
+                  color: #888;
                 }
               }
             }
@@ -2467,21 +2481,71 @@ body#page_mypage_history {
             // markdown
             h1,h2,h3,h4,h5,h6 {
               color: #333;
-              margin-top: 20px;
+              margin-top: 30px;
+              margin-bottom: 10px;
             }
-            h1 {font-size: 22px;}
-            h2 {font-size: 20px;}
-            h3 {font-size: 18px;}
-            h4 {font-size: 16px;}
-            h5 {font-size: 15px;}
-            h6 {font-size: 14px;}
+            h1 {
+              font-size: 20px;
+              padding-bottom: 15px;
+              margin-bottom: 15px;
+              border-bottom: 1px solid #c1c1c1;
+            }
+            h2 {
+              font-size: 18px;
+              padding-bottom: 15px;
+              margin-bottom: 15px;
+              border-bottom: 1px solid #cecece;
+            }
+            h3 {
+              font-size: 16px;
+              // padding-bottom: 10px;
+              margin-bottom: 20px;
+              // border-bottom: 1px solid #cecece;
+            }
+            h1 {
+              font-size: 22px;
+              margin-top: 60px;
+              border-left: 5px solid #c1c1c1;
+              padding-left: 13px;
+            }
+            h2 {
+              font-size: 20px;
+              margin-top: 50px;
+              border-left: 5px solid #c1c1c1;
+              padding-left: 13px;
+            }
+            h3 {
+              font-size: 18px;
+              margin-top: 40px;
+              border-left: 5px solid #c1c1c1;
+              padding-left: 13px;
+            }
+            h4 {
+              font-size: 16px;
+              margin-top: 30px;
+              border-left: 5px solid #c1c1c1;
+              padding-left: 13px;
+            }
+            h5 {
+              font-size: 15px;  
+              margin-top: 20px;
+              border-left: 5px solid #c1c1c1;
+              padding-left: 13px;
+            }
+            h6 {
+              font-size: 14px;
+              margin-top: 10px;
+              border-left: 5px solid #c1c1c1;
+              padding-left: 13px;
+            }
             pre {
               white-space: pre-wrap;
               font-size: 14px;
-              border: 1px dotted #888;
+              // border: 1px dotted #888;
               padding: 10px 20px;
-              color: #888;
+              // color: #888;
               border-radius: 3px;
+              background:#f5f5f5;
               
               code {
                 width: 100%;
@@ -2496,6 +2560,7 @@ body#page_mypage_history {
             }
             p {
               word-wrap: keep-all !important;
+              margin-bottom: 20px;
               code {
                 border: 1px solid #c1c1c1;
                 padding: 2px 9px;
@@ -2511,6 +2576,30 @@ body#page_mypage_history {
                 color: #0090C8;
                 text-decoration: underline;
               }
+              em {
+                background:linear-gradient(transparent 75%, #9eceff 75%);
+                font-style: normal;
+              }
+              strong {
+                text-decoration: underline;
+              }
+              code {
+                color: #333;
+                border: none;
+                font-size: 14px;
+                border: 1px solid #bbb;
+                background:#f5f5f5;
+                // width: 100%;
+                // overflow: hidden;
+                // font-weight: normal !important;
+              }
+            }
+            ul {
+              // padding: 20px 0;
+              background: #f5f5f5;
+              padding-top: 16px;
+              padding-bottom: 18px;
+              border-radius: 3px;
             }
             .blog-meta {
               ul.post-categories {
@@ -2539,6 +2628,7 @@ body#page_mypage_history {
                   padding: 3px 8px;
                   border-radius: 2px;
                   margin-right: 5px;
+                  color: #666;
                 }
                 a:link, a:visited, a:hover, a:active {
                   color: #666;
@@ -2560,6 +2650,72 @@ body#page_mypage_history {
           }//blog-text
         }
        }
+
+       /* category */
+       #category-block {
+        .ggm-article-caption {
+          margin-top: 50px;
+          margin-bottom: 50px;
+          strong {
+            color: #880000;
+          }
+        }
+        .blog-item {
+          margin-top: 50px;
+          .blog-title {
+            font-size: 20px;
+          }
+          p.datetime {
+            // float: right;
+            font-size: 10px;
+          }
+        }
+        .blog-text {
+          font-size: 14px;
+          .blog-meta {
+            // background: #ff0;
+            font-size: 14px;
+            margin-top: 10px;
+            ul.post-categories {
+              display: inline-block;
+              margin: 0;
+              margin-left: -38px;
+              li {
+                list-style: none;
+                display: inline;
+                a {
+                  font-size: 12px;
+                  border: 1px solid #888;
+                  padding: 3px 8px;
+                  background: #888;
+                  color: #fff;
+                  border-radius: 2px;
+                }
+              }
+            }
+            .tags {
+              display: inline-block;
+              a {
+                font-size: 12px;
+                border: 1px solid #c1c1c1;
+                padding: 3px 8px;
+                border-radius: 2px;
+                margin-right: 5px;
+              }
+              a:link, a:visited, a:hover, a:active {
+                color: #666;
+                text-decoration: none;
+              }
+              a:hover, a:active {
+                color: #888;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+       }
+
+       /* sidebar */
        #side-block {
         word-break: break-all;
         margin-bottom: 100px;
@@ -2620,7 +2776,7 @@ body#page_mypage_history {
               .tagcloud {
                 // background: #000;
                 a {
-                  border: 1px solid #c1c1c1;
+                  // border: 1px solid #c1c1c1;
                   font-size: 12px;
                   padding: 3px 8px;
                   border-radius: 2px;

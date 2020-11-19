@@ -46,6 +46,7 @@ fi
 # Delete cache:
 rm -fR var/cache/dev/*
 rm -fR var/cache/prod/*
+bin/console cache:clear
 
 # dev env only
 if [ $ENV = "dev" ];  then
