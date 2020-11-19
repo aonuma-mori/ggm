@@ -359,18 +359,21 @@ body.ggm {
         position: absolute;
         top: 30px;
         right: 30px;
-        color: #fff;
+        color: #f5f5f5;
         margin: 30px;
-        font-size: 27px;
-        letter-spacing: 3px;
-        line-height: 45px;
+        font-size: 23px;
+        letter-spacing: 2px;
+        line-height: 46px;
         width: 50%;
-        // text-shadow: -1px -1px 1px #888;
-        text-shadow: #000 2px 0 15px;
-        img {
+        text-shadow: #000 2px 2px 15px;
+        span.tweet-count {
+          font-size: 15px;
+        }
+        img.top-twitter-icon {
           border-radius: 50%;
           border: 1px solid #c1c1c1;
           width: 42px;
+          margin-left: 13px;
         }
       }
     }
@@ -2408,7 +2411,7 @@ body#page_mypage_history {
         .blog-item {
           margin-bottom : 60px !important;
           .blog-title {
-            font-size: 20px;
+            font-size: 23px;
             margin-bottom: 10px;
           }
           .blog-summary {
@@ -2457,6 +2460,7 @@ body#page_mypage_history {
               .tags {
                 display: inline-block;
                 a {
+                  color: #666;
                   font-size: 12px;
                   border: 1px solid #c1c1c1;
                   padding: 3px 8px;
@@ -2477,7 +2481,26 @@ body#page_mypage_history {
             // markdown
             h1,h2,h3,h4,h5,h6 {
               color: #333;
-              margin-top: 20px;
+              margin-top: 30px;
+              margin-bottom: 10px;
+            }
+            h1 {
+              font-size: 20px;
+              padding-bottom: 15px;
+              margin-bottom: 15px;
+              border-bottom: 1px solid #c1c1c1;
+            }
+            h2 {
+              font-size: 18px;
+              padding-bottom: 15px;
+              margin-bottom: 15px;
+              border-bottom: 1px solid #cecece;
+            }
+            h3 {
+              font-size: 16px;
+              // padding-bottom: 10px;
+              margin-bottom: 20px;
+              // border-bottom: 1px solid #cecece;
             }
             h1 {
               font-size: 22px;
@@ -2537,6 +2560,7 @@ body#page_mypage_history {
             }
             p {
               word-wrap: keep-all !important;
+              margin-bottom: 20px;
               code {
                 border: 1px solid #c1c1c1;
                 padding: 2px 9px;
@@ -2570,6 +2594,13 @@ body#page_mypage_history {
                 // font-weight: normal !important;
               }
             }
+            ul {
+              // padding: 20px 0;
+              background: #f5f5f5;
+              padding-top: 16px;
+              padding-bottom: 18px;
+              border-radius: 3px;
+            }
             .blog-meta {
               ul.post-categories {
                 display: inline-block;
@@ -2597,6 +2628,7 @@ body#page_mypage_history {
                   padding: 3px 8px;
                   border-radius: 2px;
                   margin-right: 5px;
+                  color: #666;
                 }
                 a:link, a:visited, a:hover, a:active {
                   color: #666;

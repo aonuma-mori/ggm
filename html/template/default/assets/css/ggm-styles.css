@@ -314,18 +314,22 @@ body.ggm .ggm-wrapper #top-banner {
     position: absolute;
     top: 30px;
     right: 30px;
-    color: #fff;
+    color: #f5f5f5;
     margin: 30px;
-    font-size: 27px;
-    letter-spacing: 3px;
-    line-height: 45px;
+    font-size: 23px;
+    letter-spacing: 2px;
+    line-height: 46px;
     width: 50%;
-    text-shadow: #000 2px 0 15px;
+    text-shadow: #000 2px 2px 15px;
   }
-  body.ggm .ggm-wrapper .ggm-top-text-block img {
+  body.ggm .ggm-wrapper .ggm-top-text-block span.tweet-count {
+    font-size: 15px;
+  }
+  body.ggm .ggm-wrapper .ggm-top-text-block img.top-twitter-icon {
     border-radius: 50%;
     border: 1px solid #c1c1c1;
     width: 42px;
+    margin-left: 13px;
   }
 }
 body.ggm .ggm-wrapper .ec-layoutRole__mainBottom .eyecatch-block {
@@ -1737,7 +1741,7 @@ body#page_mypage_history .ggm-ec-role a {
   margin-bottom: 60px !important;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-title {
-  font-size: 20px;
+  font-size: 23px;
   margin-bottom: 10px;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-summary {
@@ -1786,6 +1790,7 @@ body#page_mypage_history .ggm-ec-role a {
   display: inline-block;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-summary .blog-meta .tags a {
+  color: #666;
   font-size: 12px;
   border: 1px solid #c1c1c1;
   padding: 3px 8px;
@@ -1803,9 +1808,11 @@ body#page_mypage_history .ggm-ec-role a {
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h1, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h2, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h3, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h4, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h5, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h6 {
   color: #333;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h1 {
+
   font-size: 22px;
   margin-top: 60px;
   border-left: 5px solid #c1c1c1;
@@ -1860,6 +1867,7 @@ body#page_mypage_history .ggm-ec-role a {
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text p {
   word-wrap: keep-all !important;
+  margin-bottom: 20px;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text p code {
   border: 1px solid #c1c1c1;
@@ -1916,6 +1924,7 @@ body#page_mypage_history .ggm-ec-role a {
   padding: 3px 8px;
   border-radius: 2px;
   margin-right: 5px;
+  color: #666;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text .blog-meta .tags a:link, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text .blog-meta .tags a:visited, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text .blog-meta .tags a:hover, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text .blog-meta .tags a:active {
   color: #666;

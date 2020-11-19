@@ -10,23 +10,23 @@ function fetch_copy() {
   $rss = simplexml_load_string($rss);
   
   $tweets = json_decode(json_encode($rss->channel), true);
-  // var_dump($tweets["item"]);
+  // var_dump($tweets["item"][0]);
   $n=0;
   foreach ($tweets["item"] as $num => $v) {
-    // echo $num."\n";
-    // var_dump($v["description"])."<br>\n";
     if (preg_match("/@/",$v["description"])) {
       continue;
     } else {
-      $tweet = $v["description"];
+      $tweet = $description."<span class='tweet-count'>Tweet count</span>".$num;
     }
-    //&& !preg_match("/img/",$v["description"]))
   }
   $dummy = preg_match('/https?:\/{2}[\w\/:%#\$&\?\(\)~\.=\+\-]+/', $tweet, $matches);
   $tweet = preg_replace("/<img(.|\s)*?>/","",$tweet);
   // var_dump($tweet);
   $image = $matches[0];
   $image_tag = "<img src='".$image."' class='top-twitter-icon' id='top-twitter-icon'>";
+  // $tweet = mb_substr($tweet,5,1);
+  $tweet = "";
+  
   if ($tweet) {
     return $tweet.$image_tag;
   } else {
