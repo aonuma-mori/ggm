@@ -232,8 +232,15 @@ body.ggm .ggm-wrapper {
 body.ggm .ggm-wrapper nav.navbar .navbar-brand {
   color: #000;
 }
+body.ggm .ggm-wrapper nav.navbar .navbar-brand h1 {
+  display: inline;
+  font-size: 20px;
+}
 body.ggm .ggm-wrapper nav.navbar #navbarNav ul.navbar-nav li.dropdown a:link, body.ggm .ggm-wrapper nav.navbar #navbarNav ul.navbar-nav li.dropdown a:visited {
   color: #000;
+}
+body.ggm .ggm-wrapper nav.navbar #navbarNav ul.navbar-nav li.dropdown a:hover, body.ggm .ggm-wrapper nav.navbar #navbarNav ul.navbar-nav li.dropdown a:active {
+  background: #f5f5f5;
 }
 body.ggm .ggm-wrapper nav.navbar #navbarNav ul.navbar-nav li.dropdown .show {
   border: none;
@@ -632,6 +639,7 @@ body#page_product_list .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-modal .
   background: #880000;
   border-radius: 3px;
   border: 1px solid #880000;
+  margin: 20px;
 }
 body#page_product_list .ggm-wrapper .ggm-contents .ggm-block-div .ggm-ec-modal .ggm-ec-modal-wrap .ggm-ec-modal-box .ggm-ec-role label.ggm-ec-modal-close {
   font-weight: normal;
@@ -1717,6 +1725,10 @@ body#page_mypage_history .ggm-ec-role a {
 .ggm-blog #blog-block {
   margin-top: 100px;
 }
+.ggm-blog #blog-block div.row {
+  /* category */
+  /* sidebar */
+}
 .ggm-blog #blog-block div.row #main-block {
   word-break: break-all;
   margin-bottom: 100px;
@@ -1779,6 +1791,7 @@ body#page_mypage_history .ggm-ec-role a {
   padding: 3px 8px;
   border-radius: 2px;
   margin-right: 5px;
+  color: #888;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text {
   margin-top: 70px;
@@ -1794,29 +1807,46 @@ body#page_mypage_history .ggm-ec-role a {
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h1 {
   font-size: 22px;
+  margin-top: 60px;
+  border-left: 5px solid #c1c1c1;
+  padding-left: 13px;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h2 {
   font-size: 20px;
+  margin-top: 50px;
+  border-left: 5px solid #c1c1c1;
+  padding-left: 13px;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h3 {
   font-size: 18px;
+  margin-top: 40px;
+  border-left: 5px solid #c1c1c1;
+  padding-left: 13px;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h4 {
   font-size: 16px;
+  margin-top: 30px;
+  border-left: 5px solid #c1c1c1;
+  padding-left: 13px;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h5 {
   font-size: 15px;
+  margin-top: 20px;
+  border-left: 5px solid #c1c1c1;
+  padding-left: 13px;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text h6 {
   font-size: 14px;
+  margin-top: 10px;
+  border-left: 5px solid #c1c1c1;
+  padding-left: 13px;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text pre {
   white-space: pre-wrap;
   font-size: 14px;
-  border: 1px dotted #888;
   padding: 10px 20px;
-  color: #888;
   border-radius: 3px;
+  background: #f5f5f5;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text pre code {
   width: 100%;
@@ -1845,6 +1875,20 @@ body#page_mypage_history .ggm-ec-role a {
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text p a:hover, .ggm-blog #blog-block div.row #main-block .blog-item .blog-text p a:active {
   color: #0090C8;
   text-decoration: underline;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text p em {
+  background: linear-gradient(transparent 75%, #9eceff 75%);
+  font-style: normal;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text p strong {
+  text-decoration: underline;
+}
+.ggm-blog #blog-block div.row #main-block .blog-item .blog-text p code {
+  color: #333;
+  border: none;
+  font-size: 14px;
+  border: 1px solid #bbb;
+  background: #f5f5f5;
 }
 .ggm-blog #blog-block div.row #main-block .blog-item .blog-text .blog-meta ul.post-categories {
   display: inline-block;
@@ -1888,6 +1932,64 @@ body#page_mypage_history .ggm-ec-role a {
   float: left;
   margin-right: 15px;
 }
+.ggm-blog #blog-block div.row #category-block .ggm-article-caption {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.ggm-blog #blog-block div.row #category-block .ggm-article-caption strong {
+  color: #880000;
+}
+.ggm-blog #blog-block div.row #category-block .blog-item {
+  margin-top: 50px;
+}
+.ggm-blog #blog-block div.row #category-block .blog-item .blog-title {
+  font-size: 20px;
+}
+.ggm-blog #blog-block div.row #category-block .blog-item p.datetime {
+  font-size: 10px;
+}
+.ggm-blog #blog-block div.row #category-block .blog-text {
+  font-size: 14px;
+}
+.ggm-blog #blog-block div.row #category-block .blog-text .blog-meta {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.ggm-blog #blog-block div.row #category-block .blog-text .blog-meta ul.post-categories {
+  display: inline-block;
+  margin: 0;
+  margin-left: -38px;
+}
+.ggm-blog #blog-block div.row #category-block .blog-text .blog-meta ul.post-categories li {
+  list-style: none;
+  display: inline;
+}
+.ggm-blog #blog-block div.row #category-block .blog-text .blog-meta ul.post-categories li a {
+  font-size: 12px;
+  border: 1px solid #888;
+  padding: 3px 8px;
+  background: #888;
+  color: #fff;
+  border-radius: 2px;
+}
+.ggm-blog #blog-block div.row #category-block .blog-text .blog-meta .tags {
+  display: inline-block;
+}
+.ggm-blog #blog-block div.row #category-block .blog-text .blog-meta .tags a {
+  font-size: 12px;
+  border: 1px solid #c1c1c1;
+  padding: 3px 8px;
+  border-radius: 2px;
+  margin-right: 5px;
+}
+.ggm-blog #blog-block div.row #category-block .blog-text .blog-meta .tags a:link, .ggm-blog #blog-block div.row #category-block .blog-text .blog-meta .tags a:visited, .ggm-blog #blog-block div.row #category-block .blog-text .blog-meta .tags a:hover, .ggm-blog #blog-block div.row #category-block .blog-text .blog-meta .tags a:active {
+  color: #666;
+  text-decoration: none;
+}
+.ggm-blog #blog-block div.row #category-block .blog-text .blog-meta .tags a:hover, .ggm-blog #blog-block div.row #category-block .blog-text .blog-meta .tags a:active {
+  color: #888;
+  text-decoration: none;
+}
 .ggm-blog #blog-block div.row #side-block {
   word-break: break-all;
   margin-bottom: 100px;
@@ -1929,7 +2031,6 @@ body#page_mypage_history .ggm-ec-role a {
   margin-left: -28px;
 }
 .ggm-blog #blog-block div.row #side-block #sidebar ul li.widget .tagcloud a {
-  border: 1px solid #c1c1c1;
   font-size: 12px;
   padding: 3px 8px;
   border-radius: 2px;

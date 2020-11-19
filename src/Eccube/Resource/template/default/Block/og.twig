@@ -1,0 +1,18 @@
+{#
+  This file is part of GGM
+  Copyright(c) GGM All Rights Reserved.
+#}
+{# トップページ / #}
+{% if current_path == "/" %}
+  <meta property="og:url" content="https://ggm-do.com{{ current_path }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ BaseInfo.shop_name }}{% if subtitle is defined and subtitle is not empty %} |l {{ subtitle }}{% elseif title is defined and title is not empty %} / {{ title }}{% endif %}" />
+  <meta property="og:description" content="麻縄を販売しているアダルトショップです。" />
+  <meta property="og:site_name" content="GGM" />
+  <meta property="og:image" content="/html/template/default/assets/img/og-image.jpg" />
+{% elseif current_path == "" %}
+{# トップページ / #}
+  <meta name="robots" content="noindex">
+{% else %}
+  <meta name="robots" content="index">
+{% endif %}
