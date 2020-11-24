@@ -30,10 +30,10 @@ services:
         # ビルド時点でDBサーバの起動や接続が出来ない、という場合等にエラーとなるため。
         SKIP_INSTALL_SCRIPT_ON_DOCKER_BUILD: "true"
     ports:
-      - 8080:80
+      - 9100:80
       - 4430:443
     volumes:
-      - ".:/var/www/html:cached"
+      - ".:/var/www/html:delegated"
       ### 同期対象からコストの重いフォルダを除外 #####################
       - "var:/var/www/html/var"
       - "vendor:/var/www/html/vendor"
@@ -42,18 +42,18 @@ services:
       - backend
 
   ### Postgres ################################
-  postgres:
-    image: postgres:10
-    environment:
-      - POSTGRES_DB=eccubedb
-      - POSTGRES_USER=dbuser
-      - POSTGRES_PASSWORD=secret
-    ports:
-      - 15432:5432
-    volumes:
-      - pg-database:/var/lib/postgresql/data
-    networks:
-      - backend
+  # postgres:
+  #   image: postgres:10
+  #   environment:
+  #     - POSTGRES_DB=eccubedb
+  #     - POSTGRES_USER=dbuser
+  #     - POSTGRES_PASSWORD=secret
+  #   ports:
+  #     - 15432:5432
+  #   volumes:
+  #     - pg-database:/var/lib/postgresql/data
+  #   networks:
+  #     - backend
 
   ### MySQL ##################################
   mysql:
