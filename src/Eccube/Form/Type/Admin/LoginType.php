@@ -40,7 +40,7 @@ class LoginType extends AbstractType
     {
         $builder->add('login_id', TextType::class, [
             'attr' => [
-                'maxlength' => 50,
+                'max_length' => 50,
             ],
             'constraints' => [
                 new Assert\NotBlank(),
@@ -49,7 +49,7 @@ class LoginType extends AbstractType
         ]);
         $builder->add('password', PasswordType::class, [
             'attr' => [
-                'maxlength' => 50,
+                'max_length' => 50,
             ],
             'constraints' => [
                 new Assert\NotBlank(),

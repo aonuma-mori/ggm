@@ -1,25 +1,25 @@
 {#
-This file is part of EC-CUBE
-
-Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
-
-http://www.ec-cube.co.jp/
-
-For the full copyright and license information, please view the LICENSE
-file that was distributed with this source code.
+  This file is part of GGM
+  Copyright(c) GGM All Rights Reserved.
 #}
 {% set Carts = get_all_carts() %}
 {% set totalPrice = get_carts_total_price() %}
 {% set totalQuantity = get_carts_total_quantity() %}
-<div class="ec-cartNaviWrap">
-    <div class="ec-cartNavi">
-        <i class="ec-cartNavi__icon fas fa-shopping-cart">
-            <span class="ec-cartNavi__badge">{{ totalQuantity|number_format }}</span>
-        </i>
-        <div class="ec-cartNavi__label">
-            <div class="ec-cartNavi__price">{{ totalPrice|price }}</div>
-        </div>
+
+<div class="ggm-in-cart ec-cartNaviWrap">
+  <a href="/cart">
+    <div class="ggm-cart-navi ec-cartNavi">
+      <i class="ggm-cart-navi-icon ec-cartNavi__icon fas fa-shopping-cart">
+        <span class="ggm-cart-navi-badge ec-cartNavi__badge">{{ totalQuantity|number_format }}</span>
+      </i>
+      {% if totalQuantity > 0 %}
+      <div class="ggm-cart-navi-label ec-cartNavi__label">
+        <div class="ggm-price ec-cartNavi__price">{{ totalPrice|price }}</div>
+      </div>
+      {% endif %}
     </div>
+     </a>
+
     {% if totalQuantity > 0 %}
         <div class="ec-cartNaviIsset">
             {% for Cart in Carts %}
@@ -62,4 +62,5 @@ file that was distributed with this source code.
             </div>
         </div>
     {% endif %}
+    
 </div>

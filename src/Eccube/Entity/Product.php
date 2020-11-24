@@ -198,9 +198,7 @@ if (!class_exists('\Eccube\Entity\Product')) {
         {
             $this->_calc();
 
-            return count($this->stockFinds)
-                ? max($this->stockFinds)
-                : null;
+            return max($this->stockFinds);
         }
 
         /**
@@ -212,9 +210,7 @@ if (!class_exists('\Eccube\Entity\Product')) {
         {
             $this->_calc();
 
-            return count($this->stocks)
-                ? min($this->stocks)
-                : null;
+            return min($this->stocks);
         }
 
         /**
@@ -226,9 +222,7 @@ if (!class_exists('\Eccube\Entity\Product')) {
         {
             $this->_calc();
 
-            return count($this->stocks)
-                ? max($this->stocks)
-                : null;
+            return max($this->stocks);
         }
 
         /**
@@ -240,9 +234,7 @@ if (!class_exists('\Eccube\Entity\Product')) {
         {
             $this->_calc();
 
-            return count($this->stockUnlimiteds)
-                ? min($this->stockUnlimiteds)
-                : null;
+            return min($this->stockUnlimiteds);
         }
 
         /**
@@ -254,9 +246,7 @@ if (!class_exists('\Eccube\Entity\Product')) {
         {
             $this->_calc();
 
-            return count($this->stockUnlimiteds)
-                ? max($this->stockUnlimiteds)
-                : null;
+            return max($this->stockUnlimiteds);
         }
 
         /**
@@ -300,9 +290,7 @@ if (!class_exists('\Eccube\Entity\Product')) {
         {
             $this->_calc();
 
-            return count($this->price02)
-                ? min($this->price02)
-                : null;
+            return min($this->price02);
         }
 
         /**
@@ -314,9 +302,7 @@ if (!class_exists('\Eccube\Entity\Product')) {
         {
             $this->_calc();
 
-            return count($this->price02)
-                ? max($this->price02)
-                : null;
+            return max($this->price02);
         }
 
         /**
@@ -328,9 +314,7 @@ if (!class_exists('\Eccube\Entity\Product')) {
         {
             $this->_calc();
 
-            return count($this->price01IncTaxs)
-                ? min($this->price01IncTaxs)
-                : null;
+            return min($this->price01IncTaxs);
         }
 
         /**
@@ -342,9 +326,7 @@ if (!class_exists('\Eccube\Entity\Product')) {
         {
             $this->_calc();
 
-            return count($this->price01IncTaxs)
-                ? max($this->price01IncTaxs)
-                : null;
+            return max($this->price01IncTaxs);
         }
 
         /**
@@ -356,9 +338,7 @@ if (!class_exists('\Eccube\Entity\Product')) {
         {
             $this->_calc();
 
-            return count($this->price02IncTaxs)
-                ? min($this->price02IncTaxs)
-                : null;
+            return min($this->price02IncTaxs);
         }
 
         /**
@@ -370,9 +350,7 @@ if (!class_exists('\Eccube\Entity\Product')) {
         {
             $this->_calc();
 
-            return count($this->price02IncTaxs)
-                ? max($this->price02IncTaxs)
-                : null;
+            return max($this->price02IncTaxs);
         }
 
         /**

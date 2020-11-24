@@ -68,7 +68,7 @@ class PageController extends AbstractController
      * @Route("/%eccube_admin_route%/content/page", name="admin_content_page")
      * @Template("@admin/Content/page.twig")
      */
-    public function index(Request $request, RouterInterface $router)
+    public function index(Request $request)
     {
         $Pages = $this->pageRepository->getPageList();
 
@@ -82,7 +82,6 @@ class PageController extends AbstractController
 
         return [
             'Pages' => $Pages,
-            'router' => $router,
         ];
     }
 

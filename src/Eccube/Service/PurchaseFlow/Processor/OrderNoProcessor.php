@@ -69,16 +69,15 @@ class OrderNoProcessor implements ItemHolderPreprocessor
                 do {
                     $orderNo = preg_replace_callback('/\{(.*)}/U', function ($matches) use ($Order) {
                         if (count($matches) === 2) {
-                            $dateTime = new \DateTime('now', new \DateTimeZone($this->eccubeConfig->get('timezone')));
                             switch ($matches[1]) {
                                 case 'yyyy':
-                                    return $dateTime->format('Y');
+                                    return date('Y');
                                 case 'yy':
-                                    return $dateTime->format('y');
+                                    return date('y');
                                 case 'mm':
-                                    return $dateTime->format('m');
+                                    return date('m');
                                 case 'dd':
-                                    return $dateTime->format('d');
+                                    return date('d');
                                 default:
                                     $res = explode(',', str_replace(' ', '', $matches[1]));
                                     if (count($res) === 2 && is_numeric($res[1])) {

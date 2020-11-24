@@ -22,12 +22,7 @@ file that was distributed with this source code.
                     {{ not loop.last ? ',&nbsp;' }}
                 {%- endfor -%}
             {%- elseif php_is_a(child.vars.data, '\DateTime') -%}
-                {# DateTimeType の時は分まで表示 #}
-                {% if 'datetime' in child.vars.id %}
-                    {{ child.vars.data|date_sec }}
-                {% else %}
-                    {{ child.vars.data|date_day }}
-                {% endif %}
+                {{ child.vars.data|date_day }}
             {%- else -%}
                 {# ChoiceType -> multiple:false #}
                 {%- if child.vars.choices is defined and child.vars.choices is not empty -%}

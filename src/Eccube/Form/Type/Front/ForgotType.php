@@ -47,7 +47,7 @@ class ForgotType extends AbstractType
     {
         $builder->add('login_email', EmailType::class, [
             'attr' => [
-                'maxlength' => $this->eccubeConfig['eccube_stext_len'],
+                'max_length' => $this->eccubeConfig['eccube_stext_len'],
             ],
             'constraints' => [
                 new Assert\NotBlank(),

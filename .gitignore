@@ -1,6 +1,6 @@
+.htaccess
 !dummy
 !.gitmodule
-composer.phar
 /vendor/
 /node_modules/
 /var/*
@@ -18,7 +18,6 @@ composer.phar
 !/app/template/admin
 !/app/template/default
 !/app/template/user_data
-!/app/template/smartphone
 /app/proxy/entity/*
 !/app/proxy/entity/.gitkeep
 /html/plugin/*
@@ -46,6 +45,14 @@ composer.phar
 .env
 .maintenance
 
+.env
+.vscode/*
+var/cache/*
+var/log/*
+var/sessions/*
+vendor/*
+.DS_Store
+
 ###> symfony/phpunit-bridge ###
 .phpunit
 /phpunit.xml
@@ -59,3 +66,16 @@ composer.phar
 ###> symfony/web-server-bundle ###
 .web-server-pid
 ###< symfony/web-server-bundle ###
+
+ggm-utirily
+
+#blog
+blog/wp-config.php
+blog/wp-content/uploads/*
+blog/wp-content/plugins/*
+
+# mac
+*.icloud
+
+# phpmyadmin
+phpmyadmin/tmp/twig/*

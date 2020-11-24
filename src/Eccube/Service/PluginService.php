@@ -101,11 +101,6 @@ class PluginService
     private $systemService;
 
     /**
-     * @var PluginContext
-     */
-    private $pluginContext;
-
-    /**
      * PluginService constructor.
      *
      * @param EntityManagerInterface $entityManager
@@ -117,8 +112,6 @@ class PluginService
      * @param CacheUtil $cacheUtil
      * @param ComposerServiceInterface $composerService
      * @param PluginApiService $pluginApiService
-     * @param SystemService $systemService
-     * @param PluginContext $pluginContext
      */
     public function __construct(
         EntityManagerInterface $entityManager,
@@ -130,8 +123,7 @@ class PluginService
         CacheUtil $cacheUtil,
         ComposerServiceInterface $composerService,
         PluginApiService $pluginApiService,
-        SystemService $systemService,
-        PluginContext $pluginContext
+        SystemService $systemService
     ) {
         $this->entityManager = $entityManager;
         $this->pluginRepository = $pluginRepository;
@@ -145,7 +137,6 @@ class PluginService
         $this->composerService = $composerService;
         $this->pluginApiService = $pluginApiService;
         $this->systemService = $systemService;
-        $this->pluginContext = $pluginContext;
     }
 
     /**
@@ -209,9 +200,6 @@ class PluginService
      */
     public function installWithCode($code)
     {
-        $this->pluginContext->setCode($code);
-        $this->pluginContext->setInstall();
-
         $pluginDir = $this->calcPluginDir($code);
         $this->checkPluginArchiveContent($pluginDir);
         $config = $this->readConfig($pluginDir);

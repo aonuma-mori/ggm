@@ -73,6 +73,7 @@ function log_debug($message, array $context = [])
     if (isset($app['eccube.logger'])) {
         $app['eccube.logger']->debug($message, $context);
     }
+    // echo env("APP_ENV");
 }
 
 /**

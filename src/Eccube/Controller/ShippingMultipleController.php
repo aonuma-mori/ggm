@@ -343,7 +343,7 @@ class ShippingMultipleController extends AbstractShoppingController
                     }
                 }
 
-                $this->cartPurchaseFlow->validate($Cart, new PurchaseContext($Cart, $this->getUser()));
+                $this->cartPurchaseFlow->validate($Cart, new PurchaseContext());
                 $this->cartService->save();
             }
 

@@ -1,160 +1,367 @@
-<!doctype html>
 {#
-This file is part of EC-CUBE
-
-Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
-
-http://www.ec-cube.co.jp/
-
-For the full copyright and license information, please view the LICENSE
-file that was distributed with this source code.
+  This file is part of GGM
+  Copyright(c) GGM All Rights Reserved.
 #}
+<!doctype html>
 <html lang="{{ eccube_config.locale }}">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="eccube-csrf-token" content="{{ csrf_token(constant('Eccube\\Common\\Constant::TOKEN_NAME')) }}">
-    <title>{{ BaseInfo.shop_name }}{% if subtitle is defined and subtitle is not empty %} / {{ subtitle }}{% elseif title is defined and title is not empty %} / {{ title }}{% endif %}</title>
-    {% if Page.author is not empty %}
-        <meta name="author" content="{{ Page.author }}">
-    {% endif %}
-    {% if Page.description is not empty %}
-        <meta name="description" content="{{ Page.description }}">
-    {% endif %}
-    {% if Page.keyword is not empty %}
-        <meta name="keywords" content="{{ Page.keyword }}">
-    {% endif %}
-    {% if Page.meta_robots is not empty %}
-        <meta name="robots" content="{{ Page.meta_robots }}">
-    {% endif %}
-    {% if Page.meta_tags is not empty %}
-        {{ include(template_from_string(Page.meta_tags)) }}
-    {% endif %}
-    <link rel="icon" href="{{ asset('assets/img/common/favicon.ico', 'user_data') }}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    {% block stylesheet %}{% endblock %}
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script>
-        $(function() {
-            $.ajaxSetup({
-                'headers': {
-                    'ECCUBE-CSRF-TOKEN': $('meta[name="eccube-csrf-token"]').attr('content')
-                }
-            });
-        });
-    </script>
-    {# Layout: HEAD #}
-    {% if Layout.Head %}
-        {{ include('block.twig', {'Blocks': Layout.Head}) }}
-    {% endif %}
-    {# プラグイン用styleseetやmetatagなど #}
-    {% if plugin_assets is defined %}{{ include('@admin/snippet.twig', { snippets: plugin_assets }) }}{% endif %}
-    <link rel="stylesheet" href="{{ asset('assets/css/customize.css', 'user_data') }}">
+
+<!-- Global site tag (gtag.js) - Google Analytics : ggm.information-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPB0NJSEKH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZPB0NJSEKH');
+</script>
+{# begine: noindexタグをページによって出し分けする #}
+{% set current_path=path(app.request.attributes.get('_route'),app.request.attributes.get('_route_params')) %}
+<!-- current-path: {{ current_path }} -->
+{# botのnoindexの設定ページ
+  - 当サイトについて
+  - 特定商取引法に基づく表記
+#}
+{% 
+  if current_path == "/help/about" or
+    current_path == "/help/tradelaw" 
+%}
+  <meta name="robots" content="noindex">
+{% elseif current_path == "" %}
+  <meta name="robots" content="noindex">
+{% else %}
+  <meta name="robots" content="index">
+{% endif %}
+  <link rel="canonical" href="https://ggm-do.com{{ current_path }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="eccube-csrf-token" content="{{ csrf_token(constant('Eccube\\Common\\Constant::TOKEN_NAME')) }}">
+  <title>{{ BaseInfo.shop_name }}{% if subtitle is defined and subtitle is not empty %} | {{ subtitle }}{% elseif title is defined and title is not empty %} / {{ title }}{% endif %}</title>
+  {% if Page.author is not empty %}
+  <meta name="author" content="{{ Page.author }}">
+  {% endif %}
+  {% if Page.description is not empty %}
+  <meta name="description" content="{{ Page.description }}">
+  {% endif %}
+  {% if Page.keyword is not empty %}
+  <meta name="keywords" content="{{ Page.keyword }}">
+  {% endif %}
+  {% if Page.meta_robots is not empty %}
+  <meta name="robots" content="{{ Page.meta_robots }}">
+  {% endif %}
+  {% if Page.meta_tags is not empty %}
+      {{ include(template_from_string(Page.meta_tags)) }}
+  {% endif %}
+  {# ogタグ #}
+  {{ include('Block/og.twig') }}
+  {# end: ogタグ #}
+  <meta name="msapplication-square70x70logo" content="/html/template/default/assets/img/favicons/site-tile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="/html/template/default/assets/img/favicons/site-tile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="/html/template/default/assets/img/favicons/site-tile-310x150.png">
+  <meta name="msapplication-square310x310logo" content="/html/template/default/assets/img/favicons/site-tile-310x310.png">
+  <meta name="msapplication-TileColor" content="#0078d7">
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/html/template/default/assets/img/favicons/favicon.ico">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="/html/template/default/assets/img/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/html/template/default/assets/img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/html/template/default/assets/img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/html/template/default/assets/img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/html/template/default/assets/img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/html/template/default/assets/img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/html/template/default/assets/img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/html/template/default/assets/img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/html/template/default/assets/img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/html/template/default/assets/img/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="36x36" href="/html/template/default/assets/img/favicons/android-chrome-36x36.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/html/template/default/assets/img/favicons/android-chrome-48x48.png">
+  <link rel="icon" type="image/png" sizes="72x72" href="/html/template/default/assets/img/favicons/android-chrome-72x72.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/html/template/default/assets/img/favicons/android-chrome-96x96.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="/html/template/default/assets/img/favicons/android-chrome-128x128.png">
+  <link rel="icon" type="image/png" sizes="144x144" href="/html/template/default/assets/img/favicons/android-chrome-144x144.png">
+  <link rel="icon" type="image/png" sizes="152x152" href="/html/template/default/assets/img/favicons/android-chrome-152x152.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/html/template/default/assets/img/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="/html/template/default/assets/img/favicons/android-chrome-256x256.png">
+  <link rel="icon" type="image/png" sizes="384x384" href="/html/template/default/assets/img/favicons/android-chrome-384x384.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/html/template/default/assets/img/favicons/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="36x36" href="/html/template/default/assets/img/favicons/icon-36x36.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/html/template/default/assets/img/favicons/icon-48x48.png">
+  <link rel="icon" type="image/png" sizes="72x72" href="/html/template/default/assets/img/favicons/icon-72x72.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/html/template/default/assets/img/favicons/icon-96x96.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="/html/template/default/assets/img/favicons/icon-128x128.png">
+  <link rel="icon" type="image/png" sizes="144x144" href="/html/template/default/assets/img/favicons/icon-144x144.png">
+  <link rel="icon" type="image/png" sizes="152x152" href="/html/template/default/assets/img/favicons/icon-152x152.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="/html/template/default/assets/img/favicons/icon-160x160.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/html/template/default/assets/img/favicons/icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="196x196" href="/html/template/default/assets/img/favicons/icon-196x196.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="/html/template/default/assets/img/favicons/icon-256x256.png">
+  <link rel="icon" type="image/png" sizes="384x384" href="/html/template/default/assets/img/favicons/icon-384x384.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/html/template/default/assets/img/favicons/icon-512x512.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/html/template/default/assets/img/favicons/icon-16x16.png">
+  <link rel="icon" type="image/png" sizes="24x24" href="/html/template/default/assets/img/favicons/icon-24x24.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/html/template/default/assets/img/favicons/icon-32x32.png">
+  <link rel="manifest" href="/html/template/default/assets/img/favicons/manifest.json">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/ggm-styles.css') }}">
+  {% block stylesheet %}{% endblock %}
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+  <script>
+    $(function() {
+      $.ajaxSetup({
+        'headers': {
+          'ECCUBE-CSRF-TOKEN': $('meta[name="eccube-csrf-token"]').attr('content')
+        }
+      });
+    });
+  </script>
+  {# Layout: HEAD #}
+  {% if Layout.Head %}
+    {{ include('block.twig', {'Blocks': Layout.Head}) }}
+  {% endif %}
+  {# プラグイン用styleseetやmetatagなど #}
+  {% if plugin_assets is defined %}{{ include('@admin/snippet.twig', { snippets: plugin_assets }) }}{% endif %}
+  <link rel="stylesheet" href="{{ asset('assets/css/customize.css', 'user_data') }}">
 </head>
-<body id="page_{{ app.request.get('_route') }}" class="{{ body_class|default('other_page') }}">
+<body id="page_{{ app.request.get('_route') }}" class="{{ body_class|default('other_page') }} ggm">
+
 {# Layout: BODY_AFTER #}
 {% if Layout.BodyAfter %}
     {{ include('block.twig', {'Blocks': Layout.BodyAfter}) }}
 {% endif %}
 
-<div class="ec-layoutRole">
-    {# Layout: HEADER #}
-    {% if Layout.Header %}
-        <div class="ec-layoutRole__header">
-            {{ include('block.twig', {'Blocks': Layout.Header}) }}
-        </div>
+<!-- Debug -->
+{# <p id="device" v-bind:class="[[width_type]]">device_type class: [[width_type]]</p> #}
+<!-- Debug end -->
+
+<!-- message -->
+{# message #}
+<!-- message -->
+
+  <div class="ggm-wrapper">
+  <div class="ggm-header-bar"></div>
+  {# Layout: HEADER #}
+  {% if Layout.Header %}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+      <img src="/html/template/default/assets/img/favicons/icon-32x32.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <h1>GGM</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li>
+          <form method="get" action="/products/list" class="searchform form-inline" id="search-form-sp">
+            <input type="search" name="name" maxlength="50" class="search-name form-control mr-sm-2 border-light" placeholder="keyword">
+            <button class="btn btn-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Shop<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/products/list?mode=disp_number=0&orderby=2">Products</a>
+        </li>
+        {% if is_granted('ROLE_USER') %}
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ url('mypage') }}">
+            {{ 'front.block.login.mypage'|trans }}
+          </a>
+        </li>
+        {% if BaseInfo.option_favorite_product %}
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ url('mypage_favorite') }}">
+            {{ 'front.block.login.favorite'|trans }}
+          </a>
+        </li>
+        {% endif %}
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ url('logout') }}">
+            {{ 'front.block.login.logout'|trans }}
+          </a>
+        </li>
+        {% else %}
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ url('entry') }}">
+            {{ 'front.block.login.customer_registration'|trans }}
+          </a>
+        </li>
+        {% if BaseInfo.option_favorite_product %}
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ url('mypage_favorite') }}">
+            {{ 'front.block.login.favorite'|trans }}
+          </a>
+        </li>
+        {% endif %}
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ url('mypage_login') }}">
+            {{ 'front.block.login.login'|trans }}
+          </a>
+        </li>
+        {% endif %}
+        <li class="nav-item dropdown active">
+          <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">Blog</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/blog/#">Blog top</a>
+            <a class="dropdown-item" href="/blog/#">Gallery</a>
+            <a class="dropdown-item" href="/blog/#">Link</a>
+            <a class="dropdown-item" href="/blog/#">Profile</a>
+            <a class="dropdown-item" href="/blog/#">About us</a>
+          </div>
+        </li>
+        <li class="ggm-cart">
+          {{ include('Block/cart.twig') }}
+        </li>
+      </ul>
+    </div>
+    <!-- SPでは表示しないようにする（別の場所に移動） -->
+    {{ render(path('block_search_product')) }}
+  </nav>
+  {% endif %}
+
+
+
+
+  {% if Layout.MainTop %}
+    {{ include('block.twig', {'Blocks': Layout.MainTop}) }}
+  {% endif %}
+
+  {# Layout: CONTENTS_TOP #}
+  {% if Layout.ContentsTop %}
+    <div class="ec-layoutRole__contentTop">
+      {{ include('block.twig', {'Blocks': Layout.ContentsTop}) }}
+    </div>
+  {% endif %}
+
+
+  <div class="ggm-contents">
+
+
+{# <form method="get" action="/products/list" class="searchform form-inline ggm-search-from-sp" id="ggm-search-from-sp">
+  <input type="search" name="name" maxlength="50" class="search-name form-control mr-sm-2 border-light" placeholder="keyword">
+  <button class="btn btn-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+</form> #}
+
+    {# Layout: SIDE_LEFT #}
+    {% if Layout.SideLeft %}
+      <div class="ec-layoutRole__left">
+        {{ include('block.twig', {'Blocks': Layout.SideLeft}) }}
+      </div>
     {% endif %}
 
-    {# Layout: CONTENTS_TOP #}
-    {% if Layout.ContentsTop %}
-        <div class="ec-layoutRole__contentTop">
-            {{ include('block.twig', {'Blocks': Layout.ContentsTop}) }}
-        </div>
+    {% set layoutRoleMain = 'ggm-block' %}
+    {% if Layout.ColumnNum == 2 %}
+        {% set layoutRoleMain = 'ggm-block' %}
+    {% elseif Layout.ColumnNum == 3 %}
+        {% set layoutRoleMain = 'ggm-block' %}
     {% endif %}
 
-    <div class="ec-layoutRole__contents">
-        {# Layout: SIDE_LEFT #}
-        {% if Layout.SideLeft %}
-            <div class="ec-layoutRole__left">
-                {{ include('block.twig', {'Blocks': Layout.SideLeft}) }}
-            </div>
-        {% endif %}
+    {% if Layout.MainTop %}
+       {{ include('block.twig', {'Blocks': Layout.MainTop}) }}
+    {% endif %}
 
-        {% set layoutRoleMain = 'ec-layoutRole__main' %}
-        {% if Layout.ColumnNum == 2 %}
-            {% set layoutRoleMain = 'ec-layoutRole__mainWithColumn' %}
-        {% elseif Layout.ColumnNum == 3 %}
-            {% set layoutRoleMain = 'ec-layoutRole__mainBetweenColumn' %}
-        {% endif %}
-
-        <div class="{{ layoutRoleMain }}">
-            {# Layout: MAIN_TOP #}
-            {% if Layout.MainTop %}
-                <div class="ec-layoutRole__mainTop">
-                    {{ include('block.twig', {'Blocks': Layout.MainTop}) }}
-                </div>
-            {% endif %}
-
-            {# MAIN AREA #}
-            {% block main %}{% endblock %}
-
-            {# Layout: MAIN_Bottom #}
-            {% if Layout.MainBottom %}
-                <div class="ec-layoutRole__mainBottom">
-                    {{ include('block.twig', {'Blocks': Layout.MainBottom}) }}
-                </div>
-            {% endif %}
+    <div class="ggm-block-div">
+      {# Layout: MAIN_TOP #}
+      
+      {% if Layout.MainTop %}
+        <div class="ec-layoutRole__mainTop">
+          {{ include('block.twig', {'Blocks': Layout.MainTop}) }}
         </div>
+      {% endif %}
 
-        {# Layout: SIDE_RIGHT #}
-        {% if Layout.SideRight %}
-            <div class="ec-layoutRole__right">
-                {{ include('block.twig', {'Blocks': Layout.SideRight}) }}
-            </div>
-        {% endif %}
+      {# MAIN AREA #}
+      {% block main %}{% endblock %}
+
+      {# Layout: MAIN_Bottom #}
+      {#
+      * トップページのメインブロック部分 class:ggm-main-block
+      * - eyecatch-block
+      * - ggm-topic
+      * - 新着情報
+      * - カテゴリー(削除)
+      * - NEWS
+      #}
+      {% if Layout.MainBottom %}
+          <div class="ggm-main-block ec-layoutRole__mainBottom">
+              {{ include('block.twig', {'Blocks': Layout.MainBottom}) }}
+          </div>
+      {% endif %}
     </div>
 
-    {# Layout: CONTENTS_BOTTOM #}
-    {% if Layout.ContentsBottom %}
-        <div class="ec-layoutRole__contentBottom">
-            {{ include('block.twig', {'Blocks': Layout.ContentsBottom}) }}
-        </div>
+    {# Layout: SIDE_RIGHT #}
+    {% if Layout.SideRight %}
+      <div class="ec-layoutRole__right">
+        {{ include('block.twig', {'Blocks': Layout.SideRight}) }}
+      </div>
     {% endif %}
 
-    {# Layout: CONTENTS_FOOTER #}
-    {% if Layout.Footer %}
-        <div class="ec-layoutRole__footer">
-            {{ include('block.twig', {'Blocks': Layout.Footer}) }}
-        </div>
-    {% endif %}
-</div><!-- ec-layoutRole -->
+  </div><!-- ggm-contents end -->
 
-<div class="ec-overlayRole"></div>
-<div class="ec-drawerRoleClose"><i class="fas fa-times"></i></div>
-<div class="ec-drawerRole">
-    {# Layout: DRAWER #}
-    {% if Layout.Drawer %}
-        {{ include('block.twig', {'Blocks': Layout.Drawer}) }}
-    {% endif %}
-</div>
-<div class="ec-blockTopBtn pagetop">{{'common.pagetop'|trans}}</div>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-{% include('@common/lang.twig') %}
-<script src="{{ asset('assets/js/function.js') }}"></script>
-<script src="{{ asset('assets/js/eccube.js') }}"></script>
-{% block javascript %}{% endblock %}
-{# Layout: CLOSE_BODY_BEFORE #}
-{% if Layout.CloseBodyBefore %}
-    {{ include('block.twig', {'Blocks': Layout.CloseBodyBefore}) }}
-{% endif %}
-{# プラグイン用Snippet #}
-{% if plugin_snippets is defined %}
+  {# Layout: CONTENTS_BOTTOM #}
+  {# eyecatch block /src/Eccube/Resource/template/default/Block/eyecatch.twig #}
+  {% if Layout.ContentsBottom %}
+    <div class="ggm-top-product ec-layoutRole__contentBottom">
+      {{ include('block.twig', {'Blocks': Layout.ContentsBottom}) }}
+    </div>
+  {% endif %}
+
+
+
+
+
+  {# Layout: CONTENTS_FOOTER #}
+  {% if Layout.Footer %}
+    <!-- footer -->
+    {{ include('block.twig', {'Blocks': Layout.Footer}) }}
+    <!-- footer end -->
+  {% endif %}
+  </div><!-- ggm-wrapper end -->
+
+  <div class="ec-overlayRole"></div>
+  <div class="ec-drawerRoleClose"><i class="fas fa-times"></i></div>
+  <div class="ec-drawerRole">
+      {# Layout: DRAWER #}
+      {% if Layout.Drawer %}
+          {{ include('block.twig', {'Blocks': Layout.Drawer}) }}
+      {% endif %}
+  </div>
+
+  <!-- Topへ戻る -->
+  <div
+    id="ggm-pagetop-arrow"
+    class="ec-blockTopBtn pagetop"
+    style="
+      width: 50px !important;
+      height: 50px !important;
+      font-size: 28px;
+      padding-top: 4px;
+      border-radius: 50%;
+      background: #666;
+      margin: 20px;
+    ">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+  {% include('@common/lang.twig') %}
+  <script src="{{ asset('assets/js/function.js') }}"></script>
+  <script src="{{ asset('assets/js/eccube.js') }}"></script>
+  {% block javascript %}{% endblock %}
+  {# Layout: CLOSE_BODY_BEFORE #}
+  {% if Layout.CloseBodyBefore %}
+      {{ include('block.twig', {'Blocks': Layout.CloseBodyBefore}) }}
+  {% endif %}
+  {# プラグイン用Snippet #}
+  {% if plugin_snippets is defined %}
     {{ include('snippet.twig', { snippets: plugin_snippets }) }}
-{% endif %}
-    <script src="{{ asset('assets/js/customize.js', 'user_data') }}"></script>
+  {% endif %}
+  <script src="{{ asset('assets/js/customize.js', 'user_data') }}"></script>
+  <script src="/html/template/default/assets/js/ggm.js"></script>
 </body>
 </html>

@@ -31,7 +31,6 @@ use Eccube\Repository\ClassCategoryRepository;
 use Eccube\Repository\DeliveryDurationRepository;
 use Eccube\Repository\Master\ProductStatusRepository;
 use Eccube\Repository\Master\SaleTypeRepository;
-use Eccube\Repository\ProductImageRepository;
 use Eccube\Repository\ProductRepository;
 use Eccube\Repository\TagRepository;
 use Eccube\Repository\TaxRuleRepository;
@@ -76,11 +75,6 @@ class CsvImportController extends AbstractCsvImportController
     protected $classCategoryRepository;
 
     /**
-     * @var ProductImageRepository
-     */
-    protected $productImageRepository;
-
-    /**
      * @var ProductStatusRepository
      */
     protected $productStatusRepository;
@@ -115,7 +109,6 @@ class CsvImportController extends AbstractCsvImportController
      * @param TagRepository $tagRepository
      * @param CategoryRepository $categoryRepository
      * @param ClassCategoryRepository $classCategoryRepository
-     * @param ProductImageRepository $productImageRepository
      * @param ProductStatusRepository $productStatusRepository
      * @param ProductRepository $productRepository
      * @param TaxRuleRepository $taxRuleRepository
@@ -129,7 +122,6 @@ class CsvImportController extends AbstractCsvImportController
         TagRepository $tagRepository,
         CategoryRepository $categoryRepository,
         ClassCategoryRepository $classCategoryRepository,
-        ProductImageRepository $productImageRepository,
         ProductStatusRepository $productStatusRepository,
         ProductRepository $productRepository,
         TaxRuleRepository $taxRuleRepository,
@@ -141,7 +133,6 @@ class CsvImportController extends AbstractCsvImportController
         $this->tagRepository = $tagRepository;
         $this->categoryRepository = $categoryRepository;
         $this->classCategoryRepository = $classCategoryRepository;
-        $this->productImageRepository = $productImageRepository;
         $this->productStatusRepository = $productStatusRepository;
         $this->productRepository = $productRepository;
         $this->taxRuleRepository = $taxRuleRepository;
@@ -638,11 +629,7 @@ class CsvImportController extends AbstractCsvImportController
 
                     // 画像ファイルの削除(commit後に削除させる)
                     foreach ($deleteImages as $images) {
-                        /** @var ProductImage $image */
                         foreach ($images as $image) {
-                            if ($this->productImageRepository->findOneBy(['file_name' => $image->getFileName()])) {
-                                continue;
-                            }
                             try {
                                 $fs = new Filesystem();
                                 $fs->remove($this->eccubeConfig['eccube_save_image_dir'].'/'.$image);

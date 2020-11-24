@@ -37,8 +37,6 @@ class ShippingRepository extends AbstractRepository
      * @param  array $searchData
      *
      * @return QueryBuilder
-     *
-     * @deprecated 使用していないので削除予定
      */
     public function getQueryBuilderBySearchDataForAdmin($searchData)
     {

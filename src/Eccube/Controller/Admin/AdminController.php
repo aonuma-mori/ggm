@@ -445,7 +445,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @param \DateTime $dateTime
+     * @param $dateTime
      *
      * @return array|mixed
      *
@@ -453,23 +453,24 @@ class AdminController extends AbstractController
      */
     protected function getSalesByDay($dateTime)
     {
-        $dateTimeStart = clone $dateTime;
-        $dateTimeStart->setTime(0, 0, 0, 0);
+        // concat... for pgsql
+        // http://stackoverflow.com/questions/1091924/substr-does-not-work-with-datatype-timestamp-in-postgres-8-3
+        $dql = 'SELECT
+                  SUBSTRING(CONCAT(o.order_date, \'\'), 1, 10) AS order_day,
+                  SUM(o.payment_total) AS order_amount,
+                  COUNT(o) AS order_count
+                FROM
+                  Eccube\Entity\Order o
+                WHERE
+                    o.OrderStatus NOT IN (:excludes)
+                    AND SUBSTRING(CONCAT(o.order_date, \'\'), 1, 10) = SUBSTRING(:targetDate, 1, 10)
+                GROUP BY
+                  order_day';
 
-        $dateTimeEnd = clone $dateTimeStart;
-        $dateTimeEnd->modify('+1 days');
-
-        $qb = $this->orderRepository
-            ->createQueryBuilder('o')
-            ->select('
-            SUM(o.payment_total) AS order_amount,
-            COUNT(o) AS order_count')
+        $q = $this->entityManager
+            ->createQuery($dql)
             ->setParameter(':excludes', $this->excludes)
-            ->setParameter(':targetDateStart', $dateTimeStart)
-            ->setParameter(':targetDateEnd', $dateTimeEnd)
-            ->andWhere(':targetDateStart <= o.order_date and o.order_date < :targetDateEnd')
-            ->andWhere('o.OrderStatus NOT IN (:excludes)');
-        $q = $qb->getQuery();
+            ->setParameter(':targetDate', $dateTime);
 
         $result = [];
         try {
@@ -482,7 +483,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @param \DateTime $dateTime
+     * @param $dateTime
      *
      * @return array|mixed
      *
@@ -490,25 +491,24 @@ class AdminController extends AbstractController
      */
     protected function getSalesByMonth($dateTime)
     {
-        $dateTimeStart = clone $dateTime;
-        $dateTimeStart->setTime(0, 0, 0, 0);
-        $dateTimeStart->modify('first day of this month');
+        // concat... for pgsql
+        // http://stackoverflow.com/questions/1091924/substr-does-not-work-with-datatype-timestamp-in-postgres-8-3
+        $dql = 'SELECT
+                  SUBSTRING(CONCAT(o.order_date, \'\'), 1, 7) AS order_month,
+                  SUM(o.payment_total) AS order_amount,
+                  COUNT(o) AS order_count
+                FROM
+                  Eccube\Entity\Order o
+                WHERE
+                    o.OrderStatus NOT IN (:excludes)
+                    AND SUBSTRING(CONCAT(o.order_date, \'\'), 1, 7) = SUBSTRING(:targetDate, 1, 7)
+                GROUP BY
+                  order_month';
 
-        $dateTimeEnd = clone $dateTime;
-        $dateTimeEnd->setTime(0, 0, 0, 0);
-        $dateTimeEnd->modify('first day of 1 month');
-
-        $qb = $this->orderRepository
-            ->createQueryBuilder('o')
-            ->select('
-            SUM(o.payment_total) AS order_amount,
-            COUNT(o) AS order_count')
+        $q = $this->entityManager
+            ->createQuery($dql)
             ->setParameter(':excludes', $this->excludes)
-            ->setParameter(':targetDateStart', $dateTimeStart)
-            ->setParameter(':targetDateEnd', $dateTimeEnd)
-            ->andWhere(':targetDateStart <= o.order_date and o.order_date < :targetDateEnd')
-            ->andWhere('o.OrderStatus NOT IN (:excludes)');
-        $q = $qb->getQuery();
+            ->setParameter(':targetDate', $dateTime);
 
         $result = [];
         try {

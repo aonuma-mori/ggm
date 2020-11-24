@@ -70,6 +70,18 @@ $(function() {
     });
 
     // TODO: カート展開時のアイコン変更処理
+    // ggm cart
+    $('.ggm_cart').on('click', '.ec-cartNavi', function() {
+        // $('.ec-cartNavi').toggleClass('is-active');
+        $('.ec-cartNaviIsset').toggleClass('is-active');
+        $('.ec-cartNaviNull').toggleClass('is-active')
+    });
+    $('.ggm_cart').on('click', '.ec-cartNavi--cancel', function() {
+        // $('.ec-cartNavi').toggleClass('is-active');
+        $('.ec-cartNaviIsset').toggleClass('is-active');
+        $('.ec-cartNaviNull').toggleClass('is-active')
+    });
+    // original cart (後ほど消す)
     $('.ec-headerRole__cart').on('click', '.ec-cartNavi', function() {
         // $('.ec-cartNavi').toggleClass('is-active');
         $('.ec-cartNaviIsset').toggleClass('is-active');
@@ -81,6 +93,7 @@ $(function() {
         $('.ec-cartNaviIsset').toggleClass('is-active');
         $('.ec-cartNaviNull').toggleClass('is-active')
     });
+
 
     $('.ec-orderMail__link').on('click', function() {
         $(this).siblings('.ec-orderMail__body').slideToggle();

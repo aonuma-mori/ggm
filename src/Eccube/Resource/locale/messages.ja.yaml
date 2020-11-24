@@ -77,7 +77,7 @@ common.remember_me: 次回から自動的にログインする
 common.signup: 新規会員登録
 common.forgot_login: ログイン情報をお忘れですか？
 common.customer_address_count_is_over: お届け先登録の上限の%count%件に達しています。お届け先を入力したい場合は、削除か変更を行ってください。
-common.search_keyword: キーワードを入力
+common.search_keyword: keyword
 common.delete_confirm: 削除してもよろしいですか?
 common.pagetop: ページトップへ
 common.name.prefix: ''
@@ -128,14 +128,15 @@ front.block.new_item.item_3_price: ￥600(税込)
 front.block.news.title__en: NEWS
 front.block.news.title__ja: 新着情報
 front.block.news.read_more: more
-front.block.news.see_details: 詳しくはこちら
-front.block.login.customer_registration: 新規会員登録
-front.block.login.mypage: マイページ
-front.block.login.favorite: お気に入り
-front.block.login.login: ログイン
-front.block.login.logout: ログアウト
+front.block.news.see_details: more detail
+front.block.login.customer_registration: Sign in
+front.block.login.mypage: My Page
+front.block.login.favorite: Favorite
+front.block.login.login: Login
+front.block.login.logout: Logout
 front.block.login.to_cart: カートを見る
 front.block.login.to_home: ホームに戻る
+front.block.blog.blog: Blog
 
 
 #------------------------------------------------------------------------------------
@@ -150,6 +151,7 @@ front.contact.inquiry_contents: お問い合わせ内容
 front.contact.complete_title: お問い合わせ(完了)
 front.contact.complete_message__title: お問い合わせ内容の送信が完了いたしました
 front.contact.complete_message__body: 万一、ご確認メールが届かない場合は、トラブルの可能性もありますので大変お手数ではございますがもう一度お問い合わせいただくか、お電話にてお問い合わせくださいませ。
+
 
 #------------------------------------------------------------------------------------
 # 会員登録
@@ -223,7 +225,7 @@ front.mypage.nav__withdrow: 退会手続き
 front.mypage.history_count: '%count%件の履歴があります'
 front.mypage.history_not_found: ご注文履歴はありません。
 front.mypage.message_not_found: 記載なし
-front.mypage.view_detail: 詳細を見る
+front.mypage.view_detail: 詳細を見る / 再注文する
 front.mypage.order_no: ご注文番号
 front.mypage.order_status: ご注文状況
 front.mypage.order_date: ご注文日時
@@ -282,7 +284,7 @@ front.product.out_of_stock_label: (品切れ中)
 front.product.added_to_favorite: お気に入りに追加済です。
 front.product.normal_price: 通常価格
 front.product.sale_price: 販売価格
-front.product.code: 商品コード
+front.product.code: Product-code
 front.product.related_category: 関連カテゴリ
 front.product.continue: お買い物を続ける
 front.product.invalid_quantity: 1以上で入力してください。
@@ -292,13 +294,13 @@ front.product.product_class_unselected: 項目が選択されていません
 # カート
 #------------------------------------------------------------------------------------
 
-front.cart.title: ショッピングカート
+front.cart.title: Shopping cart
 front.cart.nav__cart_items: カートの商品
 front.cart.nav__customer_info: お客様情報
 front.cart.nav__order: ご注文手続き
 front.cart.nav__confirm: ご注文内容確認
 front.cart.nav__complete: 完了
-front.cart.total_price: 商品の合計金額は「<strong>%price%</strong>」です。
+front.cart.total_price: 商品の合計金額は <strong>%price%</strong> です。
 front.cart.divide_cart: 同時購入できない商品がカートに含まれています。
 front.cart.delete: 削除
 front.cart.delete__confirm: カートから商品を削除してよろしいですか？
@@ -315,7 +317,7 @@ front.cart.delivery_fee_free__quantity: あと「<strong>%quantity%個</strong>�
 # ショッピング
 #------------------------------------------------------------------------------------
 
-front.shopping.title: ご注文手続き
+front.shopping.title: Shopping
 front.shopping.order_no: ご注文番号
 front.shopping.customer_info: お客様情報
 front.shopping.delivery_info: 配送情報
@@ -992,7 +994,6 @@ admin.content.layout_section__drawer: '#drawer'
 admin.content.layout_section__close_body_before: '</body>タグ直前'
 admin.content.page_name: ページ名
 admin.content.page__card_title: ページ設定
-admin.content.page_route_name: ルーティング名
 admin.content.page_url: URL
 admin.content.page_url_exists: 既にURLが存在しています。
 admin.content.page_file_name: ファイル名

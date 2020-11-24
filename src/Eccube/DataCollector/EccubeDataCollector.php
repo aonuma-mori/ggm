@@ -113,7 +113,7 @@ class EccubeDataCollector extends DataCollector
 
         try {
             $this->data['locale_code'] = $this->container->getParameter('locale');
-        } catch (\Exception $exception) {
+        } catch (LocaleNotFoundException $exception) {
         }
 
         try {

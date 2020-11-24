@@ -16,7 +16,6 @@ namespace Eccube\Service;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Tools\SchemaTool;
-use Eccube\Doctrine\ORM\Mapping\Driver\NopAnnotationDriver;
 use Eccube\Doctrine\ORM\Mapping\Driver\ReloadSafeAnnotationDriver;
 use Eccube\Util\StringUtil;
 use Symfony\Component\Finder\Finder;
@@ -28,21 +27,15 @@ class SchemaService
      * @var EntityManagerInterface
      */
     protected $entityManager;
-    /**
-     * @var PluginContext
-     */
-    private $pluginContext;
 
     /**
      * SchemaService constructor.
      *
      * @param EntityManagerInterface $entityManager
-     * @param PluginContext $pluginContext
      */
-    public function __construct(EntityManagerInterface $entityManager, PluginContext $pluginContext)
+    public function __construct(EntityManagerInterface $entityManager)
     {
         $this->entityManager = $entityManager;
-        $this->pluginContext = $pluginContext;
     }
 
     /**
@@ -82,14 +75,6 @@ class SchemaService
                     $newDriver->setNewProxyFiles($generatedFiles);
                     $newDriver->setOutputDir($outputDir);
                     $chain->addDriver($newDriver, $namespace);
-                }
-
-                if ($this->pluginContext->isUninstall()) {
-                    foreach ($this->pluginContext->getExtraEntityNamespaces() as $extraEntityNamespace) {
-                        if ($extraEntityNamespace === $namespace) {
-                            $chain->addDriver(new NopAnnotationDriver(new AnnotationReader()), $namespace);
-                        }
-                    }
                 }
             }
 
