@@ -42,6 +42,8 @@ class EccubeServiceProvider implements ServiceProviderInterface
             return $app['monolog.logger'];
         });
         $app['eccube.logger'] = $app->share(function () use ($app) {
+            
+            // exit("xxxx");
             return $app->getParentContainer()->get('eccube.logger');
         });
 
