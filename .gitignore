@@ -45,6 +45,7 @@
 .env
 .maintenance
 
+.htaccess
 .env
 .vscode/*
 var/cache/*
